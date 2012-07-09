@@ -13,3 +13,8 @@
 # ActiveSupport::Inflector.inflections do |inflect|
 #   inflect.acronym 'RESTful'
 # end
+
+ActiveSupport::Inflector.inflections do |inflect|
+	inflect.irregular 'autor', 'autores'
+	inflect.irregular 'contact', 'contato'	
+end

@@ -1,4 +1,24 @@
 Portaldafono::Application.routes.draw do
+
+
+  resources :noticia
+
+  resources :super_destaques
+
+  resources :contato
+
+  resources :duvidas
+
+  resources :usuarios
+
+  resources :debates_usuarios
+
+  resources :debates
+
+  resources :autores
+
+  resources :artigos
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,37 @@
+<h1>Listing duvidas</h1>
+
+<table>
+  <tr>
+    <th>Usuario</th>
+    <th>Titulo</th>
+    <th>Texto</th>
+    <th>Created</th>
+    <th>Status</th>
+    <th>Autor responsavel</th>
+    <th>Resposta</th>
+    <th>Data resposta</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @duvidas.each do |duvida| %>
+  <tr>
+    <td><%= duvida.usuario_id %></td>
+    <td><%= duvida.titulo %></td>
+    <td><%= duvida.texto %></td>
+    <td><%= duvida.created %></td>
+    <td><%= duvida.status %></td>
+    <td><%= duvida.autor_responsavel_id %></td>
+    <td><%= duvida.resposta %></td>
+    <td><%= duvida.data_resposta %></td>
+    <td><%= link_to 'Show', duvida %></td>
+    <td><%= link_to 'Edit', edit_duvida_path(duvida) %></td>
+    <td><%= link_to 'Destroy', duvida, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Duvida', new_duvida_path %>

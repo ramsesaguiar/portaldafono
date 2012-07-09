@@ -1,0 +1,2 @@
+module SuperDestaquesHelper
+end

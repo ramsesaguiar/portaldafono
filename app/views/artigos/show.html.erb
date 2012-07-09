@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Autor:</b>
+  <%= @artigo.autor_id %>
+</p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @artigo.titulo %>
+</p>
+
+<p>
+  <b>Subtitulo:</b>
+  <%= @artigo.subtitulo %>
+</p>
+
+<p>
+  <b>Texto:</b>
+  <%= @artigo.texto %>
+</p>
+
+<p>
+  <b>Palavra chave:</b>
+  <%= @artigo.palavra_chave %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @artigo.data %>
+</p>
+
+
+<%= link_to 'Edit', edit_artigo_path(@artigo) %> |
+<%= link_to 'Back', artigos_path %>

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Debate:</b>
+  <%= @debates_usuario.debate_id %>
+</p>
+
+<p>
+  <b>Usuario:</b>
+  <%= @debates_usuario.usuario_id %>
+</p>
+
+<p>
+  <b>Data resposta:</b>
+  <%= @debates_usuario.data_resposta %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @debates_usuario.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_debates_usuario_path(@debates_usuario) %> |
+<%= link_to 'Back', debates_usuarios_path %>

@@ -1,0 +1,35 @@
+<h1>Listing debates</h1>
+
+<table>
+  <tr>
+    <th>Autor</th>
+    <th>Titulo</th>
+    <th>Subtitulo</th>
+    <th>Texto</th>
+    <th>Data inicio</th>
+    <th>Data fim</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @debates.each do |debate| %>
+  <tr>
+    <td><%= debate.autor_id %></td>
+    <td><%= debate.titulo %></td>
+    <td><%= debate.subtitulo %></td>
+    <td><%= debate.texto %></td>
+    <td><%= debate.data_inicio %></td>
+    <td><%= debate.data_fim %></td>
+    <td><%= debate.status %></td>
+    <td><%= link_to 'Show', debate %></td>
+    <td><%= link_to 'Edit', edit_debate_path(debate) %></td>
+    <td><%= link_to 'Destroy', debate, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Debate', new_debate_path %>

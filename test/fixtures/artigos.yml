@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  autor_id: 1
+  titulo: MyString
+  subtitulo: MyString
+  texto: MyString
+  palavra_chave: MyString
+  data: 2012-07-08 13:48:13
+
+two:
+  autor_id: 1
+  titulo: MyString
+  subtitulo: MyString
+  texto: MyString
+  palavra_chave: MyString
+  data: 2012-07-08 13:48:13
