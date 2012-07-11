@@ -1,4 +1,60 @@
 Portaldafono::Application.routes.draw do
+  #get "news/index"
+
+  #get "superhighlight/index"
+
+  #get "doubt/index"
+
+  #get "user/index"
+
+  #get "discussion/index"
+
+  #get "article/index"
+
+ # get "author/index"
+
+  #get "contact/index"
+  
+
+
+  #resources :news
+   resources :news, :path => "noticias", :path_names => { :new => :inserir, :edit => :alterar }
+
+  #resources :super_highlights
+   resources :super_highlights, :path => "superdestaques", :path_names => { :new => :inserir, :edit => :alterar }
+
+  #resources :contacts
+  resources :contacts, :path => "contatos", :path_names => { :new => :inserir, :edit => :alterar }
+  
+  #resources :doubts
+  resources :doubts, :path => "duvidas", :path_names => { :new => :inserir, :edit => :alterar }
+  
+  #resources :users
+  resources :users, :path => "usuarios", :path_names => { :new => :inserir, :edit => :alterar }
+
+  resources :discussion_users
+  
+  #resources :discussions
+  resources :discussions, :path => "debates", :path_names => { :new => :inserir, :edit => :alterar }
+
+  #resources :articles
+    resources :articles, :path => "artigos", :path_names => { :new => :inserir, :edit => :alterar }
+
+  #resources :authors
+     resources :authors, :path => "autores", :path_names => { :new => :inserir, :edit => :alterar }
+     
+     namespace :admin do
+	resources :author, :path => "autores", :path_names => { :new => :inserir, :edit => :alterar }
+	resources :contact, :path => "contatos", :path_names => { :new => :inserir, :edit => :alterar }
+	resources :doubt, :path => "duvidas", :path_names => { :new => :inserir, :edit => :alterar }
+	resources :user, :path => "usuarios", :path_names => { :new => :inserir, :edit => :alterar }
+	resources :news, :path => "noticias", :path_names => { :new => :inserir, :edit => :alterar }
+	resources :super_highlights, :path => "superdestaques", :path_names => { :new => :inserir, :edit => :alterar }
+	resources :discussion, :path => "debates", :path_names => { :new => :inserir, :edit => :alterar }
+	resources :article, :path => "artigos", :path_names => { :new => :inserir, :edit => :alterar }
+	
+	end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

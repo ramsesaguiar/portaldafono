@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Autor:</b>
+  <%= @discussion.autor_id %>
+</p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @discussion.titulo %>
+</p>
+
+<p>
+  <b>Subtitulo:</b>
+  <%= @discussion.subtitulo %>
+</p>
+
+<p>
+  <b>Texto:</b>
+  <%= @discussion.texto %>
+</p>
+
+<p>
+  <b>Data inicio:</b>
+  <%= @discussion.data_inicio %>
+</p>
+
+<p>
+  <b>Data fim:</b>
+  <%= @discussion.data_fim %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @discussion.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_discussion_path(@discussion) %> |
+<%= link_to 'Back', discussions_path %>

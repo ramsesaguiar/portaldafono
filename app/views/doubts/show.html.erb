@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Usuario:</b>
+  <%= @doubt.usuario_id %>
+</p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @doubt.titulo %>
+</p>
+
+<p>
+  <b>Texto:</b>
+  <%= @doubt.texto %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @doubt.status %>
+</p>
+
+<p>
+  <b>Autor responsavel:</b>
+  <%= @doubt.autor_responsavel_id %>
+</p>
+
+<p>
+  <b>Resposta:</b>
+  <%= @doubt.resposta %>
+</p>
+
+<p>
+  <b>Data resposta:</b>
+  <%= @doubt.data_resposta %>
+</p>
+
+
+<%= link_to 'Edit', edit_doubt_path(@doubt) %> |
+<%= link_to 'Back', doubts_path %>
