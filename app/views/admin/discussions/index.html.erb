@@ -1,0 +1,35 @@
+<h1>Listing admin_discussions</h1>
+
+<table>
+  <tr>
+    <th>Autor</th>
+    <th>Titulo</th>
+    <th>Subtitulo</th>
+    <th>Texto</th>
+    <th>Data inicio</th>
+    <th>Data fim</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_discussions.each do |admin_discussion| %>
+  <tr>
+    <td><%= admin_discussion.autor_id %></td>
+    <td><%= admin_discussion.titulo %></td>
+    <td><%= admin_discussion.subtitulo %></td>
+    <td><%= admin_discussion.texto %></td>
+    <td><%= admin_discussion.data_inicio %></td>
+    <td><%= admin_discussion.data_fim %></td>
+    <td><%= admin_discussion.status %></td>
+    <td><%= link_to 'Show', admin_discussion %></td>
+    <td><%= link_to 'Edit', edit_admin_discussion_path(admin_discussion) %></td>
+    <td><%= link_to 'Destroy', admin_discussion, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Discussion', new_admin_discussion_path %>

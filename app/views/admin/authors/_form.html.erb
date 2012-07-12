@@ -1,0 +1,33 @@
+<%= form_for(@admin_author) do |f| %>
+  <% if @admin_author.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_author.errors.count, "error") %> prohibited this admin_author from being saved:</h2>
+
+      <ul>
+      <% @admin_author.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :apelido %><br />
+    <%= f.text_field :apelido %>
+  </div>
+  <div class="field">
+    <%= f.label :crfa %><br />
+    <%= f.number_field :crfa %>
+  </div>
+  <div class="field">
+    <%= f.label :bibiografia %><br />
+    <%= f.text_area :bibiografia %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

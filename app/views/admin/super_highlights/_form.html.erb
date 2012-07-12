@@ -1,0 +1,45 @@
+<%= form_for(@admin_super_highlight) do |f| %>
+  <% if @admin_super_highlight.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_super_highlight.errors.count, "error") %> prohibited this admin_super_highlight from being saved:</h2>
+
+      <ul>
+      <% @admin_super_highlight.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br />
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :subtitulo %><br />
+    <%= f.text_field :subtitulo %>
+  </div>
+  <div class="field">
+    <%= f.label :slug %><br />
+    <%= f.text_field :slug %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.number_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :data_ini %><br />
+    <%= f.date_select :data_ini %>
+  </div>
+  <div class="field">
+    <%= f.label :data_fim %><br />
+    <%= f.date_select :data_fim %>
+  </div>
+  <div class="field">
+    <%= f.label :posicao %><br />
+    <%= f.number_field :posicao %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

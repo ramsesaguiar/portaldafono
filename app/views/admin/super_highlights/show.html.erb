@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @admin_super_highlight.titulo %>
+</p>
+
+<p>
+  <b>Subtitulo:</b>
+  <%= @admin_super_highlight.subtitulo %>
+</p>
+
+<p>
+  <b>Slug:</b>
+  <%= @admin_super_highlight.slug %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @admin_super_highlight.status %>
+</p>
+
+<p>
+  <b>Data ini:</b>
+  <%= @admin_super_highlight.data_ini %>
+</p>
+
+<p>
+  <b>Data fim:</b>
+  <%= @admin_super_highlight.data_fim %>
+</p>
+
+<p>
+  <b>Posicao:</b>
+  <%= @admin_super_highlight.posicao %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_super_highlight_path(@admin_super_highlight) %> |
+<%= link_to 'Back', admin_super_highlights_path %>

@@ -1,0 +1,35 @@
+<h1>Listing admin_super_highlights</h1>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Subtitulo</th>
+    <th>Slug</th>
+    <th>Status</th>
+    <th>Data ini</th>
+    <th>Data fim</th>
+    <th>Posicao</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_super_highlights.each do |admin_super_highlight| %>
+  <tr>
+    <td><%= admin_super_highlight.titulo %></td>
+    <td><%= admin_super_highlight.subtitulo %></td>
+    <td><%= admin_super_highlight.slug %></td>
+    <td><%= admin_super_highlight.status %></td>
+    <td><%= admin_super_highlight.data_ini %></td>
+    <td><%= admin_super_highlight.data_fim %></td>
+    <td><%= admin_super_highlight.posicao %></td>
+    <td><%= link_to 'Show', admin_super_highlight %></td>
+    <td><%= link_to 'Edit', edit_admin_super_highlight_path(admin_super_highlight) %></td>
+    <td><%= link_to 'Destroy', admin_super_highlight, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Super highlight', new_admin_super_highlight_path %>

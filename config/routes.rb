@@ -1,4 +1,34 @@
 Portaldafono::Application.routes.draw do
+  namespace :admin do resources :super_highlights end
+
+  resources :doubts
+
+  namespace :admin do resources :doubts end
+
+  resources :contacts
+
+  namespace :admin do resources :contacts end
+
+  resources :news
+
+  namespace :admin do resources :news end
+
+  resources :discussions
+
+  namespace :admin do resources :discussions end
+
+  resources :articles
+
+  namespace :admin do resources :articles end
+
+  resources :authors
+
+  namespace :admin do resources :authors end
+
+  resources :users
+
+  namespace :admin do resources :users end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

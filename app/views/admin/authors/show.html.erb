@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @admin_author.nome %>
+</p>
+
+<p>
+  <b>Apelido:</b>
+  <%= @admin_author.apelido %>
+</p>
+
+<p>
+  <b>Crfa:</b>
+  <%= @admin_author.crfa %>
+</p>
+
+<p>
+  <b>Bibiografia:</b>
+  <%= @admin_author.bibiografia %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_author_path(@admin_author) %> |
+<%= link_to 'Back', admin_authors_path %>

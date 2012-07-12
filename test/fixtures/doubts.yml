@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  usuario_id: 1
+  titulo: MyString
+  texto: MyText
+  status: 1
+  autor_responsavel_id: 1
+  resposta: MyText
+  data_resposta: 2012-07-11 22:48:29
+
+two:
+  usuario_id: 1
+  titulo: MyString
+  texto: MyText
+  status: 1
+  autor_responsavel_id: 1
+  resposta: MyText
+  data_resposta: 2012-07-11 22:48:29

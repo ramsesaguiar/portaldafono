@@ -1,0 +1,29 @@
+<h1>Listing admin_authors</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Apelido</th>
+    <th>Crfa</th>
+    <th>Bibiografia</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_authors.each do |admin_author| %>
+  <tr>
+    <td><%= admin_author.nome %></td>
+    <td><%= admin_author.apelido %></td>
+    <td><%= admin_author.crfa %></td>
+    <td><%= admin_author.bibiografia %></td>
+    <td><%= link_to 'Show', admin_author %></td>
+    <td><%= link_to 'Edit', edit_admin_author_path(admin_author) %></td>
+    <td><%= link_to 'Destroy', admin_author, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Author', new_admin_author_path %>
