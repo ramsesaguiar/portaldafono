@@ -2,7 +2,7 @@ class Admin::ArticlesController < ApplicationController
   # GET /admin/articles
   # GET /admin/articles.json
   def index
-    @admin_articles = Admin::Article.all
+    @admin_articles = Article.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class Admin::ArticlesController < ApplicationController
   # GET /admin/articles/1
   # GET /admin/articles/1.json
   def show
-    @admin_article = Admin::Article.find(params[:id])
+    @admin_article = Article.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class Admin::ArticlesController < ApplicationController
   # GET /admin/articles/new
   # GET /admin/articles/new.json
   def new
-    @admin_article = Admin::Article.new
+    @admin_article = Article.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +34,13 @@ class Admin::ArticlesController < ApplicationController
 
   # GET /admin/articles/1/edit
   def edit
-    @admin_article = Admin::Article.find(params[:id])
+    @admin_article = Article.find(params[:id])
   end
 
   # POST /admin/articles
   # POST /admin/articles.json
   def create
-    @admin_article = Admin::Article.new(params[:admin_article])
+    @admin_article = Article.new(params[:admin_article])
 
     respond_to do |format|
       if @admin_article.save
@@ -56,7 +56,7 @@ class Admin::ArticlesController < ApplicationController
   # PUT /admin/articles/1
   # PUT /admin/articles/1.json
   def update
-    @admin_article = Admin::Article.find(params[:id])
+    @admin_article = Article.find(params[:id])
 
     respond_to do |format|
       if @admin_article.update_attributes(params[:admin_article])
@@ -72,7 +72,7 @@ class Admin::ArticlesController < ApplicationController
   # DELETE /admin/articles/1
   # DELETE /admin/articles/1.json
   def destroy
-    @admin_article = Admin::Article.find(params[:id])
+    @admin_article = Article.find(params[:id])
     @admin_article.destroy
 
     respond_to do |format|

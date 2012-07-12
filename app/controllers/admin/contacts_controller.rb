@@ -2,7 +2,7 @@ class Admin::ContactsController < ApplicationController
   # GET /admin/contacts
   # GET /admin/contacts.json
   def index
-    @admin_contacts = Admin::Contact.all
+    @admin_contacts = Contact.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class Admin::ContactsController < ApplicationController
   # GET /admin/contacts/1
   # GET /admin/contacts/1.json
   def show
-    @admin_contact = Admin::Contact.find(params[:id])
+    @admin_contact = Contact.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class Admin::ContactsController < ApplicationController
   # GET /admin/contacts/new
   # GET /admin/contacts/new.json
   def new
-    @admin_contact = Admin::Contact.new
+    @admin_contact = Contact.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +34,13 @@ class Admin::ContactsController < ApplicationController
 
   # GET /admin/contacts/1/edit
   def edit
-    @admin_contact = Admin::Contact.find(params[:id])
+    @admin_contact = Contact.find(params[:id])
   end
 
   # POST /admin/contacts
   # POST /admin/contacts.json
   def create
-    @admin_contact = Admin::Contact.new(params[:admin_contact])
+    @admin_contact = Contact.new(params[:admin_contact])
 
     respond_to do |format|
       if @admin_contact.save
@@ -56,7 +56,7 @@ class Admin::ContactsController < ApplicationController
   # PUT /admin/contacts/1
   # PUT /admin/contacts/1.json
   def update
-    @admin_contact = Admin::Contact.find(params[:id])
+    @admin_contact = Contact.find(params[:id])
 
     respond_to do |format|
       if @admin_contact.update_attributes(params[:admin_contact])
@@ -72,7 +72,7 @@ class Admin::ContactsController < ApplicationController
   # DELETE /admin/contacts/1
   # DELETE /admin/contacts/1.json
   def destroy
-    @admin_contact = Admin::Contact.find(params[:id])
+    @admin_contact = Contact.find(params[:id])
     @admin_contact.destroy
 
     respond_to do |format|

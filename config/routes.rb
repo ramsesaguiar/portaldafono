@@ -1,33 +1,40 @@
 Portaldafono::Application.routes.draw do
-  namespace :admin do resources :super_highlights end
+  namespace :admin do resources :super_highlights, :path => "superdestaques", :path_names => { :new => :inserir, :edit => :alterar } end
 
-  resources :doubts
+  #resources :doubts
+  resources :doubts, :path => "duvidas", :path_names => { :new => :inserir, :edit => :alterar }
 
-  namespace :admin do resources :doubts end
+  namespace :admin do resources :doubts, :path => "duvidas", :path_names => { :new => :inserir, :edit => :alterar }end
 
-  resources :contacts
+  #resources :contacts
+   resources :contacts, :path => "contatos", :path_names => { :new => :inserir, :edit => :alterar }
 
-  namespace :admin do resources :contacts end
+  namespace :admin do   resources :contacts, :path => "contatos", :path_names => { :new => :inserir, :edit => :alterar } end
 
-  resources :news
+  #resources :news
+  resources :news, :path => "noticias", :path_names => { :new => :inserir, :edit => :alterar }
 
-  namespace :admin do resources :news end
+  namespace :admin do  resources :news, :path => "noticias", :path_names => { :new => :inserir, :edit => :alterar } end
 
-  resources :discussions
+  #resources :discussions
+   resources :discussions, :path => "debates", :path_names => { :new => :inserir, :edit => :alterar }
 
-  namespace :admin do resources :discussions end
+  namespace :admin do  resources :discussions, :path => "debates", :path_names => { :new => :inserir, :edit => :alterar } end
 
-  resources :articles
+  #resources :articles
+  resources :articles, :path => "artigos", :path_names => { :new => :inserir, :edit => :alterar }
 
-  namespace :admin do resources :articles end
+  namespace :admin do resources :articles, :path => "artigos", :path_names => { :new => :inserir, :edit => :alterar } end
 
-  resources :authors
+  #resources :authors
+  resources :authors, :path => "autores", :path_names => { :new => :inserir, :edit => :alterar }
 
-  namespace :admin do resources :authors end
+  namespace :admin do resources :authors, :path => "autores", :path_names => { :new => :inserir, :edit => :alterar } end
 
-  resources :users
+  #resources :users
+  resources :users, :path => "usuarios", :path_names => { :new => :inserir, :edit => :alterar }
 
-  namespace :admin do resources :users end
+  namespace :admin do resources :users, :path => "usuarios", :path_names => { :new => :inserir, :edit => :alterar } end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

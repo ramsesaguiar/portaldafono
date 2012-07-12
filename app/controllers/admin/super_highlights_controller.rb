@@ -2,7 +2,7 @@ class Admin::SuperHighlightsController < ApplicationController
   # GET /admin/super_highlights
   # GET /admin/super_highlights.json
   def index
-    @admin_super_highlights = Admin::SuperHighlight.all
+    @admin_super_highlights = SuperHighlight.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class Admin::SuperHighlightsController < ApplicationController
   # GET /admin/super_highlights/1
   # GET /admin/super_highlights/1.json
   def show
-    @admin_super_highlight = Admin::SuperHighlight.find(params[:id])
+    @admin_super_highlight = SuperHighlight.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class Admin::SuperHighlightsController < ApplicationController
   # GET /admin/super_highlights/new
   # GET /admin/super_highlights/new.json
   def new
-    @admin_super_highlight = Admin::SuperHighlight.new
+    @admin_super_highlight = SuperHighlight.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +34,13 @@ class Admin::SuperHighlightsController < ApplicationController
 
   # GET /admin/super_highlights/1/edit
   def edit
-    @admin_super_highlight = Admin::SuperHighlight.find(params[:id])
+    @admin_super_highlight = SuperHighlight.find(params[:id])
   end
 
   # POST /admin/super_highlights
   # POST /admin/super_highlights.json
   def create
-    @admin_super_highlight = Admin::SuperHighlight.new(params[:admin_super_highlight])
+    @admin_super_highlight = SuperHighlight.new(params[:admin_super_highlight])
 
     respond_to do |format|
       if @admin_super_highlight.save
@@ -56,7 +56,7 @@ class Admin::SuperHighlightsController < ApplicationController
   # PUT /admin/super_highlights/1
   # PUT /admin/super_highlights/1.json
   def update
-    @admin_super_highlight = Admin::SuperHighlight.find(params[:id])
+    @admin_super_highlight = SuperHighlight.find(params[:id])
 
     respond_to do |format|
       if @admin_super_highlight.update_attributes(params[:admin_super_highlight])
@@ -72,7 +72,7 @@ class Admin::SuperHighlightsController < ApplicationController
   # DELETE /admin/super_highlights/1
   # DELETE /admin/super_highlights/1.json
   def destroy
-    @admin_super_highlight = Admin::SuperHighlight.find(params[:id])
+    @admin_super_highlight = SuperHighlight.find(params[:id])
     @admin_super_highlight.destroy
 
     respond_to do |format|

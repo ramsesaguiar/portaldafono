@@ -2,7 +2,7 @@ class Admin::DiscussionsController < ApplicationController
   # GET /admin/discussions
   # GET /admin/discussions.json
   def index
-    @admin_discussions = Admin::Discussion.all
+    @admin_discussions = Discussion.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class Admin::DiscussionsController < ApplicationController
   # GET /admin/discussions/1
   # GET /admin/discussions/1.json
   def show
-    @admin_discussion = Admin::Discussion.find(params[:id])
+    @admin_discussion = Discussion.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class Admin::DiscussionsController < ApplicationController
   # GET /admin/discussions/new
   # GET /admin/discussions/new.json
   def new
-    @admin_discussion = Admin::Discussion.new
+    @admin_discussion = Discussion.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +34,13 @@ class Admin::DiscussionsController < ApplicationController
 
   # GET /admin/discussions/1/edit
   def edit
-    @admin_discussion = Admin::Discussion.find(params[:id])
+    @admin_discussion = Discussion.find(params[:id])
   end
 
   # POST /admin/discussions
   # POST /admin/discussions.json
   def create
-    @admin_discussion = Admin::Discussion.new(params[:admin_discussion])
+    @admin_discussion = Discussion.new(params[:admin_discussion])
 
     respond_to do |format|
       if @admin_discussion.save
@@ -56,7 +56,7 @@ class Admin::DiscussionsController < ApplicationController
   # PUT /admin/discussions/1
   # PUT /admin/discussions/1.json
   def update
-    @admin_discussion = Admin::Discussion.find(params[:id])
+    @admin_discussion = Discussion.find(params[:id])
 
     respond_to do |format|
       if @admin_discussion.update_attributes(params[:admin_discussion])
@@ -72,7 +72,7 @@ class Admin::DiscussionsController < ApplicationController
   # DELETE /admin/discussions/1
   # DELETE /admin/discussions/1.json
   def destroy
-    @admin_discussion = Admin::Discussion.find(params[:id])
+    @admin_discussion = Discussion.find(params[:id])
     @admin_discussion.destroy
 
     respond_to do |format|

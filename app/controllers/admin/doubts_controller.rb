@@ -2,7 +2,7 @@ class Admin::DoubtsController < ApplicationController
   # GET /admin/doubts
   # GET /admin/doubts.json
   def index
-    @admin_doubts = Admin::Doubt.all
+    @admin_doubts = Doubt.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class Admin::DoubtsController < ApplicationController
   # GET /admin/doubts/1
   # GET /admin/doubts/1.json
   def show
-    @admin_doubt = Admin::Doubt.find(params[:id])
+    @admin_doubt = Doubt.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class Admin::DoubtsController < ApplicationController
   # GET /admin/doubts/new
   # GET /admin/doubts/new.json
   def new
-    @admin_doubt = Admin::Doubt.new
+    @admin_doubt = Doubt.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +34,13 @@ class Admin::DoubtsController < ApplicationController
 
   # GET /admin/doubts/1/edit
   def edit
-    @admin_doubt = Admin::Doubt.find(params[:id])
+    @admin_doubt = Doubt.find(params[:id])
   end
 
   # POST /admin/doubts
   # POST /admin/doubts.json
   def create
-    @admin_doubt = Admin::Doubt.new(params[:admin_doubt])
+    @admin_doubt = Doubt.new(params[:admin_doubt])
 
     respond_to do |format|
       if @admin_doubt.save
@@ -56,7 +56,7 @@ class Admin::DoubtsController < ApplicationController
   # PUT /admin/doubts/1
   # PUT /admin/doubts/1.json
   def update
-    @admin_doubt = Admin::Doubt.find(params[:id])
+    @admin_doubt = Doubt.find(params[:id])
 
     respond_to do |format|
       if @admin_doubt.update_attributes(params[:admin_doubt])
@@ -72,7 +72,7 @@ class Admin::DoubtsController < ApplicationController
   # DELETE /admin/doubts/1
   # DELETE /admin/doubts/1.json
   def destroy
-    @admin_doubt = Admin::Doubt.find(params[:id])
+    @admin_doubt = Doubt.find(params[:id])
     @admin_doubt.destroy
 
     respond_to do |format|

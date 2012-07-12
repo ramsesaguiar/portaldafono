@@ -2,7 +2,7 @@ class Admin::AuthorsController < ApplicationController
   # GET /admin/authors
   # GET /admin/authors.json
   def index
-    @admin_authors = Admin::Author.all
+    @admin_authors = Author.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class Admin::AuthorsController < ApplicationController
   # GET /admin/authors/1
   # GET /admin/authors/1.json
   def show
-    @admin_author = Admin::Author.find(params[:id])
+    @admin_author = Author.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class Admin::AuthorsController < ApplicationController
   # GET /admin/authors/new
   # GET /admin/authors/new.json
   def new
-    @admin_author = Admin::Author.new
+    @admin_author = Author.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +34,13 @@ class Admin::AuthorsController < ApplicationController
 
   # GET /admin/authors/1/edit
   def edit
-    @admin_author = Admin::Author.find(params[:id])
+    @admin_author = Author.find(params[:id])
   end
 
   # POST /admin/authors
   # POST /admin/authors.json
   def create
-    @admin_author = Admin::Author.new(params[:admin_author])
+    @admin_author = Author.new(params[:admin_author])
 
     respond_to do |format|
       if @admin_author.save
@@ -56,7 +56,7 @@ class Admin::AuthorsController < ApplicationController
   # PUT /admin/authors/1
   # PUT /admin/authors/1.json
   def update
-    @admin_author = Admin::Author.find(params[:id])
+    @admin_author = Author.find(params[:id])
 
     respond_to do |format|
       if @admin_author.update_attributes(params[:admin_author])
@@ -72,7 +72,7 @@ class Admin::AuthorsController < ApplicationController
   # DELETE /admin/authors/1
   # DELETE /admin/authors/1.json
   def destroy
-    @admin_author = Admin::Author.find(params[:id])
+    @admin_author = Author.find(params[:id])
     @admin_author.destroy
 
     respond_to do |format|

@@ -2,7 +2,7 @@ class Admin::NewsController < ApplicationController
   # GET /admin/news
   # GET /admin/news.json
   def index
-    @admin_news = Admin::News.all
+    @admin_news = News.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class Admin::NewsController < ApplicationController
   # GET /admin/news/1
   # GET /admin/news/1.json
   def show
-    @admin_news = Admin::News.find(params[:id])
+    @admin_news = News.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class Admin::NewsController < ApplicationController
   # GET /admin/news/new
   # GET /admin/news/new.json
   def new
-    @admin_news = Admin::News.new
+    @admin_news = News.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +34,13 @@ class Admin::NewsController < ApplicationController
 
   # GET /admin/news/1/edit
   def edit
-    @admin_news = Admin::News.find(params[:id])
+    @admin_news = News.find(params[:id])
   end
 
   # POST /admin/news
   # POST /admin/news.json
   def create
-    @admin_news = Admin::News.new(params[:admin_news])
+    @admin_news = News.new(params[:admin_news])
 
     respond_to do |format|
       if @admin_news.save
@@ -56,7 +56,7 @@ class Admin::NewsController < ApplicationController
   # PUT /admin/news/1
   # PUT /admin/news/1.json
   def update
-    @admin_news = Admin::News.find(params[:id])
+    @admin_news = News.find(params[:id])
 
     respond_to do |format|
       if @admin_news.update_attributes(params[:admin_news])
@@ -72,7 +72,7 @@ class Admin::NewsController < ApplicationController
   # DELETE /admin/news/1
   # DELETE /admin/news/1.json
   def destroy
-    @admin_news = Admin::News.find(params[:id])
+    @admin_news = News.find(params[:id])
     @admin_news.destroy
 
     respond_to do |format|
