@@ -1,4 +1,4 @@
-class Admin::DiscussionsController < ApplicationController
+class Admin::DiscussionsController < Admin::ApplicationController
   # GET /admin/discussions
   # GET /admin/discussions.json
   def index

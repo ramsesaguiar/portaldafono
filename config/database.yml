@@ -15,7 +15,7 @@ development:
   database: portaldafono_development
   pool: 5
   username: root
-  password: 
+  password: root
   host: 127.0.0.1
 
 
@@ -29,7 +29,7 @@ test:
   database: portaldafono_test
   pool: 5
   username: root
-  password: 
+  password: root
   host: 127.0.0.1
  
 
@@ -40,6 +40,6 @@ production:
   database: portaldafono_production
   pool: 5
   username: root
-  password: 
+  password: root
   host: 127.0.0.1
 

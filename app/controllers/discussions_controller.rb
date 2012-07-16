@@ -1,4 +1,4 @@
-class DiscussionsController < ApplicationController
+﻿class DiscussionsController < ApplicationController
   # GET /discussions
   # GET /discussions.json
   def index

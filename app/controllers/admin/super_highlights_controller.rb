@@ -1,4 +1,4 @@
-class Admin::SuperHighlightsController < ApplicationController
+class Admin::SuperHighlightsController < Admin::ApplicationController
   # GET /admin/super_highlights
   # GET /admin/super_highlights.json
   def index

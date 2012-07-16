@@ -1,4 +1,8 @@
-class Admin::AuthorsController < ApplicationController
+class Admin::AuthorsController < Admin::ApplicationController
+
+  before_filter :verifica_acesso
+
+
   # GET /admin/authors
   # GET /admin/authors.json
   def index

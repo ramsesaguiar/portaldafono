@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120712015118) do
+ActiveRecord::Schema.define(:version => 20120714192041) do
 
   create_table "articles", :force => true do |t|
     t.integer  "autor_id"
@@ -29,8 +29,10 @@ ActiveRecord::Schema.define(:version => 20120712015118) do
     t.string   "apelido"
     t.integer  "crfa"
     t.text     "bibiografia"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.string   "senha",       :limit => 10
+    t.string   "email",       :limit => 10
   end
 
   create_table "contacts", :force => true do |t|
@@ -109,5 +111,8 @@ ActiveRecord::Schema.define(:version => 20120712015118) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "users", ["apelido"], :name => "apelido", :unique => true
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
 
 end

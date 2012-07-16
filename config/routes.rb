@@ -1,4 +1,14 @@
 Portaldafono::Application.routes.draw do
+
+  root :to=> "index#index"
+  
+ namespace :admin do  
+	root :to=> "index#index"
+	match "login" => "login#index"
+	match "login/do_login" => "login#do_login"
+	match "login/destroy" => "login#destroy"
+ end
+
   namespace :admin do resources :super_highlights, :path => "superdestaques", :path_names => { :new => :inserir, :edit => :alterar } end
 
   #resources :doubts
@@ -7,9 +17,9 @@ Portaldafono::Application.routes.draw do
   namespace :admin do resources :doubts, :path => "duvidas", :path_names => { :new => :inserir, :edit => :alterar }end
 
   #resources :contacts
-   resources :contacts, :path => "contatos", :path_names => { :new => :inserir, :edit => :alterar }
-
-  namespace :admin do   resources :contacts, :path => "contatos", :path_names => { :new => :inserir, :edit => :alterar } end
+  resources :contacts, :path => "faleconosco"
+   
+  namespace :admin do   resources :contacts, :path => "faleconosco", :path_names => { :new => :inserir, :edit => :alterar } end
 
   #resources :news
   resources :news, :path => "noticias", :path_names => { :new => :inserir, :edit => :alterar }
