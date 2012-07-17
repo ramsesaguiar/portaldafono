@@ -6,7 +6,7 @@ Portaldafono::Application.routes.draw do
 	root :to=> "index#index"
 	match "login" => "login#index"
 	match "login/do_login" => "login#do_login"
-	match "login/destroy" => "login#destroy"
+	match "login/logout" => "login#logout"
  end
 
   namespace :admin do resources :super_highlights, :path => "superdestaques", :path_names => { :new => :inserir, :edit => :alterar } end
