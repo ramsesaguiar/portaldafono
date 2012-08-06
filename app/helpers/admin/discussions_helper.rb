@@ -1,2 +1,2 @@
-module Admin::DiscussionsHelper
+﻿module Admin::DiscussionsHelper
 end

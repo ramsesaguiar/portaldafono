@@ -1,2 +1,2 @@
-module IndexHelper
+﻿module IndexHelper
 end

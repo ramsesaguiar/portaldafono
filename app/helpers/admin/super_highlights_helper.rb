@@ -1,2 +1,2 @@
-module Admin::SuperHighlightsHelper
+﻿module Admin::SuperHighlightsHelper
 end

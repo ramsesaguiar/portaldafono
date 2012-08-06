@@ -1,4 +1,4 @@
-class Admin::NewsController < Admin::ApplicationController
+﻿class Admin::NewsController < Admin::ApplicationController
   # GET /admin/news
   # GET /admin/news.json
   def index
@@ -40,12 +40,12 @@ class Admin::NewsController < Admin::ApplicationController
   # POST /admin/news
   # POST /admin/news.json
   def create
-    @admin_news = News.new(params[:admin_news])
-
+    @admin_news = News.new(params[:news])
+    
     respond_to do |format|
       if @admin_news.save
-        format.html { redirect_to @admin_news, notice: 'News was successfully created.' }
-        format.json { render json: @admin_news, status: :created, location: @admin_news }
+        format.html { redirect_to [:admin, @admin_news], notice: 'Noticia criada com sucesso' }
+        format.json { render json: [:admin, @admin_news], status: :created, location: @admin_news }
       else
         format.html { render action: "new" }
         format.json { render json: @admin_news.errors, status: :unprocessable_entity }
@@ -59,8 +59,8 @@ class Admin::NewsController < Admin::ApplicationController
     @admin_news = News.find(params[:id])
 
     respond_to do |format|
-      if @admin_news.update_attributes(params[:admin_news])
-        format.html { redirect_to @admin_news, notice: 'News was successfully updated.' }
+      if @admin_news.update_attributes(params[:news])
+        format.html { redirect_to [:admin, @admin_news], notice: 'Noticia atualizada com sucesso.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

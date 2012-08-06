@@ -1,4 +1,4 @@
-class Admin::DoubtsController < Admin::ApplicationController
+﻿class Admin::DoubtsController < Admin::ApplicationController
   # GET /admin/doubts
   # GET /admin/doubts.json
   def index
@@ -40,11 +40,11 @@ class Admin::DoubtsController < Admin::ApplicationController
   # POST /admin/doubts
   # POST /admin/doubts.json
   def create
-    @admin_doubt = Doubt.new(params[:admin_doubt])
+    @admin_doubt = Doubt.new(params[:doubt])
 
     respond_to do |format|
       if @admin_doubt.save
-        format.html { redirect_to @admin_doubt, notice: 'Doubt was successfully created.' }
+        format.html { redirect_to [:admin,@admin_doubt], notice: 'Dúvida criada com sucesso.' }
         format.json { render json: @admin_doubt, status: :created, location: @admin_doubt }
       else
         format.html { render action: "new" }
@@ -59,8 +59,8 @@ class Admin::DoubtsController < Admin::ApplicationController
     @admin_doubt = Doubt.find(params[:id])
 
     respond_to do |format|
-      if @admin_doubt.update_attributes(params[:admin_doubt])
-        format.html { redirect_to @admin_doubt, notice: 'Doubt was successfully updated.' }
+      if @admin_doubt.update_attributes(params[:doubt])
+        format.html { redirect_to [:admin,@admin_doubt], notice: 'Dúvida atualizada com sucesso.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

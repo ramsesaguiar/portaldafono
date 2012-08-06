@@ -1,4 +1,4 @@
-class Admin::ContactsController < Admin::ApplicationController
+﻿class Admin::ContactsController < Admin::ApplicationController
   # GET /admin/contacts
   # GET /admin/contacts.json
   def index
@@ -14,20 +14,9 @@ class Admin::ContactsController < Admin::ApplicationController
   # GET /admin/contacts/1.json
   def show
     @admin_contact = Contact.find(params[:id])
-
+    
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @admin_contact }
-    end
-  end
-
-  # GET /admin/contacts/new
-  # GET /admin/contacts/new.json
-  def new
-    @admin_contact = Contact.new
-
-    respond_to do |format|
-      format.html # new.html.erb
       format.json { render json: @admin_contact }
     end
   end
@@ -37,21 +26,6 @@ class Admin::ContactsController < Admin::ApplicationController
     @admin_contact = Contact.find(params[:id])
   end
 
-  # POST /admin/contacts
-  # POST /admin/contacts.json
-  def create
-    @admin_contact = Contact.new(params[:admin_contact])
-
-    respond_to do |format|
-      if @admin_contact.save
-        format.html { redirect_to @admin_contact, notice: 'Contact was successfully created.' }
-        format.json { render json: @admin_contact, status: :created, location: @admin_contact }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @admin_contact.errors, status: :unprocessable_entity }
-      end
-    end
-  end
 
   # PUT /admin/contacts/1
   # PUT /admin/contacts/1.json
@@ -59,8 +33,8 @@ class Admin::ContactsController < Admin::ApplicationController
     @admin_contact = Contact.find(params[:id])
 
     respond_to do |format|
-      if @admin_contact.update_attributes(params[:admin_contact])
-        format.html { redirect_to @admin_contact, notice: 'Contact was successfully updated.' }
+      if @admin_contact.update_attributes(params[:contact])
+        format.html { redirect_to [:admin,@admin_contact], notice: 'Contact foi atualizado.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

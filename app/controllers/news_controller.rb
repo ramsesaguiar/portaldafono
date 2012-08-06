@@ -1,4 +1,4 @@
-class NewsController < ApplicationController
+﻿class NewsController < ApplicationController
   # GET /news
   # GET /news.json
   def index

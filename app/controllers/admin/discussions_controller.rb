@@ -1,4 +1,4 @@
-class Admin::DiscussionsController < Admin::ApplicationController
+﻿class Admin::DiscussionsController < Admin::ApplicationController
   # GET /admin/discussions
   # GET /admin/discussions.json
   def index
@@ -17,7 +17,7 @@ class Admin::DiscussionsController < Admin::ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @admin_discussion }
+      format.json { render json: [:admin,@admin_discussion] }
     end
   end
 
@@ -28,7 +28,7 @@ class Admin::DiscussionsController < Admin::ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @admin_discussion }
+      format.json { render json: [:admin,@admin_discussion] }
     end
   end
 
@@ -40,12 +40,12 @@ class Admin::DiscussionsController < Admin::ApplicationController
   # POST /admin/discussions
   # POST /admin/discussions.json
   def create
-    @admin_discussion = Discussion.new(params[:admin_discussion])
+    @admin_discussion = Discussion.new(params[:discussion])
 
     respond_to do |format|
       if @admin_discussion.save
-        format.html { redirect_to @admin_discussion, notice: 'Discussion was successfully created.' }
-        format.json { render json: @admin_discussion, status: :created, location: @admin_discussion }
+        format.html { redirect_to [:admin,@admin_discussion], notice: 'Debate criado com sucesso.' }
+        format.json { render json: [:admin,@admin_discussion], status: :created, location: @admin_discussion }
       else
         format.html { render action: "new" }
         format.json { render json: @admin_discussion.errors, status: :unprocessable_entity }
@@ -59,8 +59,8 @@ class Admin::DiscussionsController < Admin::ApplicationController
     @admin_discussion = Discussion.find(params[:id])
 
     respond_to do |format|
-      if @admin_discussion.update_attributes(params[:admin_discussion])
-        format.html { redirect_to @admin_discussion, notice: 'Discussion was successfully updated.' }
+      if @admin_discussion.update_attributes(params[:discussion])
+        format.html { redirect_to [:admin,@admin_discussion], notice: 'Debate atualizada com sucesso.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

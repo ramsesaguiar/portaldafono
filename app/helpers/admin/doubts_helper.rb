@@ -1,2 +1,2 @@
-module Admin::DoubtsHelper
+﻿module Admin::DoubtsHelper
 end

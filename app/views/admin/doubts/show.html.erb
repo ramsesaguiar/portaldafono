@@ -1,12 +1,12 @@
-<p id="notice"><%= notice %></p>
+﻿<p id="notice"><%= notice %></p>
 
 <p>
-  <b>Usuario:</b>
+  <b>Usuário:</b>
   <%= @admin_doubt.usuario_id %>
 </p>
 
 <p>
-  <b>Titulo:</b>
+  <b>Título:</b>
   <%= @admin_doubt.titulo %>
 </p>
 
@@ -21,7 +21,7 @@
 </p>
 
 <p>
-  <b>Autor responsavel:</b>
+  <b>Autor da dúvida:</b>
   <%= @admin_doubt.autor_responsavel_id %>
 </p>
 
@@ -36,5 +36,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_admin_doubt_path(@admin_doubt) %> |
-<%= link_to 'Back', admin_doubts_path %>
+<%= link_to 'Editar', edit_admin_doubt_path(@admin_doubt) %> |
+<%= link_to 'Voltar', admin_doubts_path %>

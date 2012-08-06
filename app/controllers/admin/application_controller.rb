@@ -1,14 +1,9 @@
-class Admin::ApplicationController < ActionController::Base
+﻿class Admin::ApplicationController < ActionController::Base
   before_filter :authenticate
+  before_filter :instantiate_controller_and_action_names
   layout "admin_application"
   protect_from_forgery
 	
-	#protected
-	#def verifica_acesso
-		#if  session[:current_user_id]== nil
-			#redirect_to :controller => "login", :action => "index"
-		#end
-	#end
 	
 	protected
 	def authenticate
@@ -18,6 +13,11 @@ class Admin::ApplicationController < ActionController::Base
 			return false
 		end
 		return true
+	end
+	
+	def instantiate_controller_and_action_names
+		@current_action = action_name
+		@current_controller = controller_name
 	end
 
  end

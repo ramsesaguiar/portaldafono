@@ -1,2 +1,2 @@
-module DiscussionsHelper
+﻿module DiscussionsHelper
 end

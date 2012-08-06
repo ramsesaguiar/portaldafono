@@ -1,2 +1,2 @@
-module Admin::AuthorsHelper
+﻿module Admin::AuthorsHelper
 end

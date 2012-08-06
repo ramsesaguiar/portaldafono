@@ -1,2 +1,2 @@
-class SuperHighlight < ActiveRecord::Base
+﻿class SuperHighlight < ActiveRecord::Base
 end

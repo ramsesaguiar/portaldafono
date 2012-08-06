@@ -1,14 +1,14 @@
-<h1>Listing admin_super_highlights</h1>
+﻿<h1>Super destaques</h1>
 
 <table>
   <tr>
-    <th>Titulo</th>
+    <th>Título</th>
     <th>Subtitulo</th>
     <th>Slug</th>
     <th>Status</th>
     <th>Data ini</th>
     <th>Data fim</th>
-    <th>Posicao</th>
+    <th>Posição</th>
     <th></th>
     <th></th>
     <th></th>
@@ -23,13 +23,13 @@
     <td><%= admin_super_highlight.data_ini %></td>
     <td><%= admin_super_highlight.data_fim %></td>
     <td><%= admin_super_highlight.posicao %></td>
-    <td><%= link_to 'Show', admin_super_highlight %></td>
-    <td><%= link_to 'Edit', edit_admin_super_highlight_path(admin_super_highlight) %></td>
-    <td><%= link_to 'Destroy', admin_super_highlight, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Visualizar', [:admin,admin_super_highlight] %></td>
+    <td><%= link_to 'Editar', edit_admin_super_highlight_path(admin_super_highlight) %></td>
+    <td><%= link_to 'Excluir', [:admin,admin_super_highlight], confirm: 'Deseja realmente excluir?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Super highlight', new_admin_super_highlight_path %>
+<%= link_to 'Novo superdestaque', new_admin_super_highlight_path %>

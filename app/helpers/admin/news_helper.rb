@@ -1,2 +1,2 @@
-module Admin::NewsHelper
+﻿module Admin::NewsHelper
 end

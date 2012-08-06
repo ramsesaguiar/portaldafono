@@ -1,2 +1,2 @@
-module Admin::ArticlesHelper
+﻿module Admin::ArticlesHelper
 end

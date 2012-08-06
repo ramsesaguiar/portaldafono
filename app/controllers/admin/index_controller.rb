@@ -1,7 +1,7 @@
-class Admin::IndexController < Admin::ApplicationController
+﻿class Admin::IndexController < Admin::ApplicationController
 	
 	def index
-		render :text =>  session[:current_user_id]
+		render "index"
 	end
 
 end

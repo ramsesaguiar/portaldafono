@@ -1,2 +1,2 @@
-module DoubtsHelper
+﻿module DoubtsHelper
 end

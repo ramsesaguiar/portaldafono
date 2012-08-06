@@ -1,2 +1,3 @@
-class News < ActiveRecord::Base
+﻿class News < ActiveRecord::Base
+	
 end

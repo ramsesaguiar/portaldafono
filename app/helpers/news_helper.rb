@@ -1,2 +1,2 @@
-module NewsHelper
+﻿module NewsHelper
 end

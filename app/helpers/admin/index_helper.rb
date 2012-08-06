@@ -1,2 +1,2 @@
-module Admin::IndexHelper
+﻿module Admin::IndexHelper
 end

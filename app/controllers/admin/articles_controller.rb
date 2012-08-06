@@ -1,9 +1,9 @@
-class Admin::ArticlesController < Admin::ApplicationController
+﻿class Admin::ArticlesController < Admin::ApplicationController
   # GET /admin/articles
   # GET /admin/articles.json
   def index
     @admin_articles = Article.all
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @admin_articles }
@@ -40,12 +40,12 @@ class Admin::ArticlesController < Admin::ApplicationController
   # POST /admin/articles
   # POST /admin/articles.json
   def create
-    @admin_article = Article.new(params[:admin_article])
+    @admin_article = Article.new(params[:article])
 
     respond_to do |format|
       if @admin_article.save
-        format.html { redirect_to @admin_article, notice: 'Article was successfully created.' }
-        format.json { render json: @admin_article, status: :created, location: @admin_article }
+        format.html { redirect_to [:admin, @admin_article], notice: 'O artigo foi criado com sucesso.' }
+        format.json { render json: [:admin, @admin_article], status: :created, location: @admin_article }
       else
         format.html { render action: "new" }
         format.json { render json: @admin_article.errors, status: :unprocessable_entity }
@@ -59,8 +59,8 @@ class Admin::ArticlesController < Admin::ApplicationController
     @admin_article = Article.find(params[:id])
 
     respond_to do |format|
-      if @admin_article.update_attributes(params[:admin_article])
-        format.html { redirect_to @admin_article, notice: 'Article was successfully updated.' }
+      if @admin_article.update_attributes(params[:article])
+        format.html { redirect_to [:admin, @admin_article], notice: 'O artigo foi atualizado.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

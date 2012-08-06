@@ -1,4 +1,4 @@
-<h1>Listing admin_contacts</h1>
+﻿<h1>Fale conosco</h1>
 
 <table>
   <tr>
@@ -17,13 +17,12 @@
     <td><%= admin_contact.email %></td>
     <td><%= admin_contact.texto %></td>
     <td><%= admin_contact.status %></td>
-    <td><%= link_to 'Show', admin_contact %></td>
-    <td><%= link_to 'Edit', edit_admin_contact_path(admin_contact) %></td>
-    <td><%= link_to 'Destroy', admin_contact, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Visualizar', [:admin,admin_contact] %></td>
+    <td><%= link_to 'Editar', edit_admin_contact_path(admin_contact) %></td>
+    <td><%= link_to 'Excluir', [:admin,admin_contact], confirm: 'Deseja realmente excluir?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Contact', new_admin_contact_path %>

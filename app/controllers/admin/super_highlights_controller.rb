@@ -1,4 +1,4 @@
-class Admin::SuperHighlightsController < Admin::ApplicationController
+﻿class Admin::SuperHighlightsController < Admin::ApplicationController
   # GET /admin/super_highlights
   # GET /admin/super_highlights.json
   def index
@@ -40,11 +40,11 @@ class Admin::SuperHighlightsController < Admin::ApplicationController
   # POST /admin/super_highlights
   # POST /admin/super_highlights.json
   def create
-    @admin_super_highlight = SuperHighlight.new(params[:admin_super_highlight])
+    @admin_super_highlight = SuperHighlight.new(params[:super_highlight])
 
     respond_to do |format|
       if @admin_super_highlight.save
-        format.html { redirect_to @admin_super_highlight, notice: 'Super highlight was successfully created.' }
+        format.html { redirect_to [:admin,@admin_super_highlight], notice: 'Superdestaque criado com sucesso.' }
         format.json { render json: @admin_super_highlight, status: :created, location: @admin_super_highlight }
       else
         format.html { render action: "new" }
@@ -59,8 +59,8 @@ class Admin::SuperHighlightsController < Admin::ApplicationController
     @admin_super_highlight = SuperHighlight.find(params[:id])
 
     respond_to do |format|
-      if @admin_super_highlight.update_attributes(params[:admin_super_highlight])
-        format.html { redirect_to @admin_super_highlight, notice: 'Super highlight was successfully updated.' }
+      if @admin_super_highlight.update_attributes(params[:super_highlight])
+        format.html { redirect_to [:admin,@admin_super_highlight], notice: 'Superdestaque atualizado com sucesso.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

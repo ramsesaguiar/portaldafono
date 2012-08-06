@@ -1,2 +1,2 @@
-class Doubt < ActiveRecord::Base
+﻿class Doubt < ActiveRecord::Base
 end

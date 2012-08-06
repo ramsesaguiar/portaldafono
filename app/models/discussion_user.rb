@@ -1,2 +1,2 @@
-class DiscussionUser < ActiveRecord::Base
+﻿class DiscussionUser < ActiveRecord::Base
 end

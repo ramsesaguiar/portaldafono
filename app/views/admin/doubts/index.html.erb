@@ -1,12 +1,12 @@
-<h1>Listing admin_doubts</h1>
+﻿<h1>Dúvidas</h1>
 
 <table>
   <tr>
-    <th>Usuario</th>
-    <th>Titulo</th>
+    <th>Usuário</th>
+    <th>Título</th>
     <th>Texto</th>
     <th>Status</th>
-    <th>Autor responsavel</th>
+    <th>Autor da dúvida</th>
     <th>Resposta</th>
     <th>Data resposta</th>
     <th></th>
@@ -23,13 +23,13 @@
     <td><%= admin_doubt.autor_responsavel_id %></td>
     <td><%= admin_doubt.resposta %></td>
     <td><%= admin_doubt.data_resposta %></td>
-    <td><%= link_to 'Show', admin_doubt %></td>
-    <td><%= link_to 'Edit', edit_admin_doubt_path(admin_doubt) %></td>
-    <td><%= link_to 'Destroy', admin_doubt, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Visualizar', [:admin,admin_doubt] %></td>
+    <td><%= link_to 'Editar', edit_admin_doubt_path(admin_doubt) %></td>
+    <td><%= link_to 'Excluir', [:admin,admin_doubt], confirm: 'Deseja realmente excluir?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Doubt', new_admin_doubt_path %>
+<%= link_to 'Nova dúvida', new_admin_doubt_path %>

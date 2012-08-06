@@ -1,13 +1,13 @@
-<h1>Listing admin_discussions</h1>
+﻿<h1>Debates</h1>
 
 <table>
   <tr>
     <th>Autor</th>
-    <th>Titulo</th>
+    <th>Título</th>
     <th>Subtitulo</th>
     <th>Texto</th>
-    <th>Data inicio</th>
-    <th>Data fim</th>
+    <th>Data do início</th>
+    <th>Data de finalização</th>
     <th>Status</th>
     <th></th>
     <th></th>
@@ -23,13 +23,13 @@
     <td><%= admin_discussion.data_inicio %></td>
     <td><%= admin_discussion.data_fim %></td>
     <td><%= admin_discussion.status %></td>
-    <td><%= link_to 'Show', admin_discussion %></td>
-    <td><%= link_to 'Edit', edit_admin_discussion_path(admin_discussion) %></td>
-    <td><%= link_to 'Destroy', admin_discussion, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Visualizar', [:admin,admin_discussion] %></td>
+    <td><%= link_to 'Editar', edit_admin_discussion_path(admin_discussion) %></td>
+    <td><%= link_to 'Excluir', [:admin,admin_discussion], confirm: 'Deseja realmente excluir?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Discussion', new_admin_discussion_path %>
+<%= link_to 'Novo debate', new_admin_discussion_path %>

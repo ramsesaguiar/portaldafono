@@ -1,4 +1,4 @@
-<%= form_for(@admin_super_highlight) do |f| %>
+﻿<%= form_for([:admin,@admin_super_highlight]) do |f| %>
   <% if @admin_super_highlight.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@admin_super_highlight.errors.count, "error") %> prohibited this admin_super_highlight from being saved:</h2>

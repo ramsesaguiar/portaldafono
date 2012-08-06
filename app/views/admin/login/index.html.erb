@@ -1,4 +1,4 @@
-<h1>Sistema de administracao - Portal da fono</h1>
+﻿<h1>Sistema de administração - Portal da fono</h1>
 
 <% if flash[:notice] %>
 	<p style="color: red; font-style: italic"><%= flash[:notice] %></p>
@@ -6,9 +6,9 @@
 
 <%= form_tag('/admin/login/do_login') do -%>
 	<%= label(:login, :email) %>
-	<%= text_field(:login, :email, :size => 20) %>
+	<%= text_field(:login, :email, :size => 35) %>
 	<%= label(:login, :senha) %>
-	<%= text_field(:login, :senha, :size => 20)  %>
-	<%= submit_tag 'Login' %>
+	<%= password_field(:login, :senha, :size => 35)  %>
+	<%= submit_tag 'Entrar' %>
  <% end -%>
 
