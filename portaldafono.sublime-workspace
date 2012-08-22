@@ -1,0 +1,251 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"templa",
+				"TemplateLayouts"
+			],
+			[
+				"Tem",
+				"TemplateLayouts"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Leonardo/Develop/Cards/app/views/cards/edit.html.erb",
+		"/C/Users/Leonardo/Develop/Cards/app/views/templates/layouts/_teste_front.html.erb",
+		"/C/Users/Leonardo/Develop/Cards/Gemfile",
+		"/C/Users/Leonardo/Develop/Cards/app/models/template.rb",
+		"/C/Users/Leonardo/Develop/Cards/db/seeds.rb",
+		"/C/Users/Leonardo/Develop/Cards/db/migrate/20120208162939_create_template_layouts.rb",
+		"/C/Users/Leonardo/Downloads/Minecraft Server/run.bat",
+		"/C/Users/Leonardo/Downloads/Minecraft Server/server.properties",
+		"/C/Users/Leonardo/Develop/Cards/app/controllers/cards_controller.rb",
+		"/C/Users/Leonardo/Develop/Cards/app/models/card.rb",
+		"/C/Users/Leonardo/Develop/Cards/app/models/layout.rb",
+		"/C/Users/Leonardo/Develop/Cards/app/models/template_layout.rb",
+		"/C/Users/Leonardo/Develop/Cards/app/models/user.rb",
+		"/C/Users/Leonardo/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Leonardo/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Leonardo/Develop/Cards/app/models/slot.rb",
+		"/C/Users/Leonardo/Develop/Cards/app/models/image.rb",
+		"/C/Users/Leonardo/Develop/Cards/app/models/purchase.rb",
+		"/C/Users/Leonardo/Develop/Cards/db/migrate/20120201171513_devise_create_users.rb",
+		"/C/Users/Leonardo/.ssh/id_rsa.pub",
+		"/C/Users/Leonardo/Develop/Cards/config/application.rb",
+		"/C/Users/Leonardo/Develop/Cards/app/views/templates/layouts/_teste.html.erb",
+		"/C/Users/Leonardo/Develop/Cards/db/migrate/20120208162939_create_layouts_templates.rb",
+		"/C/Users/Leonardo/Develop/Cards/db/migrate/20120201173442_create_images.rb",
+		"/C/Users/Leonardo/Develop/Cards/db/migrate/20120208162824_create_layouts.rb",
+		"/C/Users/Leonardo/Develop/Cards/db/migrate/20120201173035_create_slots.rb",
+		"/C/Users/Leonardo/Develop/Cards/db/migrate/20120201172845_create_templates.rb",
+		"/C/Users/Leonardo/Develop/Cards/app/views/templates/layouts/_teste_back.html.erb",
+		"/C/Users/Leonardo/Develop/Cards/app/views/cards/_form.html.erb",
+		"/C/Users/Leonardo/Develop/Cards/app/views/cards/index.html.erb",
+		"/C/Users/Leonardo/Develop/Cards/app/views/cards/_card.html.erb",
+		"/C/Users/Leonardo/Develop/Cards/app/views/cards/new.html.erb",
+		"/C/Users/Leonardo/Develop/Cards/app/controllers/images_controller.rb",
+		"/C/Users/Leonardo/AppData/Roaming/Sublime Text 2/Packages/User/Ruby.sublime-settings",
+		"/C/Users/Leonardo/AppData/Roaming/Sublime Text 2/Packages/Default/Base File.sublime-settings"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"seed",
+				"db/seeds.rb"
+			],
+			[
+				"gemf",
+				"Gemfile"
+			],
+			[
+				"teste",
+				"app/views/templates/layouts/_teste_front.html.erb"
+			],
+			[
+				"templatelayout",
+				"app/models/template_layout.rb"
+			],
+			[
+				"appli",
+				"config/application.rb"
+			],
+			[
+				"templa",
+				"app/models/template.rb"
+			],
+			[
+				"creat",
+				"db/migrate/20120208162939_create_layouts_templates.rb"
+			],
+			[
+				"createima",
+				"db/migrate/20120201173442_create_images.rb"
+			],
+			[
+				"createslo",
+				"db/migrate/20120201173035_create_slots.rb"
+			],
+			[
+				"createlay",
+				"db/migrate/20120208162824_create_layouts.rb"
+			],
+			[
+				"gemfile",
+				"Gemfile"
+			],
+			[
+				"creteslot",
+				"db/migrate/20120201173035_create_slots.rb"
+			],
+			[
+				"template",
+				"db/migrate/20120201172845_create_templates.rb"
+			],
+			[
+				"edit",
+				"app/views/cards/edit.html.erb"
+			],
+			[
+				"new",
+				"app/views/cards/new.html.erb"
+			],
+			[
+				"car",
+				"app/controllers/cards_controller.rb"
+			],
+			[
+				"form",
+				"app/views/cards/_form.html.erb"
+			],
+			[
+				"index",
+				"app/views/cards/index.html.erb"
+			],
+			[
+				"card",
+				"app/models/card.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 259.0,
+	"status_bar_visible": true
+}
