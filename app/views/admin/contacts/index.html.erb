@@ -1,28 +1,36 @@
 ﻿<h1>Fale conosco</h1>
-
-<table>
-  <tr>
-    <th>Nome</th>
-    <th>Email</th>
-    <th>Texto</th>
-    <th>Status</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @admin_contacts.each do |admin_contact| %>
-  <tr>
-    <td><%= admin_contact.nome %></td>
-    <td><%= admin_contact.email %></td>
-    <td><%= admin_contact.texto %></td>
-    <td><%= admin_contact.status %></td>
-    <td><%= link_to 'Visualizar', [:admin,admin_contact] %></td>
-    <td><%= link_to 'Editar', edit_admin_contact_path(admin_contact) %></td>
-    <td><%= link_to 'Excluir', [:admin,admin_contact], confirm: 'Deseja realmente excluir?', method: :delete %></td>
-  </tr>
+<% if @admin_contacts.present? %>
+  <table>
+    <tr>
+      <th> ID </th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Texto</th>
+      <th>Status</th>
+      <th> Data </th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  <% @admin_contacts.each do |admin_contact| %>
+    <tr>
+      <td><%= admin_contact.id %></td>
+      <td><%= admin_contact.nome %></td>
+      <td><%= admin_contact.email %></td>
+      <td><%= admin_contact.texto %></td>
+      <td><%= admin_contact.status %></td>
+      <td><%= admin_contact.created_at.strftime("%d/%m/%Y") %></td>
+      <td><%= link_to 'Visualizar', [:admin,admin_contact] %></td>
+      <td><%= link_to 'Editar', edit_admin_contact_path(admin_contact) %></td>
+      <td><%= link_to 'Excluir', [:admin,admin_contact], confirm: 'Deseja realmente excluir?', method: :delete %></td>
+    </tr>
+  <% end %>
+  </table>
+<% else %>
+  <div> Nenhum registro encontrado </div>
 <% end %>
-</table>
+
+
 
 <br />
 

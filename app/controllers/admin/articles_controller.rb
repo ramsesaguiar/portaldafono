@@ -2,7 +2,8 @@
   # GET /admin/articles
   # GET /admin/articles.json
   def index
-    @admin_articles = Article.all
+    #@admin_articles = Article.all
+    @admin_articles = Article.find(:all, :include => :author)
     
     respond_to do |format|
       format.html # index.html.erb
@@ -34,7 +35,7 @@
 
   # GET /admin/articles/1/edit
   def edit
-    @admin_article = Article.find(params[:id])
+    @admin_article = Article.find(params[:id], :include => :author) 
   end
 
   # POST /admin/articles

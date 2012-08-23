@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th> ID </th>
     <th>Título</th>
     <th>Subtitulo</th>
     <th>Autor</th>
@@ -15,12 +16,13 @@
 
 <% @admin_news.each do |admin_news| %>
   <tr>
+    <td><%= admin_news.id %></td>
     <td><%= admin_news.titulo %></td>
     <td><%= admin_news.subtitulo %></td>
-    <td><%= admin_news.autor_id %></td>
+    <td><%= admin_news.author.nome %></td>
     <td><%= admin_news.texto %></td>
     <td><%= admin_news.status %></td>
-    <td><%= admin_news.data %></td>
+    <td><%= admin_news.data.strftime("%d/%m/%Y") %></td>
     <td><%= link_to 'Visualizar', [:admin, admin_news] %></td>
     <td><%= link_to 'Editar', edit_admin_news_path(admin_news) %></td>
     <td><%= link_to 'Excluir', [:admin, admin_news], confirm: 'Deseja realmente excluir?', method: :delete %></td>

@@ -2,12 +2,11 @@
 
 <table>
   <tr>
-    <th>Autor</th>
+    <th>ID</th>
+    <th>Data</th>
     <th>Título</th>
     <th>Subtitulo</th>
     <th>Texto</th>
-    <th>Palavras-chave</th>
-    <th>Data</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,12 +14,11 @@
 
 <% @admin_articles.each do |admin_article| %>
   <tr>
-    <td><%= admin_article.autor_id %></td>
+    <td><%= admin_article.id %></td>
+    <td><%= admin_article.data.strftime("%d/%m/%Y") %></td>
     <td><%= admin_article.titulo %></td>
     <td><%= admin_article.subtitulo %></td>
     <td><%= admin_article.texto %></td>
-    <td><%= admin_article.palavras_chave %></td>
-    <td><%= admin_article.data %></td>
     <td><%= link_to 'Visualizar', [:admin, admin_article] %></td>
     <td><%= link_to 'Editar', edit_admin_article_path(admin_article) %></td>
     <td><%= link_to 'Excluir', [:admin, admin_article], confirm: 'Deseja realmente excluir?', method: :delete %></td>

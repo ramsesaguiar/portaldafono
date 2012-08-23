@@ -12,8 +12,9 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :autor_id %><br />
-    <%= f.number_field :autor_id %>
+    <%= f.label :author_id %><br /> 
+    <%= select("discussion", "author_id", Author.all.collect {|p| [ p.nome, p.id ] }, 
+    {:selected => @admin_discussion.author_id} ,  {:prompt => 'Selecione um autor'}) %>
   </div>
   <div class="field">
     <%= f.label :titulo %><br />

@@ -1,7 +1,7 @@
 class CreateDiscussions < ActiveRecord::Migration
   def change
     create_table :discussions do |t|
-      t.integer :autor_id
+      t.integer :author_id
       t.string :titulo
       t.string :subtitulo
       t.text :texto

@@ -12,8 +12,9 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :autor_id %><br />
-    <%= f.number_field :autor_id %>
+    <%= f.label :author_id %><br />
+    <%= select("article", "author_id", Author.all.collect {|p| [ p.nome, p.id ] }, 
+     {:selected => @admin_article.author_id}, {:prompt => 'Selecione um autor'}) %>
   </div>
   <div class="field">
     <%= f.label :titulo %><br />
@@ -36,6 +37,6 @@
     <%= f.datetime_select :data %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Salvar" %>
   </div>
 <% end %>

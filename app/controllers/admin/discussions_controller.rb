@@ -2,7 +2,8 @@
   # GET /admin/discussions
   # GET /admin/discussions.json
   def index
-    @admin_discussions = Discussion.all
+    #@admin_discussions = Discussion.all
+    @admin_discussions = Discussion.find(:all, :include => :author)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -34,7 +35,7 @@
 
   # GET /admin/discussions/1/edit
   def edit
-    @admin_discussion = Discussion.find(params[:id])
+    @admin_discussion = Discussion.find(params[:id], :include => :author) 
   end
 
   # POST /admin/discussions

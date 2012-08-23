@@ -3,21 +3,21 @@ Portaldafono::Application.routes.draw do
   root :to=> "index#index"
   
  namespace :admin do  
-	root :to=> "index#index"
-	match "login" => "login#index"
-	match "login/do_login" => "login#do_login"
-	match "login/logout" => "login#logout"
+  root :to=> "index#index"
+  match "login" => "login#index"
+  match "login/do_login" => "login#do_login"
+  match "login/logout" => "login#logout"
  end
 
 namespace :admin do   
-	resources :contacts, :path => "faleconosco", :path_names => { :new => :inserir, :edit => :alterar } 
-	resources :super_highlights, :path => "superdestaques", :path_names => { :new => :inserir, :edit => :alterar } 
-	resources :doubts, :path => "duvidas", :path_names => { :new => :inserir, :edit => :alterar }
-	resources :news, :path => "noticias", :path_names => { :new => :inserir, :edit => :alterar }
-	resources :discussions, :path => "debates", :path_names => { :new => :inserir, :edit => :alterar }
-	resources :articles, :path => "artigos", :path_names => { :new => :inserir, :edit => :alterar }
-	resources :authors, :path => "autores", :path_names => { :new => :inserir, :edit => :alterar } 
-	resources :users, :path => "usuarios", :path_names => { :new => :inserir, :edit => :alterar }
+  resources :contacts, :path => "faleconosco", :path_names => { :new => :inserir, :edit => :alterar } 
+  resources :super_highlights, :path => "superdestaques", :path_names => { :new => :inserir, :edit => :alterar } 
+  resources :doubts, :path => "duvidas", :path_names => { :new => :inserir, :edit => :alterar }
+  resources :news, :path => "noticias", :path_names => { :new => :inserir, :edit => :alterar }
+  resources :discussions, :path => "debates", :path_names => { :new => :inserir, :edit => :alterar }
+  resources :articles, :path => "artigos", :path_names => { :new => :inserir, :edit => :alterar }
+  resources :authors, :path => "autores", :path_names => { :new => :inserir, :edit => :alterar } 
+  resources :users, :path => "usuarios", :path_names => { :new => :inserir, :edit => :alterar }
 end
 
 resources :news, :path => "noticias", :path_names => { :new => :inserir, :edit => :alterar }

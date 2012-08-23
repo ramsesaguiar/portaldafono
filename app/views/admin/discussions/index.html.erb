@@ -2,13 +2,12 @@
 
 <table>
   <tr>
-    <th>Autor</th>
+    <th>ID</th>
     <th>Título</th>
-    <th>Subtitulo</th>
-    <th>Texto</th>
     <th>Data do início</th>
     <th>Data de finalização</th>
     <th>Status</th>
+    <th>Autor</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,13 +15,12 @@
 
 <% @admin_discussions.each do |admin_discussion| %>
   <tr>
-    <td><%= admin_discussion.autor_id %></td>
+    <td><%= admin_discussion.id %></td>
     <td><%= admin_discussion.titulo %></td>
-    <td><%= admin_discussion.subtitulo %></td>
-    <td><%= admin_discussion.texto %></td>
-    <td><%= admin_discussion.data_inicio %></td>
-    <td><%= admin_discussion.data_fim %></td>
+    <td><%= admin_discussion.data_inicio.strftime("%d/%m/%Y") %></td>
+    <td><%= admin_discussion.data_fim.strftime("%d/%m/%Y") %></td>
     <td><%= admin_discussion.status %></td>
+    <td><%= admin_discussion.author.nome %></td>
     <td><%= link_to 'Visualizar', [:admin,admin_discussion] %></td>
     <td><%= link_to 'Editar', edit_admin_discussion_path(admin_discussion) %></td>
     <td><%= link_to 'Excluir', [:admin,admin_discussion], confirm: 'Deseja realmente excluir?', method: :delete %></td>

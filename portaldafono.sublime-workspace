@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"au",
+				"author_id"
+			],
+			[
 				"templa",
 				"TemplateLayouts"
 			],
@@ -40,6 +44,38 @@
 	},
 	"file_history":
 	[
+		"/C/wwwrails/portaldafono/app/views/admin/news/index.html.erb",
+		"/C/wwwrails/portaldafono/app/views/admin/articles/index.html.erb",
+		"/C/wwwrails/portaldafono/app/views/admin/contacts/index.html.erb",
+		"/C/wwwrails/portaldafono/app/views/admin/discussions/index.html.erb",
+		"/C/wwwrails/portaldafono/app/controllers/admin/articles_controller.rb",
+		"/C/wwwrails/portaldafono/app/controllers/admin/discussions_controller.rb",
+		"/C/wwwrails/portaldafono/app/controllers/admin/news_controller.rb",
+		"/C/wwwrails/portaldafono/app/views/admin/discussions/_form.html.erb",
+		"/C/wwwrails/portaldafono/app/views/admin/articles/_form.html.erb",
+		"/C/wwwrails/portaldafono/app/views/admin/news/_form.html.erb",
+		"/C/wwwrails/portaldafono/app/views/admin/discussions/show.html.erb",
+		"/C/wwwrails/portaldafono/app/views/admin/articles/show.html.erb",
+		"/C/wwwrails/portaldafono/app/models/discussion.rb",
+		"/C/wwwrails/portaldafono/app/models/article.rb",
+		"/C/wwwrails/portaldafono/app/models/news.rb",
+		"/C/wwwrails/portaldafono/app/views/admin/news/show.html.erb",
+		"/C/wwwrails/portaldafono/db/migrate/20120712014159_create_news.rb",
+		"/C/wwwrails/portaldafono/app/views/admin/discussions/new.html.erb",
+		"/C/wwwrails/portaldafono/app/controllers/admin/doubts_controller.rb",
+		"/C/wwwrails/portaldafono/db/migrate/20120712013303_create_discussions.rb",
+		"/C/wwwrails/portaldafono/app/views/articles/show.html.erb",
+		"/C/wwwrails/portaldafono/db/migrate/20120712012805_create_authors.rb",
+		"/C/wwwrails/portaldafono/db/migrate/20120712013021_create_articles.rb",
+		"/C/wwwrails/portaldafono/config/routes.rb",
+		"/C/wwwrails/portaldafono/app/models/author.rb",
+		"/C/wwwrails/portaldafono/app/views/admin/articles/new.html.erb",
+		"/C/wwwrails/portaldafono/config/environments/development.rb",
+		"/C/wwwrails/portaldafono/config/environment.rb",
+		"/C/wwwrails/portaldafono/config/initializers/secret_token.rb",
+		"/C/wwwrails/portaldafono/app/models/user.rb",
+		"/C/wwwrails/portaldafono/app/models/doubt.rb",
+		"/C/wwwrails/portaldafono/config/application.rb",
 		"/C/Users/Leonardo/Develop/Cards/app/views/cards/edit.html.erb",
 		"/C/Users/Leonardo/Develop/Cards/app/views/templates/layouts/_teste_front.html.erb",
 		"/C/Users/Leonardo/Develop/Cards/Gemfile",
@@ -78,7 +114,7 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -155,6 +191,174 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"views/admin/con",
+				"app/views/admin/contacts/index.html.erb"
+			],
+			[
+				"view/admin/articl",
+				"app/views/admin/articles/index.html.erb"
+			],
+			[
+				"views/admin/news/ind",
+				"app/views/admin/news/index.html.erb"
+			],
+			[
+				"views/admin/article",
+				"app/views/admin/articles/index.html.erb"
+			],
+			[
+				"views/admin/conta",
+				"app/views/admin/contacts/index.html.erb"
+			],
+			[
+				"views/admin/articl",
+				"app/views/admin/articles/index.html.erb"
+			],
+			[
+				"views/admin/discu",
+				"app/views/admin/discussions/index.html.erb"
+			],
+			[
+				"views/admin/new",
+				"app/views/admin/news/index.html.erb"
+			],
+			[
+				"controllers/admin/n",
+				"app/controllers/admin/news_controller.rb"
+			],
+			[
+				"views/admin/news",
+				"app/views/admin/news/show.html.erb"
+			],
+			[
+				"model/new",
+				"app/models/news.rb"
+			],
+			[
+				"model/ar",
+				"app/models/article.rb"
+			],
+			[
+				"model/dis",
+				"app/models/discussion.rb"
+			],
+			[
+				"views/admin/di",
+				"app/views/admin/discussions/index.html.erb"
+			],
+			[
+				"views/admin/art",
+				"app/views/admin/articles/show.html.erb"
+			],
+			[
+				"views/admin/dis",
+				"app/views/admin/discussions/show.html.erb"
+			],
+			[
+				"controllers/admin/di",
+				"app/controllers/admin/discussions_controller.rb"
+			],
+			[
+				"controller/admin/ar",
+				"app/controllers/admin/articles_controller.rb"
+			],
+			[
+				"controller/admin/dou",
+				"app/controllers/admin/doubts_controller.rb"
+			],
+			[
+				"article/",
+				"app/views/admin/articles/show.html.erb"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"controler/admin/ar",
+				"app/controllers/admin/articles_controller.rb"
+			],
+			[
+				"ar",
+				"app/models/article.rb"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"articl",
+				"app/models/article.rb"
+			],
+			[
+				"envir",
+				"config/environments/development.rb"
+			],
+			[
+				"secr",
+				"config/initializers/secret_token.rb"
+			],
+			[
+				"env",
+				"config/environment.rb"
+			],
+			[
+				"model/art",
+				"app/models/article.rb"
+			],
+			[
+				"views/admin/articles",
+				"app/views/admin/articles/index.html.erb"
+			],
+			[
+				"viewsadminarticle",
+				"app/views/admin/articles/new.html.erb"
+			],
+			[
+				"controller/admin/arti",
+				"app/controllers/admin/articles_controller.rb"
+			],
+			[
+				"views/admin/arti",
+				"app/views/admin/articles/_form.html.erb"
+			],
+			[
+				"autho",
+				"app/models/author.rb"
+			],
+			[
+				"use",
+				"app/models/user.rb"
+			],
+			[
+				"news",
+				"app/models/news.rb"
+			],
+			[
+				"usr",
+				"app/models/user.rb"
+			],
+			[
+				"doub",
+				"app/models/doubt.rb"
+			],
+			[
+				"disc",
+				"app/models/discussion.rb"
+			],
+			[
+				"auth",
+				"app/models/author.rb"
+			],
+			[
+				"article",
+				"app/models/article.rb"
+			],
+			[
+				"apli",
+				"config/application.rb"
+			],
 			[
 				"seed",
 				"db/seeds.rb"
@@ -246,6 +450,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 259.0,
+	"side_bar_width": 226.0,
 	"status_bar_visible": true
 }

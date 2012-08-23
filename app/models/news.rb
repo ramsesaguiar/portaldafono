@@ -1,4 +1,3 @@
 ﻿class News < ActiveRecord::Base
-  belongs_to :authors
-	
+  belongs_to :author
 end

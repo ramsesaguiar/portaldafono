@@ -1,3 +1,3 @@
 ﻿class Article < ActiveRecord::Base
-  belongs_to :authors
+  belongs_to :author
 end
