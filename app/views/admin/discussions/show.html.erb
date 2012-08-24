@@ -22,12 +22,12 @@
 
 <p>
   <b>Data inicio:</b>
-  <%= @admin_discussion.data_inicio %>
+  <%= @admin_discussion.data_inicio.strftime("%d/%m/%Y") %>
 </p>
 
 <p>
   <b>Data fim:</b>
-  <%= @admin_discussion.data_fim %>
+  <%= @admin_discussion.data_fim.strftime("%d/%m/%Y") %>
 </p>
 
 <p>

@@ -2,7 +2,7 @@
   # GET /admin/doubts
   # GET /admin/doubts.json
   def index
-    @admin_doubts = Doubt.all
+    @admin_doubts = Doubt.includes(:author, :user).all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@
   # GET /admin/doubts/1
   # GET /admin/doubts/1.json
   def show
-    @admin_doubt = Doubt.find(params[:id])
+    @admin_doubt = Doubt.includes(:author, :user).find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -34,7 +34,7 @@
 
   # GET /admin/doubts/1/edit
   def edit
-    @admin_doubt = Doubt.find(params[:id])
+    @admin_doubt = Doubt.includes(:author, :user).find(params[:id])
   end
 
   # POST /admin/doubts

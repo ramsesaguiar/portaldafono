@@ -1,30 +1,32 @@
 ﻿<h1>Artigos</h1>
-
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Data</th>
-    <th>Título</th>
-    <th>Subtitulo</th>
-    <th>Texto</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @admin_articles.each do |admin_article| %>
-  <tr>
-    <td><%= admin_article.id %></td>
-    <td><%= admin_article.data.strftime("%d/%m/%Y") %></td>
-    <td><%= admin_article.titulo %></td>
-    <td><%= admin_article.subtitulo %></td>
-    <td><%= admin_article.texto %></td>
-    <td><%= link_to 'Visualizar', [:admin, admin_article] %></td>
-    <td><%= link_to 'Editar', edit_admin_article_path(admin_article) %></td>
-    <td><%= link_to 'Excluir', [:admin, admin_article], confirm: 'Deseja realmente excluir?', method: :delete %></td>
-  </tr>
-<% end %>
+<% if @admin_articles.present? %>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Data</th>
+        <th>Título</th>
+        <th>Subtitulo</th>
+        <th>Texto</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    <% @admin_articles.each do |admin_article| %>
+      <tr>
+        <td><%= admin_article.id %></td>
+        <td><%= admin_article.created_at.strftime("%d/%m/%Y") %></td>
+        <td><%= admin_article.titulo %></td>
+        <td><%= admin_article.subtitulo %></td>
+        <td><%= admin_article.texto %></td>
+        <td><%= link_to 'Visualizar', [:admin, admin_article] %></td>
+        <td><%= link_to 'Editar', edit_admin_article_path(admin_article) %></td>
+        <td><%= link_to 'Excluir', [:admin, admin_article], confirm: 'Deseja realmente excluir?', method: :delete %></td>
+      </tr>
+    <% end %>
 </table>
+<% else %>
+  <div> Nenhum registro encontrado </div>
+<% end %>
 
 <br />
 

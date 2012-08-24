@@ -1,7 +1,7 @@
 ﻿<%= form_for([:admin,@admin_doubt]) do |f| %>
   <% if @admin_doubt.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@admin_doubt.errors.count, "error") %> prohibited this admin_doubt from being saved:</h2>
+      <h2><%= pluralize(@admin_doubt.errors.count, "erro") %> encontrado(s):</h2>
 
       <ul>
       <% @admin_doubt.errors.full_messages.each do |msg| %>
@@ -11,10 +11,6 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :usuario_id %><br />
-    <%= f.number_field :usuario_id %>
-  </div>
   <div class="field">
     <%= f.label :titulo %><br />
     <%= f.text_field :titulo %>
@@ -28,8 +24,7 @@
     <%= f.number_field :status %>
   </div>
   <div class="field">
-    <%= f.label :autor_responsavel_id %><br />
-    <%= f.number_field :autor_responsavel_id %>
+     <%= select("doubt", "autor_responsavel_id", Author.all.collect {|p| [ p.nome, p.id ]}, :selected => @admin_doubt.autor_responsavel_id,  :prompt => 'Selecione um autor') %>
   </div>
   <div class="field">
     <%= f.label :resposta %><br />
@@ -40,6 +35,6 @@
     <%= f.datetime_select :data_resposta %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+      <%= f.submit "Salvar" %>
   </div>
 <% end %>

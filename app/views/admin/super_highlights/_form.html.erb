@@ -1,7 +1,7 @@
 ﻿<%= form_for([:admin,@admin_super_highlight]) do |f| %>
   <% if @admin_super_highlight.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@admin_super_highlight.errors.count, "error") %> prohibited this admin_super_highlight from being saved:</h2>
+      <h2><%= pluralize(@admin_super_highlight.errors.count, "erro") %> encontrado(s):</h2>
 
       <ul>
       <% @admin_super_highlight.errors.full_messages.each do |msg| %>
@@ -40,6 +40,6 @@
     <%= f.number_field :posicao %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Salvar" %>
   </div>
 <% end %>

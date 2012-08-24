@@ -1,7 +1,7 @@
 ﻿<%= form_for( [:admin, @admin_news] ) do |f| %>
   <% if @admin_news.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@admin_news.errors.count, "error") %> prohibited this admin_news from being saved:</h2>
+      <h2><%= pluralize(@admin_news.errors.count, "erro") %> encontrado(s):</h2>
 
       <ul>
       <% @admin_news.errors.full_messages.each do |msg| %>
@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :titulo %><br />
+    <%= f.label :titulo %> * <br />
     <%= f.text_field :titulo %>
   </div>
   <div class="field">
@@ -20,9 +20,8 @@
     <%= f.text_field :subtitulo %>
   </div>
   <div class="field">
-    <%= f.label :autor_id %><br />
-     <%= select("news", "author_id", Author.all.collect {|p| [ p.nome, p.id ] }, 
-     {:selected => @admin_news.author_id}, {:prompt => 'Selecione um autor'}) %>
+    <%= f.label :autor_id %> *<br />
+    <%= select("news", "author_id", Author.all.collect {|p| [ p.nome, p.id ]}, :selected => @admin_news.author_id,  :prompt => 'Selecione um autor') %>
   </div>
   <div class="field">
     <%= f.label :texto %><br />
@@ -37,6 +36,6 @@
     <%= f.date_select :data %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+      <%= f.submit "Salvar" %>
   </div>
 <% end %>

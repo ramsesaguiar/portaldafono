@@ -10,24 +10,27 @@
       </ul>
     </div>
   <% end %>
-
+  
   <div class="field">
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
+    <%= "Id: " + @admin_contact.id.to_s%>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= "Data: " + @admin_contact.created_at.strftime("%d/%m/%Y") %>
   </div>
   <div class="field">
-    <%= f.label :texto %><br />
-    <%= f.text_area :texto %>
+    <%= "Nome: " + @admin_contact.nome %>
+  </div>
+  <div class="field">
+    <%= "Email: " + @admin_contact.email %>
+  </div>
+  <div class="field">
+    <%= "Texto: " + @admin_contact.texto %>
   </div>
   <div class="field">
     <%= f.label :status %><br />
     <%= f.number_field :status %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+      <%= f.submit "Salvar" %>
   </div>
 <% end %>

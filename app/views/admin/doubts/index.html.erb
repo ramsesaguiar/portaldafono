@@ -1,13 +1,12 @@
 ﻿<h1>Dúvidas</h1>
-
+<% if @admin_doubts.present? %>
 <table>
   <tr>
-    <th>Usuário</th>
+    <th>ID</th>
+    <th>Respondido por</th>
     <th>Título</th>
-    <th>Texto</th>
     <th>Status</th>
     <th>Autor da dúvida</th>
-    <th>Resposta</th>
     <th>Data resposta</th>
     <th></th>
     <th></th>
@@ -16,20 +15,18 @@
 
 <% @admin_doubts.each do |admin_doubt| %>
   <tr>
-    <td><%= admin_doubt.usuario_id %></td>
+    <td><%= admin_doubt.id %></td>
+    <td><%= admin_doubt.user.nome  %></td>
     <td><%= admin_doubt.titulo %></td>
-    <td><%= admin_doubt.texto %></td>
     <td><%= admin_doubt.status %></td>
-    <td><%= admin_doubt.autor_responsavel_id %></td>
-    <td><%= admin_doubt.resposta %></td>
-    <td><%= admin_doubt.data_resposta %></td>
+    <td><%= admin_doubt.author.nome %></td>
+    <td><%= admin_doubt.data_resposta.strftime("%d/%m/%Y") %></td>
     <td><%= link_to 'Visualizar', [:admin,admin_doubt] %></td>
     <td><%= link_to 'Editar', edit_admin_doubt_path(admin_doubt) %></td>
     <td><%= link_to 'Excluir', [:admin,admin_doubt], confirm: 'Deseja realmente excluir?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'Nova dúvida', new_admin_doubt_path %>
+<% else %>
+  <div> Nenhum registro encontrado </div>
+<% end %>
