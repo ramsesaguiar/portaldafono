@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :status %><br />
-    <%= f.number_field :status %>
+    <%= select("doubt", "status",  hash_to_status , :selected => @admin_doubt.status,  :prompt => 'Selecione um status') %>
   </div>
   <div class="field">
      <%= select("doubt", "autor_responsavel_id", Author.all.collect {|p| [ p.nome, p.id ]}, :selected => @admin_doubt.autor_responsavel_id,  :prompt => 'Selecione um autor') %>

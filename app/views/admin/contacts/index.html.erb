@@ -18,7 +18,7 @@
         <td><%= admin_contact.nome %></td>
         <td><%= admin_contact.email %></td>
         <td><%= admin_contact.texto %></td>
-        <td><%= admin_contact.status %></td>
+        <td><%= status_to_string admin_contact.status %></td>
         <td><%= admin_contact.created_at.strftime("%d/%m/%Y") %></td>
         <td><%= link_to 'Visualizar', [:admin,admin_contact] %></td>
         <td><%= link_to 'Editar', edit_admin_contact_path(admin_contact) %></td>

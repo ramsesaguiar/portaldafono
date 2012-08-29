@@ -18,7 +18,7 @@
     <td><%= admin_doubt.id %></td>
     <td><%= admin_doubt.user.nome  %></td>
     <td><%= admin_doubt.titulo %></td>
-    <td><%= admin_doubt.status %></td>
+    <td><%= status_to_string admin_doubt.status %></td>
     <td><%= admin_doubt.author.nome %></td>
     <td><%= admin_doubt.data_resposta.strftime("%d/%m/%Y") %></td>
     <td><%= link_to 'Visualizar', [:admin,admin_doubt] %></td>

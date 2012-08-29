@@ -3,8 +3,7 @@
   before_filter :instantiate_controller_and_action_names
   layout "admin_application"
   protect_from_forgery
-	
-	
+
 	protected
 	def authenticate
 		unless session[:current_user_id]
