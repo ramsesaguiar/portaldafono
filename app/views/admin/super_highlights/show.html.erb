@@ -39,6 +39,10 @@
   <%= @admin_super_highlight.posicao %>
 </p>
 
+<p>
+    <%= image_tag @admin_super_highlight.image.url(:thumb) %>
+</p>  
+
 
 <%= link_to 'Editar', edit_admin_super_highlight_path(@admin_super_highlight) %> |
 <%= link_to 'Voltar', admin_super_highlights_path %>

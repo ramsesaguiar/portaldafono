@@ -49,6 +49,8 @@ config.action_mailer.smtp_settings = {
   :password => 'dharana270689'
 }
   
+
+Paperclip.options[:command_path] = "/usr/local/bin/"
   
   
   

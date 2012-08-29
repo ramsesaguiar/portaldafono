@@ -1,4 +1,4 @@
-﻿<%= form_for([:admin,@admin_super_highlight]) do |f| %>
+﻿<%= form_for [:admin,@admin_super_highlight] , :html => {:multipart=>true} do |f| %>
   <% if @admin_super_highlight.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@admin_super_highlight.errors.count, "erro") %> encontrado(s):</h2>
@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :status %><br />
-    <%= f.number_field :status %>
+   <%= select("super_highlight", "status",  hash_to_status , :selected => @admin_super_highlight.status,  :prompt => 'Selecione um status') %>
   </div>
   <div class="field">
     <%= f.label :data_ini %><br />
@@ -38,6 +38,10 @@
   <div class="field">
     <%= f.label :posicao %><br />
     <%= f.number_field :posicao %>
+  </div>
+  <div class="field">
+    <%= f.label "Imagem" %> *<br />
+    <%= f.file_field :image %>
   </div>
   <div class="actions">
     <%= f.submit "Salvar" %>

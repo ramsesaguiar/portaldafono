@@ -1,6 +1,11 @@
 ﻿<p id="notice"><%= notice %></p>
 
 <p>
+  <b>ID:</b>
+  <%= @admin_article.id %>
+</p>
+
+<p>
   <b>Autor:</b>
   <%= @admin_article.author.nome %>
 </p>
@@ -29,6 +34,10 @@
   <b>Data:</b>
   <%= @admin_article.created_at.strftime("%d/%m/%Y") %>
 </p>
+
+<p>
+    <%= image_tag @admin_article.image.url(:thumb) %>
+</p>  
 
 
 <%= link_to 'Editar', edit_admin_article_path(@admin_article) %> |

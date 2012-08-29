@@ -1,7 +1,7 @@
-﻿<%= form_for(@admin_author) do |f| %>
+﻿<%= form_for [:admin, @admin_author] , :html => {:multipart=>true} do |f| %>
   <% if @admin_author.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@admin_author.errors.count, "error") %> prohibited this admin_author from being saved:</h2>
+      <h2><%= pluralize(@admin_author.errors.count, "erro") %> encontrado(s):</h2>
 
       <ul>
       <% @admin_author.errors.full_messages.each do |msg| %>
@@ -26,6 +26,10 @@
   <div class="field">
     <%= f.label :bibiografia %><br />
     <%= f.text_area :bibiografia %>
+  </div>
+  <div class="field">
+    <%= f.label "Imagem" %> *<br />
+    <%= f.file_field :image %>
   </div>
   <div class="actions">
     <%= f.submit %>

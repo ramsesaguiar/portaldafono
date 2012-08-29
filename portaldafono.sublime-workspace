@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"Re",
+				"Reprovado"
+			],
+			[
+				"stats",
+				"stats"
+			],
+			[
 				"au",
 				"author_id"
 			],
@@ -45,35 +53,43 @@
 	"file_history":
 	[
 		"/C/wwwrails/portaldafono/app/views/admin/news/_form.html.erb",
-		"/C/wwwrails/portaldafono/app/models/super_highlight.rb",
-		"/C/wwwrails/portaldafono/app/models/article.rb",
-		"/C/wwwrails/portaldafono/app/views/admin/super_highlights/index.html.erb",
-		"/C/wwwrails/portaldafono/app/views/admin/articles/index.html.erb",
-		"/C/wwwrails/portaldafono/app/views/admin/super_highlights/show.html.erb",
 		"/C/wwwrails/portaldafono/app/views/admin/super_highlights/_form.html.erb",
 		"/C/wwwrails/portaldafono/app/views/admin/articles/_form.html.erb",
-		"/C/wwwrails/portaldafono/app/views/admin/news/new.html.erb",
+		"/C/wwwrails/portaldafono/app/views/admin/articles/show.html.erb",
+		"/C/wwwrails/portaldafono/app/models/article.rb",
+		"/C/wwwrails/portaldafono/app/views/admin/super_highlights/show.html.erb",
+		"/C/wwwrails/portaldafono/app/models/author.rb",
+		"/C/wwwrails/portaldafono/app/views/admin/authors/_form.html.erb",
+		"/C/wwwrails/portaldafono/app/views/admin/authors/show.html.erb",
+		"/C/wwwrails/portaldafono/app/models/super_highlight.rb",
+		"/C/wwwrails/portaldafono/app/views/admin/news/show.html.erb",
+		"/C/wwwrails/portaldafono/app/models/news.rb",
+		"/C/wwwrails/portaldafono/app/views/admin/articles/index.html.erb",
+		"/C/wwwrails/portaldafono/config/environments/development.rb",
+		"/C/wwwrails/portaldafono/Gemfile",
+		"/C/wwwrails/portaldafono/app/controllers/admin/application_controller.rb",
+		"/C/wwwrails/portaldafono/app/helpers/admin/application_helper.rb",
+		"/C/wwwrails/portaldafono/app/views/admin/discussions/_form.html.erb",
+		"/C/wwwrails/portaldafono/app/views/admin/discussions/show.html.erb",
+		"/C/wwwrails/portaldafono/app/views/admin/news/index.html.erb",
+		"/C/wwwrails/portaldafono/app/views/admin/contacts/index.html.erb",
+		"/C/wwwrails/portaldafono/app/views/admin/doubts/_form.html.erb",
+		"/C/wwwrails/portaldafono/app/views/admin/doubts/index.html.erb",
+		"/C/wwwrails/portaldafono/app/views/admin/doubts/show.html.erb",
+		"/C/wwwrails/portaldafono/app/views/admin/discussions/index.html.erb",
 		"/C/wwwrails/portaldafono/app/views/admin/contacts/_form.html.erb",
 		"/C/wwwrails/portaldafono/app/views/admin/contacts/show.html.erb",
-		"/C/wwwrails/portaldafono/app/views/admin/discussions/_form.html.erb",
-		"/C/wwwrails/portaldafono/app/views/admin/articles/show.html.erb",
-		"/C/wwwrails/portaldafono/app/views/admin/doubts/index.html.erb",
-		"/C/wwwrails/portaldafono/app/models/author.rb",
+		"/C/wwwrails/portaldafono/app/controllers/admin/discussions_controller.rb",
+		"/C/wwwrails/portaldafono/app/helpers/application_helper.rb",
+		"/C/wwwrails/portaldafono/app/controllers/admin/contacts_controller.rb",
+		"/C/wwwrails/portaldafono/app/views/admin/super_highlights/index.html.erb",
+		"/C/wwwrails/portaldafono/app/views/admin/news/new.html.erb",
 		"/C/wwwrails/portaldafono/app/controllers/admin/articles_controller.rb",
 		"/C/wwwrails/portaldafono/app/controllers/admin/doubts_controller.rb",
 		"/C/wwwrails/portaldafono/app/models/doubt.rb",
-		"/C/wwwrails/portaldafono/app/views/admin/doubts/show.html.erb",
-		"/C/wwwrails/portaldafono/app/models/news.rb",
 		"/C/wwwrails/portaldafono/app/models/discussion.rb",
-		"/C/wwwrails/portaldafono/app/views/admin/doubts/_form.html.erb",
-		"/C/wwwrails/portaldafono/app/views/admin/discussions/show.html.erb",
 		"/C/wwwrails/portaldafono/db/migrate/20120712013021_create_articles.rb",
-		"/C/wwwrails/portaldafono/app/views/admin/contacts/index.html.erb",
-		"/C/wwwrails/portaldafono/app/views/admin/discussions/index.html.erb",
-		"/C/wwwrails/portaldafono/app/views/admin/news/index.html.erb",
-		"/C/wwwrails/portaldafono/app/controllers/admin/discussions_controller.rb",
 		"/C/wwwrails/portaldafono/app/controllers/admin/news_controller.rb",
-		"/C/wwwrails/portaldafono/app/views/admin/news/show.html.erb",
 		"/C/wwwrails/portaldafono/db/migrate/20120712014159_create_news.rb",
 		"/C/wwwrails/portaldafono/app/views/admin/discussions/new.html.erb",
 		"/C/wwwrails/portaldafono/db/migrate/20120712013303_create_discussions.rb",
@@ -81,7 +97,6 @@
 		"/C/wwwrails/portaldafono/db/migrate/20120712012805_create_authors.rb",
 		"/C/wwwrails/portaldafono/config/routes.rb",
 		"/C/wwwrails/portaldafono/app/views/admin/articles/new.html.erb",
-		"/C/wwwrails/portaldafono/config/environments/development.rb",
 		"/C/wwwrails/portaldafono/config/environment.rb",
 		"/C/wwwrails/portaldafono/config/initializers/secret_token.rb",
 		"/C/wwwrails/portaldafono/app/models/user.rb",
@@ -202,16 +217,132 @@
 		"selected_items":
 		[
 			[
+				"views/admin/news",
+				"app/views/admin/news/_form.html.erb"
+			],
+			[
+				"views/super",
+				"app/views/admin/super_highlights/_form.html.erb"
+			],
+			[
+				"views/author/fo",
+				"app/views/admin/authors/_form.html.erb"
+			],
+			[
+				"model/aut",
+				"app/models/author.rb"
+			],
+			[
+				"views/admin/author/",
+				"app/views/admin/authors/show.html.erb"
+			],
+			[
+				"views/admin/sup",
+				"app/views/admin/super_highlights/show.html.erb"
+			],
+			[
+				"model/sup",
+				"app/models/super_highlight.rb"
+			],
+			[
+				"views/admin/news/show",
+				"app/views/admin/news/show.html.erb"
+			],
+			[
+				"model/new",
+				"app/models/news.rb"
+			],
+			[
+				"gemfil",
+				"Gemfile"
+			],
+			[
+				"config/envi",
+				"config/environments/development.rb"
+			],
+			[
+				"views/admin/articles",
+				"app/views/admin/articles/index.html.erb"
+			],
+			[
+				"model/art",
+				"app/models/article.rb"
+			],
+			[
+				"views/admin/article",
+				"app/views/admin/articles/show.html.erb"
+			],
+			[
+				"model/arti",
+				"app/models/article.rb"
+			],
+			[
+				"views/admin/discu",
+				"app/views/admin/discussions/_form.html.erb"
+			],
+			[
+				"views/admin/doubts/",
+				"app/views/admin/doubts/_form.html.erb"
+			],
+			[
+				"views/admin/doubts/in",
+				"app/views/admin/doubts/index.html.erb"
+			],
+			[
+				"views/admin/doubts",
+				"app/views/admin/doubts/show.html.erb"
+			],
+			[
+				"views/admin/conta",
+				"app/views/admin/contacts/show.html.erb"
+			],
+			[
+				"views/admin/cont",
+				"app/views/admin/contacts/_form.html.erb"
+			],
+			[
+				"views/admin/dis",
+				"app/views/admin/discussions/_form.html.erb"
+			],
+			[
+				"views/admin/",
+				"app/views/admin/articles/_form.html.erb"
+			],
+			[
+				"controllers/admin/dis",
+				"app/controllers/admin/discussions_controller.rb"
+			],
+			[
+				"views/admin/disc",
+				"app/views/admin/discussions/index.html.erb"
+			],
+			[
+				"helpers/admin/hel",
+				"app/helpers/admin/application_helper.rb"
+			],
+			[
+				"helpe",
+				"app/helpers/application_helper.rb"
+			],
+			[
+				"views/admin/con",
+				"app/views/admin/contacts/index.html.erb"
+			],
+			[
+				"app/controllers/admin/cont",
+				"app/controllers/admin/contacts_controller.rb"
+			],
+			[
+				"controllers/admin/a",
+				"app/controllers/admin/application_controller.rb"
+			],
+			[
 				"views/admin/su",
 				"app/views/admin/super_highlights/index.html.erb"
 			],
 			[
 				"views/admin/articl",
 				"app/views/admin/articles/index.html.erb"
-			],
-			[
-				"views/admin/sup",
-				"app/views/admin/super_highlights/show.html.erb"
 			],
 			[
 				"viewsadminsu",
@@ -232,14 +363,6 @@
 			[
 				"adminnewsfor",
 				"app/views/admin/news/_form.html.erb"
-			],
-			[
-				"views/admin/news",
-				"app/views/admin/news/new.html.erb"
-			],
-			[
-				"views/admin/conta",
-				"app/views/admin/contacts/_form.html.erb"
 			],
 			[
 				"admindoubtsfo",
@@ -270,20 +393,8 @@
 				"app/views/admin/doubts/show.html.erb"
 			],
 			[
-				"views/admin/discu",
-				"app/views/admin/discussions/show.html.erb"
-			],
-			[
 				"model/au",
 				"app/models/author.rb"
-			],
-			[
-				"views/admin/articles",
-				"app/views/admin/articles/show.html.erb"
-			],
-			[
-				"views/admin/article",
-				"app/views/admin/articles/index.html.erb"
 			],
 			[
 				"db/migr",
@@ -302,20 +413,8 @@
 				"app/models/discussion.rb"
 			],
 			[
-				"views/admin/dis",
-				"app/views/admin/discussions/_form.html.erb"
-			],
-			[
-				"model/new",
-				"app/models/news.rb"
-			],
-			[
 				"model/d",
 				"app/models/discussion.rb"
-			],
-			[
-				"model/arti",
-				"app/models/article.rb"
 			],
 			[
 				"views/admin/news/fo",
@@ -324,10 +423,6 @@
 			[
 				"views/admin/super",
 				"app/views/admin/super_highlights/_form.html.erb"
-			],
-			[
-				"views/admin/con",
-				"app/views/admin/contacts/index.html.erb"
 			],
 			[
 				"view/admin/articl",
@@ -408,10 +503,6 @@
 			[
 				"env",
 				"config/environment.rb"
-			],
-			[
-				"model/art",
-				"app/models/article.rb"
 			],
 			[
 				"viewsadminarticle",

@@ -1,4 +1,4 @@
-﻿<%= form_for( [:admin, @admin_news] ) do |f| %>
+﻿<%= form_for [:admin, @admin_news] ,  :html => {:multipart=>true}  do |f| %>
   <% if @admin_news.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@admin_news.errors.count, "erro") %> encontrado(s):</h2>
@@ -34,6 +34,10 @@
   <div class="field">
     <%= f.label :data %><br />
     <%= f.date_select :data %>
+  </div>
+  <div class="field">
+    <%= f.label "Imagem" %> *<br />
+    <%= f.file_field :image %>
   </div>
   <div class="actions">
       <%= f.submit "Salvar" %>
