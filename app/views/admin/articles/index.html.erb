@@ -6,7 +6,7 @@
         <th>Data</th>
         <th>Título</th>
         <th>Subtitulo</th>
-        <th>Texto</th>
+        <th>Destaque</th>
         <th></th>
         <th></th>
         <th></th>
@@ -17,7 +17,7 @@
         <td><%= admin_article.created_at.strftime("%d/%m/%Y") %></td>
         <td><%= admin_article.titulo %></td>
         <td><%= admin_article.subtitulo %></td>
-        <td><%= admin_article.texto %></td>
+        <td><%= status_to_sim_nao admin_article.destaque %></td>
         <td><%= link_to 'Visualizar', [:admin, admin_article] %></td>
         <td><%= link_to 'Editar', edit_admin_article_path(admin_article) %></td>
         <td><%= link_to 'Excluir', [:admin, admin_article], confirm: 'Deseja realmente excluir?', method: :delete %></td>

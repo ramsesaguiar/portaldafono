@@ -1,6 +1,11 @@
 ﻿<p id="notice"><%= notice %></p>
 
 <p>
+  <b>ID:</b>
+  <%= @admin_news.id %>
+</p>
+
+<p>
   <b>Titulo:</b>
   <%= @admin_news.titulo %>
 </p>
@@ -22,12 +27,7 @@
 
 <p>
   <b>Status:</b>
-  <%= status_to_string @admin_news.status %>
-</p>
-
-<p>
-  <b>Data:</b>
-  <%= @admin_news.data %>
+  <%= status_to_sim_nao @admin_news.status %>
 </p>
 
 <p>

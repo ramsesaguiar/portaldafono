@@ -20,8 +20,8 @@
             <td><%= admin_news.subtitulo %></td>
             <td><%= admin_news.author.nome %></td>
             <td><%= admin_news.texto %></td>
-            <td><%= status_to_string admin_news.status %></td>
-            <td><%= admin_news.data.strftime("%d/%m/%Y") %></td>
+            <td><%= status_to_sim_nao admin_news.status %></td>
+            <td><%= admin_news.created_at.strftime("%d/%m/%Y") %></td>
             <td><%= link_to 'Visualizar', [:admin, admin_news] %></td>
             <td><%= link_to 'Editar', edit_admin_news_path(admin_news) %></td>
             <td><%= link_to 'Excluir', [:admin, admin_news], confirm: 'Deseja realmente excluir?', method: :delete %></td>

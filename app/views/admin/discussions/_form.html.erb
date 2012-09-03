@@ -37,7 +37,8 @@
   </div>
   <div class="field">
     <%= f.label :status %><br />
-    <%= select("discussion", "status",  hash_to_status , :selected => @admin_discussion.status,  :prompt => 'Selecione um status') %>
+    <%= select("discussion", "status",  hash_to_sim_nao , :selected => @admin_discussion.status,  :prompt => 'Selecione um status') %>
+  </div>
   </div>
   <div class="actions">
       <%= f.submit "Salvar" %>

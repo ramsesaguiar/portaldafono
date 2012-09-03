@@ -1,6 +1,6 @@
 Portaldafono::Application.routes.draw do
 
-  root :to=> "index#index"
+ root :to=> "index#index"
   
  namespace :admin do  
   root :to=> "index#index"
@@ -9,7 +9,8 @@ Portaldafono::Application.routes.draw do
   match "login/logout" => "login#logout"
  end
 
-namespace :admin do   
+namespace :admin do  
+  resources :newsletters 
   resources :contacts, :path => "faleconosco", :path_names => { :new => :inserir, :edit => :alterar } 
   resources :super_highlights, :path => "superdestaques", :path_names => { :new => :inserir, :edit => :alterar } 
   resources :doubts, :path => "duvidas", :path_names => { :new => :inserir, :edit => :alterar }
@@ -27,6 +28,8 @@ resources :doubts, :path => "duvidas", :path_names => { :new => :inserir, :edit 
 resources :articles, :path => "artigos", :path_names => { :new => :inserir, :edit => :alterar }
 resources :authors, :path => "autores", :path_names => { :new => :inserir, :edit => :alterar }
 resources :users, :path => "usuarios", :path_names => { :new => :inserir, :edit => :alterar }
+
+match 'subscribe_to_newsletter' => 'index#subscribe_to_newsletter'
 
   
   # The priority is based upon order of creation:

@@ -1,1 +1,67 @@
-﻿<h1> Essa sera a home do portal da fono! </h1>
+﻿<ul>
+<li> <%= link_to "Artigos", :controller => "articles", :action => "index" %></li>
+	<li> <%= link_to "Debates", :controller => "discussions", :action => "index" %></li>
+	<li> <%= link_to "Dúvidas", :controller => "doubts", :action => "index" %></li>
+	<li> <%= link_to "Fale conosco", :controller => "contacts", :action => "index" %></li>
+	<li> <%= link_to "Notícias", :controller => "news", :action => "index" %> </li>	
+</ul>	
+
+
+<% unless @artigo.blank? %>
+<h2> Artigo em destaque </h2>
+<ul>
+	<li><%= @artigo.titulo %></li>
+	<li><%= @artigo.subtitulo %></li>
+	<li> <strong>autor:</strong> <%= @artigo.author.nome %></li>
+	<li><%= @artigo.texto %></li>
+	<li> <strong>data:</strong> <%= @artigo.created_at.strftime("%d/%m/%Y") %></li>
+</ul>
+<% end %>
+
+<% unless @duvida.blank? %>
+<h2> Última dúvida enviada </h2>
+<ul>
+	<li><%= @duvida.titulo %></li>
+	<li> <strong>enviada por:</strong> <%= @duvida.user.apelido %></li>
+	<li> <strong>data:</strong> <%= @duvida.created_at.strftime("%d/%m/%Y") %></li>
+</ul>
+<% end %>
+
+<h2> Notícias </h2>
+<ul>
+	<% @noticias.each do |noticia| %>
+		<li><%= noticia.titulo %></li>
+		<li> <strong>por:</strong> <%= noticia.author.nome %></li>
+		<li> <strong>data:</strong> <%= noticia.created_at.strftime("%d/%m/%Y") %></li>	
+		<% if not noticia.image.url(:medium) == "/images/medium/missing.png" %>
+			<li> <%= image_tag noticia.image.url(:medium) %>  </li>
+		<% end %>	
+		<li> <%= noticia.texto %> </li>
+		<br />
+    <% end %>
+</ul>
+
+
+<% unless @debate.blank? %>
+<h2> Debate em destaque </h2>
+<ul>
+	<li><%= @debate.titulo %></li>
+	<li> <strong>autor:</strong> <%= @debate.author.nome %></li>
+	<li> <strong>data de inicio:</strong> <%= @debate.data_inicio.strftime("%d/%m/%Y") %></li>
+	<li> <strong>data fim:</strong> <%= @debate.data_fim.strftime("%d/%m/%Y") %></li>
+</ul>
+</ul>
+<% end %>
+
+<h2> Superdestaques </h2>
+<ul>
+	<% @superdestaques.each do |superdestaque| %>
+		<li><%= superdestaque.titulo %></li>
+		<% if not superdestaque.image.url(:medium) == "/images/medium/missing.png" %>
+			<li> <%= image_tag superdestaque.image.url(:medium) %>  </li>
+		<% end %>	
+		<br />
+    <% end %>
+</ul>
+
+<%= render :partial => "partials/form_newsletter" %>

@@ -18,7 +18,7 @@
                 <td><%= admin_discussion.titulo %></td>
                 <td><%= admin_discussion.data_inicio.strftime("%d/%m/%Y") %></td>
                 <td><%= admin_discussion.data_fim.strftime("%d/%m/%Y") %></td>
-                <td><%= status_to_string admin_discussion.status %></td>
+                <td><%= status_to_sim_nao admin_discussion.status %></td>
                 <td><%= admin_discussion.author.nome %></td>
                 <td><%= link_to 'Visualizar', [:admin,admin_discussion] %></td>
                 <td><%= link_to 'Editar', edit_admin_discussion_path(admin_discussion) %></td>

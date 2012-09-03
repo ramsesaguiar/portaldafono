@@ -50,7 +50,8 @@ config.action_mailer.smtp_settings = {
 }
   
 
-Paperclip.options[:command_path] = "/usr/local/bin/"
+#Paperclip.options[:command_path] = "/usr/local/bin/"
+Paperclip.options[:command_path] = "C:/Program Files/ImageMagick-6.7.9-Q16/identify" #notbook
   
   
   

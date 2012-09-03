@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120829020417) do
+ActiveRecord::Schema.define(:version => 20120902215151) do
 
   create_table "articles", :force => true do |t|
     t.integer  "author_id"
@@ -19,12 +19,13 @@ ActiveRecord::Schema.define(:version => 20120829020417) do
     t.string   "subtitulo"
     t.text     "texto"
     t.text     "palavras_chave"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "destaque",           :limit => 0
   end
 
   create_table "authors", :force => true do |t|
@@ -42,8 +43,6 @@ ActiveRecord::Schema.define(:version => 20120829020417) do
     t.datetime "image_updated_at"
   end
 
-  add_index "authors", ["crfa"], :name => "crfa", :unique => true
-
   create_table "contacts", :force => true do |t|
     t.string   "nome"
     t.string   "email"
@@ -53,6 +52,16 @@ ActiveRecord::Schema.define(:version => 20120829020417) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "discussion_users", :force => true do |t|
+    t.integer  "debate_id"
+    t.integer  "usuario_id"
+    t.datetime "data_resposta"
+    t.integer  "status"
+    t.text     "resposta"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
   create_table "discussions", :force => true do |t|
     t.integer  "author_id"
     t.string   "titulo"
@@ -60,21 +69,21 @@ ActiveRecord::Schema.define(:version => 20120829020417) do
     t.text     "texto"
     t.date     "data_inicio"
     t.date     "data_fim"
-    t.integer  "status"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+    t.string   "status",      :limit => 0
   end
 
   create_table "doubts", :force => true do |t|
     t.integer  "usuario_id"
     t.string   "titulo"
     t.text     "texto"
-    t.integer  "status"
     t.integer  "autor_responsavel_id"
     t.text     "resposta"
     t.datetime "data_resposta"
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+    t.string   "status",               :limit => 0
   end
 
   create_table "news", :force => true do |t|
@@ -82,30 +91,35 @@ ActiveRecord::Schema.define(:version => 20120829020417) do
     t.string   "subtitulo"
     t.integer  "author_id"
     t.text     "texto"
-    t.integer  "status"
-    t.date     "data"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "status",             :limit => 0
+  end
+
+  create_table "newsletters", :force => true do |t|
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "super_highlights", :force => true do |t|
     t.string   "titulo"
     t.string   "subtitulo"
     t.string   "slug"
-    t.integer  "status"
     t.date     "data_ini"
     t.date     "data_fim"
     t.integer  "posicao"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "status",             :limit => 0
   end
 
   create_table "users", :force => true do |t|
@@ -114,9 +128,9 @@ ActiveRecord::Schema.define(:version => 20120829020417) do
     t.date     "data_nasc"
     t.string   "email"
     t.string   "senha"
-    t.integer  "status",     :default => 1
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
+    t.integer  "status"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

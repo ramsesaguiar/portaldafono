@@ -29,11 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :status %><br />
-     <%= select("news", "status",  hash_to_status , :selected => @admin_news.status,  :prompt => 'Selecione um status') %>
-  </div>
-  <div class="field">
-    <%= f.label :data %><br />
-    <%= f.date_select :data %>
+     <%= select("news", "status",  hash_to_sim_nao , :selected => @admin_news.status,  :prompt => 'Selecione um status') %>
   </div>
   <div class="field">
     <%= f.label "Imagem" %> *<br />
