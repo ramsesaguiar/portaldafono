@@ -2,7 +2,7 @@
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @articles = Article.find(:all, :include => :author)
 
     respond_to do |format|
       format.html # index.html.erb

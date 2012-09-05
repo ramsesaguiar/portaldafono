@@ -2,7 +2,7 @@
 
 <p>
   <b>Autor:</b>
-  <%= @discussion.autor_id %>
+  <%= @discussion.author.nome %>
 </p>
 
 <p>
@@ -22,19 +22,13 @@
 
 <p>
   <b>Data inicio:</b>
-  <%= @discussion.data_inicio %>
+  <%= @discussion.data_inicio.strftime("%d/%m/%Y") %>
 </p>
 
 <p>
   <b>Data fim:</b>
-  <%= @discussion.data_fim %>
-</p>
-
-<p>
-  <b>Status:</b>
-  <%= @discussion.status %>
+  <%= @discussion.data_fim.strftime("%d/%m/%Y") %>
 </p>
 
 
-<%= link_to 'Edit', edit_discussion_path(@discussion) %> |
 <%= link_to 'Back', discussions_path %>

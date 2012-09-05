@@ -6,9 +6,7 @@
     <th>Subtitulo</th>
     <th>Autor</th>
     <th>Texto</th>
-    <th>Status</th>
     <th>Data</th>
-    <th></th>
     <th></th>
     <th></th>
   </tr>
@@ -17,10 +15,12 @@
   <tr>
     <td><%= news.titulo %></td>
     <td><%= news.subtitulo %></td>
-    <td><%= news.autor_id %></td>
+    <td><%= news.author.nome %></td>
     <td><%= news.texto %></td>
-    <td><%= news.status %></td>
-    <td><%= news.data %></td>
+    <td><%= news.created_at.strftime("%d/%m/%Y") %></td>
+    <% if not news.image.url(:medium) == "/images/medium/missing.png" %>
+            <td> <%= image_tag news.image.url(:medium) %>  </td>
+        <% end %>   
     <td><%= link_to 'Show', news %></td>
   </tr>
 <% end %>

@@ -25,7 +25,7 @@ resources :news, :path => "noticias", :path_names => { :new => :inserir, :edit =
 resources :discussions, :path => "debates", :path_names => { :new => :inserir, :edit => :alterar }
 resources :contacts, :path => "faleconosco"
 resources :doubts, :path => "duvidas", :path_names => { :new => :inserir, :edit => :alterar }
-resources :articles, :path => "artigos", :path_names => { :new => :inserir, :edit => :alterar }
+resources :articles, :path => "artigos"
 resources :authors, :path => "autores", :path_names => { :new => :inserir, :edit => :alterar }
 resources :users, :path => "usuarios", :path_names => { :new => :inserir, :edit => :alterar }
 

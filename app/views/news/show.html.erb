@@ -12,7 +12,7 @@
 
 <p>
   <b>Autor:</b>
-  <%= @news.autor_id %>
+  <%= @news.author.nome %>
 </p>
 
 <p>
@@ -21,15 +21,12 @@
 </p>
 
 <p>
-  <b>Status:</b>
-  <%= @news.status %>
-</p>
-
-<p>
   <b>Data:</b>
-  <%= @news.data %>
+  <%= @news.created_at.strftime("%d/%m/%Y") %>
 </p>
 
+<% if not @news.image.url(:medium) == "/images/medium/missing.png" %>
+      <p> <%= image_tag @news.image.url(:medium) %>  </p>
+    <% end %> 
 
-<%= link_to 'Edit', edit_news_path(@news) %> |
 <%= link_to 'Back', news_index_path %>

@@ -1,8 +1,6 @@
-﻿<p id="notice"><%= notice %></p>
-
-<p>
+﻿<p>
   <b>Autor:</b>
-  <%= @article.author_id %>
+  <%= @article.author.nome  %>
 </p>
 
 <p>
@@ -27,9 +25,5 @@
 
 <p>
   <b>Data:</b>
-  <%= @article.data %>
+  <%= @article.created_at.strftime("%d/%m/%Y") %>
 </p>
-
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>

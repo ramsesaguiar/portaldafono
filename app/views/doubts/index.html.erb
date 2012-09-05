@@ -5,28 +5,16 @@
     <th>Usuario</th>
     <th>Titulo</th>
     <th>Texto</th>
-    <th>Status</th>
-    <th>Autor responsavel</th>
-    <th>Resposta</th>
-    <th>Data resposta</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
 
 <% @doubts.each do |doubt| %>
   <tr>
-    <td><%= doubt.usuario_id %></td>
+    <td><%= doubt.user.nome %></td>
     <td><%= doubt.titulo %></td>
     <td><%= doubt.texto %></td>
-    <td><%= doubt.status %></td>
-    <td><%= doubt.autor_responsavel_id %></td>
-    <td><%= doubt.resposta %></td>
-    <td><%= doubt.data_resposta %></td>
     <td><%= link_to 'Show', doubt %></td>
-    <td><%= link_to 'Edit', edit_doubt_path(doubt) %></td>
-    <td><%= link_to 'Destroy', doubt, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+   </tr>
 <% end %>
 </table>
 

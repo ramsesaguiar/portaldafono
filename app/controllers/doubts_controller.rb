@@ -44,7 +44,7 @@
 
     respond_to do |format|
       if @doubt.save
-        format.html { redirect_to @doubt, notice: 'Doubt was successfully created.' }
+        format.html { redirect_to @doubt, notice: 'Dúvida criada com sucesso.' }
         format.json { render json: @doubt, status: :created, location: @doubt }
       else
         format.html { render action: "new" }

@@ -14,12 +14,12 @@
 
 <% @articles.each do |article| %>
   <tr>
-    <td><%= article.autor_id %></td>
+    <td><%= article.author.nome %></td>
     <td><%= article.titulo %></td>
     <td><%= article.subtitulo %></td>
     <td><%= article.texto %></td>
     <td><%= article.palavras_chave %></td>
-    <td><%= article.data %></td>
+    <td><%= article.created_at.strftime("%d/%m/%Y") %></td>
     <td><%= link_to 'Show', article %></td>
   </tr>
 <% end %>
