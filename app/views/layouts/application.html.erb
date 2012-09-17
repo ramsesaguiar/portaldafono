@@ -1,13 +1,31 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Portaldafono</title>
-  <%= javascript_include_tag 'jquery', 'geral', controller_name %>
-  <%= csrf_meta_tags %>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+  <title>Portal da fono</title> 
+  <meta name="author" content="Maikon Parreira" />
+  <meta name="description" content="A short description of your company" />
+  <meta name="keywords" content="Some keywords that best describe your business" />
+  
+  <%= stylesheet_link_tag "styles", "custom", controller_name %>
+  <%= javascript_include_tag 'jquery', 'geral',  "jquery.tools.min", "jquery.featureList-1.0.0", "application", controller_name %>
+  <%# csrf_meta_tags %>
 </head>
 <body>
+	<div class="header">
+		<div class="container_24">
+			<%= render :partial => "partials/topo" %>
+    		<div class="clear"></div>
+			<%= render :partial => "partials/menu" %>
+  		</div>
+	</div>
+	<div class="middle">
+		<div class="container_24">
+			<%= yield %>
+			<%= render :partial => "partials/sidebar" %>	
+		</div>
+	</div>
 
-<%= yield %>
-
+	<%= render :partial => "partials/footer" %>	
 </body>
 </html>

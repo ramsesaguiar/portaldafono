@@ -1,0 +1,34 @@
+﻿
+
+
+<% unless @artigo.blank? %>
+<h2> Artigo em destaque </h2>
+<ul>
+	<li><%= @artigo.titulo %></li>
+	<li><%= @artigo.subtitulo %></li>
+	<li> <strong>autor:</strong> <%= @artigo.author.nome %></li>
+	<li><%= @artigo.texto %></li>
+	<li> <strong>data:</strong> <%= @artigo.created_at.strftime("%d/%m/%Y") %></li>
+</ul>
+<% end %>
+
+
+
+<ul>
+	<% @noticias.each do |noticia| %>
+		<li><%= noticia.titulo %></li>
+		<li> <strong>por:</strong> <%= noticia.author.nome %></li>
+		<li> <strong>data:</strong> <%= noticia.created_at.strftime("%d/%m/%Y") %></li>	
+		<% if not noticia.image.url(:medium) == "/images/medium/missing.png" %>
+			<li> <%= image_tag noticia.image.url(:medium) %>  </li>
+		<% end %>	
+		<li> <%= noticia.texto %> </li>
+		<br />
+    <% end %>
+</ul>
+
+
+
+
+
+<%= render :partial => "partials/form_newsletter" %>

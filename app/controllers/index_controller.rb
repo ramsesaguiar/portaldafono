@@ -2,7 +2,7 @@
 	def index
 		@superdestaques = SuperHighlight.where("status = 'S' AND data_ini < NOW() AND data_fim > NOW()").order("posicao ASC").limit(3)
 		@artigo = Article.where("destaque = 'S'").first
-		@noticias = News.where("status = 'S'").order("created_at DESC").limit(4)
+		@noticia = News.where("status = 'S'").order("created_at DESC").first
 		@duvida	 = Doubt.where("status = 'S'").order("created_at DESC").first
 		@debate	 = Discussion.where("status = 'S' AND data_inicio < NOW() AND data_fim > NOW()").order("created_at DESC").first
 	end

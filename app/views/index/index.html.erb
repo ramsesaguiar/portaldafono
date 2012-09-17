@@ -1,67 +1,94 @@
-﻿<ul>
-<li> <%= link_to "Artigos", :controller => "articles", :action => "index" %></li>
-	<li> <%= link_to "Debates", :controller => "discussions", :action => "index" %></li>
-	<li> <%= link_to "Dúvidas", :controller => "doubts", :action => "index" %></li>
-	<li> <%= link_to "Fale conosco", :controller => "contacts", :action => "index" %></li>
-	<li> <%= link_to "Notícias", :controller => "news", :action => "index" %> </li>	
-</ul>	
-
-
-<% unless @artigo.blank? %>
-<h2> Artigo em destaque </h2>
-<ul>
-	<li><%= @artigo.titulo %></li>
-	<li><%= @artigo.subtitulo %></li>
-	<li> <strong>autor:</strong> <%= @artigo.author.nome %></li>
-	<li><%= @artigo.texto %></li>
-	<li> <strong>data:</strong> <%= @artigo.created_at.strftime("%d/%m/%Y") %></li>
-</ul>
-<% end %>
-
-<% unless @duvida.blank? %>
-<h2> Última dúvida enviada </h2>
-<ul>
-	<li><%= @duvida.titulo %></li>
-	<li> <strong>enviada por:</strong> <%= @duvida.user.apelido %></li>
-	<li> <strong>data:</strong> <%= @duvida.created_at.strftime("%d/%m/%Y") %></li>
-</ul>
-<% end %>
-
-<h2> Notícias </h2>
-<ul>
-	<% @noticias.each do |noticia| %>
-		<li><%= noticia.titulo %></li>
-		<li> <strong>por:</strong> <%= noticia.author.nome %></li>
-		<li> <strong>data:</strong> <%= noticia.created_at.strftime("%d/%m/%Y") %></li>	
-		<% if not noticia.image.url(:medium) == "/images/medium/missing.png" %>
-			<li> <%= image_tag noticia.image.url(:medium) %>  </li>
-		<% end %>	
-		<li> <%= noticia.texto %> </li>
-		<br />
-    <% end %>
-</ul>
-
-
-<% unless @debate.blank? %>
-<h2> Debate em destaque </h2>
-<ul>
-	<li><%= @debate.titulo %></li>
-	<li> <strong>autor:</strong> <%= @debate.author.nome %></li>
-	<li> <strong>data de inicio:</strong> <%= @debate.data_inicio.strftime("%d/%m/%Y") %></li>
-	<li> <strong>data fim:</strong> <%= @debate.data_fim.strftime("%d/%m/%Y") %></li>
-</ul>
-</ul>
-<% end %>
-
-<h2> Superdestaques </h2>
-<ul>
-	<% @superdestaques.each do |superdestaque| %>
-		<li><%= superdestaque.titulo %></li>
-		<% if not superdestaque.image.url(:medium) == "/images/medium/missing.png" %>
-			<li> <%= image_tag superdestaque.image.url(:medium) %>  </li>
-		<% end %>	
-		<br />
-    <% end %>
-</ul>
-
-<%= render :partial => "partials/form_newsletter" %>
+﻿<div id="feature_list">
+    <ul id="feature_tabs">
+        <% @superdestaques.each do |superdestaque| %>
+    		<li>
+            	<span class="link-title"><%= superdestaque.titulo %></span>
+    			<div class="feature_cat"> 
+                    <!-- <span class="icon_cat icon_cat_1">Photography</span> >-->  
+                    <a href="blog-details.html" class="link-more">Leia mais</a></div>
+    		</li>
+    	  <% end %>	
+	</ul>
+	<ul id="feature_output">
+        <% @superdestaques.each do |superdestaque| %>
+            <% if not superdestaque.image.url(:medium) == "/images/medium/missing.png" %>
+                <li> 
+                    <%= image_tag superdestaque.image.url(:medium), :width => "960", :height => "325" %> 
+                    <a href="blog-details.html"></a> 
+                </li>
+            <% end %>
+        <% end %>    		
+	</ul>
+</div>	
+<div class="divider_thin"></div>
+<div class="grid_15 suffix_1 content">
+    <div class="cat_title">
+    	<h2>Notícias</h2> 
+        <!-- <div class="sort"><a href="#">Popular</a> <a href="#" class="active">By Date</a></div> -->
+        <div class="clear"></div>
+    </div>
+    <div class="post-item">
+        <% unless @noticia.blank? %>
+            <h2><a href="blog-details.html"><%= @noticia.titulo %></a></h2>
+            <div class="post-meta">
+                <!-- <span class="icon_cat icon_cat_3"><a href="#">Music</a></span> -->
+            	   <em>por <span class="author"><%= @noticia.author.nome %></span> &nbsp;|&nbsp; <%= @noticia.created_at.strftime("%d/%m/%Y") %> 
+                    &nbsp;|&nbsp; <a href="#" class="link-comments">15 comentários</a></em>
+   		   </div>
+            <div class="entry">
+                <p>
+                    <% if not @noticia.image.url(:medium) == "/images/medium/missing.png" %>
+                        <%= image_tag @noticia.image.url(:medium) %>  
+                    <% end %>   
+                    <%= @noticia.texto %> 
+                </p>
+                <div class="clear"></div>
+		    </div>
+            <%= link_to "Leia Mais", @noticia, :class => "link-more" %>
+             
+        <% end %>       
+    </div>
+    <div class="cat_title">
+        <h2>Debate em destaque</h2> 
+        <!-- <div class="sort"><a href="#">Popular</a> <a href="#" class="active">By Date</a></div> -->
+        <div class="clear"></div>
+    </div>
+    <div class="post-item">
+        <% unless @debate.blank? %>
+            <h2><a href="blog-details.html"><%= @debate.titulo %></a></h2>
+            <div class="post-meta">
+                <!-- <span class="icon_cat icon_cat_4"><a href="#">Movies</a></span> -->
+                <em>por <span class="author"> <%= @debate.author.nome %> </span> &nbsp;|&nbsp; <%= @debate.data_inicio.strftime("%d/%m/%Y") %>
+                 &nbsp;|&nbsp; <a href="#" class="link-comments">6 opiniões</a></em>
+            </div>
+            <div class="entry">
+                <div class="clear"></div>
+            </div>
+            <a href="blog-details.html" class="link-more">dê sua opinião</a>
+        <% end %>
+    </div>
+    <div class="cat_title">
+        <h2>Dúvida enviada pelos usuários</h2> 
+        <!-- <div class="sort"><a href="#">Popular</a> <a href="#" class="active">By Date</a></div> -->
+        <div class="clear"></div>
+    </div>
+    <div class="post-item">
+        <% unless @duvida.blank? %>
+            <h2><a href="blog-details.html"><%= @duvida.titulo %></a></h2>
+            <div class="post-meta">
+                <!-- <span class="icon_cat icon_cat_4"><a href="#">Movies</a></span> -->
+                <em>enviada por <span class="author"><%= @duvida.user.apelido %> </span> &nbsp;|&nbsp; <%= @duvida.created_at.strftime("%d/%m/%Y") %> &nbsp;|&nbsp; <a href="#" class="link-comments">6 comentários</a></em>
+            </div>
+            <div class="entry">
+                <p><%= @duvida.texto %></p>
+                <div class="clear"></div>
+            </div>
+            <a href="blog-details.html" class="link-more">você concorda? Comente aqui</a>
+        <% end %>    
+    </div>
+    <!-- <div class="other_posts">
+    	<a href="#" class="prev">Older posts</a>
+        <a href="#" class="next">Newer posts</a>
+    </div> -->
+</div>
+  
