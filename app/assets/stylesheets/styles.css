@@ -485,7 +485,6 @@ input[type=text],input[type=password],textarea{
 	resize:none}
 	
 textarea{
-	width:90%;
 	font-size:12px;
 	background:#ececee;
 	overflow:auto;}
@@ -521,14 +520,14 @@ button:hover,button:focus{
 /* 1.11 Buttons */
 /*----------------------------------------------*/
 .button_link {
-	background:url(../images/buttons_bg.png) no-repeat scroll right -40px transparent;
-	color:#fff;
+	/* background:url(../images/buttons_bg.png) no-repeat scroll right -40px transparent; */
+	color:#fff !important;
 	display:inline-block;
 	margin:5px 0;
 	border:0 none;
 	padding:0 20px 0 0;
 	font-family:'edelsansRegular', Arial, Helvetica, sans-serif;
-	font-size:14px;
+	font-size:12px !important;
 	text-transform:uppercase;
 	text-align:center}
 

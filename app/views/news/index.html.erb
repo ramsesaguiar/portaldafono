@@ -1,28 +1,20 @@
-﻿<h1>Listing news</h1>
+﻿<div class="divider_thin"></div>
+<div class="grid_15 suffix_1 content">
+    <div class="cat_title">
+        <h2>Últimas notícias</h2> 
+        <!-- <div class="sort"><a href="#">Popular</a> <a href="#" class="active">By Date</a></div> -->
+        <div class="clear"></div>
+    </div>
+    <div class="post-item">
+        <div class="post-meta">
+            <ul class="list_arrows">
+                <% @news.each do |news| %>
+                    <li class="news-list"> <%= link_to ("#{news.created_at.strftime("%d/%m/%Y")} - <strong> #{news.titulo} </strong> <em> por </em> <span class='author'> #{news.author.nome} </span>" ).html_safe , @news, :class => "" %> </li>
+                <% end %>               
+            </ul>
+        </div>
+    </div>
 
-<table>
-  <tr>
-    <th>Titulo</th>
-    <th>Subtitulo</th>
-    <th>Autor</th>
-    <th>Texto</th>
-    <th>Data</th>
-    <th></th>
-    <th></th>
-  </tr>
+</div>
 
-<% @news.each do |news| %>
-  <tr>
-    <td><%= news.titulo %></td>
-    <td><%= news.subtitulo %></td>
-    <td><%= news.author.nome %></td>
-    <td><%= news.texto %></td>
-    <td><%= news.created_at.strftime("%d/%m/%Y") %></td>
-    <% if not news.image.url(:medium) == "/images/medium/missing.png" %>
-            <td> <%= image_tag news.image.url(:medium) %>  </td>
-        <% end %>   
-    <td><%= link_to 'Show', news %></td>
-  </tr>
-<% end %>
-</table>
 

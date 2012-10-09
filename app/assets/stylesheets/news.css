@@ -1,3 +1,2 @@
-// Place all the styles related to the news controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.news-list a{ color: #262626 !important; }
+.news-list:hover { text-decoration: underline; }
