@@ -1,27 +1,28 @@
-﻿<h1>Debates</h1>
-
-<table>
-  <tr>
-    <th>Autor</th>
-    <th>Titulo</th>
-    <th>Subtitulo</th>
-    <th>Texto</th>
-    <th>Data inicio</th>
-    <th>Data fim</th>
-    <th></th>
-  </tr>
-
-<% @discussions.each do |discussion| %>
-  <tr>
-    <td><%= discussion.author.nome  %></td>
-    <td><%= discussion.titulo %></td>
-    <td><%= discussion.subtitulo %></td>
-    <td><%= discussion.texto %></td>
-    <td><%= discussion.data_inicio.strftime("%d/%m/%Y") %></td>
-    <td><%= discussion.data_fim.strftime("%d/%m/%Y") %></td>
-    <td><%= link_to 'Show', discussion %></td>
-
-  </tr>
-<% end %>
-</table>
-
+﻿<div class="divider_thin"></div>
+<div class="grid_15 suffix_1 content">
+  <div class="cat_title">
+        <h2>Debates</h2> 
+        <div class="clear"></div>
+    </div>
+    <div class="post-item">
+        <div class="post-meta">
+            <ul class="list_arrows">
+              <% if @discussions.count > 0 %>
+                <% @discussions.each do |discussion| %>
+                  <li class="discussions-list"> 
+                    <%= link_to ( 
+                      "início: #{discussion.data_inicio.strftime("%d/%m/%Y")} - 
+                       até: #{discussion.data_fim.strftime("%d/%m/%Y")} <br />
+                       <strong> #{discussion.titulo} </strong> 
+                       <br/>
+                       <em> #{discussion.subtitulo}</em>
+                       <strong> <em> por </em> </strong> 
+                       <span class='author'> #{discussion.author.nome} </span>" ).html_safe , discussion, :class => "" %> </li>
+                   <% end %>
+              <% else %>
+                  <li class="not-found"> Nenhum debate realizado</li>
+              <% end %>                    
+            </ul>
+        </div>
+    </div>
+</div>

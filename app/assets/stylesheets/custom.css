@@ -1,8 +1,33 @@
-/* 
-CUSTOM CSS 
+.not-found{ font-size: 22px !important; margin-top: 20px !important; color: black; text-align: center; background: #FFF !important; }
 
-Instructions:
+.inner-quote {
+background: url(../images/icons/icon_quote.gif) 10px 20px no-repeat white;
+	border: 1px dotted #D0D0D0;
+	padding: 20px 20px 20px 48px;
+}
 
-Use the custom.css file to add your styles. Just copy a style from styles.css and paste it in 
-custom.css and it will override the style in this file.
-*/
+.quote-text {
+	color: #663D18;
+	font-family: 'DroidSerifItalic', Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 1.6em;
+}
+
+.quote-author {
+text-align: right;
+color: #8F8F8F;
+margin: 10px 0 5px 0;
+}
+
+.black { color: #121212; }
+.red{ color:red; font-weight:strong;  }
+
+.divider_dots_full {
+	background: url(/images/divider_dots.gif) center bottom no-repeat;
+	margin-bottom: 40px;
+	padding-top: 45px;
+	clear: both;
+	display: block;
+	width: 100%;
+}

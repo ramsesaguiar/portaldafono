@@ -31,6 +31,12 @@ resources :users, :path => "usuarios", :path_names => { :new => :inserir, :edit 
 
 match 'subscribe_to_newsletter' => 'index#subscribe_to_newsletter'
 
+# ESTATICAS #
+match "quem-somos" => "estaticas#quem_somos"
+match "anuncie" => "estaticas#anuncie"
+match "livros-recomendados" => "estaticas#livros_recomendados"
+match "o-que-e-fonoaudiologia" => "estaticas#o_que_e_fonoaudiologia"
+match "termos-de-uso" => "estaticas#termos_de_uso"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

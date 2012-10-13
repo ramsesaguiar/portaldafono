@@ -1,23 +1,23 @@
-﻿<h1>Listing doubts</h1>
+﻿<div class="divider_thin"></div>
+<div class="grid_15 suffix_1 content">
+    <div class="cat_title">
+        <h2>Dúvidas</h2> 
+        <div class="clear"></div>
+    </div>
+    <div class="post-item">
+        <div class="post-meta">
+            <ul class="list_arrows">
+                <% if @doubts.count > 0 %>    
+                    <% @doubts.each do |doubt| %>
+                        <li class="doubts-list"> <%= link_to (
+                            "#{doubt.created_at.strftime("%d/%m/%Y")} - <strong> #{doubt.titulo} </strong> 
+                             <em> por </em> <span class='author'> #{doubt.user.nome} </span>" ).html_safe , doubt, :class => "" %> </li>
+                    <% end %> 
+                <% else %>
+                  <li class="not-found"> Nenhuma dúvida enviada </li>
+              <% end %>                     
+            </ul>
+        </div>
+    </div>
 
-<table>
-  <tr>
-    <th>Usuario</th>
-    <th>Titulo</th>
-    <th>Texto</th>
-    <th></th>
-  </tr>
-
-<% @doubts.each do |doubt| %>
-  <tr>
-    <td><%= doubt.user.nome %></td>
-    <td><%= doubt.titulo %></td>
-    <td><%= doubt.texto %></td>
-    <td><%= link_to 'Show', doubt %></td>
-   </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Doubt', new_doubt_path %>
+</div>

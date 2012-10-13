@@ -24,12 +24,11 @@
 <div class="grid_15 suffix_1 content">
     <div class="cat_title">
     	<h2>Notícias</h2> 
-        <!-- <div class="sort"><a href="#">Popular</a> <a href="#" class="active">By Date</a></div> -->
         <div class="clear"></div>
     </div>
     <div class="post-item">
         <% unless @noticia.blank? %>
-            <h2><a href="blog-details.html"><%= @noticia.titulo %></a></h2>
+            <h2> <%= link_to @noticia.titulo, @noticia  %> </h2>
             <div class="post-meta">
                 <!-- <span class="icon_cat icon_cat_3"><a href="#">Music</a></span> -->
             	   <em>por <span class="author"><%= @noticia.author.nome %></span> &nbsp;|&nbsp; <%= @noticia.created_at.strftime("%d/%m/%Y") %> 
@@ -48,14 +47,16 @@
              
         <% end %>       
     </div>
+    <!-- <div class="adv_mid_468x60">
+        <img src="images/temp/adv_468x60.gif" width="468" height="60" alt="">
+    </div> -->
     <div class="cat_title">
         <h2>Debate em destaque</h2> 
-        <!-- <div class="sort"><a href="#">Popular</a> <a href="#" class="active">By Date</a></div> -->
         <div class="clear"></div>
     </div>
     <div class="post-item">
         <% unless @debate.blank? %>
-            <h2><a href="blog-details.html"><%= @debate.titulo %></a></h2>
+            <h2><%= link_to @debate.titulo, @debate %></h2>
             <div class="post-meta">
                 <!-- <span class="icon_cat icon_cat_4"><a href="#">Movies</a></span> -->
                 <em>por <span class="author"> <%= @debate.author.nome %> </span> &nbsp;|&nbsp; <%= @debate.data_inicio.strftime("%d/%m/%Y") %>
@@ -64,26 +65,30 @@
             <div class="entry">
                 <div class="clear"></div>
             </div>
-            <a href="blog-details.html" class="link-more">dê sua opinião</a>
+             <%= link_to "Dê sua opinião", @debate, :class => "link-more" %>
         <% end %>
     </div>
     <div class="cat_title">
         <h2>Dúvida enviada pelos usuários</h2> 
-        <!-- <div class="sort"><a href="#">Popular</a> <a href="#" class="active">By Date</a></div> -->
         <div class="clear"></div>
     </div>
     <div class="post-item">
         <% unless @duvida.blank? %>
-            <h2><a href="blog-details.html"><%= @duvida.titulo %></a></h2>
             <div class="post-meta">
                 <!-- <span class="icon_cat icon_cat_4"><a href="#">Movies</a></span> -->
-                <em>enviada por <span class="author"><%= @duvida.user.apelido %> </span> &nbsp;|&nbsp; <%= @duvida.created_at.strftime("%d/%m/%Y") %> &nbsp;|&nbsp; <a href="#" class="link-comments">6 comentários</a></em>
+                <div class="inner-quote">
+                    <div class="quote-text">
+                        <h2><%= @duvida.titulo %></h2>
+                    </div>
+                    <div class="quote-author">
+                        <div><em> enviada por</em> <span class="black"><%= @duvida.user.apelido %></span>, 
+                        <%= @duvida.created_at.strftime("%d/%m/%Y") %>
+                        | &nbsp; <a href="#" class="link-comments">6 comentários</a></div>  
+                    </div>
+                    <div class="clear"></div>
+                </div>
             </div>
-            <div class="entry">
-                <p><%= @duvida.texto %></p>
-                <div class="clear"></div>
-            </div>
-            <a href="blog-details.html" class="link-more">você concorda? Comente aqui</a>
+            <%= link_to "Você concorda? Comente", @duvida, :class => "link-more" %>
         <% end %>    
     </div>
     <!-- <div class="other_posts">

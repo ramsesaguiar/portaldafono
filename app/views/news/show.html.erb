@@ -2,15 +2,16 @@
     <div class="grid_15 suffix_1 content">
         <div class="cat_title back_post">
             <%= link_to "Veja todas as notícias", news_index_path, :class => "link-back" %>
-            <div class="social_buttons_top"><img src="images/temp/social_buttons.gif" width="217" height="20" alt="" /></div>
+            <div class="social_buttons_top"><img src="/images/temp/social_buttons.gif" width="217" height="20" alt="" /></div>
             <div class="clear"></div>
         </div>
         <div class="post-item post-detail">
           <h1><%= @news.titulo %></h1>
           <p> <%= @news.subtitulo %> </p>
           <div class="post-meta">
-              <span class="icon_cat icon_cat_blog"><a href="#">Blog</a></span>
-              <em>por <span class="author">  <%= @news.author.nome %> </span> &nbsp;|&nbsp; <%= @news.created_at.strftime("%d/%m/%Y") %> </em>
+              <span class="icon_cat icon_cat_blog">20 comentários</span>
+              <em>por <span class="author">  <%= @news.author.nome %> </span> 
+                &nbsp;|&nbsp; <%= @news.created_at.strftime("%d/%m/%Y") %> </em>
           </div>
           <div class="entry">
             <% if not @news.image.url(:medium) == "/images/medium/missing.png" %>

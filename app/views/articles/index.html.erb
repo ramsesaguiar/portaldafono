@@ -1,26 +1,28 @@
-﻿<h1>Artigos</h1>
-<table>
-  <tr>
-    <th>Autor</th>
-    <th>Título</th>
-    <th>Subtitulo</th>
-    <th>Texto</th>
-    <th>Palavras chave</th>
-    <th>Data</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+﻿<div class="divider_thin"></div>
+<div class="grid_15 suffix_1 content">
+    <div class="cat_title">
+        <h2>Artigos</h2> 
+        <!-- <div class="sort"><a href="#">Popular</a> <a href="#" class="active">By Date</a></div> -->
+        <div class="clear"></div>
+    </div>
+    <div class="post-item">
+        <div class="post-meta">
+            <ul class="list_arrows">
+                <% if @articles.count > 0 %>
+                    <% @articles.each do |article| %>
+                        <li class="articles-list"> 
+                            <%= link_to ( "<p> #{article.created_at.strftime("%d/%m/%Y")} - 
+                        <strong> #{article.titulo} </strong> 
+                        <br/>
+                        <em> #{article.subtitulo}</em>
+                        <strong> <em> por </em> </strong> 
+                        <span class='author'> #{article.author.nome} </span> </p>" ).html_safe , article, :class => "" %> </li>
+                    <% end %>
+                <% else %>
+                    <li class="not-found"> Nenhum artigo encontrado </li>
+                <% end %>                   
+            </ul>
+        </div>
+    </div>
 
-<% @articles.each do |article| %>
-  <tr>
-    <td><%= article.author.nome %></td>
-    <td><%= article.titulo %></td>
-    <td><%= article.subtitulo %></td>
-    <td><%= article.texto %></td>
-    <td><%= article.palavras_chave %></td>
-    <td><%= article.created_at.strftime("%d/%m/%Y") %></td>
-    <td><%= link_to 'Show', article %></td>
-  </tr>
-<% end %>
-</table>
+</div>

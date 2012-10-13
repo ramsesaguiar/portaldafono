@@ -8,9 +8,14 @@
     <div class="post-item">
         <div class="post-meta">
             <ul class="list_arrows">
-                <% @news.each do |news| %>
-                    <li class="news-list"> <%= link_to ("#{news.created_at.strftime("%d/%m/%Y")} - <strong> #{news.titulo} </strong> <em> por </em> <span class='author'> #{news.author.nome} </span>" ).html_safe , @news, :class => "" %> </li>
-                <% end %>               
+                <% if @news.count > 0 %>    
+                    <% @news.each do |news| %>
+                        <li class="news-list"> <%= link_to (" <p> <em> #{news.created_at.strftime("%d/%m/%Y")} </em> - 
+                            #{news.titulo}</p>" ).html_safe , news, :class => "" %> </li>
+                    <% end %> 
+                <% else %>
+                  <li class="not-found"> Nenhuma notícia encontrada </li>
+              <% end %>                     
             </ul>
         </div>
     </div>
