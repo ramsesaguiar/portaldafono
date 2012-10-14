@@ -1,16 +1,22 @@
 ﻿<div class="header_left">
-    <a href="index.html"> <%= image_tag("/images/logo.png", :height => '115', :width => '300', :alt => " ") %>  </a>
-    <div class="logo_text"><h1>Life &amp; Style Magazine</h1></div>
+     <%= link_to image_tag("/images/logo.png", :height => '115', :width => '300', :alt => " "), "/" %>  
+    <div class="logo_text"><h1>Portal da Fono</h1></div>
 </div>    
 <div class="header_right">    	
-    <div class="social_icons">
-        <a href="#" class="social-rss"><strong>RSS</strong> subscribe</a> &nbsp; <a href="#" class="social-twitter"><strong>16453</strong> followers</a> &nbsp; <a href="#" class="social-facebook"><strong>5470</strong> fans</a>
-        <div class="clearboth"></div>
-    </div>    
-    <div class="search_box">
+     
+    <!-- <div class="search_box">
     	<form method="get" id="searchform" action="">
 			<input type="text" value="Search LifeStyle Magazine" onfocus="if (this.value == 'Search LifeStyle Magazine') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search LifeStyle Magazine';}" name="s" id="s" class="inputField" />
 			<input type="submit" id="searchsubmit" value="Search" class="btn-search" />
         </form>            
-    </div>
+    </div> -->
+    <div class="box_login_with_facebook">
+        <% if current_user.present? %>
+            <p> Seja bem vindo(a) <%= current_user["nome"] %>!, <span> <a href="/sair/"> sair </a> </span> </p>
+        <% else %>
+            <div class="facebook_btn-big float_right">
+                <a href="/auth/facebook"> Entrar usando o Facebook </a>
+            </div>
+        <% end %>
+    </div> 
 </div>

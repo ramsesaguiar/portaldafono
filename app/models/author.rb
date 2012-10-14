@@ -3,6 +3,7 @@
   has_many :discussions
   has_many :doubts
   has_many :news
+  has_many :interviews
 
   has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 end

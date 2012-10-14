@@ -5,6 +5,14 @@
   <title>Portal da fono</title> 
   <meta name="author" content="Maikon Parreira" />
   <meta name="description" content="A short description of your company" />
+  <meta property="fb:admins" content="{100001294911795,100001557107821}"/>
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="http://www.portaldafono.com" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+
+
   <meta name="keywords" content="Some keywords that best describe your business" />
   
   <%= stylesheet_link_tag "styles", "custom", controller_name %>
@@ -12,6 +20,16 @@
   <%# csrf_meta_tags %>
 </head>
 <body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+  		var js, fjs = d.getElementsByTagName(s)[0];
+  		if (d.getElementById(id)) return;
+  			js = d.createElement(s); js.id = id;
+  			js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=164299493693982";
+  			fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- Caso precisa acessar os comentários, entrar em http://developers.facebook.com/tools/comments. -->
+
 	<div class="header">
 		<!-- <div class="adv_head_728x90">
 			<img src="/images/temp/adv_728x90.gif" width="728" height="90" alt="">

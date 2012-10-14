@@ -11,12 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120902223443) do
-
-  create_table "admin_newsletters", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20121013124448) do
 
   create_table "articles", :force => true do |t|
     t.integer  "author_id"
@@ -134,8 +129,12 @@ ActiveRecord::Schema.define(:version => 20120902223443) do
     t.string   "email"
     t.string   "senha"
     t.integer  "status"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.string   "url_image"
+    t.string   "localizacao"
+    t.integer  "uid"
+    t.string   "genero",      :limit => 20
   end
 
 end

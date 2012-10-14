@@ -750,7 +750,7 @@ button:hover,button:focus{
 .header_right {
 	float:left;
 	width:500px;
-	height:95px;
+	/* height:95px; */
 	text-align:right;
 	padding-top:20px}
 
@@ -1009,7 +1009,8 @@ button:hover,button:focus{
 	position: relative;
 	z-index:1;
 	clear:both;
-	margin-top:30px	}
+	/* margin-top:30px	*/
+}
 
 #feature_list ul {
 	position: absolute;
@@ -2291,6 +2292,10 @@ table.table-price tbody .tablecolhover {}
 	font-size:14px;
 	padding:5px 0 10px 0}
 
+.post-meta ul {
+	list-style-type: none;
+}	
+
 .link-comments {
 	color:#262626}
 
@@ -2304,7 +2309,11 @@ table.table-price tbody .tablecolhover {}
 	border-bottom:1px dotted #ccc}
 
 .post-meta .author {
-	color:#262626}
+	background: url(../images/author-icon.png) no-repeat left center;
+	padding-left: 20px;
+	vertical-align: top;
+	color:#262626
+}
 
 .entry {
 	color:#404040;

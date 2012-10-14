@@ -1,19 +1,55 @@
-﻿<p id="notice"><%= notice %></p>
+﻿<div class="divider_thin"></div>
+    <div class="grid_15 suffix_1 content">
+        <div class="cat_title back_post">
+            <%= link_to "Veja todas as duvidas", "/duvidas", :class => "link-back" %>
+            <div class="social_buttons_top">
+               <div class="fb-like" 
+               data-send="true" data-layout="button_count" 
+               data-width="450" data-show-faces="false" data-font="verdana"></div> 
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="post-detail">
+        	<div class="inner-quote">
+            	<div class="quote-text">
+                	<h2><%= @doubt.titulo %></h2>
+                </div>
+                <div class="post-meta">
+              		<span class="icon_cat icon_cat_blog">
+                		<fb:comments-count href="<%= request.url %>"></fb:comments-count> comentários
+              		</span>
+              		<em>por <span class="author">  <%= @doubt.user.nome %> </span> 
+                	&nbsp;|&nbsp; <%= @doubt.created_at.strftime("%d/%m/%Y") %> </em>
+          		</div>
+                
+            </div>
+		</div>
 
-<p>
-  <b>Usuario:</b>
-  <%= @doubt.user.nome %>
-</p>
-
-<p>
-  <b>Titulo:</b>
-  <%= @doubt.titulo %>
-</p>
-
-<p>
-  <b>Texto:</b>
-  <%= @doubt.texto %>
-</p>
-
-
-<%= link_to 'Back', doubts_path %>
+		<% if @doubt.resposta.present? %>
+			<div class="cat_title back_post padding_top_10">
+				<p> <%= @doubt.author.nome %> respondeu:</p>
+			</div>
+			<table class="blockquote-curly-brackets">
+				<tbody><tr><td class="tl"></td><td></td><td class="tr"></td></tr>
+				<tr>
+					<td class="ml"></td>
+					<td class="mm">
+						<blockquote>
+							<%= @doubt.resposta %>
+						</blockquote>
+					</td>
+					<td class="mr"></td>
+				</tr>
+				<tr><td class="bl"></td><td></td><td class="br"></td></tr>
+				</tbody></table>
+		<% else %>
+			<div class="divider_dots_full"></div>
+			<div class="back_post padding_top_10 padding_bottom_40">
+				<h5 class="colr"> A dúvida será respondida em breve por um de nossos profissionais </h5>
+			</div>
+		<% end %>
+		<div class="add-comment" id="addcomments">
+        	<div class="cat_title back_post"> <h3> Faça aqui seus comentários </h3> </div>
+          	<div class="fb-comments" data-href="<%= request.url %>" data-num-posts="10" data-width="590"></div> 
+        </div>               
+    </div>

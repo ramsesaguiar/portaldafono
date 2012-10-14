@@ -1,5 +1,33 @@
-﻿<h1>New doubt</h1>
+﻿<div class="divider_thin"></div>
+<div class="grid_15 suffix_1 content">
+    <div class="cat_title">
+        <h2>Nova dúvida</h2>
+        <div class="clear"></div>
+    </div>
+    <div class="post-item">
+        <div class="post-meta">
+        	<% if current_user.present? %>
+        		<%= render 'form' %>
+        	<% else %>
+        		<blockquote>
+            		<div class="inner">
+                		<p> Você precisa efetuar o cadastro para enviar suas dúvidas. O cadastro é gratuito! </p>
+            		</div>    
+        		</blockquote>
+        		<div class="block_doubt_facebook">
+	            	<div class="facebook_btn-big float_left">
+	                	<a href="/auth/facebook"> Entre usando o Facebook </a>
+	            	</div>
+	            </div>	
+        	<% end %>
+            
+        </div>
+    </div>
 
-<%= render 'form' %>
+</div>
 
-<%= link_to 'Back', doubts_path %>
+
+
+
+
+

@@ -32,7 +32,7 @@
             <div class="post-meta">
                 <!-- <span class="icon_cat icon_cat_3"><a href="#">Music</a></span> -->
             	   <em>por <span class="author"><%= @noticia.author.nome %></span> &nbsp;|&nbsp; <%= @noticia.created_at.strftime("%d/%m/%Y") %> 
-                    &nbsp;|&nbsp; <a href="#" class="link-comments">15 comentários</a></em>
+                    &nbsp;|&nbsp; <span class="icon_cat icon_cat_blog">20 comentários</span> 
    		   </div>
             <div class="entry">
                 <p>
@@ -60,12 +60,12 @@
             <div class="post-meta">
                 <!-- <span class="icon_cat icon_cat_4"><a href="#">Movies</a></span> -->
                 <em>por <span class="author"> <%= @debate.author.nome %> </span> &nbsp;|&nbsp; <%= @debate.data_inicio.strftime("%d/%m/%Y") %>
-                 &nbsp;|&nbsp; <a href="#" class="link-comments">6 opiniões</a></em>
+                 &nbsp;|&nbsp; <span class="icon_cat icon_cat_blog">20 opiniões</span> 
             </div>
             <div class="entry">
                 <div class="clear"></div>
             </div>
-             <%= link_to "Dê sua opinião", @debate, :class => "link-more" %>
+             <%= link_to "Dê a sua opinião", @debate, :class => "link-more" %>
         <% end %>
     </div>
     <div class="cat_title">
@@ -81,7 +81,7 @@
                         <h2><%= @duvida.titulo %></h2>
                     </div>
                     <div class="quote-author">
-                        <div><em> enviada por</em> <span class="black"><%= @duvida.user.apelido %></span>, 
+                        <div><em> enviada por</em> <span class="author"><%= @duvida.user.nome %></span>, 
                         <%= @duvida.created_at.strftime("%d/%m/%Y") %>
                         | &nbsp; <a href="#" class="link-comments">6 comentários</a></div>  
                     </div>
@@ -95,5 +95,6 @@
     	<a href="#" class="prev">Older posts</a>
         <a href="#" class="next">Newer posts</a>
     </div> -->
+
 </div>
   

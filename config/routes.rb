@@ -19,6 +19,7 @@ namespace :admin do
   resources :articles, :path => "artigos", :path_names => { :new => :inserir, :edit => :alterar }
   resources :authors, :path => "autores", :path_names => { :new => :inserir, :edit => :alterar } 
   resources :users, :path => "usuarios", :path_names => { :new => :inserir, :edit => :alterar }
+  resources :interviews, :path => "entrevistas", :path_names => { :new => :inserir, :edit => :alterar }
 end
 
 resources :news, :path => "noticias", :path_names => { :new => :inserir, :edit => :alterar }
@@ -28,6 +29,7 @@ resources :doubts, :path => "duvidas", :path_names => { :new => :inserir, :edit 
 resources :articles, :path => "artigos"
 resources :authors, :path => "autores", :path_names => { :new => :inserir, :edit => :alterar }
 resources :users, :path => "usuarios", :path_names => { :new => :inserir, :edit => :alterar }
+resources :interviews, :path => "entrevistas"
 
 match 'subscribe_to_newsletter' => 'index#subscribe_to_newsletter'
 
@@ -37,6 +39,13 @@ match "anuncie" => "estaticas#anuncie"
 match "livros-recomendados" => "estaticas#livros_recomendados"
 match "o-que-e-fonoaudiologia" => "estaticas#o_que_e_fonoaudiologia"
 match "termos-de-uso" => "estaticas#termos_de_uso"
+match "como-enviar-suas-duvidas" => "estaticas#como_enviar_suas_duvidas"
+
+
+#LOGIN WITH FACEBOOK#
+match '/auth/:provider/callback' => 'login#create'
+match '/auth/failure', :to => 'login#failure'
+match '/sair', :to => 'login#destroy'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

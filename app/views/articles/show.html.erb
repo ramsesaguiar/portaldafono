@@ -2,30 +2,36 @@
   <div class="grid_15 suffix_1 content">
     <div class="cat_title back_post">
       <%= link_to "Veja todos os artigos", "/artigos", :class => "link-back" %>
-      <div class="social_buttons_top"><img src="/images/temp/social_buttons.gif" width="217" height="20" alt="" /></div>
+      <div class="social_buttons_top">
+          <div class="fb-like" 
+            data-send="true" data-layout="button_count" 
+            data-width="450" data-show-faces="false" data-font="verdana"></div> 
+      </div>
       <div class="clear"></div>
     </div>
     <div class="post-item post-detail">
       <h1><%= @article.titulo %></h1>
       <p> <%= @article.subtitulo %> </p>
       <div class="post-meta">
-        <span class="icon_cat icon_cat_blog">20 comentários</span>
+        <span class="icon_cat icon_cat_blog">
+                <fb:comments-count href="<%= request.url %>"></fb:comments-count> comentários
+              </span>
         <em>por <span class="author">  <%= @article.author.nome %> </span> 
         &nbsp;|&nbsp; <%= @article.created_at.strftime("%d/%m/%Y") %> </em>
       </div>
       <div class="entry">
         <% if not @article.image.url(:medium) == "/images/medium/missing.png" %>
-            <p> <%= image_tag @article.image.url(:medium) %>  </p>
+            <p> <%= image_tag @article.image.url(:medium), :class => "frame_left" %>  </p>
         <% end %> 
         <p>  <%= @article.texto %> </p>
-        <p> <strong>Palavras-chave:</strong> <%= @article.palavras_chave %> </p>
+        <p> <strong>Palavras-chave:</strong> <em> <%= @article.palavras_chave %></em> </p>
         <div class="clear"></div>
       </div>
     </div>
     
-  <!-- comentário do Facebook -->
   <div class="add-comment" id="addcomments">
-      <h3>Comente</h3>
+    <div class="cat_title back_post"> <h3> Faça aqui seus comentários </h3> </div>
+    <div class="fb-comments" data-href="<%= request.url %>" data-num-posts="10" data-width="590"></div> 
   </div>
                       
   </div>

@@ -12,18 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :usuario_id %><br />
-    <%= f.number_field :usuario_id %>
-  </div>
-  <div class="field">
-    <%= f.label :titulo %><br />
+    <%= f.label :titulo,  "Escreva sua pergunta" %><br />
     <%= f.text_field :titulo %>
   </div>
   <div class="field">
-    <%= f.label :texto %><br />
+    <%= f.label :texto, "Faça uma explicação para que possamos entender melhor" %><br />
     <%= f.text_area :texto %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Enviar" %>
   </div>
 <% end %>

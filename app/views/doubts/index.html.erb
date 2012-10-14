@@ -1,10 +1,22 @@
 ﻿<div class="divider_thin"></div>
 <div class="grid_15 suffix_1 content">
     <div class="cat_title">
-        <h2>Dúvidas</h2> 
+        <h2>Dúvidas</h2>
+        <div class="social_buttons_top">
+            <p> <%= link_to "Envie sua dúvida para nós", "/duvidas/inserir", :class => "link-more" %> </p>
+        </div>
         <div class="clear"></div>
     </div>
     <div class="post-item">
+        <blockquote>
+            <div class="inner">
+                <p>Nesse espaço, nossos profissionais tirarão suas dúvidas referente à fonoadiologia. 
+                    Você poderá opinar também, nas dúvidas enviadas por outros usuários </p>
+                 <br />   
+                <p> Saiba mais sobre como enviar suas dúvidas, <a href="/como-enviar-suas-duvidas" class="black">clicando aqui </a> </p>  
+                <br />     
+            </div>    
+        </blockquote>
         <div class="post-meta">
             <ul class="list_arrows">
                 <% if @doubts.count > 0 %>    

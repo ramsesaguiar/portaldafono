@@ -16,5 +16,9 @@ class EstaticasController < ApplicationController
     @sidebar = false
   end
 
+  def como_enviar_suas_duvidas
+    @sidebar = false
+  end
+
 
 end

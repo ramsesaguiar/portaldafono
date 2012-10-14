@@ -40,17 +40,20 @@
   # POST /doubts
   # POST /doubts.json
   def create
-    @doubt = Doubt.new(params[:doubt])
-
+    duvida = Doubt.new
+    duvida.usuario_id = session[:current_user_id]
+    duvida.titulo = params[:doubt][:titulo]
+    duvida.texto = params[:doubt][:texto]
+    duvida.status = "S"
     respond_to do |format|
-      if @doubt.save
-        format.html { redirect_to @doubt, notice: 'Dúvida criada com sucesso.' }
-        format.json { render json: @doubt, status: :created, location: @doubt }
+      if duvida.save
+        format.html { redirect_to duvida, notice: 'Dúvida criada com sucesso.' }
+        format.json { render json: duvida, status: :created, location: duvida }
       else
         format.html { render action: "new" }
-        format.json { render json: @doubt.errors, status: :unprocessable_entity }
+        format.json { render json: duvida.errors, status: :unprocessable_entity }
       end
-    end
+    end 
   end
 
   # PUT /doubts/1

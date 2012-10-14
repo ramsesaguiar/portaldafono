@@ -2,14 +2,20 @@
   <div class="grid_15 suffix_1 content">
     <div class="cat_title back_post">
       <%= link_to "Veja todos os debates", "/debates", :class => "link-back" %>
-      <div class="social_buttons_top"><img src="/images/temp/social_buttons.gif" width="217" height="20" alt="" /></div>
+      <div class="social_buttons_top">
+         <div class="fb-like" 
+         data-send="true" data-layout="button_count" 
+         data-width="450" data-show-faces="false" data-font="verdana"></div> 
+      </div>
       <div class="clear"></div>
     </div>
     <div class="post-item post-detail">
       <h1><%= @discussion.titulo %></h1>
       <p> <%= @discussion.subtitulo %> </p>
       <div class="post-meta">
-        <span class="icon_cat icon_cat_blog">20 opiniões</span>
+        <span class="icon_cat icon_cat_blog">
+            <fb:comments-count href="<%= request.url %>"></fb:comments-count> opiniões
+        </span>
         <em>por <span class="author">  <%= @discussion.author.nome %> </span> 
         &nbsp;|&nbsp; início: <%= @discussion.data_inicio.strftime("%d/%m/%Y") %> 
         até:  <%= @discussion.data_fim.strftime("%d/%m/%Y") %> </em>
@@ -19,10 +25,9 @@
         <div class="clear"></div>
       </div>
     </div>
-    
-  <!-- comentário do Facebook -->
-  <div class="add-comment" id="addcomments">
-      <h3>Comente</h3>
-  </div>
+    <div class="add-comment" id="addcomments">
+        <div class="cat_title back_post"> <h3> Faça aqui seus comentários </h3> </div>
+        <div class="fb-comments" data-href="<%= request.url %>" data-num-posts="10" data-width="590"></div> 
+    </div>     
                       
   </div>
