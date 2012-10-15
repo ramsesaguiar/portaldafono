@@ -40,6 +40,7 @@ match "livros-recomendados" => "estaticas#livros_recomendados"
 match "o-que-e-fonoaudiologia" => "estaticas#o_que_e_fonoaudiologia"
 match "termos-de-uso" => "estaticas#termos_de_uso"
 match "como-enviar-suas-duvidas" => "estaticas#como_enviar_suas_duvidas"
+match "links-uteis" => "estaticas#links_uteis"
 
 
 #LOGIN WITH FACEBOOK#

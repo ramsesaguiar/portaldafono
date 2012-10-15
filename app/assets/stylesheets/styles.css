@@ -39,7 +39,7 @@ table { border-collapse: collapse; border-spacing: 0; }/* tables still need 'cel
 /*----------------------------------------------*/
 body {
 	background:#fff;
-	font-family: Georgia, "Times New Roman", Times, serif;
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
 	color:#404040;
 	font-size:13px;
 	line-height:1.4em}
@@ -977,27 +977,39 @@ button:hover,button:focus{
 
 .menu-gray a:hover, .current-menu-item.menu-gray a, .current-menu-ancestor.menu-gray a {
 	background:url(../images/menu_gray_a.png) center 0 no-repeat}
+
+.menu-red-active { background:url(../images/menu_red_a.png) center 0 no-repeat !important; }	
 	
 .menu-red a:hover, .current-menu-item.menu-red a, .current-menu-ancestor.menu-red a  {
 	background:url(../images/menu_red_a.png) center 0 no-repeat}
 	
 .menu-orange a:hover, .current-menu-item.menu-orange a, .current-menu-ancestor.menu-orange a  {
 	background:url(../images/menu_orange_a.png) center 0 no-repeat}
+
+.menu-orange-active { background:url(../images/menu_orange_a.png) center 0 no-repeat !important; }	
 	
 .menu-yellow a:hover, .current-menu-item.menu-yellow a, .current-menu-ancestor.menu-yellow a  {
 	background:url(../images/menu_yellow_a.png) center 0 no-repeat}
+
+.menu-yellow-active { background:url(../images/menu_yellow_a.png) center 0 no-repeat !important; }	
 	
 .menu-green a:hover, .current-menu-item.menu-green a, .current-menu-ancestor.menu-green a  {
 	background:url(../images/menu_green_a.png) center 0 no-repeat}
+
+.menu-green-active { background:url(../images/menu_green_a.png) center 0 no-repeat !important; }	
 	
 .menu-turquoise a:hover, .current-menu-item.menu-turquoise a, .current-menu-ancestor.menu-turquoise a  {
 	background:url(../images/menu_turquoise_a.png) center 0 no-repeat}
+
+.menu-turquoise-active { background:url(../images/menu_turquoise_a.png) center 0 no-repeat !important; }
 	
 .menu-blue a:hover, .current-menu-item.menu-blue a, .current-menu-ancestor.menu-blue a  {
 	background:url(../images/menu_blue_a.png) center 0 no-repeat}
 	
 .menu-purple a:hover, .current-menu-item.menu-purple a, .current-menu-ancestor.menu-purple a  {
 	background:url(../images/menu_purple_a.png) center 0 no-repeat}
+
+.menu-purple-active { background:url(../images/menu_purple_a.png) center 0 no-repeat !important; }
 
 /*----------------------------------------------*/
 /* 2.3 Homepage Featured Content */
@@ -1490,8 +1502,9 @@ button:hover,button:focus{
 .text {
 	line-height:1.5em;
 	font-size:14px;
-	font-family: "Times New Roman", Times, serif;
-	color:#404040}
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	color:#404040;
+ }
 
 .text a {
 	color:#2e88c7}
@@ -2320,7 +2333,8 @@ table.table-price tbody .tablecolhover {}
 	padding:0 0 5px 0;
 	line-height:1.5em;
 	font-size:15px;
-	font-family: "Times New Roman", Times, serif}
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+}
 
 .grid_15 .entry img {
 	max-width:590px}

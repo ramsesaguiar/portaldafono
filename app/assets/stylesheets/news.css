@@ -3,12 +3,14 @@
 
 .news-list {
 	border-left: 2px solid #DC3019;
-border-right: 2px solid #DC3019;
-padding: 0px 16px;
-margin: 20px 0px;
-font-family: 'Times New Roman';
-height: 47px;
-line-height: 49px;
-font-size: 18px;
-font-style: italic;
+	border-right: 2px solid #DC3019;
+	padding: 0px 16px;
+	margin: 20px 0px;
+	font-family: 'Times New Roman';
+	height: 47px;
+	line-height: 49px;
+	font-size: 18px;
+	font-style: italic;
 }
+
+.linha_vermelha{ border-bottom: 1px solid red !important; }

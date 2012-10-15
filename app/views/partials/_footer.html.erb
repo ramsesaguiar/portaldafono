@@ -18,8 +18,9 @@
                     <ul class="menu_type_2">
                          <li><a href="/livros-recomendados">Livros recomendados</a></li>
                          <li><a href="#">Apostilas <span class="red">em breve</span></a></li>
-                         <li><a href="#">Faculdades<span class="red">em breve</span></a></li>
+                         <li><a href="#">Faculdades <span class="red">em breve</span></a></li>
                          <li><a href="/o-que-e-fonoaudiologia">O que é fonoaudiologia? </a></li>
+                          <li><a href="/links-uteis">Links úteis </a></li>
                     </ul>
                 </div>
             </div>          
@@ -59,34 +60,39 @@
 <div class="container_24">
     <div class="botmenu">
         <ul>
-            <li class="menu-red">
+            <li class="first current-menu-item menu-item-home menu-gray"> 
+                <%= link_to "/" do %>
+                    <span>HOME</span>
+                <% end %>
+            </li>
+            <li class="<%= controller.controller_name == 'news' ? 'menu-red-active' : 'menu-red' %>">
                 <%= link_to "/noticias" do %>
                     <span>Notícias</span>
                 <% end %>
             </li>
-            <li class="menu-orange">
+            <li class="<%= controller.controller_name == 'discussions' ? 'menu-orange-active' : 'menu-orange' %>">
                  <%= link_to "/debates" do %>
                     <span>Debates</span>
                 <% end %>
             </li>
-            <li class="menu-yellow">
+            <li class="<%= controller.controller_name == 'doubts' ? 'menu-yellow-active' : 'menu-yellow parent' %>">
                 <%= link_to "/duvidas" do %>
                     <span>Dúvidas</span>
                 <% end %>
             </li>
-            <li class="menu-green">
+            <li class="<%= controller.controller_name == 'articles' ? 'menu-green-active' : 'menu-green' %>"> 
                  <%= link_to "/artigos" do %>
                     <span>Artigos</span>
                 <% end %>
             </li>
-            <li class="menu-turquoise">
+            <li class="<%= controller.controller_name == 'interviews' ? 'menu-turquoise-active' : 'menu-turquoise' %>">
                 <%= link_to "/entrevistas" do %>
                     <span>Entrevistas</span>
                 <% end %>
             </li>  
             </li>
             <!-- <li class="menu-blue"><a href="#">Movies</a></li> -->
-            <li class="menu-purple">
+            <li class="<%= controller.controller_name == 'contacts' ? 'menu-purple-active' : 'menu-purple' %>">
                 <%= link_to "/faleconosco" do %>
                     <span>Fale conosco</span>
                 <% end %>  

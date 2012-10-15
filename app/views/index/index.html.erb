@@ -31,7 +31,8 @@
             <h2> <%= link_to @noticia.titulo, @noticia  %> </h2>
             <div class="post-meta">
                 <!-- <span class="icon_cat icon_cat_3"><a href="#">Music</a></span> -->
-            	   <em>por <span class="author"><%= @noticia.author.nome %></span> &nbsp;|&nbsp; <%= @noticia.created_at.strftime("%d/%m/%Y") %> 
+            	   por <span class="author"><%= @noticia.author.nome %></span> 
+                   &nbsp;|&nbsp; <%= @noticia.created_at.strftime("%d/%m/%Y") %> 
                     &nbsp;|&nbsp; <span class="icon_cat icon_cat_blog">20 comentários</span> 
    		   </div>
             <div class="entry">
@@ -59,7 +60,8 @@
             <h2><%= link_to @debate.titulo, @debate %></h2>
             <div class="post-meta">
                 <!-- <span class="icon_cat icon_cat_4"><a href="#">Movies</a></span> -->
-                <em>por <span class="author"> <%= @debate.author.nome %> </span> &nbsp;|&nbsp; <%= @debate.data_inicio.strftime("%d/%m/%Y") %>
+                por <span class="author"> <%= @debate.author.nome %> </span> &nbsp;|&nbsp; 
+                <%= @debate.data_inicio.strftime("%d/%m/%Y") %>
                  &nbsp;|&nbsp; <span class="icon_cat icon_cat_blog">20 opiniões</span> 
             </div>
             <div class="entry">

@@ -1,7 +1,8 @@
-﻿<div class="divider_thin"></div>
+﻿  <div class="divider_thin"></div>
   <div class="grid_15 suffix_1 content">
-    <div class="cat_title back_post">
-      <%= link_to "Veja todos os debates", "/debates", :class => "link-back" %>
+    <div class="cat_title linha_laranja back_post">
+      <%= link_to "Ir para Debates", "/debates", :class => "link-back" %> 
+
       <div class="social_buttons_top">
          <div class="fb-like" 
          data-send="true" data-layout="button_count" 
@@ -16,9 +17,9 @@
         <span class="icon_cat icon_cat_blog">
             <fb:comments-count href="<%= request.url %>"></fb:comments-count> opiniões
         </span>
-        <em>por <span class="author">  <%= @discussion.author.nome %> </span> 
+        por <span class="author">  <%= @discussion.author.nome %> </span> 
         &nbsp;|&nbsp; início: <%= @discussion.data_inicio.strftime("%d/%m/%Y") %> 
-        até:  <%= @discussion.data_fim.strftime("%d/%m/%Y") %> </em>
+        até:  <%= @discussion.data_fim.strftime("%d/%m/%Y") %> 
       </div>
       <div class="entry">
         <p>  <%= @discussion.texto %> </p>

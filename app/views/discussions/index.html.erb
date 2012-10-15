@@ -1,23 +1,22 @@
 ﻿<div class="divider_thin"></div>
 <div class="grid_15 suffix_1 content">
-  <div class="cat_title">
+  <div class="cat_title linha_laranja">
         <h2>Debates</h2> 
         <div class="clear"></div>
     </div>
     <div class="post-item">
         <div class="post-meta">
-            <ul class="list_arrows">
+            <ul>
               <% if @discussions.count > 0 %>
                 <% @discussions.each do |discussion| %>
                   <li class="discussions-list"> 
-                    <%= link_to ( 
-                      "início: #{discussion.data_inicio.strftime("%d/%m/%Y")} - 
-                       até: #{discussion.data_fim.strftime("%d/%m/%Y")} <br />
-                       <strong> #{discussion.titulo} </strong> 
-                       <br/>
-                       <em> #{discussion.subtitulo}</em>
-                       <strong> <em> por </em> </strong> 
-                       <span class='author'> #{discussion.author.nome} </span>" ).html_safe , discussion, :class => "" %> </li>
+                    <p> 
+                      início: <%= discussion.data_inicio.strftime("%d/%m/%Y") %> |
+                      fim: <%= discussion.data_fim.strftime("%d/%m/%Y") %></p>
+                      <%= link_to ( "<strong> #{discussion.titulo} </strong> " ).html_safe , discussion %> 
+                      <br />
+                      <em> por </em> <span class='author'> <%= discussion.author.nome %> </span>
+                  </li>
                    <% end %>
               <% else %>
                   <li class="not-found"> Nenhum debate realizado</li>

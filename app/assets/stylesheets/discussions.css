@@ -1,2 +1,24 @@
-.discussions-list a{ color: #262626 !important; }
-.discussions-list:hover { text-decoration: underline; }
+.discussions-list {
+	border-bottom: 1px solid #F1F1F1;
+	padding: 0 0 20px 0;
+	position: relative;
+	min-height: 66px;
+	overflow: hidden;
+	margin: 0 0 20px 0;
+	list-style-type: none; 
+}
+
+.discussions-list a{
+	color: #4183C4;
+	text-decoration: none;
+	font-size: 20px;
+	letter-spacing: -1px;
+	line-height: 32px;
+	height: 32px;
+	margin: 0 0 1px;
+	white-space: nowrap;
+}
+
+.discussions-list a:hover { text-decoration: underline;}
+
+.linha_laranja{ border-bottom: 1px solid orange !important; }

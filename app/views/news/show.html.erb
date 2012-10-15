@@ -1,6 +1,6 @@
 ﻿<div class="divider_thin"></div>
     <div class="grid_15 suffix_1 content">
-        <div class="cat_title back_post">
+        <div class="cat_title linha_vermelha back_post">
             <%= link_to "Veja todas as notícias", news_index_path, :class => "link-back" %>
             <div class="social_buttons_top">
                <div class="fb-like" 
@@ -16,8 +16,8 @@
               <span class="icon_cat icon_cat_blog">
                 <fb:comments-count href="<%= request.url %>"></fb:comments-count> comentários
               </span>
-              <em>por <span class="author">  <%= @news.author.nome %> </span> 
-                &nbsp;|&nbsp; <%= @news.created_at.strftime("%d/%m/%Y") %> </em>
+              por <span class="author">  <%= @news.author.nome %> </span> 
+                &nbsp;|&nbsp; <%= @news.created_at.strftime("%d/%m/%Y") %> 
           </div>
           <div class="entry">
             <% if not @news.image.url(:medium) == "/images/medium/missing.png" %>

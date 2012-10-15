@@ -5,34 +5,32 @@
                 <span>HOME</span>
             <% end %>
         </li>
-        <li class="menu-red">
+        <li class="<%= controller.controller_name == 'news' ? 'menu-red-active' : 'menu-red' %>">
             <%= link_to "/noticias" do %>
                 <span>Notícias</span>
             <% end %>
         </li>
-        <li class="menu-orange">
+        <li class="<%= controller.controller_name == 'discussions' ? 'menu-orange-active' : 'menu-orange' %>">
             <%= link_to "/debates" do %>
                 <span>Debates</span>
             <% end %>
         </li>
-        <li class="menu-yellow parent">
+        <li class="<%= controller.controller_name == 'doubts' ? 'menu-yellow-active' : 'menu-yellow parent' %>">    
             <%= link_to "/duvidas" do %>
                 <span>Dúvidas</span>
             <% end %>
         </li>
-        <li class="menu-green">
+         <li class="<%= controller.controller_name == 'articles' ? 'menu-green-active' : 'menu-green' %>">    
             <%= link_to "/artigos" do %>
                 <span>Artigos</span>
             <% end %>
         </li>
-       <li class="menu-turquoise">
+         <li class="<%= controller.controller_name == 'interviews' ? 'menu-turquoise-active' : 'menu-turquoise' %>">
             <%= link_to "/entrevistas" do %>
                 <span>Entevistas</span>
             <% end %>
         </li>
-        <!-- <li class="menu-blue">
-        </li> -->
-        <li class="last menu-purple">
+        <li class="<%= controller.controller_name == 'contacts' ? 'menu-purple-active' : 'menu-purple' %>">
             <%= link_to "/faleconosco" do %>
                 <span>Fale conosco</span>
             <% end %>    

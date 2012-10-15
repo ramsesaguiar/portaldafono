@@ -1,2 +1,3 @@
 .doubts-list a{ color: #262626 !important; }
 .doubts-list:hover { text-decoration: underline; }
+.linha_amarela{ border-bottom: 1px solid yellow !important; }

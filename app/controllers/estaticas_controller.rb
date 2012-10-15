@@ -20,5 +20,9 @@ class EstaticasController < ApplicationController
     @sidebar = false
   end
 
+  def links_uteis
+    @sidebar = false
+  end
+
 
 end
