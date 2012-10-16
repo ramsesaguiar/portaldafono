@@ -3,20 +3,18 @@
     <div class="cat_title linha_purpura">
         <h2>Fale conosco</h2>
 	    <div class="clear"></div>
-        
-      
     </div>
-      <p> Sua participação é muito importante para nós </p>
-      <p id="notice"><%= notice %></p>
-    <div class="post-item">
-        <div class="post-meta">
-            <%= render 'form' %>
-        </div>
-    </div>
+      <% if params[:notice].present? %>
+        <p class="form-sucess"> Enviado com sucesso. Em breve estaremos respondendo. </p>
+        <p class="form-sucess"> Muito obrigado por entrar em contato conosco.</p>
+      <% else %>
+        <p> Sua participação é muito importante para nós </p>
+        <div class="post-item">
+            <div class="post-meta">
+                <%= render 'form' %>
+            </div>
+        </div>  
+      <% end %>
+    
 
 </div>
-
-
-
-
-

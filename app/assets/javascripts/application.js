@@ -6,8 +6,6 @@ $(document).ready(function() {
 				transition_interval: 5000
 			}
 		);
-	
 
-
-
-	});
+		$('textarea').autosize({append: "\n"});
+});

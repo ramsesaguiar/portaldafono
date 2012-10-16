@@ -10,11 +10,12 @@
 			<input type="submit" id="searchsubmit" value="Search" class="btn-search" />
         </form>            
     </div> -->
-    <div class="box_login_with_facebook">
+    <div class="box_login_with_facebook float_right">
         <% if current_user.present? %>
-            <p> Seja bem vindo(a) <%= current_user["nome"] %>!, <span> <a href="/sair/"> sair </a> </span> </p>
+            <p> <%= image_tag current_user["url_image"],  :height => "30px", :class => "frame_left" %>  
+             Seja bem vindo(a)   <%= current_user["nome"] %>!, <span> <a href="/sair/"> sair </a> </span> </p>
         <% else %>
-            <div class="facebook_btn-big float_right">
+            <div class="facebook_btn-big">
                 <a href="/auth/facebook"> Entrar usando o Facebook </a>
             </div>
         <% end %>

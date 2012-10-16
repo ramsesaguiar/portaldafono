@@ -24,5 +24,9 @@ class EstaticasController < ApplicationController
     @sidebar = false
   end
 
+  def termos_de_uso
+    @sidebar = false
+  end
+
 
 end

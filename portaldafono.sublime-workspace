@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
 				"Re",
 				"Reprovado"
 			],
@@ -27,6 +35,54 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/views/news/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 1276,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/contacts/new.html.erb",
+			"settings":
+			{
+				"buffer_size": 419,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/news/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 761,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/news.css",
+			"settings":
+			{
+				"buffer_size": 91,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/contacts/_form.html.erb",
+			"settings":
+			{
+				"buffer_size": 734,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/styles.css",
+			"settings":
+			{
+				"buffer_size": 57482,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -52,6 +108,8 @@
 	},
 	"file_history":
 	[
+		"/C/wwwrails/portaldafono/app/views/index/index.html.erb",
+		"/C/wwwrails/portaldafono/app/assets/stylesheets/styles.css",
 		"/C/Users/Leonardo/Desktop/theme_v2/shortcodes-typography.html",
 		"/C/Users/Leonardo/Desktop/theme_v2/shortcodes-columns.html",
 		"/C/Users/Leonardo/Desktop/theme_v2/shortcodes-html.html",
@@ -81,7 +139,6 @@
 		"/C/wwwrails/portaldafono/app/controllers/news_controller.rb",
 		"/C/wwwrails/portaldafono/app/views/news/index.html.erb",
 		"/C/wwwrails/portaldafono/app/views/news/show.html.erb",
-		"/C/wwwrails/portaldafono/app/views/index/index.html.erb",
 		"/C/wwwrails/portaldafono/app/controllers/doubts_controller.rb",
 		"/C/wwwrails/portaldafono/app/views/contacts/new.html.erb",
 		"/C/wwwrails/portaldafono/app/views/admin/articles/_form.html.erb",
@@ -211,8 +268,172 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/views/news/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 1276,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								399,
+								399
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/contacts/new.html.erb",
+					"settings":
+					{
+						"buffer_size": 419,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								286,
+								286
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/news/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 761,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								761
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/assets/stylesheets/news.css",
+					"settings":
+					{
+						"buffer_size": 91,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12,
+								12
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/contacts/_form.html.erb",
+					"settings":
+					{
+						"buffer_size": 734,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								615,
+								615
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/assets/stylesheets/styles.css",
+					"settings":
+					{
+						"buffer_size": 57482,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13932,
+								13932
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6464.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -258,6 +479,30 @@
 		"selected_items":
 		[
 			[
+				"styles",
+				"app/assets/stylesheets/styles.css"
+			],
+			[
+				"viewscontact",
+				"app/views/contacts/_form.html.erb"
+			],
+			[
+				"news.css",
+				"app/assets/stylesheets/news.css"
+			],
+			[
+				"viewsindex",
+				"app/views/index/index.html.erb"
+			],
+			[
+				"viewsnewsin",
+				"app/views/news/index.html.erb"
+			],
+			[
+				"viewsnewssho",
+				"app/views/news/show.html.erb"
+			],
+			[
 				"controllercon",
 				"app/controllers/contacts_controller.rb"
 			],
@@ -268,10 +513,6 @@
 			[
 				"viewsindexind",
 				"app/views/index/index.html.erb"
-			],
-			[
-				"viewsnewssho",
-				"app/views/news/show.html.erb"
 			],
 			[
 				"viewsnewsinde",
@@ -348,10 +589,6 @@
 			[
 				"controllerdiscu",
 				"app/controllers/discussions_controller.rb"
-			],
-			[
-				"viewsindex",
-				"app/views/index/index.html.erb"
 			],
 			[
 				"viewsarticles",
@@ -752,22 +989,6 @@
 			[
 				"creat",
 				"db/migrate/20120208162939_create_layouts_templates.rb"
-			],
-			[
-				"createima",
-				"db/migrate/20120201173442_create_images.rb"
-			],
-			[
-				"createslo",
-				"db/migrate/20120201173035_create_slots.rb"
-			],
-			[
-				"createlay",
-				"db/migrate/20120208162824_create_layouts.rb"
-			],
-			[
-				"gemfile",
-				"Gemfile"
 			]
 		],
 		"width": 0.0

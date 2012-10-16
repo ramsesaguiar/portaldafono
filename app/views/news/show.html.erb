@@ -23,7 +23,7 @@
             <% if not @news.image.url(:medium) == "/images/medium/missing.png" %>
                 <p> <%= image_tag @news.image.url(:medium), :class => "frame_left" %>  </p>
             <% end %> 
-            <p>  <%= @news.texto %> </p>
+            <p>  <%= (@news.texto).html_safe %> </p>
             
             <div class="clear"></div>
           </div>

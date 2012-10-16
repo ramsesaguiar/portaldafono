@@ -1,29 +1,36 @@
 ﻿<%= form_for(@contact) do |f| %>
   <% if @contact.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@contact.errors.count, "erro") %> encontrado(s):</h2>
-
-      <ul>
-      <% @contact.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+      <p class="red">Erros encontrado(s): <p>
+      <ul class="list_arrows">
+        <% @contact.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="field">
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
+    <%= f.label :nome, "Nome:*" %>
+    <% if current_user.present? %>
+       <%= f.text_field :nome, :value => current_user["nome"] , :placeholder => 'Digite seu nome', :readonly => true  %>
+    <% else %>
+     <%= f.text_field :nome, :placeholder => 'Digite seu nome'  %>
+    <% end %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.label :email, "Email:*" %>
+    <% if current_user.present? %>
+       <%= f.text_field :email, :value => current_user["email"] , :placeholder => 'Digite seu email', :readonly => true  %>
+    <% else %>
+     <%= f.text_field :email, :placeholder => 'Digite seu email'  %>
+    <% end %>
   </div>
   <div class="field">
-    <%= f.label :texto %><br />
-    <%= f.text_area :texto, :cols => 40, :rows => 10 %>
+    <%= f.label :texto, "Texto:*" %>
+    <%= f.text_area :texto,  :rows => 4 %>
   </div>
   <div class="actions">
-    <%= f.submit "Enviar", :class => "button_link btn_red" %>
+    <%= f.submit "Enviar", :class => "button_link btn_contact_enviar" %>
   </div>
 <% end %>

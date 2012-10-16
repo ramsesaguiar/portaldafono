@@ -34,14 +34,11 @@ margin: 10px 0 5px 0;
 
 .facebook_btn-big {
 	border: 1px #29447E solid;
-	display: block;
-	height: 38px;
 	width: 236px;
 	line-height: 37px;
 }
 
 .facebook_btn-big a {
-	padding-left: 42px;
 	padding-right: 12px;
 	background: url(http://img.kekanto.com/sprites/sprites.png) no-repeat -560px -156px #637BAD;
 	display: block;
@@ -60,19 +57,22 @@ margin: 10px 0 5px 0;
 }
 
 .box_login_with_facebook{
-	padding-top: 22px;
-	width: 491px;
+	/* padding-top: 22px;
+	width: 491px; */
+	
 }
 
 .box_login_with_facebook p{
-	font-size: 16px;
+	font-size: 13px;
 	font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+	float: left;
+	line-height: 55px;
 }
 
 .box_login_with_facebook span{ font-size: 16px; font-family: 'lucida grande',tahoma,verdana,arial,sans-serif; color: blue; }
 .float_right{ float: right; }
 .float_left{ float: left; }
-.block_doubt_facebook{ position: relative; left: 126px; margin-top: 20px; }
+
 .padding_top_10 { padding-top: 10px; }
 .padding_bottom_40 { padding-bottom: 40px; }
 .inner a{ color: #CE205A; }

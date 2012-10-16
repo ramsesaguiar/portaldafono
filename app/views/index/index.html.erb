@@ -32,15 +32,14 @@
             <div class="post-meta">
                 <!-- <span class="icon_cat icon_cat_3"><a href="#">Music</a></span> -->
             	   por <span class="author"><%= @noticia.author.nome %></span> 
-                   &nbsp;|&nbsp; <%= @noticia.created_at.strftime("%d/%m/%Y") %> 
-                    &nbsp;|&nbsp; <span class="icon_cat icon_cat_blog">20 comentários</span> 
+                   &nbsp;|&nbsp; <%= @noticia.created_at.strftime("%d/%m/%Y") %> &nbsp; <span class="icon_cat icon_cat_blog"> <%= link_to "20 comentários" , @noticia %> </span> 
    		   </div>
             <div class="entry">
                 <p>
                     <% if not @noticia.image.url(:medium) == "/images/medium/missing.png" %>
-                        <%= image_tag @noticia.image.url(:medium) %>  
+                        <%= image_tag @noticia.image.url(:medium), :class => "frame_left" %>  
                     <% end %>   
-                    <%= @noticia.texto %> 
+                    <%= (@noticia.texto).html_safe %> 
                 </p>
                 <div class="clear"></div>
 		    </div>
@@ -62,7 +61,7 @@
                 <!-- <span class="icon_cat icon_cat_4"><a href="#">Movies</a></span> -->
                 por <span class="author"> <%= @debate.author.nome %> </span> &nbsp;|&nbsp; 
                 <%= @debate.data_inicio.strftime("%d/%m/%Y") %>
-                 &nbsp;|&nbsp; <span class="icon_cat icon_cat_blog">20 opiniões</span> 
+                 &nbsp;|&nbsp; <span class="icon_cat icon_cat_blog"><%= link_to "20 opiniões" , @debate %></span> 
             </div>
             <div class="entry">
                 <div class="clear"></div>
@@ -80,12 +79,13 @@
                 <!-- <span class="icon_cat icon_cat_4"><a href="#">Movies</a></span> -->
                 <div class="inner-quote">
                     <div class="quote-text">
-                        <h2><%= @duvida.titulo %></h2>
+                        <h2><%= link_to @duvida.titulo, @duvida %></h2>
                     </div>
                     <div class="quote-author">
-                        <div><em> enviada por</em> <span class="author"><%= @duvida.user.nome %></span>, 
-                        <%= @duvida.created_at.strftime("%d/%m/%Y") %>
-                        | &nbsp; <a href="#" class="link-comments">6 comentários</a></div>  
+                        <div>
+                            enviada por <span class="author"><%= @duvida.user.nome %></span>, <%= @duvida.created_at.strftime("%d/%m/%Y") %> | &nbsp;
+                            <span class="icon_cat icon_cat_blog"> <%= link_to "20 comentários", @debate %></span>
+                        </div>  
                     </div>
                     <div class="clear"></div>
                 </div>

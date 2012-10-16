@@ -30,7 +30,8 @@
 
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to action: "index", notice: 'Fale conosco criado com sucesso.' }
+        UserMailer.fale_conosco_enviado(params[:contact]).deliver
+        format.html { redirect_to action: "index", notice: 'sucess' }
         format.json { render json: @contact, status: :created, location: @contact }
       else
         format.html { render action: "new" }

@@ -10,8 +10,10 @@
             <ul>
                 <% if @news.count > 0 %>    
                     <% @news.each do |news| %>
-                        <li class="news-list"> <%= link_to (" <p> <em> #{news.created_at.strftime("%d/%m/%Y")} </em> | 
-                            #{news.titulo}</p>" ).html_safe , news, :class => "" %> </li>
+                        <li class="news-list"> 
+                            <p> <%= news.created_at.strftime("%d/%m/%Y") %> |      
+                            <%= link_to ("<strong> #{news.titulo} </strong>").html_safe , news  %> </p>
+                        </li>
                     <% end %> 
                 <% else %>
                   <li class="not-found"> Nenhuma notícia encontrada </li>

@@ -1,10 +1,9 @@
 ﻿<%= form_for(@doubt) do |f| %>
   <% if @doubt.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@doubt.errors.count, "error") %> prohibited this doubt from being saved:</h2>
-
-      <ul>
-      <% @doubt.errors.full_messages.each do |msg| %>
+       <p class="red">Erros encontrado(s): <p>
+      <ul class="list_arrows">
+        <% @doubt.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -12,14 +11,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :titulo,  "Escreva sua pergunta" %><br />
-    <%= f.text_field :titulo %>
+    <%#= f.label :titulo,  ""  %>
+    <%= f.text_field :titulo,  :placeholder => "Escreva aqui a sua dúvida" %>
   </div>
   <div class="field">
-    <%= f.label :texto, "Faça uma explicação para que possamos entender melhor" %><br />
-    <%= f.text_area :texto %>
+    <%= f.text_area :texto,  :placeholder => "Faça uma breve descrição da sua dúvida para que possamos entender com mais clareza" %>
   </div>
   <div class="actions">
-    <%= f.submit "Enviar" %>
+    <%= f.submit "Enviar", :class => "btn_doubt_enviar" %>
   </div>
 <% end %>

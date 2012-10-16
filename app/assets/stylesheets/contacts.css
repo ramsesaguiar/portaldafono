@@ -1,1 +1,40 @@
 .linha_purpura{ border-bottom: 1px solid #7093DB !important; }
+.new_contact input { width: 300px; height: 30px; }
+
+.btn_contact_enviar{ width: 124px !important; height: 45px !important; }
+.btn_contact_enviar:hover { background: red; }
+
+.new_contact label {
+	clear: left;
+	color: #3E3A32;
+	display: inline;
+	float: left;
+	width: 65px;
+	text-transform: uppercase;
+	padding-top: 5px;
+}
+
+
+
+.new_contact input, .new_contact textarea {
+	display: inline;
+	border: 1px solid #A8998C;
+	background-color: #70665C;
+	padding: 5px 10px;
+	color: #FAF8E8;
+}
+
+.list_arrows li{
+	color: black;
+	margin: 0px !important;	
+}
+
+.field_with_errors label { color: #FF0000 !important; }
+
+.form-sucess{ color: #FF0000; font-size: 18px; font-style: italic; line-height: 30px;}
+
+
+
+
+
+

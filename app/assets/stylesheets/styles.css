@@ -25,21 +25,13 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 del { text-decoration: line-through; }
 table { border-collapse: collapse; border-spacing: 0; }/* tables still need 'cellspacing="0"' in the markup */
 
-/*----------------------------------------------*/
-/* 1.2 Extra fonts */
-/*----------------------------------------------*/
-@font-face {
-	font-family: 'edelsansRegular';
-	font-weight: normal;
-	font-style: normal;
-}
 
 /*----------------------------------------------*/
 /* 1.3 General Styles */
 /*----------------------------------------------*/
 body {
 	background:#fff;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif !important;
 	color:#404040;
 	font-size:13px;
 	line-height:1.4em}
@@ -400,7 +392,7 @@ hr{
 /*----------------------------------------------*/
 h1,h2,h3,h4,h5,h6{
 	font-weight:normal;
-	font-family:'edelsansRegular', Arial, Helvetica, sans-serif;
+	/* font-family:'edelsansRegular', Arial, Helvetica, sans-serif; */
 	color:#262626}
 	
 h1{
@@ -477,17 +469,22 @@ fieldset{
 	border:1px solid #e0e0e0;}
 form .row {
 	padding:5px 0}
-input[type=text],input[type=password],textarea{
-	color:#666;
+
+input, textarea {
+	padding: 6px 10px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;
+	background: white;
+	border: 1px solid #C8BBAA;
+	position: relative;
+	font-size: 12px;
 	padding:8px;
-	border:1px solid #dedede;
-	background:#ececee;
-	resize:none}
-	
-textarea{
-	font-size:12px;
-	background:#ececee;
-	overflow:auto;}
+}
+
+.field { margin-top: 10px; }
+
 	
 input, textarea,input[type="submit"]:focus{
 	outline:0 none;}

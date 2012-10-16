@@ -12,18 +12,19 @@
             <div class="inner">
                 <p>Nesse espaço, nossos profissionais tirarão suas dúvidas referente à fonoadiologia. 
                     Você poderá opinar também, nas dúvidas enviadas por outros usuários </p>
-                 <br />   
-                <p> Saiba mais sobre como enviar suas dúvidas, <a href="/como-enviar-suas-duvidas" class="black">clicando aqui </a> </p>  
-                <br />     
             </div>    
         </blockquote>
+        <p> Saiba mais sobre como enviar suas dúvidas, <%= link_to "clicando aqui", "/como-enviar-suas-duvidas", :class => "black" %> </p>  
+        <br />
         <div class="post-meta">
             <ul class="list_arrows">
                 <% if @doubts.count > 0 %>    
                     <% @doubts.each do |doubt| %>
-                        <li class="doubts-list"> <%= link_to (
-                            "#{doubt.created_at.strftime("%d/%m/%Y")} - <strong> #{doubt.titulo} </strong> 
-                             <em> por </em> <span class='author'> #{doubt.user.nome} </span>" ).html_safe , doubt, :class => "" %> </li>
+                        <li class="doubts-list">
+                            <p> <%= doubt.created_at.strftime("%d/%m/%Y") %> | 
+                            <%= link_to ("<strong>#{doubt.titulo}</strong>").html_safe , doubt  %> </p>
+                            <p> enviado(a) por <span class='author'> <%= doubt.user.nome %> </span> </p>
+                        </li>
                     <% end %> 
                 <% else %>
                   <li class="not-found"> Nenhuma dúvida enviada </li>

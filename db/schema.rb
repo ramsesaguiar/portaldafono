@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121013124448) do
+ActiveRecord::Schema.define(:version => 20121014132840) do
 
   create_table "articles", :force => true do |t|
     t.integer  "author_id"
@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(:version => 20121013124448) do
     t.datetime "image_updated_at"
   end
 
+  add_index "authors", ["crfa"], :name => "crfa", :unique => true
+
   create_table "contacts", :force => true do |t|
     t.string   "nome"
     t.string   "email"
@@ -50,16 +52,6 @@ ActiveRecord::Schema.define(:version => 20121013124448) do
     t.integer  "status"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "discussion_users", :force => true do |t|
-    t.integer  "debate_id"
-    t.integer  "usuario_id"
-    t.datetime "data_resposta"
-    t.integer  "status"
-    t.text     "resposta"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
   end
 
   create_table "discussions", :force => true do |t|
@@ -84,6 +76,14 @@ ActiveRecord::Schema.define(:version => 20121013124448) do
     t.datetime "created_at",                        :null => false
     t.datetime "updated_at",                        :null => false
     t.string   "status",               :limit => 0
+  end
+
+  create_table "interviews", :force => true do |t|
+    t.integer  "author_id"
+    t.string   "nome_entrevistado"
+    t.text     "texto"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   create_table "news", :force => true do |t|
@@ -128,9 +128,9 @@ ActiveRecord::Schema.define(:version => 20121013124448) do
     t.date     "data_nasc"
     t.string   "email"
     t.string   "senha"
-    t.integer  "status"
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
+    t.integer  "status",                    :default => 1
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
     t.string   "url_image"
     t.string   "localizacao"
     t.integer  "uid"

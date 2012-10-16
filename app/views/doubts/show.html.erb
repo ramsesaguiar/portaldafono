@@ -19,7 +19,7 @@
                 		<fb:comments-count href="<%= request.url %>"></fb:comments-count> comentários
               		</span>
               		por <span class="author">  <%= @doubt.user.nome %> </span> 
-                	&nbsp;|&nbsp; <%= @doubt.created_at.strftime("%d/%m/%Y") %> 
+                	em <%= @doubt.created_at.strftime("%d/%m/%Y") %> 
           		</div>
                 
             </div>
@@ -46,6 +46,7 @@
 			<div class="divider_dots_full"></div>
 			<div class="back_post padding_top_10 padding_bottom_40">
 				<h5 class="colr"> A dúvida será respondida em breve por um de nossos profissionais </h5>
+        <p style="text-align:center;"> Saiba como funciona as dúvidas enviadas,  <%= link_to "clicando aqui" , "/como-enviar-suas-duvidas" %> </p>
 			</div>
 		<% end %>
 		<div class="add-comment" id="addcomments">
