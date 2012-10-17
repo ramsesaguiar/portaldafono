@@ -1,114 +1,24 @@
-.not-found{ font-size: 22px !important; margin-top: 20px !important; color: black; text-align: center; background: #FFF !important; }
-
-.inner-quote {
-background: url(../images/icons/icon_quote.gif) 10px 20px no-repeat white;
-	border: 1px dotted #D0D0D0;
-	padding: 20px 20px 20px 48px;
-}
-
-.quote-text {
-	color: #663D18;
-	font-family: 'DroidSerifItalic', Arial, Helvetica, sans-serif;
-	font-size: 15px;
-	font-weight: normal;
-	line-height: 1.6em;
-}
-
-.quote-author {
-text-align: right;
-color: #8F8F8F;
-margin: 10px 0 5px 0;
-}
-
 .black { color: #121212; }
-.red{ color:red; font-weight:strong;  }
-
-.divider_dots_full {
-	background: url(../images/divider_dots.gif) center bottom no-repeat;
-	margin-bottom: 40px;
-	padding-top: 45px;
-	clear: both;
-	display: block;
-	width: 100%;
-}
-
-.facebook_btn-big {
-	border: 1px #29447E solid;
-	width: 236px;
-	line-height: 37px;
-}
-
-.facebook_btn-big a {
-	padding-right: 12px;
-	background: url(http://img.kekanto.com/sprites/sprites.png) no-repeat -560px -156px #637BAD;
-	display: block;
-	height: 37px;
-	border-top: 1px solid #7288B5;
-	color: white;
-	font-size: 14px;
-	text-shadow: 0 1px 0 #1E3563;
-	font-weight: bold;
-	font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
-	cursor: pointer;
-}
-
-.facebook_btn-big a:hover, .box_login_with_facebook a:hover{
-	text-decoration: underline;
-}
-
-.box_login_with_facebook{
-	/* padding-top: 22px;
-	width: 491px; */
-	
-}
-
-.box_login_with_facebook p{
-	font-size: 13px;
-	font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
-	float: left;
-	line-height: 55px;
-}
-
+.blockquote-curly-brackets { margin: 0 23px 25px 23px; }
+.blockquote-curly-brackets .ml { width: 14px; background: url(../images/blockquote-curly-brackets-ml-bg.png) center left no-repeat; }
+.blockquote-curly-brackets blockquote { margin: -5px 0; padding: 0 23px; }
+.blockquote-curly-brackets .mr { width: 14px; background: url(../images/blockquote-curly-brackets-mr-bg.png) center right no-repeat; }
+.box_login_with_facebook p{ font-size: 13px; font-family: 'lucida grande',tahoma,verdana,arial,sans-serif; float: left; line-height: 55px; }
 .box_login_with_facebook span{ font-size: 16px; font-family: 'lucida grande',tahoma,verdana,arial,sans-serif; color: blue; }
+.content-wrapper .content .blockquote-curly-brackets { margin: 0 23px 25px 23px; }
+.colr { color: #884932 !important; text-align: center; }
+.divider_dots_full { background: url(../images/divider_dots.gif) center bottom no-repeat; margin-bottom: 40px; padding-top: 45px; clear: both; display: block; width: 100%; }
 .float_right{ float: right; }
 .float_left{ float: left; }
-
-.padding_top_10 { padding-top: 10px; }
-.padding_bottom_40 { padding-bottom: 40px; }
+.facebook-login { margin: 10px 11px 0 0; }
+.facebook-login a { display: block; width: 193px; height: 45px; background: url(../images/login-facebook.png)no-repeat scroll 0 -1px transparent; cursor: pointer; }
+.facebook-login a:hover { display:block; width:193px; height:45px; background:url("../images/login-facebook.png") no-repeat scroll 0 -45px transparent;}
 .inner a{ color: #CE205A; }
 .inner a:hover { color: #C63C2A; text-decoration: underline;}
-
-
-
-.blockquote-curly-brackets {
-margin: 0 23px 25px 23px;
-}
-
- .blockquote-curly-brackets .ml {
-width: 14px;
-background: url(../images/blockquote-curly-brackets-ml-bg.png) center left no-repeat;
-}
-
-
-
- .blockquote-curly-brackets blockquote {
-margin: -5px 0;
-padding: 0 23px;
-
-}
-
-
- .blockquote-curly-brackets .mr {
-width: 14px;
-background: url(../images/blockquote-curly-brackets-mr-bg.png) center right no-repeat;
-}
-
-
-.content-wrapper .content .blockquote-curly-brackets {
-margin: 0 23px 25px 23px;
-}
-
-.colr {
-color: #884932 !important;
-text-align: center;
-}
+.inner-quote { background: url(../images/icons/icon_quote.gif) 10px 20px no-repeat white; border: 1px dotted #D0D0D0; padding: 20px 20px 20px 48px; }
+.not-found{ font-size: 22px !important; margin-top: 20px !important; color: black; text-align: center; background: #FFF !important; }
+.padding_top_10 { padding-top: 10px; }
+.padding_bottom_40 { padding-bottom: 40px; }
+.quote-text { color: #663D18; font-family: 'DroidSerifItalic', Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; line-height: 1.6em; }
+.quote-author { text-align: right; color: #8F8F8F; margin: 10px 0 5px 0; }
+.red{ color:red; text-transform: none !important; }

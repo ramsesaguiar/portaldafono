@@ -3,21 +3,17 @@
     <div class="logo_text"><h1>Portal da Fono</h1></div>
 </div>    
 <div class="header_right">    	
-     
-    <!-- <div class="search_box">
-    	<form method="get" id="searchform" action="">
-			<input type="text" value="Search LifeStyle Magazine" onfocus="if (this.value == 'Search LifeStyle Magazine') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search LifeStyle Magazine';}" name="s" id="s" class="inputField" />
-			<input type="submit" id="searchsubmit" value="Search" class="btn-search" />
-        </form>            
-    </div> -->
-    <div class="box_login_with_facebook float_right">
-        <% if current_user.present? %>
-            <p> <%= image_tag current_user["url_image"],  :height => "30px", :class => "frame_left" %>  
-             Seja bem vindo(a)   <%= current_user["nome"] %>!, <span> <a href="/sair/"> sair </a> </span> </p>
+    <% if current_user.present? %>
+        <div class="box_login_with_facebook float_right">
+            <p> 
+                <%= image_tag current_user["url_image"],  :height => "30px", :class => "frame_left" %>  
+                Seja bem vindo(a) <%= current_user["nome"] %>!, <span> <a href="/sair/"> sair </a> </span>
+            </p>
+        </div> 
         <% else %>
-            <div class="facebook_btn-big">
-                <a href="/auth/facebook"> Entrar usando o Facebook </a>
+             <div class="facebook-login float_right"> 
+                <a href="/auth/facebook"> &nbsp; </a>
             </div>
         <% end %>
-    </div> 
+    
 </div>
