@@ -4,24 +4,39 @@
         <h2>Debates</h2> 
         <div class="clear"></div>
     </div>
-    <div class="post-item">
-        <div class="post-meta">
-            <ul>
+        <div class="post-item">
+          <div class="post-meta">
               <% if @discussions.count > 0 %>
-                <% @discussions.each do |discussion| %>
-                  <li class="discussions-list"> 
-                    <p> 
-                      início: <%= discussion.data_inicio.strftime("%d/%m/%Y") %> |
-                      fim: <%= discussion.data_fim.strftime("%d/%m/%Y") %></p>
-                      <%= link_to ( "<strong> #{discussion.titulo} </strong> " ).html_safe , discussion %> 
-                      <br />
-                      <em> por </em> <span class='author'> <%= discussion.author.nome %> </span>
-                  </li>
-                   <% end %>
-              <% else %>
-                  <li class="not-found"> Nenhum debate realizado</li>
-              <% end %>                    
-            </ul>
-        </div>
+                  <% @discussions.each do |discussions| %>
+                      <div class="desc">
+                          <div class="post-opts">
+                              <div class="post-date">
+                                  <h1><%= discussions.created_at.strftime("%d") %></h1>
+                                  <h6> <%= mes_do_ano_em_portugues discussions.created_at.strftime("%b") %> <br> <%= discussions.created_at.strftime("%Y") %></h6>
+                              </div>
+                              <div class="post-cats">
+                                  <p class="postby"><%= discussions.author.nome %></p>
+                                  <!-- <p class="cats"> Church Media </p> -->
+                              </div>
+                              <div class="post-share">
+                                  <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div> 
+                              </div>
+                          </div>
+                          <div class="post-details">
+                              <h5> <%= link_to discussions.titulo, discussions, :class=> "colr" %> </h5>
+                                 <%= raw truncate discussions.texto , :length => 250 %>
+                              <div class="padding_top_10">  
+                                  <%= link_to "Comente", discussions, :class=> "link-more" %>
+                              </div> 
+                          </div>
+                      </div>
+               <% end %> 
+               <% else %>
+                   Nenhuma notícia encontrada
+                <% end %>  
+          </div>
     </div>
 </div>
+
+
+

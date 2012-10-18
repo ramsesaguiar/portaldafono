@@ -6,21 +6,43 @@
     </div>
     <div class="post-item">
         <div class="post-meta">
-            <ul>
-                <% if @articles.count > 0 %>
-                    <% @articles.each do |article| %>
-                        <li class="articles-list"> 
-                            <p> <%= article.created_at.strftime("%d/%m/%Y") %> </p>
-                            <%= link_to ( " <strong> #{article.titulo} </strong>" ).html_safe , article  %> 
-                            <em> <%= article.subtitulo %></em>
-                        <p> <em> por </em> <span class='author'> <%= article.author.nome %> </span> </p>
-                    </li>
-                    <% end %>
-                <% else %>
-                    <li class="not-found"> Nenhum artigo encontrado </li>
-                <% end %>                   
-            </ul>
-        </div>
+            <% if @articles.count > 0 %>
+                <% @articles.each do |article| %>
+                    <div class="desc">
+                        <div class="post-opts">
+                            <div class="post-date">
+                                <h1><%= article.created_at.strftime("%d") %></h1>
+                                <h6> <%= mes_do_ano_em_portugues article.created_at.strftime("%b") %> <br/ > <%= article.created_at.strftime("%Y") %></h6>
+                            </div>
+                            <div class="post-cats">
+                                <p class="postby"><%= article.author.nome %></p>
+                            </div>
+                            <div class="post-share">
+                                <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div> 
+                            </div>
+                        </div>
+                        <div class="post-details">
+                            <h5> <%= link_to article.titulo, article, :class=> "colr" %> </h5>
+                               <%= raw truncate article.texto , :length => 250 %>
+                            <div class="padding_top_10">  
+                                <%= link_to "veja o artigo", article, :class=> "link-more" %>
+                            </div> 
+                        </div>
+                    </div>
+             <% end %> 
+             <% else %>
+                 Nenhuma notícia encontrada
+              <% end %>  
+        </div>    
     </div>
-
 </div>
+
+
+
+
+
+
+
+
+
+        

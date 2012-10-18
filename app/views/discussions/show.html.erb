@@ -17,9 +17,10 @@
         <span class="icon_cat icon_cat_blog">
             <fb:comments-count href="<%= request.url %>"></fb:comments-count> opiniões
         </span>
-        por <span class="author">  <%= @discussion.author.nome %> </span> 
-        &nbsp;|&nbsp; início: <%= @discussion.data_inicio.strftime("%d/%m/%Y") %> 
-        até:  <%= @discussion.data_fim.strftime("%d/%m/%Y") %> 
+        <span class="postby"> <%= @discussion.author.nome %> </span> 
+        <div style="margin-top:3px"> &nbsp; | &nbsp;  início: <%= @discussion.data_inicio.strftime("%d/%m/%Y") %> 
+        até:  <%= @discussion.data_fim.strftime("%d/%m/%Y") %> </div>
+
       </div>
       <div class="entry">
         <p>  <%= @discussion.texto %> </p>
@@ -27,8 +28,19 @@
       </div>
     </div>
     <div class="add-comment" id="addcomments">
-        <div class="cat_title back_post"> <h3> Faça aqui seus comentários </h3> </div>
+      <% if current_user.present? %>
+        <div class="cat_title back_post">
+          <h3> Faça aqui seus comentários </h3> 
+        </div>
         <div class="fb-comments" data-href="<%= request.url %>" data-num-posts="10" data-width="590"></div> 
+      <% else %>
+        <div class="cat_title back_post">
+           <h3> Para comentar, você precisa fazer o login</h3>
+        </div>
+        <div class="block_doubt_facebook">
+          <div class="facebook-login"> <a href="/auth/facebook"> &nbsp; </a> </div>
+        </div>  
+      <% end %>    
     </div>     
                       
   </div>

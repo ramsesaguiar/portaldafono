@@ -16,8 +16,8 @@
               <span class="icon_cat icon_cat_blog">
                 <fb:comments-count href="<%= request.url %>"></fb:comments-count> comentários
               </span>
-              por <span class="author">  <%= @news.author.nome %> </span> 
-                &nbsp;|&nbsp; <%= @news.created_at.strftime("%d/%m/%Y") %> 
+              <span class="postby">  <%= @news.author.nome %> </span> 
+              <div style="margin-top:3px"> &nbsp; | &nbsp; <%= @news.created_at.strftime("%d/%m/%Y") %> </div>
           </div>
           <div class="entry">
             <% if not @news.image.url(:medium) == "/images/medium/missing.png" %>

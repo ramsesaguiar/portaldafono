@@ -1483,7 +1483,6 @@ button:hover,button:focus{
 	float:right;}
 	
 .copyright {
-	font-style:italic;
 	padding:10px 0}
 
 .copyright a {
@@ -2605,3 +2604,9 @@ table.table-price tbody .tablecolhover {}
 
 /*conact form*/
 .error {overflow:hidden; border:1px solid red!important; }
+
+.copyrights {
+	width: 100%;
+	height: 41px;
+	background: url(../images/black.png);
+}

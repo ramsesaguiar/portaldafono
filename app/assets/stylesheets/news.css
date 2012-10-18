@@ -1,15 +1,1 @@
-.news-list a { color: #828282; }
-.news-list a:hover { text-decoration: underline; }
-
-.news-list {
-	border-left: 2px solid #DC3019;
-	padding: 0px 16px;
-	margin: 20px 0px;
-	height: 47px;
-	line-height: 49px;
-	font-size: 15px;
-}
-
 .linha_vermelha{ border-bottom: 1px solid red !important; }
-
-ul{ margin: 0 !important; }

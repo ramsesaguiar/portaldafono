@@ -18,15 +18,14 @@
               		<span class="icon_cat icon_cat_blog">
                 		<fb:comments-count href="<%= request.url %>"></fb:comments-count> comentários
               		</span>
-              		por <span class="author">  <%= @doubt.user.nome %> </span> 
-                	em <%= @doubt.created_at.strftime("%d/%m/%Y") %> 
+              		<span class="postby"> <%= @doubt.user.nome %> </span> 
+                	<div style="margin-top:3px"> &nbsp;  em <%= @doubt.created_at.strftime("%d/%m/%Y") %> </div>
           		</div>
                 
             </div>
-		</div>
-
-		<% if @doubt.resposta.present? %>
-			<div class="cat_title back_post padding_top_10">
+		    </div>
+		  <% if @doubt.resposta.present? %>
+			 <div class="cat_title back_post padding_top_10">
 				<p> <%= @doubt.author.nome %> respondeu:</p>
 			</div>
 			<table class="blockquote-curly-brackets">
@@ -43,9 +42,8 @@
 				<tr><td class="bl"></td><td></td><td class="br"></td></tr>
 				</tbody></table>
 		<% else %>
-			<div class="divider_dots_full"></div>
-			<div class="back_post padding_top_10 padding_bottom_40">
-				<h5 class="colr"> A dúvida será respondida em breve por um de nossos profissionais </h5>
+			<div class="back_post padding_top_40 padding_bottom_40">
+				<h5 class="colr align-center"> A dúvida será respondida em breve por um de nossos profissionais </h5>
         <p style="text-align:center;"> Saiba como funciona as dúvidas enviadas,  <%= link_to "clicando aqui" , "/como-enviar-suas-duvidas" %> </p>
 			</div>
 		<% end %>

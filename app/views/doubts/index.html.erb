@@ -8,29 +8,41 @@
         <div class="clear"></div>
     </div>
     <div class="post-item">
-        <blockquote>
-            <div class="inner">
+        <div class="post-meta">
+            <% if @doubts.count > 0 %>
                 <p>Nesse espaço, nossos profissionais tirarão suas dúvidas referente à fonoadiologia. 
                     Você poderá opinar também, nas dúvidas enviadas por outros usuários </p>
-            </div>    
-        </blockquote>
-        <p> Saiba mais sobre como enviar suas dúvidas, <%= link_to "clicando aqui", "/como-enviar-suas-duvidas", :class => "black" %> </p>  
-        <br />
-        <div class="post-meta">
-            <ul class="list_arrows">
-                <% if @doubts.count > 0 %>    
-                    <% @doubts.each do |doubt| %>
-                        <li class="doubts-list">
-                            <p> <%= doubt.created_at.strftime("%d/%m/%Y") %> | 
-                            <%= link_to ("<strong>#{doubt.titulo}</strong>").html_safe , doubt  %> </p>
-                            <p> enviado(a) por <span class='author'> <%= doubt.user.nome %> </span> </p>
-                        </li>
-                    <% end %> 
-                <% else %>
-                  <li class="not-found"> Nenhuma dúvida enviada </li>
-              <% end %>                     
-            </ul>
+                <p> Saiba mais sobre como enviar suas dúvidas, <%= link_to "clicando aqui", "/como-enviar-suas-duvidas", :class => "black" %> </p>
+                <% @doubts.each do |doubt| %>
+                    <div class="desc">
+                        <div class="post-opts">
+                            <div class="post-date">
+                                <h1><%= doubt.created_at.strftime("%d") %></h1>
+                                <h6> <%= mes_do_ano_em_portugues doubt.created_at.strftime("%b") %> <br> <%= doubt.created_at.strftime("%Y") %></h6>
+                            </div>
+                            <div class="post-cats">
+                                <p class="postby"><%= doubt.user.nome %></p>
+                                <!-- <p class="cats"> Church Media </p> -->
+                            </div>
+                            <div class="post-share">
+                                <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div> 
+                            </div>
+                        </div>
+                        <div class="post-details">
+                            <div class="quote-text">
+                                <h2><%= doubt.titulo %></h2>
+                            </div>
+                            <div class="padding_top_10">  
+                                <%= link_to "comente", doubt, :class=> "link-more" %>
+                            </div> 
+                        </div>
+                    </div>
+             <% end %> 
+             <% else %>
+                 Nenhuma dúvida encontrada
+              <% end %>  
         </div>
     </div>
+ 
 
 </div>

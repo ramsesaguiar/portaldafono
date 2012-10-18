@@ -31,8 +31,9 @@
             <h2> <%= link_to @noticia.titulo, @noticia  %> </h2>
             <div class="post-meta">
                 <!-- <span class="icon_cat icon_cat_3"><a href="#">Music</a></span> -->
-            	   por <span class="author"><%= @noticia.author.nome %></span> 
-                   &nbsp;|&nbsp; <%= @noticia.created_at.strftime("%d/%m/%Y") %> &nbsp; <span class="icon_cat icon_cat_blog"> <%= link_to "20 comentários" , @noticia %> </span> 
+            	   <span class="postby"><%= @noticia.author.nome %></span> 
+                   <div style="margin-top:3px"> &nbsp;|&nbsp;  <%= @noticia.created_at.strftime("%d/%m/%Y") %> &nbsp; </div>
+                    <span class="icon_cat icon_cat_blog"> <%= link_to "20 comentários" , @noticia %> </span> 
    		   </div>
             <div class="entry">
                 <p>
@@ -59,9 +60,9 @@
             <h2><%= link_to @debate.titulo, @debate %></h2>
             <div class="post-meta">
                 <!-- <span class="icon_cat icon_cat_4"><a href="#">Movies</a></span> -->
-                por <span class="author"> <%= @debate.author.nome %> </span> &nbsp;|&nbsp; 
-                <%= @debate.data_inicio.strftime("%d/%m/%Y") %>
-                 &nbsp;|&nbsp; <span class="icon_cat icon_cat_blog"><%= link_to "20 opiniões" , @debate %></span> 
+                <span class="postby"> <%= @debate.author.nome %> </span>
+                <div style="margin-top:3px"> &nbsp;|&nbsp; <%= @debate.data_inicio.strftime("%d/%m/%Y") %> </div>
+                <span class="icon_cat icon_cat_blog"><%= link_to "20 opiniões" , @debate %></span> 
             </div>
             <div class="entry">
                 <div class="clear"></div>
@@ -83,7 +84,7 @@
                     </div>
                     <div class="quote-author">
                         <div>
-                            enviada por <span class="author"><%= @duvida.user.nome %></span>, <%= @duvida.created_at.strftime("%d/%m/%Y") %> | &nbsp;
+                            <span class="postby"> enviada por <%= @duvida.user.nome %> em <%= @duvida.created_at.strftime("%d/%m/%Y") %> </span>
                             <span class="icon_cat icon_cat_blog"> <%= link_to "20 comentários", @debate %></span>
                         </div>  
                     </div>
