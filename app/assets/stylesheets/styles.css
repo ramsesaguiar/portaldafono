@@ -1057,7 +1057,9 @@ button:hover,button:focus{
 	color:#666;
 	font-family:Georgia, "Times New Roman", Times, serif;
 	font-size:14px;
-	font-style:italic;}
+	font-style:italic;
+	
+}
 
 #feature_tabs li .link-more:hover {
 	border-bottom:1px dotted #666}

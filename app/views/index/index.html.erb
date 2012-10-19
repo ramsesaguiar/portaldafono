@@ -5,7 +5,8 @@
             	<span class="link-title"><%= superdestaque.titulo %></span>
     			<div class="feature_cat"> 
                     <!-- <span class="icon_cat icon_cat_1">Photography</span> >-->  
-                    <a href="blog-details.html" class="link-more">Leia mais</a></div>
+                    <%= link_to "Leia mais", superdestaque.slug, :class=> "link-more", :title => "Clique para saber mais"  %>
+                </div>
     		</li>
     	  <% end %>	
 	</ul>
@@ -13,8 +14,7 @@
         <% @superdestaques.each do |superdestaque| %>
             <% if not superdestaque.image.url(:medium) == "/images/medium/missing.png" %>
                 <li> 
-                    <%= image_tag superdestaque.image.url(:medium), :width => "960", :height => "325" %> 
-                    <a href="blog-details.html"></a> 
+                    <%= link_to ( image_tag superdestaque.image.url(:medium), :width => "960", :height => "325" ) , superdestaque.slug,  :title => "Clique para saber mais" %> 
                 </li>
             <% end %>
         <% end %>    		

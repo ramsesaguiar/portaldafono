@@ -10,3 +10,4 @@ end
 gem 'jquery-rails'
 gem 'paperclip', '3.0.4'
 gem 'omniauth-facebook'
+gem "friendly_id", "~> 4.0.1"

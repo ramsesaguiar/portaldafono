@@ -4,12 +4,64 @@
 		"selected_items":
 		[
 			[
-				"text-",
-				"text-decoration"
-			],
-			[
 				"tex",
 				"text-align"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"imag",
+				"url_image"
+			],
+			[
+				"se",
+				"session"
+			],
+			[
+				"lin",
+				"line-height"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"fo",
+				"font-style"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"text-",
+				"text-decoration"
 			],
 			[
 				"Re",
@@ -35,54 +87,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app/views/news/show.html.erb",
-			"settings":
-			{
-				"buffer_size": 1276,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/contacts/new.html.erb",
-			"settings":
-			{
-				"buffer_size": 419,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/news/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 761,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/news.css",
-			"settings":
-			{
-				"buffer_size": 91,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/contacts/_form.html.erb",
-			"settings":
-			{
-				"buffer_size": 734,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/styles.css",
-			"settings":
-			{
-				"buffer_size": 57482,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -108,8 +112,59 @@
 	},
 	"file_history":
 	[
+		"/C/wwwrails/portaldafono/app/controllers/login_controller.rb",
+		"/C/wwwrails/portaldafono/app/controllers/news_controller.rb",
+		"/C/wwwrails/portaldafono/app/controllers/admin/login_controller.rb",
+		"/C/wwwrails/portaldafono/app/controllers/admin/application_controller.rb",
+		"/C/wwwrails/portaldafono/app/controllers/index_controller.rb",
+		"/C/wwwrails/portaldafono/app/controllers/application_controller.rb",
+		"/C/wwwrails/portaldafono/app/assets/stylesheets/custom.css",
+		"/C/wwwrails/portaldafono/app/views/news/index.html.erb",
+		"/C/wwwrails/portaldafono/app/views/articles/index.html.erb",
+		"/C/wwwrails/portaldafono/app/views/articles/show.html.erb",
+		"/C/wwwrails/portaldafono/app/views/news/show.html.erb",
+		"/C/wwwrails/portaldafono/app/assets/stylesheets/articles.css",
 		"/C/wwwrails/portaldafono/app/views/index/index.html.erb",
+		"/C/wwwrails/portaldafono/app/views/discussions/show.html.erb",
+		"/C/wwwrails/portaldafono/app/views/doubts/show.html.erb",
+		"/C/wwwrails/portaldafono/app/views/doubts/index.html.erb",
+		"/C/wwwrails/portaldafono/app/assets/stylesheets/doubts.css",
+		"/C/wwwrails/portaldafono/app/views/discussions/index.html.erb",
+		"/C/wwwrails/portaldafono/app/views/doubts/new.html.erb",
 		"/C/wwwrails/portaldafono/app/assets/stylesheets/styles.css",
+		"/C/wwwrails/portaldafono/app/assets/stylesheets/news.css",
+		"/C/wwwrails/portaldafono/app/models/news.rb",
+		"/C/wwwrails/portaldafono/app/helpers/application_helper.rb",
+		"/C/wwwrails/portaldafono/config/locales/pt.yml",
+		"/C/wwwrails/portaldafono/config/locales/en.yml",
+		"/C/wwwrails/portaldafono/app/views/partials/_footer.html.erb",
+		"/C/wwwrails/portaldafono/app/views/estaticas/anuncie.html.erb",
+		"/C/wwwrails/portaldafono/app/views/estaticas/como_enviar_suas_duvidas.html.erb",
+		"/C/wwwrails/portaldafono/app/views/estaticas/livros_recomendados.html.erb",
+		"/C/wwwrails/portaldafono/app/assets/stylesheets/estaticas.css",
+		"/C/wwwrails/portaldafono/app/views/layouts/application.html.erb",
+		"/C/wwwrails/portaldafono/app/views/partials/_topo.html.erb",
+		"/C/wwwrails/portaldafono/app/views/estaticas/termos_de_uso.html.erb",
+		"/C/wwwrails/portaldafono/app/controllers/doubts_controller.rb",
+		"/C/wwwrails/portaldafono/app/controllers/contacts_controller.rb",
+		"/C/wwwrails/portaldafono/app/views/doubts/_form.html.erb",
+		"/C/wwwrails/portaldafono/app/views/contacts/_form.html.erb",
+		"/C/wwwrails/portaldafono/app/models/doubt.rb",
+		"/C/wwwrails/portaldafono/app/models/contact.rb",
+		"/C/wwwrails/portaldafono/app/views/contacts/new.html.erb",
+		"/C/wwwrails/portaldafono/app/assets/stylesheets/contacts.css",
+		"/C/wwwrails/portaldafono/app/mailers/user_mailer.rb",
+		"/C/wwwrails/portaldafono/app/views/user_mailer/fale_conosco_enviado.html.erb",
+		"/C/wwwrails/portaldafono/app/views/user_mailer/fale_conosco_enviado.text.erb",
+		"/C/wwwrails/portaldafono/app/views/user_mailer/welcome_email.text.erb",
+		"/C/wwwrails/portaldafono/app/views/user_mailer/welcome_email.html.erb",
+		"/C/wwwrails/portaldafono/config/environments/development.rb",
+		"/C/wwwrails/portaldafono/config/environments/$RAILS_ENV.rb",
+		"/C/wwwrails/portaldafono/app/controllers/estaticas_controller.rb",
+		"/C/wwwrails/portaldafono/config/routes.rb",
+		"/C/wwwrails/portaldafono/config/initializers/omniauth.rb",
+		"/C/wwwrails/portaldafono/app/assets/javascripts/contacts.js",
+		"/C/wwwrails/portaldafono/app/assets/javascripts/application.js",
 		"/C/Users/Leonardo/Desktop/theme_v2/shortcodes-typography.html",
 		"/C/Users/Leonardo/Desktop/theme_v2/shortcodes-columns.html",
 		"/C/Users/Leonardo/Desktop/theme_v2/shortcodes-html.html",
@@ -134,31 +189,14 @@
 		"/C/Users/Leonardo/Desktop/theme/js/general.js",
 		"/C/Users/Leonardo/Desktop/theme/js/jquery.min.js",
 		"/C/Users/Leonardo/Desktop/theme/js/preloadCssImages.js",
-		"/C/wwwrails/portaldafono/app/controllers/contacts_controller.rb",
-		"/C/wwwrails/portaldafono/app/views/contacts/_form.html.erb",
-		"/C/wwwrails/portaldafono/app/controllers/news_controller.rb",
-		"/C/wwwrails/portaldafono/app/views/news/index.html.erb",
-		"/C/wwwrails/portaldafono/app/views/news/show.html.erb",
-		"/C/wwwrails/portaldafono/app/controllers/doubts_controller.rb",
-		"/C/wwwrails/portaldafono/app/views/contacts/new.html.erb",
 		"/C/wwwrails/portaldafono/app/views/admin/articles/_form.html.erb",
-		"/C/wwwrails/portaldafono/app/models/contact.rb",
-		"/C/wwwrails/portaldafono/app/views/doubts/show.html.erb",
 		"/C/wwwrails/portaldafono/app/models/article.rb",
-		"/C/wwwrails/portaldafono/app/views/doubts/_form.html.erb",
-		"/C/wwwrails/portaldafono/app/views/doubts/index.html.erb",
 		"/C/wwwrails/portaldafono/app/views/admin/doubts/index.html.erb",
-		"/C/wwwrails/portaldafono/app/views/articles/index.html.erb",
-		"/C/wwwrails/portaldafono/app/views/discussions/index.html.erb",
 		"/C/wwwrails/portaldafono/app/controllers/discussions_controller.rb",
-		"/C/wwwrails/portaldafono/app/views/discussions/show.html.erb",
 		"/C/wwwrails/portaldafono/app/controllers/articles_controller.rb",
 		"/C/wwwrails/portaldafono/app/controllers/admin/articles_controller.rb",
 		"/C/wwwrails/portaldafono/app/views/admin/articles/show.html.erb",
-		"/C/wwwrails/portaldafono/app/views/articles/show.html.erb",
-		"/C/wwwrails/portaldafono/config/routes.rb",
 		"/C/wwwrails/portaldafono/app/views/admin/articles/index.html.erb",
-		"/C/wwwrails/portaldafono/config/environments/development.rb",
 		"/C/wwwrails/portaldafono/Gemfile",
 		"/C/wwwrails/portaldafono/app/views/admin/news/_form.html.erb",
 		"/C/wwwrails/portaldafono/app/views/admin/super_highlights/_form.html.erb",
@@ -168,8 +206,6 @@
 		"/C/wwwrails/portaldafono/app/views/admin/authors/show.html.erb",
 		"/C/wwwrails/portaldafono/app/models/super_highlight.rb",
 		"/C/wwwrails/portaldafono/app/views/admin/news/show.html.erb",
-		"/C/wwwrails/portaldafono/app/models/news.rb",
-		"/C/wwwrails/portaldafono/app/controllers/admin/application_controller.rb",
 		"/C/wwwrails/portaldafono/app/helpers/admin/application_helper.rb",
 		"/C/wwwrails/portaldafono/app/views/admin/discussions/_form.html.erb",
 		"/C/wwwrails/portaldafono/app/views/admin/discussions/show.html.erb",
@@ -181,12 +217,10 @@
 		"/C/wwwrails/portaldafono/app/views/admin/contacts/_form.html.erb",
 		"/C/wwwrails/portaldafono/app/views/admin/contacts/show.html.erb",
 		"/C/wwwrails/portaldafono/app/controllers/admin/discussions_controller.rb",
-		"/C/wwwrails/portaldafono/app/helpers/application_helper.rb",
 		"/C/wwwrails/portaldafono/app/controllers/admin/contacts_controller.rb",
 		"/C/wwwrails/portaldafono/app/views/admin/super_highlights/index.html.erb",
 		"/C/wwwrails/portaldafono/app/views/admin/news/new.html.erb",
 		"/C/wwwrails/portaldafono/app/controllers/admin/doubts_controller.rb",
-		"/C/wwwrails/portaldafono/app/models/doubt.rb",
 		"/C/wwwrails/portaldafono/app/models/discussion.rb",
 		"/C/wwwrails/portaldafono/db/migrate/20120712013021_create_articles.rb",
 		"/C/wwwrails/portaldafono/app/controllers/admin/news_controller.rb",
@@ -205,35 +239,7 @@
 		"/C/Users/Leonardo/Develop/Cards/app/models/template.rb",
 		"/C/Users/Leonardo/Develop/Cards/db/seeds.rb",
 		"/C/Users/Leonardo/Develop/Cards/db/migrate/20120208162939_create_template_layouts.rb",
-		"/C/Users/Leonardo/Downloads/Minecraft Server/run.bat",
-		"/C/Users/Leonardo/Downloads/Minecraft Server/server.properties",
-		"/C/Users/Leonardo/Develop/Cards/app/controllers/cards_controller.rb",
-		"/C/Users/Leonardo/Develop/Cards/app/models/card.rb",
-		"/C/Users/Leonardo/Develop/Cards/app/models/layout.rb",
-		"/C/Users/Leonardo/Develop/Cards/app/models/template_layout.rb",
-		"/C/Users/Leonardo/Develop/Cards/app/models/user.rb",
-		"/C/Users/Leonardo/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/C/Users/Leonardo/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-		"/C/Users/Leonardo/Develop/Cards/app/models/slot.rb",
-		"/C/Users/Leonardo/Develop/Cards/app/models/image.rb",
-		"/C/Users/Leonardo/Develop/Cards/app/models/purchase.rb",
-		"/C/Users/Leonardo/Develop/Cards/db/migrate/20120201171513_devise_create_users.rb",
-		"/C/Users/Leonardo/.ssh/id_rsa.pub",
-		"/C/Users/Leonardo/Develop/Cards/config/application.rb",
-		"/C/Users/Leonardo/Develop/Cards/app/views/templates/layouts/_teste.html.erb",
-		"/C/Users/Leonardo/Develop/Cards/db/migrate/20120208162939_create_layouts_templates.rb",
-		"/C/Users/Leonardo/Develop/Cards/db/migrate/20120201173442_create_images.rb",
-		"/C/Users/Leonardo/Develop/Cards/db/migrate/20120208162824_create_layouts.rb",
-		"/C/Users/Leonardo/Develop/Cards/db/migrate/20120201173035_create_slots.rb",
-		"/C/Users/Leonardo/Develop/Cards/db/migrate/20120201172845_create_templates.rb",
-		"/C/Users/Leonardo/Develop/Cards/app/views/templates/layouts/_teste_back.html.erb",
-		"/C/Users/Leonardo/Develop/Cards/app/views/cards/_form.html.erb",
-		"/C/Users/Leonardo/Develop/Cards/app/views/cards/index.html.erb",
-		"/C/Users/Leonardo/Develop/Cards/app/views/cards/_card.html.erb",
-		"/C/Users/Leonardo/Develop/Cards/app/views/cards/new.html.erb",
-		"/C/Users/Leonardo/Develop/Cards/app/controllers/images_controller.rb",
-		"/C/Users/Leonardo/AppData/Roaming/Sublime Text 2/Packages/User/Ruby.sublime-settings",
-		"/C/Users/Leonardo/AppData/Roaming/Sublime Text 2/Packages/Default/Base File.sublime-settings"
+		"/C/Users/Leonardo/Downloads/Minecraft Server/run.bat"
 	],
 	"find":
 	{
@@ -251,6 +257,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"font",
+			"h4",
+			"4"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -268,172 +277,8 @@
 	"groups":
 	[
 		{
-			"selected": 4,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/views/news/show.html.erb",
-					"settings":
-					{
-						"buffer_size": 1276,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								399,
-								399
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/views/contacts/new.html.erb",
-					"settings":
-					{
-						"buffer_size": 419,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								286,
-								286
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/views/news/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 761,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								761
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/assets/stylesheets/news.css",
-					"settings":
-					{
-						"buffer_size": 91,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								12,
-								12
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/contacts/_form.html.erb",
-					"settings":
-					{
-						"buffer_size": 734,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								615,
-								615
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/assets/stylesheets/styles.css",
-					"settings":
-					{
-						"buffer_size": 57482,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								13932,
-								13932
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 6464.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -479,6 +324,286 @@
 		"selected_items":
 		[
 			[
+				"applicaton",
+				"app/controllers/admin/application_controller.rb"
+			],
+			[
+				"adminlogin",
+				"app/controllers/admin/login_controller.rb"
+			],
+			[
+				"adminapplicationcon",
+				"app/controllers/admin/application_controller.rb"
+			],
+			[
+				"newscon",
+				"app/controllers/news_controller.rb"
+			],
+			[
+				"indexcon",
+				"app/controllers/index_controller.rb"
+			],
+			[
+				"applicationcontr",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"adminapp",
+				"app/controllers/admin/application_controller.rb"
+			],
+			[
+				"login",
+				"app/controllers/login_controller.rb"
+			],
+			[
+				"controlleradminlog",
+				"app/controllers/admin/login_controller.rb"
+			],
+			[
+				"newsshow",
+				"app/views/news/show.html.erb"
+			],
+			[
+				"articleshow",
+				"app/views/articles/show.html.erb"
+			],
+			[
+				"articles.css",
+				"app/assets/stylesheets/articles.css"
+			],
+			[
+				"newsindex",
+				"app/views/news/index.html.erb"
+			],
+			[
+				"articlesinde",
+				"app/views/articles/index.html.erb"
+			],
+			[
+				"doubtshow",
+				"app/views/doubts/show.html.erb"
+			],
+			[
+				"discussionssho",
+				"app/views/discussions/show.html.erb"
+			],
+			[
+				"indexindex",
+				"app/views/index/index.html.erb"
+			],
+			[
+				"doubts.css",
+				"app/assets/stylesheets/doubts.css"
+			],
+			[
+				"doubtsind",
+				"app/views/doubts/index.html.erb"
+			],
+			[
+				"doubtsnew",
+				"app/views/doubts/new.html.erb"
+			],
+			[
+				"doubtsshow",
+				"app/views/doubts/show.html.erb"
+			],
+			[
+				"discussionsshow",
+				"app/views/discussions/show.html.erb"
+			],
+			[
+				"discussionsindex",
+				"app/views/discussions/index.html.erb"
+			],
+			[
+				"applicationhelper",
+				"app/helpers/application_helper.rb"
+			],
+			[
+				"news.rb",
+				"app/models/news.rb"
+			],
+			[
+				"viewsnewssho",
+				"app/views/news/show.html.erb"
+			],
+			[
+				"news.css",
+				"app/assets/stylesheets/news.css"
+			],
+			[
+				"footer",
+				"app/views/partials/_footer.html.erb"
+			],
+			[
+				"style",
+				"app/assets/stylesheets/styles.css"
+			],
+			[
+				"como",
+				"app/views/estaticas/como_enviar_suas_duvidas.html.erb"
+			],
+			[
+				"anuncie",
+				"app/views/estaticas/anuncie.html.erb"
+			],
+			[
+				"cust",
+				"app/assets/stylesheets/custom.css"
+			],
+			[
+				"livros",
+				"app/views/estaticas/livros_recomendados.html.erb"
+			],
+			[
+				"index",
+				"app/views/index/index.html.erb"
+			],
+			[
+				"topo",
+				"app/views/partials/_topo.html.erb"
+			],
+			[
+				"lay",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"termos",
+				"app/views/estaticas/termos_de_uso.html.erb"
+			],
+			[
+				"comoenvia",
+				"app/views/estaticas/como_enviar_suas_duvidas.html.erb"
+			],
+			[
+				"foot",
+				"app/views/partials/_footer.html.erb"
+			],
+			[
+				"viewdoub",
+				"app/views/doubts/new.html.erb"
+			],
+			[
+				"custo",
+				"app/assets/stylesheets/custom.css"
+			],
+			[
+				"doubt.",
+				"app/models/doubt.rb"
+			],
+			[
+				"contactform",
+				"app/views/contacts/_form.html.erb"
+			],
+			[
+				"contactcon",
+				"app/controllers/contacts_controller.rb"
+			],
+			[
+				"doubtinde",
+				"app/views/doubts/index.html.erb"
+			],
+			[
+				"doubtform",
+				"app/views/doubts/_form.html.erb"
+			],
+			[
+				"modelcont",
+				"app/models/contact.rb"
+			],
+			[
+				"modeldo",
+				"app/models/doubt.rb"
+			],
+			[
+				"doubtscontr",
+				"app/controllers/doubts_controller.rb"
+			],
+			[
+				"stle",
+				"app/assets/stylesheets/styles.css"
+			],
+			[
+				"appmailer",
+				"app/mailers/user_mailer.rb"
+			],
+			[
+				"foote",
+				"app/views/partials/_footer.html.erb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"estatic",
+				"app/controllers/estaticas_controller.rb"
+			],
+			[
+				"comoenviar",
+				"app/views/estaticas/como_enviar_suas_duvidas.html.erb"
+			],
+			[
+				"applicatoncon",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"custom.css",
+				"app/assets/stylesheets/custom.css"
+			],
+			[
+				"doubtnew",
+				"app/views/doubts/new.html.erb"
+			],
+			[
+				"oa",
+				"config/initializers/omniauth.rb"
+			],
+			[
+				"loginc",
+				"app/controllers/login_controller.rb"
+			],
+			[
+				"contact",
+				"app/models/contact.rb"
+			],
+			[
+				"application.js",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"doubt.css",
+				"app/assets/stylesheets/doubts.css"
+			],
+			[
+				"doubtsform",
+				"app/views/doubts/_form.html.erb"
+			],
+			[
+				"styles.css",
+				"app/assets/stylesheets/styles.css"
+			],
+			[
+				"contacts.js",
+				"app/assets/javascripts/contacts.js"
+			],
+			[
+				"contacts.css",
+				"app/assets/stylesheets/contacts.css"
+			],
+			[
+				"viewscontactsfor",
+				"app/views/contacts/_form.html.erb"
+			],
+			[
+				"viewscontactsn",
+				"app/views/contacts/new.html.erb"
+			],
+			[
+				"controllersconta",
+				"app/controllers/contacts_controller.rb"
+			],
+			[
 				"styles",
 				"app/assets/stylesheets/styles.css"
 			],
@@ -487,20 +612,12 @@
 				"app/views/contacts/_form.html.erb"
 			],
 			[
-				"news.css",
-				"app/assets/stylesheets/news.css"
-			],
-			[
 				"viewsindex",
 				"app/views/index/index.html.erb"
 			],
 			[
 				"viewsnewsin",
 				"app/views/news/index.html.erb"
-			],
-			[
-				"viewsnewssho",
-				"app/views/news/show.html.erb"
 			],
 			[
 				"controllercon",
@@ -717,278 +834,6 @@
 			[
 				"views/admin/cont",
 				"app/views/admin/contacts/_form.html.erb"
-			],
-			[
-				"views/admin/dis",
-				"app/views/admin/discussions/_form.html.erb"
-			],
-			[
-				"views/admin/",
-				"app/views/admin/articles/_form.html.erb"
-			],
-			[
-				"controllers/admin/dis",
-				"app/controllers/admin/discussions_controller.rb"
-			],
-			[
-				"views/admin/disc",
-				"app/views/admin/discussions/index.html.erb"
-			],
-			[
-				"helpers/admin/hel",
-				"app/helpers/admin/application_helper.rb"
-			],
-			[
-				"helpe",
-				"app/helpers/application_helper.rb"
-			],
-			[
-				"views/admin/con",
-				"app/views/admin/contacts/index.html.erb"
-			],
-			[
-				"app/controllers/admin/cont",
-				"app/controllers/admin/contacts_controller.rb"
-			],
-			[
-				"controllers/admin/a",
-				"app/controllers/admin/application_controller.rb"
-			],
-			[
-				"views/admin/su",
-				"app/views/admin/super_highlights/index.html.erb"
-			],
-			[
-				"views/admin/articl",
-				"app/views/admin/articles/index.html.erb"
-			],
-			[
-				"viewsadminsu",
-				"app/views/admin/super_highlights/_form.html.erb"
-			],
-			[
-				"models/art",
-				"app/models/article.rb"
-			],
-			[
-				"models/su",
-				"app/models/super_highlight.rb"
-			],
-			[
-				"viewsadminarticlefo",
-				"app/views/admin/articles/_form.html.erb"
-			],
-			[
-				"adminnewsfor",
-				"app/views/admin/news/_form.html.erb"
-			],
-			[
-				"admindoubtsfo",
-				"app/views/admin/doubts/_form.html.erb"
-			],
-			[
-				"views/admin/dou",
-				"app/views/admin/doubts/index.html.erb"
-			],
-			[
-				"model/auth",
-				"app/models/author.rb"
-			],
-			[
-				"controllers/admin/arti",
-				"app/controllers/admin/articles_controller.rb"
-			],
-			[
-				"controllers/admin/dou",
-				"app/controllers/admin/doubts_controller.rb"
-			],
-			[
-				"models/do",
-				"app/models/doubt.rb"
-			],
-			[
-				"views/admin/doub",
-				"app/views/admin/doubts/show.html.erb"
-			],
-			[
-				"model/au",
-				"app/models/author.rb"
-			],
-			[
-				"db/migr",
-				"db/migrate/20120712013021_create_articles.rb"
-			],
-			[
-				"models/ar",
-				"app/models/article.rb"
-			],
-			[
-				"models/ne",
-				"app/models/news.rb"
-			],
-			[
-				"models/di",
-				"app/models/discussion.rb"
-			],
-			[
-				"model/d",
-				"app/models/discussion.rb"
-			],
-			[
-				"views/admin/news/fo",
-				"app/views/admin/news/_form.html.erb"
-			],
-			[
-				"views/admin/super",
-				"app/views/admin/super_highlights/_form.html.erb"
-			],
-			[
-				"view/admin/articl",
-				"app/views/admin/articles/index.html.erb"
-			],
-			[
-				"views/admin/news/ind",
-				"app/views/admin/news/index.html.erb"
-			],
-			[
-				"views/admin/new",
-				"app/views/admin/news/index.html.erb"
-			],
-			[
-				"controllers/admin/n",
-				"app/controllers/admin/news_controller.rb"
-			],
-			[
-				"model/ar",
-				"app/models/article.rb"
-			],
-			[
-				"model/dis",
-				"app/models/discussion.rb"
-			],
-			[
-				"views/admin/di",
-				"app/views/admin/discussions/index.html.erb"
-			],
-			[
-				"views/admin/art",
-				"app/views/admin/articles/show.html.erb"
-			],
-			[
-				"controllers/admin/di",
-				"app/controllers/admin/discussions_controller.rb"
-			],
-			[
-				"controller/admin/ar",
-				"app/controllers/admin/articles_controller.rb"
-			],
-			[
-				"controller/admin/dou",
-				"app/controllers/admin/doubts_controller.rb"
-			],
-			[
-				"article/",
-				"app/views/admin/articles/show.html.erb"
-			],
-			[
-				"controler/admin/ar",
-				"app/controllers/admin/articles_controller.rb"
-			],
-			[
-				"ar",
-				"app/models/article.rb"
-			],
-			[
-				"rou",
-				"config/routes.rb"
-			],
-			[
-				"articl",
-				"app/models/article.rb"
-			],
-			[
-				"envir",
-				"config/environments/development.rb"
-			],
-			[
-				"secr",
-				"config/initializers/secret_token.rb"
-			],
-			[
-				"env",
-				"config/environment.rb"
-			],
-			[
-				"controller/admin/arti",
-				"app/controllers/admin/articles_controller.rb"
-			],
-			[
-				"views/admin/arti",
-				"app/views/admin/articles/_form.html.erb"
-			],
-			[
-				"autho",
-				"app/models/author.rb"
-			],
-			[
-				"use",
-				"app/models/user.rb"
-			],
-			[
-				"news",
-				"app/models/news.rb"
-			],
-			[
-				"usr",
-				"app/models/user.rb"
-			],
-			[
-				"doub",
-				"app/models/doubt.rb"
-			],
-			[
-				"disc",
-				"app/models/discussion.rb"
-			],
-			[
-				"auth",
-				"app/models/author.rb"
-			],
-			[
-				"article",
-				"app/models/article.rb"
-			],
-			[
-				"apli",
-				"config/application.rb"
-			],
-			[
-				"seed",
-				"db/seeds.rb"
-			],
-			[
-				"gemf",
-				"Gemfile"
-			],
-			[
-				"teste",
-				"app/views/templates/layouts/_teste_front.html.erb"
-			],
-			[
-				"templatelayout",
-				"app/models/template_layout.rb"
-			],
-			[
-				"appli",
-				"config/application.rb"
-			],
-			[
-				"templa",
-				"app/models/template.rb"
-			],
-			[
-				"creat",
-				"db/migrate/20120208162939_create_layouts_templates.rb"
 			]
 		],
 		"width": 0.0

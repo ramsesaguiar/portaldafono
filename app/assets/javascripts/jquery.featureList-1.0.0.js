@@ -43,7 +43,7 @@
 
 		tabs.click(function() {
 			if ($(this).hasClass('current')) {
-				return false;	
+				//return false;	
 			}
 
 			slide( tabs.index( this) );

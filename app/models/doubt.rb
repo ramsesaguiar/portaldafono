@@ -3,5 +3,7 @@
   belongs_to :author, :foreign_key => 'autor_responsavel_id'
 
    validates_presence_of :titulo,  :message => "para sua dúvida não pode estar vazio;"
+   extend FriendlyId
+   friendly_id :titulo, use: :slugged
 
 end
