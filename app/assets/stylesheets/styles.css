@@ -426,7 +426,7 @@ h6{
 /* 1.8 Tables */
 /*----------------------------------------------*/
 table.fancy_table,.widget_calendar table { border-collapse:separate; border-spacing:0; width:99%; padding:2px 0; }
-table,td,th { vertical-align:middle; text-align:center; }
+table,td,th { vertical-align:middle; /* text-align:center; */ }
 th{ padding:10px; font-size:12px; text-transform:uppercase; letter-spacing:1px;}
 td{ font-size:11px; padding:10px; }
 table.fancy_table,.widget_calendar table{margin:20px 2px; }
@@ -1824,13 +1824,15 @@ button:hover,button:focus{
 	padding:17px;
 	background:#e9e9e9;
 	margin-bottom:20px;}
-	
-.newsletterBox h3 {
+
+.newsletterBox h3, .proximo-evento-box h3 {
 	color:#262626;
 	margin:0 0 10px 0;
 	font-family:Georgia, "Times New Roman", Times, serif;
 	font-size:17px;
-	font-style:italic;}
+	font-style:italic;
+	text-align: center;
+}
 
 .link-news-rss {
 	color:#676767;
@@ -1867,6 +1869,39 @@ button:hover,button:focus{
 	overflow:hidden;
 	margin:0;
 	padding:0}
+
+/*----------------------------------------------*/
+/* 4.2 Próximo evento box */
+/*----------------------------------------------*/
+
+.proximo-evento-box{
+	padding: 10px;
+	border: 1px solid #e9e9e9;
+	float: left;
+	width: 285px;
+}
+
+.data-do-proximo-evento {
+	float: left;
+	width: 78px;
+	height: 46px;
+	padding: 6px;
+	margin: 0px 10px 10px 0px;
+	background: url(../images/date-bg.png);
+}
+
+.data-do-proximo-evento h1 {
+	float: left;
+	font-weight: bold;
+	padding: 0px 10px 0px 0px;
+}
+
+.texto-do-proximo-evento{
+	margin-left:10px;  
+}
+
+.link-para-proximo-evento{ margin:  10px 0px 0px 0px; }	
+
 
 /*----------------------------------------------*/
 /* 4.3 Advertise Baners  */
@@ -2348,7 +2383,7 @@ table.table-price tbody .tablecolhover {}
 .entry a:hover {
 	border-bottom:1px dotted #0a93cc}
 	
-.content .link-more {
+ .link-more {
 	background:url(../images/icon_plus.gif) 0 3px no-repeat;
 	padding-left:18px;
 	color:#3b3b3b;
@@ -2360,8 +2395,9 @@ table.table-price tbody .tablecolhover {}
 	height:18px;
 	display:inline-block}
 
-.content .link-more:hover {
-	color:#000}
+ .link-more:hover {
+	color:#000;
+}
 
 
 /* posts navigation */
@@ -2530,7 +2566,6 @@ table.table-price tbody .tablecolhover {}
 
 .comment-list h2, .add-comment h3 {
 	font-family:Georgia, "Times New Roman", Times, serif;
-	font-size:18px;
 	font-style:italic}
 
 .link-top {

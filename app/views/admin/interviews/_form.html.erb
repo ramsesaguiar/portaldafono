@@ -1,0 +1,34 @@
+<%= form_for [:admin, @admin_interview]  do |f| %>
+  <% if @admin_interview.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_interview.errors.count, "erro") %> encontrado(s):</h2>
+
+      <ul>
+      <% @admin_interview.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome_entrevistado %> * <br />
+    <%= f.text_field :nome_entrevistado %>
+  </div>
+  <div class="field">
+    <%= f.label :autor_id %> *<br />
+    <%= select("interview", "author_id", Author.all.collect {|p| [ p.nome, p.id ]}, :selected => @admin_interview.author_id,  :prompt => 'Selecione um autor') %>
+  </div>
+  <div class="field">
+    <%= f.label :bio %><br />
+    <%= f.text_area :bio %>
+  </div>
+  <div class="field">
+    <%= f.label :texto %><br />
+    <%= f.text_area :texto %>
+  </div>
+  <div class="actions">
+      <%= f.submit "Salvar" %>
+  </div>
+<% end %>
+

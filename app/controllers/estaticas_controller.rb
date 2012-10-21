@@ -28,5 +28,9 @@ class EstaticasController < ApplicationController
     @sidebar = false
   end
 
+  def agenda
+    @sidebar = false
+  end
+
 
 end

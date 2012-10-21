@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>ID:</b>
+  <%= @admin_interview.id %>
+</p>
+
+<p>
+  <b>Nome do entrevistado:</b>
+  <%= @admin_interview.nome_entrevistado %>
+</p>
+
+<p>
+  <b>Autor:</b>
+  <%= @admin_interview.author.nome %>
+</p>
+
+<p>
+  <b>Texto:</b>
+  <%= @admin_interview.texto %>
+</p>
+
+<%= link_to 'Editar', edit_admin_interview_path(@admin_interview) %> |
+<%= link_to 'Voltar', admin_interviews_path %>

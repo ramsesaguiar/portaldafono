@@ -1,0 +1,27 @@
+<h1>Entrevistas</h1>
+<% if @admin_interviews.present? %>
+<table>
+  <tr>
+    <th> ID </th>
+    <th>Entrevistado</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_interviews.each do |admin_interview| %>
+  <tr>
+    <td><%= admin_interview.id %></td>
+    <td><%= admin_interview.nome_entrevistado %></td>
+    <td><%= link_to 'Visualizar', [:admin, admin_interview]  %></td>
+    <td><%= link_to 'Editar', edit_admin_interview_path(admin_interview) %></td>
+    <td><%= link_to 'Excluir', [:admin, admin_interview], confirm: 'Deseja realmente excluir?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+<% else %>
+  <div> Nenhum registro encontrado </div>
+<% end %>
+<br />
+
+<%= link_to 'Nova entrevista', new_admin_interview_path %>

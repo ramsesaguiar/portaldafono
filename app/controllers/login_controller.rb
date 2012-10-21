@@ -26,7 +26,7 @@ def create
 		
 		if new_user.save
 			@user = User.where("uid = ?", new_user.uid).first
-			UserMailer.welcome_email(@user).deliver
+			UserMailer.cadastro_confirmado(@user).deliver
 			session[:current_user_id] = @user.id
 			session[:apelido] = @user.apelido
 			session[:email] = @user.email

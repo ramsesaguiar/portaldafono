@@ -3,10 +3,10 @@
 <table>
   <tr>
     <th>ID</th>
-    <th>Respondido por</th>
+    <th>Dúvida enviada por</th>
     <th>Título</th>
     <th>Status</th>
-    <th>Autor da dúvida</th>
+    <th>Respondida por:</th>
     <th>Data resposta</th>
     <th></th>
     <th></th>
@@ -18,9 +18,9 @@
     <td><%= admin_doubt.id %></td>
     <td><%= admin_doubt.user.nome  %></td>
     <td><%= admin_doubt.titulo %></td>
-    <td><%= status_to_string admin_doubt.status %></td>
-    <td><%= admin_doubt.author.nome %></td>
-    <td><%= admin_doubt.data_resposta.strftime("%d/%m/%Y") %></td>
+    <td><%= status_to_sim_nao admin_doubt.status %></td>
+    <td><%=  admin_doubt.author.nome if admin_doubt.author.present? %></td>
+    <td><%= admin_doubt.data_resposta.strftime("%d/%m/%Y") if admin_doubt.author.present? %></td>
     <td><%= link_to 'Visualizar', [:admin,admin_doubt] %></td>
     <td><%= link_to 'Editar', edit_admin_doubt_path(admin_doubt) %></td>
     <td><%= link_to 'Excluir', [:admin,admin_doubt], confirm: 'Deseja realmente excluir?', method: :delete %></td>

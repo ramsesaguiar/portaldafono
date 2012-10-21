@@ -16,6 +16,10 @@
                             </div>
                             <div class="post-cats">
                                 <p class="postby"><%= article.author.nome %></p>
+                                <p class="cats">
+                                    <fb:comments-count href="<%= request.url + "/" + article.slug %>"></fb:comments-count>
+                                    <%= link_to "comentários" , article_path(article) + "#comente" %> 
+                                </p>
                             </div>
                             <div class="post-share">
                                 <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div> 
@@ -31,7 +35,7 @@
                     </div>
              <% end %> 
              <% else %>
-                 Nenhuma notícia encontrada
+                 Nenhum artigo encontrado
               <% end %>  
         </div>    
     </div>

@@ -1,17 +1,16 @@
 class UserMailer < ActionMailer::Base
   default from: "mknparreira@gmail.com"
 
-  def welcome_email(user)
-    @user = user
-    @url  = "http://example.com/login"
-    mail(:to => user.email, :subject => "Welcome to My Awesome Site")
+  def cadastro_confirmado(obj)
+    @user = obj
+    @url = "http://www.portaldafono.com"
+    mail(:to => @user.email, :subject => "Portal da fono | Cadastro realizado com sucesso")
   end
 
-  def fale_conosco_enviado(user)
-    @user = User.where("email = ?", user["email"]).first
-    @url = "http://example.com/login"
-      mail(:to => user["email"], :subject => "Portal da fono | Contato enviado com sucesso")
-
+  def fale_conosco_enviado(obj)
+    @contact = obj
+    @url = "http://www.portaldafono.com"
+      mail(:to => @contact.email, :subject => "Portal da fono | Contato enviado com sucesso")
   end
 
 end

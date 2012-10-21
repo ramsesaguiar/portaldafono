@@ -1,1 +1,26 @@
 .list_arrows li{ font-size: 12px !important; background: none !important; }
+
+/* ################# AGENDA ################## */
+.eve-month{ width: 100%; padding: 10px; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: #E7E7E7 solid 1px;
+border-radius: 3px; height: 42px; }
+.event-set { float: left; width: 100%; padding-bottom: 10px; }
+.event-set .single-event:first-child { border-top: none; }
+.eve-date { width: 88px; height: 46px; padding: 3px 5px 0px 10px; margin-right: 15px; float: left; border: #ACACAC solid 1px; border-radius: 3px;
+background: url(../images/gray-bg1.gif) repeat-x bottom; }
+.eve-date h1 { float: left; margin: 0px !important; font-size: 34px; color: #3D3D3D; padding: 2px 5px 0px 0px; }
+.eve-date h5 { float: left; margin: 0px !important; color: #3D3D3D; line-height: 15px; padding: 6px 0px 0px 0px; text-transform: uppercase; }
+.eve-desc { width: 100%; }
+.eve-desc h4 { margin: 0px !important; }
+.localizacao-do-evento { padding: 0px 20px 0px 16px; float: left; background: url(../images/location.png) no-repeat 0px 6px; }
+.single-event { width: 100%; float: left; padding: 20px 0px; border-top: #D9D9D9 solid 1px; }
+.time { padding: 0px 20px 0px 16px; background: url(../images/clock-small.png) no-repeat 0px 6px; float: left; }
+.venu-map { width: 100%; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+border: #C5C5C5 solid 1px; box-shadow: 0px 0px 3px #CCC; margin: 10px 0px 0px 0px; padding: 15px 10px 10px 10px; display: block; }
+.venu-map p { margin: 0px !important; }
+/* ################# FIM: AGENDA ################## */
+
+/* ################# LINKS ÚTEIS ################## */
+.text a:hover { text-decoration: underline !important;}
+
+/* ################# FIM: LINKS ÚTEIS ################## */
+

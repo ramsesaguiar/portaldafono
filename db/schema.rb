@@ -11,7 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121019020558) do
+ActiveRecord::Schema.define(:version => 20121020183959) do
+
+  create_table "admin_interviews", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "articles", :force => true do |t|
     t.integer  "author_id"
@@ -47,7 +52,6 @@ ActiveRecord::Schema.define(:version => 20121019020558) do
     t.string   "slug"
   end
 
-  add_index "authors", ["crfa"], :name => "crfa", :unique => true
   add_index "authors", ["slug"], :name => "index_authors_on_slug", :unique => true
 
   create_table "contacts", :force => true do |t|
@@ -57,6 +61,16 @@ ActiveRecord::Schema.define(:version => 20121019020558) do
     t.integer  "status"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "discussion_users", :force => true do |t|
+    t.integer  "debate_id"
+    t.integer  "usuario_id"
+    t.datetime "data_resposta"
+    t.integer  "status"
+    t.text     "resposta"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "discussions", :force => true do |t|
@@ -96,6 +110,7 @@ ActiveRecord::Schema.define(:version => 20121019020558) do
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
     t.string   "slug"
+    t.text     "bio"
   end
 
   add_index "interviews", ["slug"], :name => "index_interviews_on_slug", :unique => true
@@ -145,9 +160,9 @@ ActiveRecord::Schema.define(:version => 20121019020558) do
     t.date     "data_nasc"
     t.string   "email"
     t.string   "senha"
-    t.integer  "status",                    :default => 1
-    t.datetime "created_at",                               :null => false
-    t.datetime "updated_at",                               :null => false
+    t.integer  "status"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
     t.string   "url_image"
     t.string   "localizacao"
     t.integer  "uid",         :limit => 8

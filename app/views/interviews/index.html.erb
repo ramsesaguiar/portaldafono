@@ -1,26 +1,43 @@
 ﻿<div class="divider_thin"></div>
 <div class="grid_15 suffix_1 content">
-    <div class="cat_title">
-        <h2>Artigos</h2> 
+    <div class="cat_title linha_vermelha">
+        <h2>Entrevistas</h2> 
         <div class="clear"></div>
     </div>
     <div class="post-item">
         <div class="post-meta">
-            <ul>
-                <% if @articles.count > 0 %>
-                    <% @articles.each do |article| %>
-                        <li class="articles-list"> 
-                            <p> <%= article.created_at.strftime("%d/%m/%Y") %> </p>
-                            <%= link_to ( " <strong> #{article.titulo} </strong>" ).html_safe , article  %> 
-                            <em> <%= article.subtitulo %></em>
-                        <p> <em> por </em> <span class='author'> <%= article.author.nome %> </span> </p>
-                    </li>
-                    <% end %>
-                <% else %>
-                    <li class="not-found"> Nenhum artigo encontrado </li>
-                <% end %>                   
-            </ul>
+            <% if @interviews.count > 0 %>
+                <% @interviews.each do |entrevista| %>
+                    <div class="desc">
+                        <div class="post-opts">
+                            <div class="post-date">
+                                <h1><%= entrevista.created_at.strftime("%d") %></h1>
+                                <h6> <%= mes_do_ano_em_portugues entrevista.created_at.strftime("%b") %> <br> <%= entrevista.created_at.strftime("%Y") %></h6>
+                            </div>
+                            <div class="post-cats">
+                                <p class="postby"><%= entrevista.author.nome %></p>
+                                <p class="cats">
+                                    <fb:comments-count href="<%= request.url + "/" + entrevista.slug %>"></fb:comments-count>
+                                    <%= link_to "comentários" , interview_path(entrevista) + "#comente" %>   
+                                </p>
+                            </div>
+                            <div class="post-share">
+                                <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div> 
+                            </div>
+                        </div>
+                        <div class="post-details">
+                            <h5> <%= link_to entrevista.nome_entrevistado, entrevista, :class=> "colr" %> </h5>
+                            <div class="padding_top_10">  
+                                <%= link_to "veja a entrevista na íntegra", entrevista, :class=> "link-more" %>
+                            </div> 
+                        </div>
+                    </div>
+             <% end %> 
+             <% else %>
+                 Nenhuma notícia encontrada
+              <% end %>  
         </div>
     </div>
-
 </div>
+
+

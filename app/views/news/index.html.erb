@@ -16,7 +16,10 @@
                             </div>
                             <div class="post-cats">
                                 <p class="postby"><%= news.author.nome %></p>
-                                <!-- <p class="cats"> Church Media </p> -->
+                                <p class="cats">
+                                    <fb:comments-count href="<%= request.url + "/" + news.slug %>"></fb:comments-count> 
+                                    <%= link_to "comentários" , news_path(news) + "#comente" %> 
+                                 </p>
                             </div>
                             <div class="post-share">
                                 <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div> 
@@ -26,7 +29,7 @@
                             <h5> <%= link_to news.titulo, news, :class=> "colr" %> </h5>
                                <%= raw truncate news.texto , :length => 250 %>
                             <div class="padding_top_10">  
-                                <%= link_to "veja a notícia", news, :class=> "link-more" %>
+                                <%= link_to "veja a notícia completa", news, :class=> "link-more" %>
                             </div> 
                         </div>
                     </div>

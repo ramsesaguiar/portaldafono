@@ -1,17 +1,100 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-  </head>
-  <body>
-    <h1>Welcome to example.com, <%= @user.nome %></h1>
-    <p>
-      You have successfully signed up to example.com,
-      your username is: <%= @user.email %>.<br/>
-    </p>
-    <p>
-      To login to the site, just follow this link: <%= @url %>.
-    </p>
-    <p>Thanks for joining and have a great day!</p>
-  </body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Portal da fono</title>
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="background-color:#ededed;">
+    <table width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td valign="top" align="center">
+          <table width="546" border="0" cellspacing="0" cellpadding="0" style="background-color:#ffffff">
+            <tr>
+                <td> // Imagem que por enquanto será Portal da fono</td>
+            </tr>
+          </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" align="center">
+            <table width="546" border="0" cellspacing="0" cellpadding="0" style="background-color:#ffffff" >
+              <tr>
+                <td align="center">
+                    <p style="height:1px;"></p>                     
+                    <p style="font-size:15px; font-family:Tahoma, Geneva, sans-serif; color:#252525;">
+                        <%= @contact.nome %>, em breve enviaremos uma resposta para o seu contato.  
+                    </p>
+                    <p style="font-size:18px; font-family:Tahoma, Geneva, sans-serif; color:#252525; font-weight:bold"> Muito obrigado por entrar em contato conosco. 
+                    </p>                  
+                </td>
+              </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+      <td valign="top" align="center">
+          <table width="546" border="0" cellspacing="0" cellpadding="8" style="background-color:#ffffff">
+              <tr>
+                  <td width="18">  </td>
+                  <td width="510" align="center" style="background: #fff0e4; border-radius:10px; border:solid 2px #FFCC99;">
+                  <p style="font-size:20px; font-family:Tahoma, Geneva, sans-serif; line-height:5px; color: #C63;">
+                        Seu protocolo de contato &eacute;: <%= @contact.id %>
+                      </p>
+                    </td> 
+                   <td width="18"> </td>                                               
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+      <td valign="top" align="center">
+            <table width="546" border="0" cellspacing="0" cellpadding="10" style="background-color:#ffffff" >
+              <tr>
+                <td align="center">
+                </td>
+              </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+       <td valign="top" align="center">
+            <table width="546" border="0" cellspacing="0" cellpadding="0" >
+                <tr>
+                    <td height="55"> </td>
+                </tr>
+            </table>
+      </td>
+    </tr>   
+    <tr>
+        <td valign="top" align="center">
+            <table width="546" border="0" cellspacing="0" cellpadding="10" style="background-color:#252525" >
+                <tr>
+                    <td width="12"> </td> 
+                    <td  width="260">
+                        <p style="font-size:11px; font-family:Tahoma, Geneva, sans-serif; color:#ababab; line-height:10px">
+                            Copyright &copy; 2012 <a href="<%= @url %>" style="color:#ababab;">Portaldafono.com</a>
+                        </p>
+                        <p style="font-size:11px; font-family:Tahoma, Geneva, sans-serif; color:#ababab; line-height:10px">
+                            <strong>Anuncie</strong> <a href="<%= @url %>/anuncie" style="color:#ababab; text-decoration:underline">portaldafono.com/anuncie</a>
+                        </p>
+                        <p style="font-size:11px; font-family:Tahoma, Geneva, sans-serif; line-height:10px">
+                            <a href="<%= @url %>/termos-de-uso" style="color:#ababab; text-decoration:underline">Termos de uso</a> 
+                        </p>   
+                    </td>                    
+                    <td width="8"> </td> 
+                    <td  width="200">
+                        <p style="height:22px"></p>
+                        <p style="font-size:14px; font-family:Tahoma, Geneva, sans-serif; line-height:10px">
+                            <a href="<%= @url %>" style="color:#e4e4e4; text-decoration:underline">Acessar o Portaldafono.com</a>
+                        </p>
+                    </td>
+                    <td width="8"> </td> 
+                </tr>
+            </table>
+        </td>
+    </tr>   
+  </table>
+</body>
 </html>
+
+

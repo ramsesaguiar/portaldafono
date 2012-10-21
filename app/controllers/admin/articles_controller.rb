@@ -49,7 +49,7 @@
         format.json { render json: [:admin, @admin_article], status: :created, location: @admin_article }
       else
         format.html { render action: "new" }
-        format.json { render json: @admin_article.errors, status: :unprocessable_entity }
+        format.json { render json: [:admin, @admin_article.erros], status: :unprocessable_entity }
       end
     end
   end
@@ -65,7 +65,7 @@
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
-        format.json { render json: @admin_article.errors, status: :unprocessable_entity }
+        format.json { render json: [:admin, @admin_article.erros], status: :unprocessable_entity }
       end
     end
   end

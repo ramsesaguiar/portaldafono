@@ -2,7 +2,6 @@
   # GET /admin/news
   # GET /admin/news.json
   def index
-    #@admin_news = News.all
     @admin_news = News.find(:all, :include => :author)
 
     respond_to do |format|

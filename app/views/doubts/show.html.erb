@@ -16,7 +16,8 @@
                 </div>
                 <div class="post-meta">
               		<span class="icon_cat icon_cat_blog">
-                		<fb:comments-count href="<%= request.url %>"></fb:comments-count> comentários
+                		<fb:comments-count href="<%= request.url %>"></fb:comments-count>
+                    <%= link_to "comentários" , "#comente" %>  
               		</span>
               		<span class="postby"> <%= @doubt.user.apelido %> </span> 
                 	<div style="margin-top:3px"> &nbsp;  em <%= @doubt.created_at.strftime("%d/%m/%Y") %> </div>
@@ -48,7 +49,7 @@
 			</div>
 		<% end %>
 		<div class="add-comment" id="addcomments">
-        	<div class="cat_title back_post"> <h3> Faça aqui seus comentários </h3> </div>
+        	<div class="cat_title back_post"> <h3> <a name="comente"> Faça aqui seus comentários </a> </h3> </div>
           	<div class="fb-comments" data-href="<%= request.url %>" data-num-posts="10" data-width="590"></div> 
         </div>               
     </div>
