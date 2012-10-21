@@ -1,33 +1,54 @@
-﻿<h1>Artigos</h1>
-<% if @admin_articles.present? %>
-    <table>
-      <tr>
-        <th>ID</th>
-        <th>Data</th>
-        <th>Título</th>
-        <th>Subtitulo</th>
-        <th>Destaque</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    <% @admin_articles.each do |admin_article| %>
-      <tr>
-        <td><%= admin_article.id %></td>
-        <td><%= admin_article.created_at.strftime("%d/%m/%Y") %></td>
-        <td><%= admin_article.titulo %></td>
-        <td><%= admin_article.subtitulo %></td>
-        <td><%= status_to_sim_nao admin_article.destaque %></td>
-        <td><%= link_to 'Visualizar', [:admin, admin_article] %></td>
-        <td><%= link_to 'Editar', edit_admin_article_path(admin_article) %></td>
-        <td><%= link_to 'Excluir', [:admin, admin_article], confirm: 'Deseja realmente excluir?', method: :delete %></td>
-      </tr>
-    <% end %>
-</table>
-<% else %>
-  <div> Nenhum registro encontrado </div>
-<% end %>
-
-<br />
-
-<%= link_to 'Novo artigo', new_admin_article_path %>
+﻿<div class="block">
+  <div class="block_head">
+    <div class="bheadl"></div>
+      <div class="bheadr"></div>
+        <h2>Artigos</h2>
+          <ul>
+            <li> <%= link_to 'Novo artigo', new_admin_article_path %></li>
+          </ul>
+  </div>    
+  <div class="block_content">
+    <% if @admin_articles.present? %>
+      <table cellpadding="0" cellspacing="0" width="100%" class="sortable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Data</th>
+            <th>Destaque</th>
+            <th>Author</th>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </thead>
+        <tbody>
+           <% @admin_articles.each do |admin_article| %>
+          <tr>
+            <td><%= admin_article.id %></td>
+            <td><%= link_to admin_article.titulo, [:admin, admin_article] %></td>
+            <td><%= admin_article.created_at.strftime("%d/%m/%Y") %></td>
+            <td><%= status_to_sim_nao admin_article.destaque %></td>
+            <td><%= admin_article.author.nome %> </td>
+            <td><%= link_to 'Editar', edit_admin_article_path(admin_article) %></td>
+            <td><%= link_to 'Excluir', [:admin, admin_article], confirm: 'Deseja realmente excluir?', method: :delete %></td>
+          </tr>
+           <% end %>
+        </tbody>
+    </table>
+  <% else %>
+      <div> Nenhum registro encontrado </div>
+  <% end %>
+    <!--  <div class="pagination right">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+      </div> -->    
+  </div> 
+  <div class="bendl"></div>
+  <div class="bendr"></div>
+</div>

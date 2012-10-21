@@ -1,14 +1,36 @@
-﻿<h1>Sistema de administração - Portal da fono</h1>
-
-<% if flash[:notice] %>
-	<p style="color: red; font-style: italic"><%= flash[:notice] %></p>
-<% end %>
-
-<%= form_tag('/admin/login/do_login') do -%>
-	<%= label(:login, :email) %>
-	<%= text_field(:login, :email, :size => 35) %>
-	<%= label(:login, :senha) %>
-	<%= password_field(:login, :senha, :size => 35)  %>
-	<%= submit_tag 'Entrar' %>
- <% end -%>
-
+﻿<div id="hld">
+	<div class="wrapper">	
+		<div class="block small center login">
+			<div class="block_head">
+				<div class="bheadl"></div>
+				<div class="bheadr"></div>
+					<h2>Login</h2>
+					<ul>
+						<li><%= link_to "voltar para o site", "http://www.portaldafono.com", :target => "_blank" %></li>
+					</ul>
+				</div>		
+				<div class="block_content">
+					<% if flash[:notice] %>
+						<div class="message info">
+							<p><%= flash[:notice] %></p>
+						</div>
+					<% end %>	
+						<%= form_tag('/admin/login/do_login') do %>
+							<p>
+								<%= label(:login, :email, "E-mail:*") %>
+								<%= text_field :login, :email, :size => 35, :class => "text" %>
+							</p>
+							<p>
+								<%= label(:login, :senha, "Senha:*") %>
+								<%= password_field :login, :senha, :size => 35, :class => "text"  %>
+							</p>
+							<p>
+								<%= submit_tag 'Entrar', :class => "submit" %> 
+							</p>
+						 <% end %>
+				</div>	
+				<div class="bendl"></div>
+				<div class="bendr"></div>
+		</div>		
+	</div>					
+</div>
