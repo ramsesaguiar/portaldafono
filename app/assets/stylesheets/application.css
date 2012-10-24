@@ -1,0 +1,17 @@
+/*
+ *= require styles
+ *= require custom
+
+ *= require articles
+ *= require contacts
+
+ *= require discussions
+ *= require doubts
+ *= require estaticas
+ *= require news
+
+ *= require shCore
+ *= require shThemeDefault
+ *= require ui-lightness/jquery-ui-1.8.4.custom
+ *= require ui.selectmenu
+*/

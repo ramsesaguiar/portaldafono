@@ -1,13 +1,10 @@
-﻿<%= form_for([:admin,@admin_contact]) do |f| %>
+﻿<%= form_for [:admin,@admin_contact] do |f| %>
   <% if @admin_contact.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@admin_contact.errors.count, "error") %> prohibited this admin_contact from being saved:</h2>
-
-      <ul>
       <% @admin_contact.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <div class="message errormsg"><p><%= msg %></p></div>
       <% end %>
-      </ul>
     </div>
   <% end %>
   
@@ -27,10 +24,10 @@
     <%= "Texto: " + @admin_contact.texto %>
   </div>
   <div class="field">
-    <%= f.label :status %><br />
-    <%= select("contact", "status",  hash_to_status , :selected => @admin_contact.status,  :prompt => 'Selecione um status') %>
+    <%= f.label :status, "Mensagem foi respondida?" %>
+    <%= select("contact", "status",  hash_to_sim_nao , :selected => @admin_contact.status,  :prompt => 'Selecione um status') %>
   </div>
-  <div class="actions">
-      <%= f.submit "Salvar" %>
+  <div class="field">
+      <%= f.submit "Enviar", :class => "submit small" %>
   </div>
 <% end %>

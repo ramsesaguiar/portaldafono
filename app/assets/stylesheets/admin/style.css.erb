@@ -13,7 +13,7 @@ Author URI: http://themeforest.net/user/enstyled
 * { padding:0; margin:0; }
 	
 body {
-	background: #fbfbfb url(/images/admin/bg.jpg) 0 0 repeat;
+	background: #fbfbfb url(<%= asset_path "admin/bg.jpg" %>) 0 0 repeat;
 	font-family: "Lucida Grande", Verdana, sans-serif;
 	font-size: 12px;
 	color: #666;
@@ -40,7 +40,7 @@ a:hover {
 	}	
 	
 #hld {
-	background: url(/images/admin/hld.jpg) 0 0 repeat-x;
+	background: url(<%= asset_path "admin/hld.jpg" %>) 0 0 repeat-x;
 	min-height: 402px;
 	}
 	
@@ -57,7 +57,7 @@ a:hover {
 #header {
 	height: 50px;
 	line-height: 50px;
-	background: url(/images/admin/hdr.gif) 0 0 repeat-x;
+	background: url(<%= asset_path "admin/hdr.gif" %>) 0 0 repeat-x;
 	color: #999;
 	font-weight: bold;
 	margin-bottom: 20px;
@@ -67,14 +67,14 @@ a:hover {
 	width: 20px;
 	height: 50px;
 	float: left;
-	background: url(/images/admin/hdrl.gif) top left no-repeat;
+	background: url(<%= asset_path "admin/hdrl.gif" %>) top left no-repeat;
 	}
 
 #header .hdrr {
 	width: 20px;
 	height: 50px;
 	float: right;
-	background: url(/images/admin/hdrr.gif) top right no-repeat;
+	background: url(<%= asset_path "admin/hdrr.gif" %>) top right no-repeat;
 	}
 	
 #header a {
@@ -122,7 +122,7 @@ a:hover {
 	position: relative;
 	height: 50px;
 	padding: 0 10px;
-	background: url(/images/admin/nsp.gif) center right no-repeat;
+	background: url(<%= asset_path "admin/nsp.gif" %>) center right no-repeat;
 	/* line-height: 50px; */
 	}
 	
@@ -197,7 +197,7 @@ a:hover {
 	font-weight: bold;
 	line-height: 30px;
 	color: #999;
-	background: url(/images/admin/mbg.png) 0 0 repeat;
+	background: url(<%= asset_path "admin/mbg.png" %>) 0 0 repeat;
 	}
 
 /* 2nd Menu Hover Persistence */
@@ -214,7 +214,7 @@ a:hover {
 #header #nav li.iehover li.iehover li a {
 	float: none;
 	color: #999;
-	background: url(../images/mbg.png) 0 0 repeat;
+	background: url(<%= asset_path "admin/mbg.png" %>) 0 0 repeat;
 	}
 
 /* 3rd Menu Hover Persistence */
@@ -230,7 +230,7 @@ a:hover {
 #header #nav li:hover li:hover li:hover li a,
 #header #nav li.iehover li.iehover li.iehover li a {
 	color: #999;
-	background: url(/images/admin/mbg.png) 0 0 repeat;
+	background: url(<%= asset_path "admin/mbg.png" %>) 0 0 repeat;
 	}
 
 /* 4th Menu Hover */
@@ -280,20 +280,20 @@ a:hover {
 	padding-bottom: 5px;
 	margin-bottom: 25px;
 	clear: both;
-	background: #fff url(/images/admin/bnd.gif) bottom center repeat-x;
+	background: #fff url(<%= asset_path "admin/bnd.gif" %>) bottom center repeat-x;
 	}
 
 .block .bendl {
 	width: 5px;
 	height: 5px;
-	background: url(/images/admin/bendl.gif) bottom left no-repeat;
+	background: url(<%= asset_path "admin/bendl.gif" %>) bottom left no-repeat;
 	float: left;
 	}
 
 .block .bendr {
 	width: 5px;
 	height: 5px;
-	background: url(/images/admin/bendr.gif) bottom left no-repeat;
+	background: url(<%= asset_path "admin/bendr.gif" %>) bottom left no-repeat;
 	float: right;
 	}
 	
@@ -303,7 +303,7 @@ a:hover {
 .block .block_head {
 	height: 54px;
 	line-height: 54px;
-	background: url(/images/admin/bhead.gif) 0 0 repeat-x;
+	background: url(<%= asset_path "admin/bhead.gif" %>) 0 0 repeat-x;
 	overflow: hidden;
 	}
 
@@ -311,14 +311,14 @@ a:hover {
 	width: 20px;
 	height: 54px;
 	float: left;
-	background: url(/images/admin/bheadl.gif) top left no-repeat;
+	background: url(<%= asset_path "admin/bheadl.gif" %>) top left no-repeat;
 	}
 
 .block .block_head .bheadr {
 	width: 20px;
 	height: 54px;
 	float: right;
-	background: url(/images/admin/bheadr.gif) top right no-repeat;
+	background: url(<%= asset_path "admin/bheadr.gif" %>) top right no-repeat;
 	}
 	
 .block .block_head h2 {
@@ -343,7 +343,7 @@ a:hover {
 	display: inline;
 	padding: 3px 0;
 	padding-left: 20px;
-	background: url(/images/admin/phs.gif) 7px center no-repeat;
+	background: url(<%= asset_path "admin/phs.gif" %>) 7px center no-repeat;
 	}
 	
 .block .block_head ul li.nobg { background: none; }
@@ -372,12 +372,12 @@ a:hover {
 	font-size: 11px;
 	color: #999;
 	margin: 0;
-	background: url(/images/admin/srch.gif) left center no-repeat;
+	background: url(<%= asset_path "admin/srch.gif" %>) left center no-repeat;
 	}
 
 .block .block_head form .text:focus {
 	color: #666;
-	background: url(/images/admin/srch_.gif) left center no-repeat;
+	background: url(<%= asset_path "admin/srch_.gif" %>) left center no-repeat;
 	}
 
 .block .block_head select {
@@ -438,12 +438,12 @@ a:hover {
 
 .block table tr th.headerSortUp {
 	color: #333;
-	background: url(/images/admin/sortd.gif) 95% center no-repeat;
+	background: url(<%= asset_path "admin/sortd.gif" %>) 95% center no-repeat;
 	}
 
 .block table tr th.headerSortDown {
 	color: #333;
-	background: url(/images/admin/sorta.gif) 95% center no-repeat;
+	background: url(<%= asset_path "admin/sorta.gif" %>) 95% center no-repeat;
 	}
 	
 .block table tr td.delete {
@@ -519,7 +519,7 @@ a:hover {
 .block .block_content ul li {
 	margin-bottom: 5px;
 	padding-left: 15px;
-	background: url(/images/admin/li.gif) 0 7px no-repeat;
+	background: url(<%= asset_path "admin/li.gif" %>) 0 7px no-repeat;
  	}
  	
 .block .block_content ol li {
@@ -564,25 +564,25 @@ a:hover {
 	
 .block .message.errormsg {
 	border: 1px solid #e9c59b;
-	background: #ffecce url(/images/admin/error.gif) 12px 12px no-repeat;
+	background: #ffecce url(<%= asset_path "admin/error.gif" %>) 12px 12px no-repeat;
 	color: #e3302c;
 	}
 	
 .block .message.success {
 	border: 1px solid #bfde84;
-	background: #edfbd8 url(/images/admin/success.gif) 12px 12px no-repeat;
+	background: #edfbd8 url(<%= asset_path "admin/success.gif" %>) 12px 12px no-repeat;
 	color: #508600;
 	}
 		
 .block .message.info {
 	border: 1px solid #bbdbe0;
-	background: #ecf9ff url(/images/admin/info.gif) 12px 12px no-repeat;
+	background: #ecf9ff url(<%= asset_path "admin/info.gif" %>) 12px 12px no-repeat;
 	color: #0888c3;
 	}
 	
 .block .message.warning {
 	border: 1px solid #e5e181;
-	background: #fefde2 url(/images/admin/warning.gif) 12px 12px no-repeat;
+	background: #fefde2 url(<%= asset_path "admin/warning.gif" %>) 12px 12px no-repeat;
 	color: #666;
 	}
 	
@@ -591,7 +591,7 @@ a:hover {
 	float: right;
 	width: 16px;
 	height: 16px;
-	background: url(/images/admin/close.png) 0 0 no-repeat;
+	background: url(<%= asset_path "admin/close.png" %>) 0 0 no-repeat;
 	margin-top: 2px;
 	cursor: pointer;
 	-moz-opacity: 0.7;
@@ -643,7 +643,7 @@ a:hover {
 	width: 100px;
 	padding-right: 36px;
 	cursor: pointer;
-	background: url(/images/admin/cal.jpg) center right no-repeat;
+	background: url(<%= asset_path "admin/cal.jpg" %>) center right no-repeat;
 	}
 
 .block form textarea {
@@ -686,11 +686,11 @@ a:hover {
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
-	background: url('/images/admin/sdd.jpg') center right no-repeat;
+	background: url(<%= asset_path "admin/sdd.jpg" %>) center right no-repeat;
 	}
 
 .block form .cmf-skinned-select:hover {
-	background: url('/images/admin/sdd_.jpg') center right no-repeat;
+	background: url(<%= asset_path "admin/sdd_.jpg" %>) center right no-repeat;
 	}
 
 .block form div.cmf-skinned-text {
@@ -719,7 +719,7 @@ a:hover {
 	}
 
 .block form .fileupload #uploadmsg.loading {
-	background: url(/images/admin/ajax-loader.gif) center left no-repeat;
+	background: url(<%= asset_path "admin/ajax-loader.gif" %>) center left no-repeat;
 	width: 30px;
 	padding-left: 20px;
 	}
@@ -757,7 +757,7 @@ a:hover {
 	width: 85px;
 	height: 30px;
 	line-height: 30px;
-	background: url(/images/admin/btns.gif) top center no-repeat;
+	background: url(<%= asset_path "admin/btns.gif" %>) top center no-repeat;
 	border: 0;
 	font-family: "Titillium800", "Trebuchet MS", Arial, sans-serif;
 	font-size: 14px;
@@ -771,7 +771,7 @@ a:hover {
 	}
 	
 .block form input.submit:hover {
-	background: url(/images/admin/btns_.gif) top center no-repeat;
+	background: url(<%= asset_path "admin/btns_.gif" %>) top center no-repeat;
 	text-shadow: 1px 1px 0 #b55f10;
 	}
 
@@ -785,30 +785,30 @@ a:hover {
 	font-size: 10px;
 	font-weight: bold;
 	text-transform: none;
-	background: url(/images/admin/tiny.gif) top center no-repeat;
+	background: url(<%= asset_path "admin/tiny.gif" %>) top center no-repeat;
 	}
 	
-.block form input.submit.tiny:hover { background: url(/images/admin/tiny_.gif) top center no-repeat; }
+.block form input.submit.tiny:hover { background: url(<%= asset_path "admin/tiny_.gif" %>) top center no-repeat; }
 	
-.block form input.submit.mid { width: 115px; background: url(/images/admin/btnm.gif) top center no-repeat; }
-.block form input.submit.mid:hover { background: url(/images/admin/btnm_.gif) top center no-repeat; }
+.block form input.submit.mid { width: 115px; background: url(<%= asset_path "admin/btnm.gif" %>) top center no-repeat; }
+.block form input.submit.mid:hover { background: url(<%= asset_path "admin/btnm_.gif" %>) top center no-repeat; }
 
-.block form input.submit.long { width: 165px; background: url(/images/admin/btnb.gif) top center no-repeat; }
-.block form input.submit.long:hover { background: url(/images/admin/btnb_.gif) top center no-repeat; }
+.block form input.submit.long { width: 165px; background: url(<%= asset_path "admin/btnb.gif" %>) top center no-repeat; }
+.block form input.submit.long:hover { background: url(<%= asset_path "admin/btnb_.gif" %>) top center no-repeat; }
 
 
 /* Small blocks */
 
 .block.small {
 	width: 49%;
-	background: #fff url(/images/admin/bnd.gif) bottom center repeat-x;
+	background: #fff url(<%= asset_path "admin/bnd.gif" %>) bottom center repeat-x;
 	padding-bottom: 0;
 	}
 
 .block.small.left { float: left; clear: none; }
 .block.small.right { float: right; clear: none; }
 
-.block.small .block_head { background: url(/images/admin/bhead.gif) 0 0 repeat-x; }
+.block.small .block_head { background: url(<%= asset_path "admin/bhead.gif" %>) 0 0 repeat-x; }
 .block.small .block_content { background: #fff; border-left: 1px solid #ccc; border-right: 1px solid #ccc; }
 
 .block.small .block_content input.text,
@@ -824,7 +824,7 @@ a:hover {
 
 .block.small.center.login {
 	width: 470px;
-	background: #fff url(/images/admin/bnd.gif) bottom center repeat-x;
+	background: #fff url(<%= asset_path "admin/bnd.gif" %>) bottom center repeat-x;
 	margin-top: 100px;
 	margin-bottom: 100px;
 	padding-bottom: 5px;
@@ -835,13 +835,13 @@ a:hover {
 
 .block.withsidebar .bendl {
 	width: 191px;
-	background: url(/images/admin/bendsb.gif) bottom left no-repeat;
+	background: url(<%= asset_path "admin/bendsb.gif" %>) bottom left no-repeat;
 	}
 
 .block.withsidebar .block_content {
 	overflow: hidden;
 	padding: 0;
-	background: url(/images/admin/sidebar.gif) 0 0 repeat-y;
+	background: url(<%= asset_path "admin/sidebar.gif" %>) 0 0 repeat-y;
 	}
 
 .block.withsidebar .block_content .sidebar {
@@ -928,7 +928,7 @@ a:hover {
 .block .block_content .imglist li ul {
 	position: absolute;
 	z-index: 10;
-	background: url(/images/admin/imgo.gif) center no-repeat;
+	background: url(<%= asset_path "admin/imgo.gif" %>) center no-repeat;
 	width: 62px;
 	height: 58px;
 	left: 20px;
@@ -963,14 +963,14 @@ a:hover {
 	outline: none;
 	}
 	
-.block .block_content .imglist li ul li.view a:hover { background: url(/images/admin/imgt.gif) bottom center no-repeat; }
-.block .block_content .imglist li ul li.delete a:hover { background: url(/images/admin/imgb.gif) top center no-repeat; }
+.block .block_content .imglist li ul li.view a:hover { background: url(<%= asset_path "admin/imgt.gif" %>) bottom center no-repeat; }
+.block .block_content .imglist li ul li.delete a:hover { background: url(<%= asset_path "admin/imgb.gif" %>) top center no-repeat; }
 
 
 /* Footer */
 
 #footer {
-	background: url(/images/admin/ft.gif) 0 0 repeat-x;
+	background: url(<%= asset_path "admin/ft.gif" %>) 0 0 repeat-x;
 	padding: 10px 0 50px;
 	font-size: 10px;
 	color: #757575;

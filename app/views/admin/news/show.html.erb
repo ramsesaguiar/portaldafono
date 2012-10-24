@@ -1,39 +1,28 @@
-﻿<p id="notice"><%= notice %></p>
-
-<p>
-  <b>ID:</b>
-  <%= @admin_news.id %>
-</p>
-
-<p>
-  <b>Titulo:</b>
-  <%= @admin_news.titulo %>
-</p>
-
-<p>
-  <b>Subtitulo:</b>
-  <%= @admin_news.subtitulo %>
-</p>
-
-<p>
-  <b>Autor:</b>
-  <%= @admin_news.author.nome %>
-</p>
-
-<p>
-  <b>Texto:</b>
-  <%= @admin_news.texto %>
-</p>
-
-<p>
-  <b>Status:</b>
-  <%= status_to_sim_nao @admin_news.status %>
-</p>
-
-<p>
-    <%= image_tag @admin_news.image.url(:thumb) %>
-</p>  
-
-
-<%= link_to 'Editar', edit_admin_news_path(@admin_news) %> |
-<%= link_to 'Voltar', admin_news_index_path %>
+﻿<div class="block">
+  <div class="block_head">
+    <div class="bheadl"></div>
+    <div class="bheadr"></div>
+    <h2>Notícia > <%= @admin_news.titulo %></h2>
+    <ul class="tabs">
+      <li> <%= link_to 'Editar', edit_admin_news_path(@admin_news) %> </li>
+      <li> <%= link_to 'Voltar', admin_news_index_path %> </li>
+    </ul>
+  </div>    
+  <div class="block_content tab_content">
+    <% if notice.present? %>
+      <div id="notice" class="message success"><p><%= notice %></p></div>
+    <% end %>
+    <p> <strong>ID:</strong> <%= @admin_news.id %> </p>
+    <p> <strong>Autor:</strong> <%= @admin_news.author.nome %> </p>
+    <p> <strong>Titulo:</strong> <%= @admin_news.titulo %> </p>
+    <p> <strong>Subtitulo:</strong> <%= @admin_news.subtitulo %> </p>
+    <p> <strong>Texto:</strong> <%= @admin_news.texto %> </p>
+    <p> <strong>Status :</strong> <%= status_to_sim_nao @admin_news.status %> </p>
+    <p> <strong>Data:</strong> <%= @admin_news.created_at.strftime("%d/%m/%Y") %> </p>
+    <p>
+      <%= image_tag @admin_news.image.url(:thumb) %>
+    </p>  
+  </div>   
+  <div class="bendl"></div>
+  <div class="bendr"></div>
+</div> 

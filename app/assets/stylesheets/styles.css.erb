@@ -376,7 +376,7 @@ hr{
 	padding-top:15px;}
 
 .divider{
-	background:url(../images/divider_line.gif) bottom repeat-x;
+	background:url(<%= asset_path "divider_line.gif" %>) bottom repeat-x;
 	padding-top:22px}
 
 .clearboth{
@@ -530,7 +530,7 @@ button:hover,button:focus{
 
 .button_link span, 
 .text .button_link span {
-	background:url(../images/buttons_bg.png) no-repeat scroll left 0 transparent;
+	background:url(<%= asset_path "buttons_bg.png" %>) no-repeat scroll left 0 transparent;
 	display:block;
 	line-height:20px;
 	padding:10px 0px 10px 20px;
@@ -553,33 +553,33 @@ button:hover,button:focus{
 	
 /* Color Styled Buttons */
 .btn_blue, .btn_blue span, .text .btn_blue span {
-	background-image:url(../images/buttons_bg_blue.png);}
+	background-image:url(<%= asset_path "buttons_bg_blue.png" %>);}
 
 .btn_yellow, .btn_yellow span, .text .btn_yellow span {
-	background-image:url(../images/buttons_bg_yellow.png);}
+	background-image:url(<%= asset_path "buttons_bg_yellow.png" %>);}
 
 .btn_yellow:active span {}
 
 .btn_orange, .btn_orange span, .text .btn_orange span {
-	background-image:url(../images/buttons_bg_orange.png);}
+	background-image:url(<%= asset_path "buttons_bg_orange.png" %>);}
 
 .btn_orange:active span {}
 
 .btn_green, .btn_green span, .text .btn_green span {
-	background-image:url(../images/buttons_bg_green.png);}
+	background-image:url(<%= asset_path "buttons_bg_green.png" %>);}
 
 .btn_green:active span {}
 
 .btn_red, .btn_red span, .text .btn_red span {
-	background-image:url(../images/buttons_bg_red.png);}
+	background-image:url(<%= asset_path "buttons_bg_red.png" %>);}
 
 .btn_red:active span {}
 
 .btn_cyan, .btn_cyan span, .text .btn_cyan span {
-	background-image:url(../images/buttons_bg_cyan.png);}
+	background-image:url(<%= asset_path "buttons_bg_cyan.png" %>);}
 
 .btn_violet, .btn_violet span, .text .btn_violet span {
-	background-image:url(../images/buttons_bg_violet.png);}
+	background-image:url(<%= asset_path "buttons_bg_violet.png" %>);}
 
 /*============================================================================================*/
 /* 2. SITE STRUCTURE */
@@ -588,7 +588,7 @@ button:hover,button:focus{
 /* 2.1 HeadBar with menu */
 /*----------------------------------------------*/
 .head_bar {
-	background:url(../images/head_menu_bg.gif) left bottom #efefef repeat-x;
+	background:url(<%= asset_path "head_menu_bg.gif" %>) left bottom #efefef repeat-x;
 	height:25px;
 	padding-top:10px;
 	position:relative;
@@ -674,7 +674,7 @@ button:hover,button:focus{
 	
 .head_bar .dropdown li ul li {
 	display:block;
-	background:url(../images/dropdown_1_bg.png) 0 0 repeat-y;
+	background:url(<%= asset_path "dropdown_1_bg.png" %>) 0 0 repeat-y;
 	width: 140px;
 	margin:0;
 	height:auto;
@@ -683,15 +683,15 @@ button:hover,button:focus{
 	line-height:1.4em}
 
 .head_bar .dropdown li ul li.first {
-	background:url(../images/dropdown_1_first.png) 0 top no-repeat;
+	background:url(<%= asset_path "dropdown_1_first.png" %>) 0 top no-repeat;
 	padding-top:10px}
 
 .head_bar .dropdown li ul li ul li.first {
-	background:url(../images/dropdown_1_first2.png) 0 top no-repeat;
+	background:url(<%= asset_path "dropdown_1_first2.png" %>) 0 top no-repeat;
 	padding-top:3px}
 	
 .head_bar .dropdown li ul li.last {
-	background:url(../images/dropdown_1_last.png) 0 bottom no-repeat;
+	background:url(<%= asset_path "dropdown_1_last.png" %>) 0 bottom no-repeat;
 	padding-bottom:8px}
 
 .head_bar .dropdown li ul li a,
@@ -699,7 +699,7 @@ button:hover,button:focus{
 	display:block;
 	color:#999;
 	padding:10px 10px 10px 14px;
-	background:url(../images/dropdown_1_line.png) 0 bottom no-repeat;}
+	background:url(<%= asset_path "dropdown_1_line.png" %>) 0 bottom no-repeat;}
 
 .head_bar .dropdown li ul li.last a,
 .head_bar .dropdown li ul li ul li.last a {
@@ -712,7 +712,7 @@ button:hover,button:focus{
 	cursor:pointer}
 
 .head_bar .dropdown li ul li.parent span {
-	background:url(../images/dropdown_arrow.gif) 110px 4px no-repeat;
+	background:url(<%= asset_path "dropdown_arrow.gif" %>) 110px 4px no-repeat;
 	padding-right:7px}
 
 .head_bar .dropdown li ul li.parent ul li span{
@@ -774,15 +774,15 @@ button:hover,button:focus{
 	padding-bottom:1px}
 
 .social_icons .social-rss {
-	background:url(../images/icon_rss.gif) 0 0 no-repeat;
+	background:url(<%= asset_path "icon_rss.gif" %>) 0 0 no-repeat;
 	padding-left:30px}
 
 .social_icons .social-twitter {
-	background:url(../images/icon_twitter.gif) 0 0 no-repeat;
+	background:url(<%= asset_path "icon_twitter.gif" %>) 0 0 no-repeat;
 	padding-left:30px}
 	
 .social_icons .social-facebook {
-	background:url(../images/icon_facebook.gif) 0 0 no-repeat;
+	background:url(<%= asset_path "icon_facebook.gif" %>) 0 0 no-repeat;
 	padding-left:30px}
 
 /* top search */
@@ -790,7 +790,7 @@ button:hover,button:focus{
 	padding-top:15px;}
 	
 .search_box form {
-	background:url(../images/search_bg.gif) 0 0 no-repeat;
+	background:url(<%= asset_path "search_bg.gif" %>) 0 0 no-repeat;
 	height:31px;
 	width:315px;
 	margin:0;
@@ -818,7 +818,7 @@ button:hover,button:focus{
 	text-indent:300px;
 	overflow:hidden;
 	cursor:pointer;
-	background:url(../images/search_btn.gif) 0 0 no-repeat;
+	background:url(<%= asset_path "search_btn.gif" %>) 0 0 no-repeat;
 	float:left;
 	margin:0;
 	padding:0}
@@ -826,7 +826,7 @@ button:hover,button:focus{
 /* topmenu */
 .topmenu {
 	height:70px;
-	background:url(../images/topmenu_bg.gif) 0 0 no-repeat;
+	background:url(<%= asset_path "topmenu_bg.gif" %>) 0 0 no-repeat;
 	position:relative;
 	z-index:2}
 
@@ -849,7 +849,7 @@ button:hover,button:focus{
 	height:70px;
 	position:relative;
 	list-style:none;
-	background:url(../images/topmenu_line.gif) right 5px no-repeat}
+	background:url(<%= asset_path "topmenu_line.gif" %>) right 5px no-repeat}
 
 .topmenu .dropdown li a {
 	display:block;
@@ -902,7 +902,7 @@ button:hover,button:focus{
 	
 .topmenu .dropdown li ul li {
 	display:block;
-	background:url(../images/dropdown_1_bg.png) 0 0 repeat-y;
+	background:url(<%= asset_path "dropdown_1_bg.png" %>) 0 0 repeat-y;
 	width: 140px;
 	margin:0;
 	height:auto;
@@ -911,15 +911,15 @@ button:hover,button:focus{
 	line-height:1.4em}
 
 .topmenu .dropdown li ul li.first {
-	background:url(../images/dropdown_1_first.png) 0 top no-repeat;
+	background:url(<%= asset_path "dropdown_1_first.png" %>) 0 top no-repeat;
 	padding-top:10px}
 
 .topmenu .dropdown li ul li ul li.first {
-	background:url(../images/dropdown_1_first2.png) 0 top no-repeat;
+	background:url(<%= asset_path "dropdown_1_first2.png" %>) 0 top no-repeat;
 	padding-top:3px}
 	
 .topmenu .dropdown li ul li.last {
-	background:url(../images/dropdown_1_last.png) 0 bottom no-repeat;
+	background:url(<%= asset_path "dropdown_1_last.png" %>) 0 bottom no-repeat;
 	padding-bottom:8px}
 
 .topmenu .dropdown li ul li a,
@@ -928,7 +928,7 @@ button:hover,button:focus{
 	color:#999;
 	height: auto;
 	padding:10px 10px 10px 14px;
-	background:url(../images/dropdown_1_line.png) 0 bottom no-repeat;}
+	background:url(<%= asset_path "dropdown_1_line.png" %>) 0 bottom no-repeat;}
 
 .topmenu .dropdown li ul li.last a,
 .topmenu .dropdown li ul li ul li.last a {
@@ -941,7 +941,7 @@ button:hover,button:focus{
 	cursor:pointer}
 
 .topmenu .dropdown li ul li.parent span {
-	background:url(../images/dropdown_arrow.gif) 110px 4px no-repeat;
+	background:url(<%= asset_path "dropdown_arrow.gif" %>) 110px 4px no-repeat;
 	padding-right:7px}
 
 .topmenu .dropdown li ul li.parent ul li span{
@@ -956,57 +956,46 @@ button:hover,button:focus{
 	display:block}
 
 .menu-gray a {
-	background:url(../images/menu_gray.gif) 0 0 repeat-x}
+	background:url(<%= asset_path "menu_gray.gif" %>) 0 0 repeat-x}
 .menu-red a {
-	background:url(../images/menu_red.gif) 0 0 repeat-x}
+	background:url(<%= asset_path "menu_red.gif" %>) 0 0 repeat-x}
 .menu-orange a {
-	background:url(../images/menu_orange.gif) 0 0 repeat-x}
+	background:url(<%= asset_path "menu_orange.gif" %>) 0 0 repeat-x}
 .menu-yellow a {
-	background:url(../images/menu_yellow.gif) 0 0 repeat-x}
+	background:url(<%= asset_path "menu_yellow.gif" %>) 0 0 repeat-x}
 .menu-green a {
-	background:url(../images/menu_green.gif) 0 0 repeat-x}
+	background:url(<%= asset_path "menu_green.gif" %>) 0 0 repeat-x}
 .menu-turquoise a {
-	background:url(../images/menu_turquoise.gif) 0 0 repeat-x}
+	background:url(<%= asset_path "menu_turquoise.gif" %>) 0 0 repeat-x}
 .menu-blue a {
-	background:url(../images/menu_blue.gif) 0 0 repeat-x}
+	background:url(<%= asset_path "menu_blue.gif" %>) 0 0 repeat-x}
 .menu-purple a {
-	background:url(../images/menu_purple.gif) 0 0 repeat-x}
-
+	background:url(<%= asset_path "menu_purple.gif" %>) 0 0 repeat-x}
 .menu-gray a:hover, .current-menu-item.menu-gray a, .current-menu-ancestor.menu-gray a {
-	background:url(../images/menu_gray_a.png) center 0 no-repeat}
-
-.menu-red-active { background:url(../images/menu_red_a.png) center 0 no-repeat !important; }	
-	
+	background:url(<%= asset_path "menu_gray_a.png" %>) center 0 no-repeat}
+.menu-red-active { background:url(<%= asset_path "menu_red_a.png" %>) center 0 no-repeat !important; }	
 .menu-red a:hover, .current-menu-item.menu-red a, .current-menu-ancestor.menu-red a  {
-	background:url(../images/menu_red_a.png) center 0 no-repeat}
-	
+	background:url(<%= asset_path "menu_red_a.png" %>) center 0 no-repeat}
 .menu-orange a:hover, .current-menu-item.menu-orange a, .current-menu-ancestor.menu-orange a  {
-	background:url(../images/menu_orange_a.png) center 0 no-repeat}
-
-.menu-orange-active { background:url(../images/menu_orange_a.png) center 0 no-repeat !important; }	
-	
+	background:url(<%= asset_path "menu_orange_a.png" %>) center 0 no-repeat}
+.menu-orange-active { background:url(<%= asset_path "menu_orange_a.png" %>) center 0 no-repeat !important; }	
 .menu-yellow a:hover, .current-menu-item.menu-yellow a, .current-menu-ancestor.menu-yellow a  {
-	background:url(../images/menu_yellow_a.png) center 0 no-repeat}
-
-.menu-yellow-active { background:url(../images/menu_yellow_a.png) center 0 no-repeat !important; }	
-	
-.menu-green a:hover, .current-menu-item.menu-green a, .current-menu-ancestor.menu-green a  {
-	background:url(../images/menu_green_a.png) center 0 no-repeat}
-
-.menu-green-active { background:url(../images/menu_green_a.png) center 0 no-repeat !important; }	
-	
-.menu-turquoise a:hover, .current-menu-item.menu-turquoise a, .current-menu-ancestor.menu-turquoise a  {
-	background:url(../images/menu_turquoise_a.png) center 0 no-repeat}
-
-.menu-turquoise-active { background:url(../images/menu_turquoise_a.png) center 0 no-repeat !important; }
+	background:url(<%= asset_path "menu_yellow_a.png" %>) center 0 no-repeat}
+.menu-yellow-active { background:url(<%= asset_path "menu_yellow_a.png" %>) center 0 no-repeat !important; }	
+	.menu-green a:hover, .current-menu-item.menu-green a, .current-menu-ancestor.menu-green a  {
+	background:url(<%= asset_path "menu_green_a.png" %>) center 0 no-repeat}
+.menu-green-active { background:url(<%= asset_path "menu_green_a.png" %>) center 0 no-repeat !important; }	
+	.menu-turquoise a:hover, .current-menu-item.menu-turquoise a, .current-menu-ancestor.menu-turquoise a  {
+	background:url(<%= asset_path "menu_turquoise_a.png" %>) center 0 no-repeat}
+.menu-turquoise-active { background:url(<%= asset_path "menu_turquoise_a.png" %>) center 0 no-repeat !important; }
 	
 .menu-blue a:hover, .current-menu-item.menu-blue a, .current-menu-ancestor.menu-blue a  {
-	background:url(../images/menu_blue_a.png) center 0 no-repeat}
+	background:url(<%= asset_path "menu_blue_a.png" %>) center 0 no-repeat}
 	
 .menu-purple a:hover, .current-menu-item.menu-purple a, .current-menu-ancestor.menu-purple a  {
-	background:url(../images/menu_purple_a.png) center 0 no-repeat}
+	background:url(<%= asset_path "menu_purple_a.png" %>) center 0 no-repeat}
 
-.menu-purple-active { background:url(../images/menu_purple_a.png) center 0 no-repeat !important; }
+.menu-purple-active { background:url(<%= asset_path "menu_purple_a.png" %>) center 0 no-repeat !important; }
 
 /*----------------------------------------------*/
 /* 2.3 Homepage Featured Content */
@@ -1040,7 +1029,7 @@ button:hover,button:focus{
 	font-family: Arial;
 	height:89px;
 	color: #ccc;
-	background:url(../images/feature_tab_bg.png) 0 0 no-repeat;}
+	background:url(<%= asset_path "feature_tab_bg.png" %>) 0 0 no-repeat;}
 
 #feature_tabs li:hover {
 	cursor:pointer;}
@@ -1065,7 +1054,7 @@ button:hover,button:focus{
 	border-bottom:1px dotted #666}
 
 #feature_tabs li.current {
-	background:url(../images/feature_current.png) 0 0 no-repeat}
+	background:url(<%= asset_path "feature_current.png" %>) 0 0 no-repeat}
 
 #feature_output {
 	top:0;
@@ -1088,7 +1077,7 @@ button:hover,button:focus{
 	left: 0;
 	width:636px;
 	height:325px;
-	background:url(../images/blank.gif)}
+	background:url(<%= asset_path "blank.gif" %>)}
 
 .feature_cat {
 	text-align:right;
@@ -1106,56 +1095,56 @@ button:hover,button:focus{
 
 .icon_cat_1 {
 	color:#f1dc2b;
-	background:url(../images/icon_cat_1.png) 0 0 no-repeat;}
+	background:url(<%= asset_path "icon_cat_1.png" %>) 0 0 no-repeat;}
 
 .icon_cat_1 a {
 	color:#f1dc2b;}
 
 .icon_cat_2 {
 	color:#8fbd03;
-	background:url(../images/icon_cat_2.png) 0 0 no-repeat;}
+	background:url(<%= asset_path "icon_cat_2.png" %>) 0 0 no-repeat;}
 
 .icon_cat_2 a {
 	color:#8fbd03;}
 
 .icon_cat_3 {
 	color:#ca62f0;
-	background:url(../images/icon_cat_3.png) 0 0 no-repeat;}
+	background:url(<%= asset_path "icon_cat_3.png" %>) 0 0 no-repeat;}
 	
 .icon_cat_3 a{
 	color:#ca62f0;}
 
 .icon_cat_4 {
 	color:#1899cf;
-	background:url(../images/icon_cat_4.png) 0 0 no-repeat;}
+	background:url(<%= asset_path "icon_cat_4.png" %>) 0 0 no-repeat;}
 	
 .icon_cat_4 a{
 	color:#1899cf;}
 	
 .icon_cat_5 {
 	color:#c92923;
-	background:url(../images/icon_cat_5.png) 0 0 no-repeat;}
+	background:url(<%= asset_path "icon_cat_5.png" %>) 0 0 no-repeat;}
 	
 .icon_cat_5 a{
 	color:#c92923;}
 
 .icon_cat_6 {
 	color:#e98503;
-	background:url(../images/icon_cat_6.png) 0 0 no-repeat;}
+	background:url(<%= asset_path "icon_cat_6.png" %>) 0 0 no-repeat;}
 	
 .icon_cat_6 a{
 	color:#e98503;}
 
 .icon_cat_7 {
 	color:#0accaa;
-	background:url(../images/icon_cat_7.png) 0 0 no-repeat;}
+	background:url(<%= asset_path "icon_cat_7.png" %>) 0 0 no-repeat;}
 	
 .icon_cat_7 a{
 	color:#0accaa;}
 
 .icon_cat_blog {
 	color:#a6a6a6;
-	background:url(../images/icon_cat_blog.png) 0 0 no-repeat;}
+	background:url(<%= asset_path "icon_cat_blog.png" %>) 0 0 no-repeat;}
 	
 .icon_cat_blog a{
 	color:#a6a6a6;}
@@ -1207,7 +1196,7 @@ button:hover,button:focus{
 	padding:5px 10px 10px 10px}
 
 .sort a.active {
-	background:url(../images/sort_arrow.gif) center bottom no-repeat}
+	background:url(<%= asset_path "sort_arrow.gif" %>) center bottom no-repeat}
 
 /*----------------------------------------------*/
 /* 2.5 Sidebar  */
@@ -1243,18 +1232,18 @@ button:hover,button:focus{
 
 .tf_menu_blue ul li {
 	padding-left:20px;
-	background:url(../images/icon_sub.gif) 5px 6px no-repeat}
+	background:url(<%= asset_path "icon_sub.gif" %> ) 5px 6px no-repeat}
 
 .tf_menu_blue li a {
 	color:#0a93cc;
 	display:block;
-	background: url(../images/arrow_menu_blue.png) right 10px no-repeat #fff;
+	background: url(<%= asset_path "arrow_menu_blue.png" %>) right 10px no-repeat #fff;
 	padding:5px 15px}
 
 .tf_menu_blue li a:hover,
 .tf_menu_blue li.current-menu-item a {
 	color:#fff;
-	background: url(../images/arrow_menu_white.png) right 10px no-repeat #0a93cc;}
+	background: url(<%= asset_path "arrow_menu_white.png" %>) right 10px no-repeat #0a93cc;}
 
 /*----------------------------------------------*/
 /* 2.6 3rd Column */
@@ -1324,7 +1313,7 @@ button:hover,button:focus{
 	width:8px;
 	height:0;
 	padding-top:8px;
-	background-image:url(../images/pagination.png);
+	background-image:url(<%= asset_path "pagination.png" %>);
 	background-position:0 0;
 	float:left;
 	overflow:hidden;}
@@ -1361,10 +1350,10 @@ button:hover,button:focus{
 .bottom_content .container_24 {
 	border-top:1px solid #c1c1c1;
 	padding:30px 0 0 0;
-	background:url(../images/bottom_content_bg.gif) center top repeat-y;}
+	background:url(<%= asset_path "bottom_content_bg.gif" %>) center top repeat-y;}
 
 .bottom_content .inner {
-	background:url(../images/bottom_line.gif) center  repeat-y}
+	background:url(<%= asset_path "bottom_line.gif" %>) center  repeat-y}
 
 .bottom_content .grid_6{
 	padding-bottom:40px}
@@ -1414,7 +1403,7 @@ button:hover,button:focus{
 /* 2.8 Footer */
 /*----------------------------------------------*/
 .footer {
-	background:url(../images/footer_bg.gif) 0 0 repeat-x #2e2e2e;
+	background:url(<%= asset_path "footer_bg.gif" %>) 0 0 repeat-x #2e2e2e;
 	color:#8c8c8c;}
 
 .footer .container_24 {
@@ -1437,7 +1426,7 @@ button:hover,button:focus{
 	font-size:12px;
 	line-height:1em;
 	text-transform:uppercase;
-	background:url(../images/menu_gray.gif) 0 0 repeat-x;
+	background:url(<%= asset_path "menu_gray.gif" %>) 0 0 repeat-x;
 	height:55px;
 	width:100%;}
 
@@ -1458,7 +1447,7 @@ button:hover,button:focus{
 	color:#000}
 
 .botmenu .menu-gray a:hover, .botmenu .current-menu-item.menu-gray a {
-	background:url(../images/menu_gray_a.png) center 0 no-repeat}
+	background:url(<%= asset_path "menu_gray_a.png" %>) center 0 no-repeat}
 	
 .botmenu .menu-red a:hover, .botmenu .current-menu-item.menu-red a{
 	background:#c21c1c}
@@ -1612,14 +1601,14 @@ button:hover,button:focus{
 /* Toggle Contents */
 .toggle, h3.toggle {
 	cursor:pointer;
-	background:url(../images/toggle_plus.gif) 98% 15px #f0f0f0 no-repeat;
+	background:url(<%= asset_path "toggle_plus.gif" %>) 98% 15px #f0f0f0 no-repeat;
 	padding:10px;
 	line-height:inherit;
 	margin:20px 0;
 	border:1px solid #e7e7e7;}
 
 .toggle.active {
-	background:url(../images/toggle_minus.gif) 98% 15px #f0f0f0 no-repeat;}
+	background:url(<%= asset_path "toggle_minus.gif" %>) 98% 15px #f0f0f0 no-repeat;}
 
 .toggle_content {
 	margin-left:10px;
@@ -1686,21 +1675,21 @@ button:hover,button:focus{
 	
 .list_check li {
 	list-style:none;
-	background:url(../images/icons/icon_check.png) 0 0 no-repeat;
+	background:url(<%= asset_path "icons/icon_check.png" %>) 0 0 no-repeat;
 	margin:0 0 10px 0;
 	line-height:21px;
 	padding:0 0 0 30px}
 
 .list_delete li {
 	list-style:none;
-	background:url(../images/icons/icon_del.png) 0 0 no-repeat;
+	background:url(<%= asset_path "icons/icon_del.png" %>) 0 0 no-repeat;
 	margin:0 0 10px 0;
 	line-height:21px;
 	padding:0 0 0 30px}
 
 .list_arrows li {
 	list-style:none;
-	background:url(../images/arrow_menu_blue.png) 5px 6px no-repeat;
+	background:url(<%= asset_path "icons/icon_blue.png" %>) 5px 6px no-repeat;
 	margin:0 0 10px 0;
 	line-height:21px;
 	padding:0 0 0 20px}
@@ -1722,21 +1711,21 @@ button:hover,button:focus{
 	font-family:Georgia, "Times New Roman", Times, serif}
 
 .download_box {
-	background-image:url(../images/download_box.png);
+	background-image:url(<%= asset_path "download_box.png" %>);
 	background-position:10px 15px;
 	padding:15px 10px 15px 65px;}
 	
 .info_box {
-	background-image:url(../images/info_box.png);
+	background-image:url(<%= asset_path "info_box.png" %>);
 	background-position:10px 15px;}
 	
 .warrning_box {
-	background-image:url(../images/warrning_box.png);
+	background-image:url(<%= asset_path "warrning_box.png" %>);
 	background-position:10px 15px;	
 	padding:15px 10px 15px 65px}
 
 .note_box {
-	background-image:url(../images/info_box.png);
+	background-image:url(<%= asset_path "info_box.png" %>);
 	background-position:10px 15px;	
 	padding:20px 10px 10px 65px;
 	min-height:40px;
@@ -1752,7 +1741,7 @@ button:hover,button:focus{
 	position:relative;
 	z-index:1;
 	padding:15px 0;
-	background:url(../images/top_carousel_bg.jpg) center 0 no-repeat;
+	background:url(<%= asset_path "top_carousel_bg.jpg" %>) center 0 no-repeat;
 	width:960px;
 	height:183px}
 	
@@ -1798,7 +1787,7 @@ button:hover,button:focus{
 	
 .popular_box .prev, .popular_box .next {
 	display:block;
-	background:url(../images/arrow_posts_left.png) 0 0 no-repeat;
+	background:url(<%= asset_path "arrow_posts_left.png" %>) 0 0 no-repeat;
 	width:25px;
 	height:25px;
 	text-indent:-100px;
@@ -1811,7 +1800,7 @@ button:hover,button:focus{
 	left:0px}
 	
 .popular_box .next {
-	background:url(../images/arrow_posts_right.png) 0 0 no-repeat;
+	background:url(<%= asset_path "arrow_posts_right.png" %>) 0 0 no-repeat;
 	right:0px}
 
 .popular_box .disabled {
@@ -1837,7 +1826,7 @@ button:hover,button:focus{
 .link-news-rss {
 	color:#676767;
 	font-family:Arial, Helvetica, sans-serif;
-	background:url(../images/icon_news_rss.gif) 0 0 no-repeat;
+	background:url(<%= asset_path "icon_news_rss.gif" %>) 0 0 no-repeat;
 	padding-left:18px;
 	color: #F75D11;
 }	
@@ -1861,7 +1850,7 @@ button:hover,button:focus{
 	font-weight:normal;}
 	
 .newsletterBox .btn-arrow {
-	background: url(../images/btn_arrow.gif) 0 0 no-repeat;
+	background: url(<%= asset_path "btn_arrow.gif" %>) 0 0 no-repeat;
 	width:28px;
 	height:34px;
 	float:left;
@@ -1887,7 +1876,7 @@ button:hover,button:focus{
 	height: 46px;
 	padding: 6px;
 	margin: 0px 10px 10px 0px;
-	background: url(../images/date-bg.png);
+	background: url(<%= asset_path "date-bg.png" %>);
 }
 
 .data-do-proximo-evento h1 {
@@ -1948,7 +1937,7 @@ button:hover,button:focus{
 	font-weight:normal;
 	margin:0;
 	padding:0;
-	background:url(../images/tabs_bg.gif) 0 0 repeat-x;
+	background:url(<%= asset_path "tabs_bg.gif" %>) 0 0 repeat-x;
 	height:50px}
 
 .tabs li {
@@ -1964,17 +1953,17 @@ button:hover,button:focus{
 	text-decoration:none;
 	height:43px;
 	line-height:40px;
-	background:url(../images/tabs_line.gif) right top no-repeat}
+	background:url(<%= asset_path "tabs_line.gif" %>) right top no-repeat}
 
 .tf_sidebar_tabs .tabs li a {
-	background:url(../images/tabs_line.gif) left top no-repeat;
+	background:url(<%= asset_path "tabs_line.gif" %>) left top no-repeat;
 	padding:0 28px;}
 
 .tf_sidebar_tabs .tabs li:first-child a {
 	background:none}
 
 .tabs li.current {
-	background:url(../images/tabs_bg_a.gif) center 0 no-repeat}
+	background:url(<%= asset_path "tabs_bg_a.gif" %>) center 0 no-repeat}
 
 .tabs li.current a {
 	color:#000;}
@@ -2032,7 +2021,7 @@ button:hover,button:focus{
 	margin:10px 0 20px 0}
 	
 .table-price thead {
-	background:url(../images/table_price_head_bg.gif) 0 0 repeat-x;
+	background:url(<%= asset_path "table_price_head_bg.gif" %>) 0 0 repeat-x;
 	height:53px;}
 
 .table-price thead td {
@@ -2053,7 +2042,7 @@ button:hover,button:focus{
 	height:38px;}
 
 .table-price thead td.first span {
-	background:url(../images/table_price_head_first.gif) left 0 no-repeat;
+	background:url(<%= asset_path "table_price_head_first.gif" %>) left 0 no-repeat;
 	top:0;
 	left:-6px}
 
@@ -2061,7 +2050,7 @@ button:hover,button:focus{
 	border:none;}
 	
 .table-price thead td.last span {
-	background:url(../images/table_price_head_last.gif) right 0 no-repeat;
+	background:url(<%= asset_path "table_price_head_last.gif" %>) right 0 no-repeat;
 	top:0;
 	right:-6px}
 
@@ -2191,7 +2180,7 @@ table.table-price tbody .tablecolhover {}
 	padding:0}
 
 .contact-form .contact-submit, .contact-submit {
-	background:url(../images/btn_submit.png) no-repeat;
+	background:url(<%= asset_path "btn_submit.png" %>) no-repeat;
 	width:217px;
 	height:49px;
 	font-weight:bold}
@@ -2254,16 +2243,16 @@ table.table-price tbody .tablecolhover {}
 	color:#0a93cc}
 
 .social-mail {
-	background:url(../images/icons/contact_social.png) 0 0 no-repeat}
+	background:url(<%= asset_path "icons/contact_social.png" %>) 0 0 no-repeat}
 
 .social-twitter {
-	background:url(../images/icons/contact_social.png) 0 -24px no-repeat}
+	background:url(<%= asset_path "icons/contact_social.png" %>) 0 -24px no-repeat}
 
 .social-skype {
-	background:url(../images/icons/contact_social.png) 0 -48px no-repeat}
+	background:url(<%= asset_path "icons/contact_social.png" %>) 0 -48px no-repeat}
 
 .social-facebook {
-	background:url(../images/icons/contact_social.png) 0 -72px no-repeat}
+	background:url(<%= asset_path "icons/contact_social.png" %>) 0 -72px no-repeat}
 
 /*----------------------------------------------*/
 /* 5.2 Sidebar Widget Container  */
@@ -2289,7 +2278,7 @@ table.table-price tbody .tablecolhover {}
 
 .sidebar .widget-container ul li ul li {
 	padding-left:20px;
-	background:url(../images/icon_sub.gif) 5px 6px no-repeat}
+	background:url(<%= asset_path "icon_sub.gif" %>) 5px 6px no-repeat}
 
 .sidebar .widget-container li {
 	list-style:none;
@@ -2298,13 +2287,13 @@ table.table-price tbody .tablecolhover {}
 .sidebar .widget-container li a {
 	color:#0a93cc;
 	display:block;
-	background: url(../images/arrow_menu_blue.png) right 10px no-repeat #fff;
+	background: url(<%= asset_path "arrow_menu_blue.png" %>) right 10px no-repeat #fff;
 	padding:5px 15px}
 
 .sidebar .widget-container li a:hover,
 .sidebar .widget-container li.current-menu-item a {
 	color:#fff;
-	background: url(../images/arrow_menu_white.png) right 10px no-repeat #0a93cc;}
+	background: url(<%= asset_path "arrow_menu_white.png" %>) right 10px no-repeat #0a93cc;}
 
 /*============================================================================================*/
 /* 6. POSTS */
@@ -2355,7 +2344,7 @@ table.table-price tbody .tablecolhover {}
 	border-bottom:1px dotted #ccc}
 
 .post-meta .author {
-	background: url(../images/author-icon.png) no-repeat left center;
+	background: url(<%= asset_path "author-icon.png" %>) no-repeat left center;
 	padding-left: 20px;
 	vertical-align: top;
 	color:#262626
@@ -2384,7 +2373,7 @@ table.table-price tbody .tablecolhover {}
 	border-bottom:1px dotted #0a93cc}
 	
  .link-more {
-	background:url(../images/icon_plus.gif) 0 3px no-repeat;
+	background:url(<%= asset_path "icon_plus.gif" %>) 0 3px no-repeat;
 	padding-left:18px;
 	color:#3b3b3b;
 	font-family:Arial, Helvetica, sans-serif;
@@ -2402,7 +2391,7 @@ table.table-price tbody .tablecolhover {}
 
 /* posts navigation */
 .other_posts {
-	background:url(../images/other_posts_bg.gif) repeat-x;
+	background:url(<%= asset_path "other_posts_bg.gif" %>) repeat-x;
 	height:89px;
 	margin:10px;
 	font-family:'edelsansRegular', Arial, Helvetica, sans-serif;
@@ -2422,12 +2411,12 @@ table.table-price tbody .tablecolhover {}
 	display:block}
 	
 .other_posts .prev {
-	background:url(../images/arrow_posts_left.png) left 0 no-repeat;
+	background:url(<%= asset_path "arrow_posts_left.png" %>) left 0 no-repeat;
 	padding-left:35px;
 	left:-10px}
 
 .other_posts .next {
-	background:url(../images/arrow_posts_right.png) right 0 no-repeat;
+	background:url(<%= asset_path "arrow_posts_right.png" %>) right 0 no-repeat;
 	padding-right:35px;
 	right:-10px}
 	
@@ -2452,7 +2441,7 @@ table.table-price tbody .tablecolhover {}
 	position:absolute;
 	right:0;
 	top:10px;
-	background:url(../images/icon_plus.gif) 0 3px no-repeat;
+	background:url(<%= asset_path "icon_plus.gif" %>) 0 3px no-repeat;
 	padding-left:18px;
 	color:#3b3b3b;
 	font-family:Arial, Helvetica, sans-serif;
@@ -2534,7 +2523,7 @@ table.table-price tbody .tablecolhover {}
 	top:4px;
 	right:0;
 	color:#f75d11;
-	background:url(../images/arrow_orange.png) 0 4px no-repeat;
+	background:url(<%= asset_path "arrow_orange.png" %>) 0 4px no-repeat;
 	padding-left:10px;
 	font-size:13px;
 	font-family:Arial;
@@ -2558,7 +2547,7 @@ table.table-price tbody .tablecolhover {}
 	width:210px;}
 
 .children .comment {
-	background:url(../images/divider_line.gif) top repeat-x;
+	background:url(<%= asset_path "divider_line.gif" %>) top repeat-x;
 	padding-top:2px}
 
 .add-comment {
@@ -2623,7 +2612,7 @@ table.table-price tbody .tablecolhover {}
 .btn-submit, 
 .contact-form .btn-submit, 
 .comment-form .btn-submit {
-	background:url(../images/btn_submit.png) no-repeat;
+	background:url(<%= asset_path "btn_submit.png" %>) no-repeat;
 	width:151px;
 	height:42px;
 	text-align:left;
@@ -2645,5 +2634,5 @@ table.table-price tbody .tablecolhover {}
 .copyrights {
 	width: 100%;
 	height: 41px;
-	background: url(../images/black.png);
+	background: url(<%= asset_path "black.png" %>);
 }

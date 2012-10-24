@@ -1,6 +1,13 @@
-﻿<h1>Editar notícia</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Visualizar', [:admin, @admin_news] %>
-<%= link_to 'Voltar', admin_news_index_path %>
+﻿<div class="block">
+	<div class="block_head">
+		<div class="bheadl"></div>
+		<div class="bheadr"></div>
+			<h2>Editar notícia</h2>
+	</div>
+	<p class="breadcrumb"><%= link_to 'Todas as notícias', admin_news_index_path %> &raquo; <strong>Formulário</strong> </p>		
+	<div class="block_content">
+		<%= render 'form' %>		
+	</div>		
+	<div class="bendl"></div>
+	<div class="bendr"></div>
+</div>

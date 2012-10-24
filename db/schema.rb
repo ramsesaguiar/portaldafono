@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20121020183959) do
     t.string   "slug"
   end
 
+  add_index "authors", ["crfa"], :name => "crfa", :unique => true
   add_index "authors", ["slug"], :name => "index_authors_on_slug", :unique => true
 
   create_table "contacts", :force => true do |t|
@@ -61,16 +62,6 @@ ActiveRecord::Schema.define(:version => 20121020183959) do
     t.integer  "status"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "discussion_users", :force => true do |t|
-    t.integer  "debate_id"
-    t.integer  "usuario_id"
-    t.datetime "data_resposta"
-    t.integer  "status"
-    t.text     "resposta"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
   end
 
   create_table "discussions", :force => true do |t|
@@ -160,9 +151,9 @@ ActiveRecord::Schema.define(:version => 20121020183959) do
     t.date     "data_nasc"
     t.string   "email"
     t.string   "senha"
-    t.integer  "status"
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
+    t.integer  "status",                    :default => 1
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
     t.string   "url_image"
     t.string   "localizacao"
     t.integer  "uid",         :limit => 8

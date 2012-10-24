@@ -1,36 +1,58 @@
-﻿<h1>Notícias</h1>
-<% if @admin_news.present? %>
-    <table>
-        <tr>
+﻿<div class="block">
+  <div class="block_head">
+    <div class="bheadl"></div>
+      <div class="bheadr"></div>
+        <h2>Notícias</h2>
+          <ul>
+            <li> <%= link_to 'Nova notícia', new_admin_news_path %></li>
+          </ul>
+  </div>    
+  <div class="block_content">
+    <% if @admin_news.present? %>
+      <table cellpadding="0" cellspacing="0" width="100%" class="sortable">
+        <thead>
+           <tr>
             <th> ID </th>
             <th>Título</th>
             <th>Subtitulo</th>
             <th>Autor</th>
-            <th>Texto</th>
             <th>Status</th>
             <th>Data</th>
             <th></th>
             <th></th>
             <th></th>
         </tr>
-    <% @admin_news.each do |admin_news| %>
-        <tr>
+        </thead>
+        <tbody>
+           <% @admin_news.each do |admin_news| %>
+          <tr>
             <td><%= admin_news.id %></td>
             <td><%= admin_news.titulo %></td>
             <td><%= admin_news.subtitulo %></td>
             <td><%= admin_news.author.nome %></td>
-            <td><%= admin_news.texto %></td>
             <td><%= status_to_sim_nao admin_news.status %></td>
             <td><%= admin_news.created_at.strftime("%d/%m/%Y") %></td>
             <td><%= link_to 'Visualizar', [:admin, admin_news] %></td>
             <td><%= link_to 'Editar', edit_admin_news_path(admin_news) %></td>
             <td><%= link_to 'Excluir', [:admin, admin_news], confirm: 'Deseja realmente excluir?', method: :delete %></td>
-        </tr>
-    <% end %>
+          </tr>
+           <% end %>
+        </tbody>
     </table>
-<% else %>
-  <div> Nenhum registro encontrado </div>
-<% end %>
-<br />
-
-<%= link_to 'Nova noticia', new_admin_news_path %>
+  <% else %>
+      <div> Nenhum registro encontrado </div>
+  <% end %>
+    <!--  <div class="pagination right">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+      </div> -->    
+  </div> 
+  <div class="bendl"></div>
+  <div class="bendr"></div>
+</div>

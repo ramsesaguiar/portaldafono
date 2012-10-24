@@ -1,0 +1,11 @@
+//= require admin/jquery.min
+//= require admin/custom
+//= require admin/ajaxupload
+//= require admin/facebox
+//= require admin/jquery.filestyle.mini
+//= require admin/jquery.img.preload
+//= require admin/jquery.pngfix
+//= require admin/jquery.select_skin
+//= require admin/jquery.tablesorter.min
+//= require admin/jquery.visualize
+//= require admin/jquery.visualize.tooltip

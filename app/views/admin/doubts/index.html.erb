@@ -1,32 +1,58 @@
-﻿<h1>Dúvidas</h1>
-<% if @admin_doubts.present? %>
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Dúvida enviada por</th>
-    <th>Título</th>
-    <th>Status</th>
-    <th>Respondida por:</th>
-    <th>Data resposta</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @admin_doubts.each do |admin_doubt| %>
-  <tr>
-    <td><%= admin_doubt.id %></td>
-    <td><%= admin_doubt.user.nome  %></td>
-    <td><%= admin_doubt.titulo %></td>
-    <td><%= status_to_sim_nao admin_doubt.status %></td>
-    <td><%=  admin_doubt.author.nome if admin_doubt.author.present? %></td>
-    <td><%= admin_doubt.data_resposta.strftime("%d/%m/%Y") if admin_doubt.author.present? %></td>
-    <td><%= link_to 'Visualizar', [:admin,admin_doubt] %></td>
-    <td><%= link_to 'Editar', edit_admin_doubt_path(admin_doubt) %></td>
-    <td><%= link_to 'Excluir', [:admin,admin_doubt], confirm: 'Deseja realmente excluir?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-<% else %>
-  <div> Nenhum registro encontrado </div>
-<% end %>
+﻿<div class="block">
+  <div class="block_head">
+    <div class="bheadl"></div>
+      <div class="bheadr"></div>
+        <h2>Dúvidas enviadas pelos usuários</h2>
+          <ul>
+            <li> &nbsp; </li>
+          </ul>
+  </div>    
+  <div class="block_content">
+    <% if @admin_doubts.present? %>
+      <table cellpadding="0" cellspacing="0" width="100%" class="sortable">
+        <thead>
+          <tr>
+             <th>ID</th>
+             <th>Dúvida enviada por</th>
+             <th>Título</th>
+             <th>Status</th>
+             <th>Respondida por:</th>
+             <th>Data resposta</th>
+             <th>&nbsp;</th>
+             <th>&nbsp;</th>
+             <th>&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+           <% @admin_doubts.each do |admin_doubt| %>
+          <tr>
+            <td><%= admin_doubt.id %></td>
+            <td><%= admin_doubt.user.nome  %></td>
+            <td><%= admin_doubt.titulo %></td>
+            <td><%= status_to_sim_nao admin_doubt.status %></td>
+            <td><%= admin_doubt.author.nome if admin_doubt.author.present? %></td>
+            <td><%= admin_doubt.data_resposta.strftime("%d/%m/%Y") if admin_doubt.author.present? %></td>
+            <td><%= link_to 'Visualizar', [:admin,admin_doubt] %></td>
+            <td><%= link_to 'Editar', edit_admin_doubt_path(admin_doubt) %></td>
+            <td><%= link_to 'Excluir', [:admin,admin_doubt], confirm: 'Deseja realmente excluir?', method: :delete %></td>
+          </tr>
+           <% end %>
+        </tbody>
+    </table>
+  <% else %>
+      <div> Nenhum registro encontrado </div>
+  <% end %>
+    <!--  <div class="pagination right">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+      </div> -->    
+  </div> 
+  <div class="bendl"></div>
+  <div class="bendr"></div>
+</div>

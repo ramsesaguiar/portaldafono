@@ -2,33 +2,30 @@
   <% if @admin_interview.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@admin_interview.errors.count, "erro") %> encontrado(s):</h2>
-
-      <ul>
       <% @admin_interview.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <div class="message errormsg"><p><%= msg %></p></div>
       <% end %>
-      </ul>
     </div>
   <% end %>
 
   <div class="field">
-    <%= f.label :nome_entrevistado %> * <br />
-    <%= f.text_field :nome_entrevistado %>
+    <%= f.label :nome_entrevistado, "Nome do entrevistado:*" %> 
+    <%= f.text_field :nome_entrevistado,  :class => "text" %>
   </div>
   <div class="field">
-    <%= f.label :autor_id %> *<br />
+    <%= f.label :autor_id, "Autor da entrevista*:" %> 
     <%= select("interview", "author_id", Author.all.collect {|p| [ p.nome, p.id ]}, :selected => @admin_interview.author_id,  :prompt => 'Selecione um autor') %>
   </div>
   <div class="field">
-    <%= f.label :bio %><br />
-    <%= f.text_area :bio %>
+    <%= f.label :bio, "Biografia do entrevistado:*" %>
+    <%= f.text_area :bio, :class => "wysiwyg" %>
   </div>
   <div class="field">
-    <%= f.label :texto %><br />
-    <%= f.text_area :texto %>
+    <%= f.label :texto, "Entrevista:" %>
+    <%= f.text_area :texto, :class => "wysiwyg" %>
   </div>
-  <div class="actions">
-      <%= f.submit "Salvar" %>
+  <div class="field">
+      <%= f.submit "Salvar", :class => "submit small"  %>
   </div>
 <% end %>
 

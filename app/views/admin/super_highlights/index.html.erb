@@ -1,39 +1,62 @@
-﻿<h1>Super destaques</h1>
-<% if @admin_super_highlights.present? %>
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Título</th>
-    <th>Subtitulo</th>
-    <th>Slug</th>
-    <th>Status</th>
-    <th>Data ini</th>
-    <th>Data fim</th>
-    <th>Posição</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @admin_super_highlights.each do |admin_super_highlight| %>
-  <tr>
-    <td><%= admin_super_highlight.id %></td>
-    <td><%= admin_super_highlight.titulo %></td>
-    <td><%= admin_super_highlight.subtitulo %></td>
-    <td><%= admin_super_highlight.slug %></td>
-    <td><%= status_to_sim_nao admin_super_highlight.status %></td>
-    <td><%= admin_super_highlight.data_ini.strftime("%d/%m/%Y") %></td>
-    <td><%= admin_super_highlight.data_fim.strftime("%d/%m/%Y") %></td>
-    <td><%= admin_super_highlight.posicao %></td>
-    <td><%= link_to 'Visualizar', [:admin,admin_super_highlight] %></td>
-    <td><%= link_to 'Editar', edit_admin_super_highlight_path(admin_super_highlight) %></td>
-    <td><%= link_to 'Excluir', [:admin,admin_super_highlight], confirm: 'Deseja realmente excluir?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-<% else %>
-  <div> Nenhum registro encontrado </div>
-<% end %>
-<br />
-
-<%= link_to 'Novo super destaque', new_admin_super_highlight_path %>
+﻿<div class="block">
+  <div class="block_head">
+    <div class="bheadl"></div>
+      <div class="bheadr"></div>
+        <h2>Super destaques</h2>
+          <ul>
+            <li> <%= link_to 'Novo super destaque', new_admin_super_highlight_path %> </li>
+          </ul>
+  </div>    
+  <div class="block_content">
+    <% if @admin_super_highlights.present? %>
+      <table cellpadding="0" cellspacing="0" width="100%" class="sortable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Subtitulo</th>
+            <th>Slug</th>
+            <th>Status</th>
+            <th>Data ini</th>
+            <th>Data fim</th>
+            <th>Posição</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+           <% @admin_super_highlights.each do |admin_super_highlight| %>
+              <tr>
+                <td><%= admin_super_highlight.id %></td>
+                <td><%= admin_super_highlight.titulo %></td>
+                <td><%= admin_super_highlight.subtitulo %></td>
+                <td><%= admin_super_highlight.slug %></td>
+                <td style="text-align:center"><%= status_to_sim_nao admin_super_highlight.status %></td>
+                <td><%= admin_super_highlight.data_ini.strftime("%d/%m/%Y") %></td>
+                <td><%= admin_super_highlight.data_fim.strftime("%d/%m/%Y") %></td>
+                <td style="text-align:center"><%= admin_super_highlight.posicao %></td>
+                <td><%= link_to 'Visualizar', [:admin,admin_super_highlight] %></td>
+                <td><%= link_to 'Editar', edit_admin_super_highlight_path(admin_super_highlight) %></td>
+                <td><%= link_to 'Excluir', [:admin,admin_super_highlight], confirm: 'Deseja realmente excluir?', method: :delete %></td>
+              </tr>
+           <% end %>
+        </tbody>
+    </table>
+  <% else %>
+      <div> Nenhum registro encontrado </div>
+  <% end %>
+    <!--  <div class="pagination right">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+      </div> -->    
+  </div> 
+  <div class="bendl"></div>
+  <div class="bendr"></div>
+</div>

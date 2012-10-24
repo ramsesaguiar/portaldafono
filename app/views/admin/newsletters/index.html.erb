@@ -1,25 +1,48 @@
-<h1>Newsletter</h1>
-<% if @admin_newsletters.present? %>
-<table>
-  <tr>
-    <th> ID </th>
-    <th>Email</th>
-    <th>Data</th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @admin_newsletters.each do |admin_newsletter| %>
-  <tr>
-    <td><%= admin_newsletter.id %></td>
-    <td><%= admin_newsletter.email %></td>
-    <td><%= admin_newsletter.created_at.strftime("%d/%m/%Y") %></td>
-    <td><%= link_to 'Excluir', [:admin, admin_newsletter], confirm: 'Deseja realmente excluir?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-<% else %>
-  <div> Nenhum registro encontrado </div>
-<% end %>
-<br />
-
+<div class="block">
+  <div class="block_head">
+    <div class="bheadl"></div>
+      <div class="bheadr"></div>
+        <h2>Newsletter</h2>
+          <ul>
+            <li> &nbsp; </li>
+          </ul>
+  </div>    
+  <div class="block_content">
+    <% if @admin_newsletters.present? %>
+      <table cellpadding="0" cellspacing="0" width="100%" class="sortable">
+        <thead>
+         <tr>
+            <th> ID </th>
+            <th>Email</th>
+            <th>Data</th>
+            <th></th>
+         </tr>
+        </thead>
+        <tbody>
+           <% @admin_newsletters.each do |admin_newsletter| %>
+            <tr>
+                <td><%= admin_newsletter.id %></td>
+                <td><%= admin_newsletter.email %></td>
+                <td><%= admin_newsletter.created_at.strftime("%d/%m/%Y") %></td>
+                <td><%= link_to 'Excluir', [:admin, admin_newsletter], confirm: 'Deseja realmente excluir?', method: :delete %></td>
+            </tr>
+           <% end %>
+        </tbody>
+    </table>
+  <% else %>
+      <div> Nenhum registro encontrado </div>
+  <% end %>
+    <!--  <div class="pagination right">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+      </div> -->    
+  </div> 
+  <div class="bendl"></div>
+  <div class="bendr"></div>
+</div>

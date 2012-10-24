@@ -1,40 +1,36 @@
-﻿<%= form_for([:admin,@admin_doubt]) do |f| %>
+﻿<%= form_for [:admin, @admin_doubt]  do |f| %>
   <% if @admin_doubt.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@admin_doubt.errors.count, "erro") %> encontrado(s):</h2>
-
-      <ul>
       <% @admin_doubt.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <div class="message errormsg"><p><%= msg %></p></div>
       <% end %>
-      </ul>
     </div>
   <% end %>
-
   <div class="field">
-    <%= f.label :titulo %><br />
-    <%= f.text_field :titulo %>
+   <%= f.label :titulo, "Título:*" %> 
+    <%= f.text_field :titulo, :class => "text" %>
   </div>
   <div class="field">
-    <%= f.label :texto %><br />
-    <%= f.text_area :texto %>
+    <%= f.label :texto, "Texto:*" %> 
+    <%= f.text_area :texto, :class => "wysiwyg" %>
   </div>
   <div class="field">
-    <%= f.label :status %><br />
+    <%= f.label :status, "Status:" %>
     <%= select("doubt", "status",  hash_to_status , :selected => @admin_doubt.status,  :prompt => 'Selecione um status') %>
   </div>
   <div class="field">
      <%= select("doubt", "autor_responsavel_id", Author.all.collect {|p| [ p.nome, p.id ]}, :selected => @admin_doubt.autor_responsavel_id,  :prompt => 'Selecione um autor') %>
   </div>
   <div class="field">
-    <%= f.label :resposta %><br />
-    <%= f.text_area :resposta %>
+    <%= f.label :resposta, "Resposta do autor" %>
+    <%= f.text_area :resposta, :class => "wysiwyg" %>
   </div>
   <div class="field">
-    <%= f.label :data_resposta %><br />
+    <%= f.label :data_resposta, "Data da resposta" %>
     <%= f.datetime_select :data_resposta %>
   </div>
-  <div class="actions">
-      <%= f.submit "Salvar" %>
+  <div class="field">
+      <%= f.submit "Salvar", :class => "submit small" %>
   </div>
 <% end %>

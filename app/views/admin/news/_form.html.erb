@@ -2,40 +2,37 @@
   <% if @admin_news.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@admin_news.errors.count, "erro") %> encontrado(s):</h2>
-
-      <ul>
       <% @admin_news.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <div class="message errormsg"><p><%= msg %></p></div>
       <% end %>
-      </ul>
     </div>
   <% end %>
 
   <div class="field">
-    <%= f.label :titulo %> * <br />
-    <%= f.text_field :titulo %>
+    <%= f.label :titulo, "Título:*" %> 
+    <%= f.text_field :titulo, :class => "text big" %>
   </div>
   <div class="field">
-    <%= f.label :subtitulo %><br />
-    <%= f.text_field :subtitulo %>
+    <%= f.label :subtitulo, "Subtitulo:" %>
+    <%= f.text_field :subtitulo, :class => "text big" %>
   </div>
   <div class="field">
-    <%= f.label :autor_id %> *<br />
+    <%= f.label :autor_id, "Autor:*" %> 
     <%= select("news", "author_id", Author.all.collect {|p| [ p.nome, p.id ]}, :selected => @admin_news.author_id,  :prompt => 'Selecione um autor') %>
   </div>
   <div class="field">
-    <%= f.label :texto %><br />
-    <%= f.text_area :texto %>
+    <%= f.label :texto, "Texto:*" %>
+    <%= f.text_area :texto, :class => "wysiwyg" %>
   </div>
   <div class="field">
-    <%= f.label :status %><br />
+    <%= f.label :status, "Publicar?*" %>
      <%= select("news", "status",  hash_to_sim_nao , :selected => @admin_news.status,  :prompt => 'Selecione um status') %>
   </div>
   <div class="field">
-    <%= f.label "Imagem" %> *<br />
+    <%= f.label "Imagem" %> 
     <%= f.file_field :image %>
   </div>
-  <div class="actions">
-      <%= f.submit "Salvar" %>
+  <div class="field">
+      <%= f.submit "Salvar", :class => "submit small" %>
   </div>
 <% end %>

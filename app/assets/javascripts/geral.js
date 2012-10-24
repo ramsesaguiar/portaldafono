@@ -1,4 +1,15 @@
 $(document).ready(function(){
+    $.featureList(
+        $("#feature_tabs li"),
+        $("#feature_output li"), 
+        {
+            start_item : 0,
+            transition_interval: 5000
+        }
+    );
+
+    $('textarea').autosize({append: "\n"});
+
 	$("#enviar_newsletter").click(function(){
 		email = $("#email_newsletter").val();
 		if (isEmail(email) == true){
@@ -53,24 +64,22 @@ function isEmail(email){
 
 function envia_email_to_newsletter(email){
 	$.ajax({
-            url: "subscribe_to_newsletter",
-            data:{ news_email: email} ,
-            type: "POST", 
-            cache: true, 
-            dataType: "json", 
-            beforeSend: function(){
-                $('#newsletter-message').html("<div id='loading'>por favor, aguarde...</div>");
-            }, 
-            complete: function(){
-                $("#loading").remove();
-            },
-            error: function(xhr, er){
-                $('#newsletter-message').html('<p> Error: '+ xhr.status + '-' + xhr.statusText +  ' tipo de erro: ' + er + '</p>' );
-            }, // Função a ser chamada quando retorna um erro na requisição
-            success: function(data){
-                $('#newsletter-message').html(data.message);
-            }
-        })
+        url: "subscribe_to_newsletter",
+        data:{ news_email: email} ,
+        type: "POST", 
+        cache: true, 
+        dataType: "json", 
+        beforeSend: function(){
+            $('#newsletter-message').html("<div id='loading'>por favor, aguarde...</div>");
+        }, 
+        complete: function(){
+            $("#loading").remove();
+        },
+        error: function(xhr, er){
+            $('#newsletter-message').html('<p> Error: '+ xhr.status + '-' + xhr.statusText +  ' tipo de erro: ' + er + '</p>' );
+        }, // Função a ser chamada quando retorna um erro na requisição
+        success: function(data){
+            $('#newsletter-message').html(data.message);
+        }
+    })
 }
-
-

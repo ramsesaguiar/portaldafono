@@ -1,48 +1,29 @@
-﻿<p id="notice"><%= notice %></p>
-
-<p>
-  <b>ID:</b>
-  <%= @admin_super_highlight.id %>
-</p>
-<p>
-  <b>Título:</b>
-  <%= @admin_super_highlight.titulo %>
-</p>
-
-<p>
-  <b>Subtitulo:</b>
-  <%= @admin_super_highlight.subtitulo %>
-</p>
-
-<p>
-  <b>Slug:</b>
-  <%= @admin_super_highlight.slug %>
-</p>
-
-<p>
-  <b>Status:</b>
-  <%= @admin_super_highlight.status %>
-</p>
-
-<p>
-  <b>Data ini:</b>
-  <%= @admin_super_highlight.data_ini.strftime("%d/%m/%Y") %>
-</p>
-
-<p>
-  <b>Data fim:</b>
-  <%= @admin_super_highlight.data_fim.strftime("%d/%m/%Y") %>
-</p>
-
-<p>
-  <b>Posicao:</b>
-  <%= @admin_super_highlight.posicao %>
-</p>
-
-<p>
-    <%= image_tag @admin_super_highlight.image.url(:thumb) %>
-</p>  
-
-
-<%= link_to 'Editar', edit_admin_super_highlight_path(@admin_super_highlight) %> |
-<%= link_to 'Voltar', admin_super_highlights_path %>
+﻿<div class="block">
+  <div class="block_head">
+    <div class="bheadl"></div>
+    <div class="bheadr"></div>
+    <h2>Super destaque > <%= @admin_super_highlight.id %></h2>
+    <ul class="tabs">
+      <li> <%= link_to 'Editar', edit_admin_super_highlight_path(@admin_super_highlight) %> </li>
+      <li> <%= link_to 'Voltar', admin_super_highlights_path %> </li>
+    </ul>
+  </div>    
+  <div class="block_content tab_content">
+    <% if notice.present? %>
+      <div id="notice" class="message success"><p><%= notice %></p></div>
+    <% end %>
+    <p> <strong>ID:</strong> <%= @admin_super_highlight.id %> </p>
+    <p> <strong>Titulo:</strong> <%= @admin_super_highlight.titulo %> </p>
+    <p> <strong>Subtitulo:</strong> <%= @admin_super_highlight.subtitulo %> </p>
+    <p> <strong>Slug:</strong>   <%= @admin_super_highlight.slug %> </p>
+    <p> <strong>Status:</strong> <%= @admin_super_highlight.status %> </p>
+    <p> <strong>Posição:</strong>   <%= @admin_super_highlight.posicao %> </p>
+    <p> <strong>Data de início:</strong>  <%= @admin_super_highlight.data_ini.strftime("%d/%m/%Y") %> </p>
+    <p> <strong>Data fim :</strong>   <%= @admin_super_highlight.data_fim.strftime("%d/%m/%Y") %> </p>
+    <p>
+      <%= image_tag @admin_super_highlight.image.url(:thumb) %>
+    </p>  
+  </div>   
+  <div class="bendl"></div>
+  <div class="bendr"></div>
+</div>    

@@ -104,8 +104,10 @@
 
 </div>
 <div class="copyrights">
-        <div style="width: 960px; margin: 0 auto; ">
-            <div class="footer_logo"><a href="index.html"><img src="/images/logo_footer.png" width="117" height="37" alt="" /></a></div>
+        <div style="width: 960px; margin: 0 auto; "> 
+            <div class="footer_logo">
+                <%= link_to (image_tag "logo_footer.png", :alt => "Portal da fono", :title => "Portal da fono", :width => "117", :height => "37"), "/" %>
+            </div>
             <p class="copyright">&copy; 2012 Portal da fono. Veja nosso <%= link_to "Termo de uso", "/termos-de-uso" %> </p>
             <div class="clear"></div>
         </div>

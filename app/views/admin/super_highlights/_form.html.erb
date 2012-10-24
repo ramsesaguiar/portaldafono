@@ -2,48 +2,46 @@
   <% if @admin_super_highlight.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@admin_super_highlight.errors.count, "erro") %> encontrado(s):</h2>
-
-      <ul>
       <% @admin_super_highlight.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+         <div class="message errormsg"><p><%= msg %></p></div>
       <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="field">
-    <%= f.label :titulo %><br />
-    <%= f.text_field :titulo %>
+    <%= f.label :titulo, "Título:*" %>
+    <%= f.text_field :titulo, :class => "text big" %>
   </div>
   <div class="field">
-    <%= f.label :subtitulo %><br />
-    <%= f.text_field :subtitulo %>
+    <%= f.label :subtitulo, "Subtitulo:" %>
+    <%= f.text_field :subtitulo,  :class => "text" %>
   </div>
   <div class="field">
-    <%= f.label :slug %><br />
-    <%= f.text_field :slug %>
+    <%= f.label :slug, "Slug:*" %>
+    <%= f.text_field :slug, :class => "text big" %>
   </div>
   <div class="field">
-    <%= f.label :status %><br />
+    <%= f.label :status, "Publicar?:*" %>
     <%= select("super_highlight", "status",  hash_to_sim_nao , :selected => @admin_super_highlight.status,  :prompt => 'Selecione um status') %>
   </div>
   <div class="field">
-    <%= f.label :data_ini %><br />
+    <%= f.label :data_ini, "Data de início:" %>
     <%= f.date_select :data_ini %>
   </div>
   <div class="field">
-    <%= f.label :data_fim %><br />
+    <%= f.label :data_fim, "Data de fim:" %>
     <%= f.date_select :data_fim %>
   </div>
   <div class="field">
-    <%= f.label :posicao %><br />
-    <%= f.number_field :posicao %>
+    <%= f.label :posicao, "Posição:" %>
+    <%= f.number_field :posicao, :class => "text" %>
   </div>
   <div class="field">
-    <%= f.label "Imagem" %> *<br />
+    <%= f.label "Imagem", "Imagem:" %>
     <%= f.file_field :image %>
   </div>
-  <div class="actions">
-    <%= f.submit "Salvar" %>
+  <div class="field">
+     <%= f.submit "Salvar", :class => "submit small" %>
   </div>
 <% end %>

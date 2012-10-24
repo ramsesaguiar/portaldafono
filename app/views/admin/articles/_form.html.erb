@@ -33,7 +33,7 @@
   <%= f.label :destaque, "Destaque" %>
   <%= select("article", "destaque",  hash_to_sim_nao , :selected => @admin_article.destaque,  :prompt => 'Selecione') %>
 </div>
-<div class="field fileupload">
+<div class="field">
   <%= f.label "Imagem" %>
   <%= f.file_field :image %> 
 </div>
