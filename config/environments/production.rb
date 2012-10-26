@@ -75,7 +75,7 @@ Portaldafono::Application.configure do
     :authentication => :plain,
     :domain => 'gmail.com',
     :user_name => 'mknparreira@gmail.com',
-    :password => 'dharana270689'
+    :password => ''
   }
 
   # Log the query plan for queries taking more than this (works

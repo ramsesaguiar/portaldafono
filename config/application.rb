@@ -55,6 +55,8 @@ module Portaldafono
     # Enable the asset pipeline
     config.assets.enabled = true
 
+     
+     #HABILITAR ESSA OPÇÂO PARA COLOCAR ESTE ARQUIVO NO AR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      #Rails.env = ActiveSupport::StringInquirer.new('production')
 
     # Version of your assets, change this if you want to expire all your assets

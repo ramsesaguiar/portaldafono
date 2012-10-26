@@ -13,7 +13,7 @@
         <thead>
           <tr>
              <th>ID</th>
-             <th>Dúvida enviada por</th>
+             <th>Dúvida enviada</th>
              <th>Título</th>
              <th>Status</th>
              <th>Respondida por:</th>
@@ -27,7 +27,7 @@
            <% @admin_doubts.each do |admin_doubt| %>
           <tr>
             <td><%= admin_doubt.id %></td>
-            <td><%= admin_doubt.user.nome  %></td>
+            <td><%= admin_doubt.user.nome %> <strong> em </strong> <%= admin_doubt.created_at.strftime("%d/%m/%Y") %> </td>
             <td><%= admin_doubt.titulo %></td>
             <td><%= status_to_sim_nao admin_doubt.status %></td>
             <td><%= admin_doubt.author.nome if admin_doubt.author.present? %></td>
@@ -40,7 +40,7 @@
         </tbody>
     </table>
   <% else %>
-      <div> Nenhum registro encontrado </div>
+       <div class="nenhum_registro_encontrado"> Nenhum registro encontrado </div>
   <% end %>
     <!--  <div class="pagination right">
         <a href="#">&laquo;</a>

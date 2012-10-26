@@ -1,9 +1,5 @@
 $(function () {
-	
-	// Preload images
-	$.preloadCssImages();
-	
-	
+
 	
 	// CSS tweaks
 	$('#header #nav li:last').addClass('nobg');
@@ -73,12 +69,8 @@ $(function () {
 	
 	
 	// Set WYSIWYG editor
-	$('.wysiwyg').wysiwyg({css: "css/wysiwyg.css", brIE: false });
+	$('.wysiwyg').wysiwyg({brIE: false});
 	
-	
-	
-	// Modal boxes - to all links with rel="facebox"
-	$('a[rel*=facebox]').facebox()
 	
 	
 	
@@ -171,41 +163,9 @@ $(function () {
 	});
 	
 	
-	
-	// Style file input
-	$("input[type=file]").filestyle({ 
-	    image: "images/upload.gif",
-	    imageheight : 30,
-	    imagewidth : 80,
-	    width : 250
-	});
-	
-	
-	
-	// File upload
-	if ($('#fileupload').length) {
-		new AjaxUpload('fileupload', {
-			action: 'upload-handler.php',
-			autoSubmit: true,
-			name: 'userfile',
-			responseType: 'text/html',
-			onSubmit : function(file , ext) {
-					$('.fileupload #uploadmsg').addClass('loading').text('Uploading...');
-					this.disable();	
-				},
-			onComplete : function(file, response) {
-					$('.fileupload #uploadmsg').removeClass('loading').text(response);
-					this.enable();
-				}	
-		});
-	}
-		
-		
-	
 	// Date picker
 	$('input.date_picker').date_input();
 	
-
 
 	// Navigation dropdown fix for IE6
 	if(jQuery.browser.version.substr(0,1) < 7) {

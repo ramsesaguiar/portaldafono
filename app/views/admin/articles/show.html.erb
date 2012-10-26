@@ -16,7 +16,7 @@
     <p> <strong>Autor:</strong> <%= @admin_article.author.nome %> </p>
     <p> <strong>Titulo:</strong> <%= @admin_article.titulo %> </p>
     <p> <strong>Subtitulo:</strong> <%= @admin_article.subtitulo %> </p>
-    <p> <strong>Texto:</strong> <%= @admin_article.texto %> </p>
+    <p> <strong>Texto:</strong> <%= (@admin_article.texto).html_safe %> </p>
     <p> <strong> Destaque:</strong> <%= @admin_article.destaque %> </p>
     <p> <strong>Palavras-chave:</strong> <%= @admin_article.palavras_chave %> </p>
     <p> <strong>Data:</strong> <%= @admin_article.created_at.strftime("%d/%m/%Y") %> </p>

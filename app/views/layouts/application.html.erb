@@ -9,25 +9,20 @@
   <meta property="og:title" content="" />
   <meta property="og:type" content="" />
   <meta property="og:url" content="http://www.portaldafono.com" />
-  <meta property="og:image" content="" />
+  <meta property="og:image" content="<%= image_path('portal_da_fono_logo.png') %>" />
   <meta property="og:site_name" content="" />
   <meta name="keywords" content="Some keywords that best describe your business" />
+  <link rel="shortcut icon" href="<%= image_path('icons/ico.png') %>" type="image/ico" />
   
 <%= stylesheet_link_tag "application" %>
 <%= javascript_include_tag "application" %>
   <%# csrf_meta_tags %>
+
+<%= render :partial => "partials/analytcs" %>
+
 </head>
 <body>
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-  		var js, fjs = d.getElementsByTagName(s)[0];
-  		if (d.getElementById(id)) return;
-  			js = d.createElement(s); js.id = id;
-  			js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=164299493693982";
-  			fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
-	<!-- Caso precisa acessar os comentários, entrar em http://developers.facebook.com/tools/comments. -->
-
+	<%= render :partial => "partials/facebook_connect" %>
 	<div class="header">
 		<%= render :partial => "partials/advertisement/adv_728x90" %>
 		<div class="container_24">

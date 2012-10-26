@@ -14,7 +14,7 @@
     <%= f.text_field :titulo, :class => "text big" %>
   </div>
   <div class="field">
-    <%= f.label :subtitulo, "Subtitulo:" %>
+    <%= f.label :subtitulo, "Subtitulo:*" %>
     <%= f.text_field :subtitulo,  :class => "text" %>
   </div>
   <div class="field">
@@ -22,16 +22,16 @@
     <%= f.text_field :slug, :class => "text big" %>
   </div>
   <div class="field">
-    <%= f.label :status, "Publicar?:*" %>
-    <%= select("super_highlight", "status",  hash_to_sim_nao , :selected => @admin_super_highlight.status,  :prompt => 'Selecione um status') %>
+    <%= f.label :status, "Publicar?*" %>
+    <%= select("super_highlight", "status",  hash_to_sim_nao , :selected => @admin_super_highlight.status,  :prompt => 'Selecione') %>
   </div>
   <div class="field">
     <%= f.label :data_ini, "Data de início:" %>
-    <%= f.date_select :data_ini %>
+    <%= f.text_field :data_ini,  :class=> "text date_picker" %>
   </div>
   <div class="field">
     <%= f.label :data_fim, "Data de fim:" %>
-    <%= f.date_select :data_fim %>
+    <%= f.text_field :data_fim,  :class=> "text date_picker" %>
   </div>
   <div class="field">
     <%= f.label :posicao, "Posição:" %>

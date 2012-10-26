@@ -1,8 +1,10 @@
 ﻿<div class="header_left">
-     <%= link_to image_tag("logo.png", :height => '115', :width => '300', :alt => " "), "/" %>  
+    <div class="portal_da_fono_logo">  
+        <%= link_to image_tag("portal_da_fono_logo.png", :height => '72', :width => '186', :alt => "Portal da fono", :title => "Portal da fono"), "/" %> 
+    </div>
     <div class="logo_text"><h1>Portal da Fono</h1></div>
 </div>    
-<div class="header_right">    	
+<div class="header_right">  
     <% if current_user.present? %>
         <div class="box_login_with_facebook float_right">
             <p> 

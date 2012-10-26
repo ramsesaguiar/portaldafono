@@ -1037,21 +1037,16 @@ button:hover,button:focus{
 #feature_tabs li:last-child {
 	height:107px}
 		
-#feature_tabs li .link-title {
+/* #feature_tabs li .link-title {
 	color:#ccc;
-	font-size:13px}
+	font-size:13px} */
 	
 #feature_tabs li .link-more {
-	text-decoration: none;
+	background: none !important;
 	color:#666;
-	font-family:Georgia, "Times New Roman", Times, serif;
-	font-size:14px;
-	font-style:italic;
-	
 }
 
-#feature_tabs li .link-more:hover {
-	border-bottom:1px dotted #666}
+#feature_tabs li .link-more:hover { text-decoration: underline !important;} 
 
 #feature_tabs li.current {
 	background:url(<%= asset_path "feature_current.png" %>) 0 0 no-repeat}
@@ -1885,6 +1880,8 @@ button:hover,button:focus{
 	padding: 0px 10px 0px 0px;
 }
 
+ .data-do-proximo-evento h6 { font-size: 13px; }
+
 .texto-do-proximo-evento{
 	margin-left:10px;  
 }
@@ -2636,3 +2633,5 @@ table.table-price tbody .tablecolhover {}
 	height: 41px;
 	background: url(<%= asset_path "black.png" %>);
 }
+
+.portal_da_fono_logo{ margin-top: 30px; }

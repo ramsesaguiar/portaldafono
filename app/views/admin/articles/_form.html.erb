@@ -8,35 +8,33 @@
       </div>
   <% end %>
   <div class="field">
-    <%= f.label :author_id, "Autor:" %> 
+    <%= f.label :author_id, "Autor:*" %> 
     <%= select("article", "author_id", Author.all.collect {|p| [ p.nome, p.id ]}, :selected => @admin_article.author_id,  :prompt => 'Selecione um autor') %>
-    <span class="note"> Campo Obrigatório!</span>
  </div>
   <div class="field">
-    <%= f.label :titulo, "Título*" %> 
-    <%= f.text_field :titulo, :class => "text" %>
-     <span class="note"> Campo Obrigatório!</span>
+    <%= f.label :titulo, "Título:*" %> 
+    <%= f.text_field :titulo, :class => "text big" %>
   </div>
   <div class="field">
     <%= f.label :subtitulo, "Subtitulo:" %>
     <%= f.text_field :subtitulo, :class => "text" %>
   </div>
 <div class="field">
-  <%= f.label :texto, "Texto*" %> 
+  <%= f.label :texto, "Texto:*" %> 
   <%= f.text_area :texto, :class => "wysiwyg" %>
 </div>
 <div class="field">
-  <%= f.label :palavras_chave, "Palavras-chave" %>
+  <%= f.label :palavras_chave, "Palavras-chave:*" %>
   <%= f.text_area :palavras_chave, :class => "text" %>
 </div>
 <div class="field">
-  <%= f.label :destaque, "Destaque" %>
+  <%= f.label :destaque, "Destaque?" %>
   <%= select("article", "destaque",  hash_to_sim_nao , :selected => @admin_article.destaque,  :prompt => 'Selecione') %>
 </div>
-<div class="field">
-  <%= f.label "Imagem" %>
-  <%= f.file_field :image %> 
-</div>
+ <div class="field">
+    <%= f.label "Imagem:" %> 
+    <%= f.file_field :image %>
+  </div>
 <div class="field">
   <%= f.submit "Salvar", :class => "submit small" %>
 </div>

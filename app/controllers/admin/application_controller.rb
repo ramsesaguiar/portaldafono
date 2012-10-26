@@ -6,7 +6,7 @@
 
 	protected
 	def authenticate
-		unless session[:current_user_id]
+		unless session[:admin_current_user_id]
 			session[:return_to] = request.url
 			redirect_to :controller => "login", :action => "index"
 			return false

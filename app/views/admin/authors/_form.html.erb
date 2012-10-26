@@ -1,37 +1,41 @@
 ﻿<%= form_for [:admin, @admin_author] , :html => {:multipart=>true} do |f| %>
-  <% if @admin_author.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@admin_author.errors.count, "erro") %> encontrado(s):</h2>
-
-      <ul>
-      <% @admin_author.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
+    <% if @admin_author.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@admin_author.errors.count, "erro") %> encontrado(s):</h2>
+        <% @admin_author.errors.full_messages.each do |msg| %>
+          <div class="message errormsg"><p><%= msg %></p></div>
+        <% end %>
+      </div>
   <% end %>
+ 
+  <div class="field">
+    <%= f.label :nome, "Nome:*" %> 
+    <%= f.text_field :nome, :class => "text" %>
+  </div>
+  <div class="field">
+    <%= f.label :apelido, "Apelido:" %>
+    <%= f.text_field :apelido, :class => "text" %>
+  </div>
 
   <div class="field">
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
+    <%= f.label :senha, "Sua senha:" %>
+    <%= f.text_field :senha, :class => "text" %>
   </div>
   <div class="field">
-    <%= f.label :apelido %><br />
-    <%= f.text_field :apelido %>
+    <%= f.label :crfa, "CRFA:" %>
+    <%= f.text_field :crfa, :class => "text" %>
   </div>
-  <div class="field">
-    <%= f.label :crfa %><br />
-    <%= f.number_field :crfa %>
-  </div>
-  <div class="field">
-    <%= f.label :bibiografia %><br />
-    <%= f.text_area :bibiografia %>
-  </div>
-  <div class="field">
-    <%= f.label "Imagem" %> *<br />
+
+<div class="field">
+  <%= f.label :bibiografia, "Sua bibiografia:" %> 
+  <%= f.text_area :bibiografia, :class => "wysiwyg" %>
+</div>
+
+ <div class="field">
+    <%= f.label "Imagem:" %> 
     <%= f.file_field :image %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<div class="field">
+  <%= f.submit "Salvar", :class => "submit small" %>
+</div>
 <% end %>

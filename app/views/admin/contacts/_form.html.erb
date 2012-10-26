@@ -21,7 +21,7 @@
     <%= "Email: " + @admin_contact.email %>
   </div>
   <div class="field">
-    <%= "Texto: " + @admin_contact.texto %>
+    <%= "Texto: " + (@admin_contact.texto).html_safe %>
   </div>
   <div class="field">
     <%= f.label :status, "Mensagem foi respondida?" %>

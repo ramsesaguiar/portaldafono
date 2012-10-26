@@ -16,7 +16,7 @@
     <p> <strong>Data:</strong> <%= @admin_contact.created_at.strftime("%d/%m/%Y") %> </p>
     <p> <strong>Nome:</strong> <%= @admin_contact.nome %> </p>
     <p> <strong>Email:</strong> <%= @admin_contact.email %> </p>
-    <p> <strong>Texto:</strong> <%= @admin_contact.texto %> </p>
+    <p> <strong>Texto:</strong> <%= (@admin_contact.texto).html_safe %> </p>
     <p> <strong> A mensagem foi respondida ?:</strong> <%= status_to_string @admin_contact.status %> </p>
     
   </div>   

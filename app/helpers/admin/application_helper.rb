@@ -1,6 +1,6 @@
 ﻿module Admin::ApplicationHelper
 	def session_user
-		@session_user ||= Author.find(:first, :conditions => ['id = ?', session[:current_user_id]])
+		@session_user ||= Author.find(:first, :conditions => ['id = ?', session[:admin_current_user_id]])
 	end
 
   def status_to_string status

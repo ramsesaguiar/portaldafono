@@ -10,6 +10,10 @@ Rails.application.config.middleware.use OmniAuth::Builder do
    # NÃO É RECOMENDADO SEU USO EM PRODUÇÃO. TALVEZ NEM FUNCIONE.	
    OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
+   #DEVELOPMENT ::: "164299493693982", "d45a843c9f1f7674a3af06e48a6fa503"
+   #TO PRODUCTION ::::  "360004484092897", "0408ea8d889261f4abd5e4a581e66d3a"
+
+
   provider :facebook, "164299493693982", "d45a843c9f1f7674a3af06e48a6fa503", 
      :client_options => {
      	:ssl => {:ca_path => '/etc/ssl/certs'}

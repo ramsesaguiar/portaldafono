@@ -16,12 +16,11 @@
     <p> <strong>Autor:</strong> <%= @admin_discussion.author.nome %> </p>
     <p> <strong>Titulo:</strong> <%= @admin_discussion.titulo %> </p>
     <p> <strong>Subtitulo:</strong> <%= @admin_discussion.subtitulo %> </p>
-    <p> <strong>Texto:</strong> <%= @admin_discussion.texto %> </p>
+    <p> <strong>Texto:</strong> <%= (@admin_discussion.texto).html_safe %> </p>
     <p> <strong> Data de início do debate:</strong> <%= @admin_discussion.data_inicio.strftime("%d/%m/%Y") %> </p>
     <p> <strong> Data final do debate:</strong> <%= @admin_discussion.data_fim.strftime("%d/%m/%Y") %> </p>
     <p> <strong>Status:</strong>  <%= status_to_sim_nao @admin_discussion.status %> </p>
   </div>   
   <div class="bendl"></div>
   <div class="bendr"></div>
-
-  </div>    <!-- .block ends -->
+</div>   
