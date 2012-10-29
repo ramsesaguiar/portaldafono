@@ -5,6 +5,9 @@
 		@noticia = News.where("status = 'S'").order("created_at DESC").first
 		@duvida	 = Doubt.where("status = 'S'").order("created_at DESC").first
 		@debate	 = Discussion.where("status = 'S' AND data_inicio < NOW() AND data_fim > NOW()").order("created_at DESC").first
+    set_meta_tags :title => 'Seja bem vindo ao portal da fonoaudiologia', 
+    :description => 'O Portal da fono é o seu canal para o mundo da fonoaudiologia. Em nosso portal você encontrará: Notícias, Artigos, recomendação de livros, entrevistas com os principais nomes da área. participar de debates, enviar suas dúvidas e muito mais! Descubra esse incrível mundo da fonoaudiologia. ', 
+    :keywords => 'fonoaudiologia, fonoaudiologia exercicios , curso fonoaudiologia, fonoaudiologista, artigos fonoaudiologia, fonoaudiologo '
 	end
 
 	def subscribe_to_newsletter

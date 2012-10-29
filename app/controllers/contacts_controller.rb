@@ -3,6 +3,10 @@
   # GET /contacts.json
   def index
 	@contact = Contact.new
+  set_meta_tags :title => 'Fale conosco', 
+    :description => 'Dúvidas, sugestões, elogios. Entre em contato conosco.', 
+    :keywords => 'fonoaudiologia, fonoaudiologia exercicios, curso fonoaudiologia, fonoaudiologista, artigos fonoaudiologia '
+
 	respond_to do |format|
       format.html { render action: "new" }
       format.json { render json: @contact }

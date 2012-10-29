@@ -22,12 +22,12 @@
                                  </p>
                             </div>
                             <div class="post-share">
-                                <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div> 
+                                <div class="fb-like" data-send="false" data-layout="button_count" data-href="<%= request.url + "/" + news.slug %>"  data-width="450" data-show-faces="false" data-font="verdana"></div> 
                             </div>
                         </div>
                         <div class="post-details">
-                            <h5> <%= link_to news.titulo, news, :class=> "colr" %> </h5>
-                               <%= raw truncate news.texto , :length => 250 %>
+                            <h5> <%= link_to news.titulo.mb_chars.downcase.normalize.capitalize, news, :class=> "colr" %> </h5>
+                               <%= strip_tags( raw truncate news.texto , :length => 250) %>
                             <div class="padding_top_10">  
                                 <%= link_to "veja a notícia completa", news, :class=> "link-more" %>
                             </div> 
@@ -40,5 +40,3 @@
         </div>
     </div>
 </div>
-
-

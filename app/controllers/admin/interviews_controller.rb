@@ -2,7 +2,7 @@ class Admin::InterviewsController < Admin::ApplicationController
   # GET /admin/interviews
   # GET /admin/interviews.json
   def index
-     @admin_interviews = Interview.find(:all, :include => :author)
+     @admin_interviews = Interview.find(:all, :include => :author,  :order => 'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb

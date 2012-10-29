@@ -3,7 +3,7 @@
   # GET /admin/articles.json
   def index
     #@admin_articles = Article.all
-    @admin_articles = Article.find(:all, :include => :author)
+    @admin_articles = Article.find(:all, :include => :author, :order => 'created_at DESC')
     
     respond_to do |format|
       format.html # index.html.erb

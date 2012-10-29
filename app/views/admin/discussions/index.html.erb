@@ -20,19 +20,17 @@
             <th>Autor</th>
             <th></th>
             <th></th>
-            <th></th>
           </tr>
         </thead>
         <tbody>
            <% @admin_discussions.each do |admin_discussion| %>
           <tr>
             <td><%= admin_discussion.id %></td>
-                <td><%= admin_discussion.titulo %></td>
+                <td><%= link_to admin_discussion.titulo.mb_chars.downcase.normalize.capitalize, [:admin, admin_discussion], :title => "CLique para visualizar o debate na íntegra"  %></td>
                 <td><%= admin_discussion.data_inicio.strftime("%d/%m/%Y") %></td>
                 <td><%= admin_discussion.data_fim.strftime("%d/%m/%Y") %></td>
                 <td><%= status_to_sim_nao admin_discussion.status %></td>
                 <td><%= admin_discussion.author.nome %></td>
-                <td><%= link_to 'Visualizar', [:admin,admin_discussion] %></td>
                 <td><%= link_to 'Editar', edit_admin_discussion_path(admin_discussion) %></td>
                 <td><%= link_to 'Excluir', [:admin,admin_discussion], confirm: 'Deseja realmente excluir?', method: :delete %></td>
             </tr>

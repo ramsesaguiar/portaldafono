@@ -4,6 +4,10 @@ class InterviewsController < ApplicationController
   def index
     @interviews = Interview.find(:all, :include => :author, :order => 'created_at DESC')
 
+    set_meta_tags :title => 'Entrevista', 
+    :description => 'Publicaremos entrevistas com os principais influentes do mundo da fonoaudiologia', 
+    :keywords => 'entrevista, fonoaudiologia, profissional de fonoaudiologia'
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @interviews }
@@ -14,6 +18,10 @@ class InterviewsController < ApplicationController
   # GET /interviews/1.json
   def show
     @interviews = Interview.find(params[:id])
+
+    set_meta_tags :title => @interviews.nome_entrevistado, 
+    :description => 'Publicaremos entrevistas com os principais influentes do mundo da fonoaudiologia', 
+    :keywords => 'entrevista, fonoaudiologia, profissional de fonoaudiologia'
 
     respond_to do |format|
       format.html # show.html.erb

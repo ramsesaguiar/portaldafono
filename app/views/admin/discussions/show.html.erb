@@ -2,7 +2,7 @@
   <div class="block_head">
     <div class="bheadl"></div>
     <div class="bheadr"></div>
-    <h2>Debate > <%= @admin_discussion.slug %></h2>
+    <h2>Debate > <%= @admin_discussion.titulo %></h2>
     <ul class="tabs">
       <li><%= link_to 'Editar', edit_admin_discussion_path(@admin_discussion) %> </li>
       <li><%= link_to 'Voltar', admin_discussions_path %></li>
@@ -14,8 +14,8 @@
     <% end %>
     <p> <strong>ID:</strong> <%= @admin_discussion.id %> </p>
     <p> <strong>Autor:</strong> <%= @admin_discussion.author.nome %> </p>
-    <p> <strong>Titulo:</strong> <%= @admin_discussion.titulo %> </p>
-    <p> <strong>Subtitulo:</strong> <%= @admin_discussion.subtitulo %> </p>
+    <p> <strong>Titulo:</strong> <%= @admin_discussion.titulo.mb_chars.downcase.normalize.capitalize %> </p>
+    <p> <strong>Subtitulo:</strong> <%= @admin_discussion.subtitulo.mb_chars.downcase.normalize.capitalize %> </p>
     <p> <strong>Texto:</strong> <%= (@admin_discussion.texto).html_safe %> </p>
     <p> <strong> Data de início do debate:</strong> <%= @admin_discussion.data_inicio.strftime("%d/%m/%Y") %> </p>
     <p> <strong> Data final do debate:</strong> <%= @admin_discussion.data_fim.strftime("%d/%m/%Y") %> </p>

@@ -6,8 +6,8 @@
                     <ul class="menu_type_1">
                         <li><a href="/quem-somos">Quem somos</a></li>
                         <li><a href="/anuncie">Anuncie</a></li>
-                        <li><a href="#">Twitter</a></li>
-                         <li><a href="#">Facebook</a></li> 
+                        <li><a href="#">Twitter </a> <span class="red">em breve</span></li>
+                         <li><a href="#">Facebook  </a> <span class="red">em breve</span></li> 
                          <li><a href="#">RSS</a> <span class="red">em breve</span></li>  
                     </ul>
                 </div>
@@ -30,7 +30,7 @@
                     <ul class="menu_type_2">
                         <% if @artigos_em_destaque.count > 0 %>
                             <% @artigos_em_destaque.each do |artigos| %>
-                                <li><%= link_to artigos.titulo, artigos %></li>
+                                <li><%= link_to artigos.titulo.mb_chars.downcase.normalize.capitalize, artigos %></li>
                             <% end %>
                         <% else %>
                                 <li>Nenhum artigo encontrado</li>
@@ -44,7 +44,7 @@
                     <ul class="menu_type_2">
                         <% if @noticias_em_destaque.count > 0 %>
                             <% @noticias_em_destaque.each do |noticias| %>
-                                <li><%= link_to noticias.titulo, noticias %></li>
+                                <li><%= link_to noticias.titulo.mb_chars.downcase.normalize.capitalize, noticias %></li>
                             <% end %>
                         <% else %>
                                 <li>Nenhuma notícia encontrada</li>

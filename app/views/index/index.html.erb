@@ -1,4 +1,5 @@
 ﻿<div id="feature_list">
+    <% if @superdestaques.size > 1 %>
     <ul id="feature_tabs">
         <% @superdestaques.each do |superdestaque| %>
     		<li>
@@ -9,6 +10,7 @@
     		</li>
     	  <% end %>	
 	</ul>
+    <% end %>
 	<ul id="feature_output">
         <% @superdestaques.each do |superdestaque| %>
             <% if not superdestaque.image.url(:medium) == "/images/medium/missing.png" %>
@@ -42,7 +44,7 @@
                     <% if not @noticia.image.url(:medium) == "/images/medium/missing.png" %>
                         <%= image_tag @noticia.image.url(:medium), :class => "frame_left" %>  
                     <% end %>   
-                    <%= raw truncate @noticia.texto , :length => 500 %> 
+                    <%=  strip_tags ( raw truncate @noticia.texto , :length => 500 ) %> 
                 </p>
                 <div class="clear"></div>
 		    </div>

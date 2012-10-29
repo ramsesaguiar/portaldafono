@@ -16,6 +16,7 @@ Portaldafono::Application.configure do
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
 
+
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
 
@@ -54,7 +55,7 @@ config.action_mailer.smtp_settings = {
 }
   
 #Paperclip.options[:command_path] = "/usr/local/bin/"
-Paperclip.options[:command_path] = "C:/Program Files/ImageMagick-6.7.9-Q16/identify" #notbook
+Paperclip.options[:command_path] = "C:/Program Files/ImageMagick-6.7.9-Q16/"  #notbook
 
 
 end

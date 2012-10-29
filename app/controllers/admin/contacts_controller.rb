@@ -2,7 +2,7 @@
   # GET /admin/contacts
   # GET /admin/contacts.json
   def index
-    @admin_contacts = Contact.all
+    @admin_contacts = Contact.find(:all, :order => 'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb

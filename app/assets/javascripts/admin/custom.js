@@ -69,10 +69,68 @@ $(function () {
 	
 	
 	// Set WYSIWYG editor
-	$('.wysiwyg').wysiwyg({brIE: false});
-	
-	
-	
+	$('.wysiwyg').wysiwyg({
+		  autoGrow: true,
+		  rmMsWordMarkup: true,
+		  initialContent: "",
+
+		  controls: {
+		    bold          : { visible : true },
+		    italic        : { visible : true },
+			underline     : { visible : true },
+			strikeThrough : { visible : true },
+			insertImage :   { visible : false }, 
+			justifyLeft   : { visible : true },
+			justifyCenter : { visible : true },
+			justifyRight  : { visible : true },
+			justifyFull   : { visible : true },
+
+
+			indent  : { visible : true },
+			outdent : { visible : true },
+
+			undo : { visible : true },
+			redo : { visible : true },
+			
+			insertTable : { visible: false } ,
+			insertOrderedList    : { visible : true },
+			insertUnorderedList  : { visible : true },
+			insertHorizontalRule : { visible : true },
+
+			h4: {
+				visible: true,
+				className: 'h4',
+				command: ($.browser.msie || $.browser.safari) ? 'formatBlock' : 'heading',
+				arguments: ($.browser.msie || $.browser.safari) ? '<h4>' : 'h4',
+				tags: ['h4'],
+				tooltip: 'Header 4'
+			},
+			h5: {
+				visible: true,
+				className: 'h5',
+				command: ($.browser.msie || $.browser.safari) ? 'formatBlock' : 'heading',
+				arguments: ($.browser.msie || $.browser.safari) ? '<h5>' : 'h5',
+				tags: ['h5'],
+				tooltip: 'Header 5'
+			},
+			h6: {
+				visible: true,
+				className: 'h6',
+				command: ($.browser.msie || $.browser.safari) ? 'formatBlock' : 'heading',
+				arguments: ($.browser.msie || $.browser.safari) ? '<h6>' : 'h6',
+				tags: ['h6'],
+				tooltip: 'Header 6'
+			},
+			
+			cut   : { visible : true },
+			copy  : { visible : true },
+			paste : { visible : true },
+			html  : { visible: true },
+			increaseFontSize : { visible : true },
+			decreaseFontSize : { visible : true }
+		  }
+		});
+
 	
 	// Messages
 	$('.block .message').hide().append('<span class="close" title="Dismiss"></span>').fadeIn('slow');

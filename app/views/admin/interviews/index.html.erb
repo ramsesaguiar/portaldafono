@@ -16,15 +16,13 @@
             <th>Entrevistado</th>
             <th>&nbsp;</th>
             <th>&nbsp;</th>
-            <th>&nbsp;</th>
           </tr>
         </thead>
         <tbody>
            <% @admin_interviews.each do |admin_interview| %>
           <tr>
             <td><%= admin_interview.id %></td>
-            <td><%= admin_interview.nome_entrevistado %></td>
-            <td><%= link_to 'Visualizar', [:admin, admin_interview]  %></td>
+            <td><%= link_to  admin_interview.nome_entrevistado, [:admin, admin_interview], :title => "Clique para visualizar a entrevista na íntegra" %></td>
             <td><%= link_to 'Editar', edit_admin_interview_path(admin_interview) %></td>
             <td><%= link_to 'Excluir', [:admin, admin_interview], confirm: 'Deseja realmente excluir?', method: :delete %></td>
           </tr>
