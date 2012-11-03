@@ -15,7 +15,7 @@
     <p> <strong>ID:</strong> <%= @admin_interview.id %> </p>
     <p> <strong>Nome do entrevistado:</strong>  <%= @admin_interview.nome_entrevistado %> </p>
     <p> <strong>Bio:</strong> <%= (@admin_interview.bio).html_safe if @admin_interview.bio.present? %> </p>
-    <p> <strong>Entrevista:</strong> <%= @admin_interview.texto %> </p>
+    <p> <strong>Entrevista:</strong> <%= (@admin_interview.texto).html_safe  %> </p>
     <p> <strong>Data:</strong> <%= @admin_interview.created_at.strftime("%d/%m/%Y") %> </p>
   </div>   
   <div class="bendl"></div>

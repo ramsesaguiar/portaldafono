@@ -2,7 +2,7 @@
   # GET /admin/super_highlights
   # GET /admin/super_highlights.json
   def index
-    @admin_super_highlights = SuperHighlight.all
+    @admin_super_highlights = SuperHighlight.find(:all, :order => 'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb

@@ -3,7 +3,7 @@
   # GET /admin/discussions.json
   def index
     #@admin_discussions = Discussion.all
-    @admin_discussions = Discussion.find(:all, :include => :author)
+    @admin_discussions = Discussion.find(:all, :include => :author, :order => 'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb

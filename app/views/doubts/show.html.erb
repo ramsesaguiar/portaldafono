@@ -4,7 +4,7 @@
             <%= link_to "Veja todas as dúvidas", "/duvidas", :class => "link-back" %>
             <div class="social_buttons_top">
                <div class="fb-like" 
-               data-send="true" data-layout="button_count" 
+               data-send="true" data-layout="button_count" data-href="<%= request.url + "/" + @doubt.slug %>" 
                data-width="450" data-show-faces="false" data-font="verdana"></div> 
             </div>
             <div class="clear"></div>

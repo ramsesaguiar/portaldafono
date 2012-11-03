@@ -2,7 +2,11 @@
   # GET /doubts
   # GET /doubts.json
   def index
-    @doubts = Doubt.all
+    @doubts = Doubt.where(:all, :order => 'created_at DESC')
+
+    set_meta_tags :title => 'Duvidas', 
+    :description => 'Tire sua dúvida com nossos profissionais.', 
+    :keywords => 'fonoaudiologia, fonoaudiologia exercicios , curso fonoaudiologia, fonoaudiologista, duvidas fonoaudiologia '
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +18,10 @@
   # GET /doubts/1.json
   def show
     @doubt = Doubt.find(params[:id])
+
+    set_meta_tags :title => @doubt.titulo, 
+    :description => 'Tire sua dúvida com nossos profissionais.', 
+    :keywords => 'fonoaudiologia, fonoaudiologia exercicios , curso fonoaudiologia, fonoaudiologista, duvidas fonoaudiologia '
 
     respond_to do |format|
       format.html # show.html.erb

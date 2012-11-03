@@ -22,12 +22,12 @@
                                  </p>
                               </div>
                               <div class="post-share">
-                                  <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div> 
+                                  <div class="fb-like" data-send="false" data-href="<%= request.url + "/" + discussions.slug %>" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div> 
                               </div>
                           </div>
                           <div class="post-details">
-                              <h5> <%= link_to discussions.titulo, discussions, :class=> "colr" %> </h5>
-                                 <%= raw truncate discussions.texto , :length => 250 %>
+                              <h5> <%= link_to discussions.titulo.mb_chars.downcase.normalize.capitalize, discussions, :class=> "colr" %> </h5>
+                                 <%= strip_tags( raw truncate discussions.texto , :length => 250 ) %>
                               <div class="padding_top_10">  
                                   <%= link_to "Faça seus comentários", discussions, :class=> "link-more" %>
                               </div> 

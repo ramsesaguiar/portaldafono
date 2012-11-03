@@ -13,12 +13,11 @@
         <thead>
           <tr>
              <th>ID</th>
-             <th>Dúvida enviada</th>
+             <th>Dúvida enviada por</th>
              <th>Título</th>
              <th>Status</th>
              <th>Respondida por:</th>
              <th>Data resposta</th>
-             <th>&nbsp;</th>
              <th>&nbsp;</th>
              <th>&nbsp;</th>
           </tr>
@@ -28,11 +27,10 @@
           <tr>
             <td><%= admin_doubt.id %></td>
             <td><%= admin_doubt.user.nome %> <strong> em </strong> <%= admin_doubt.created_at.strftime("%d/%m/%Y") %> </td>
-            <td><%= admin_doubt.titulo %></td>
+            <td><%= link_to admin_doubt.titulo.mb_chars.downcase.normalize.capitalize, [:admin,admin_doubt], :title => "Clique para visualizar a dúvida na íntegra" %></td>
             <td><%= status_to_sim_nao admin_doubt.status %></td>
             <td><%= admin_doubt.author.nome if admin_doubt.author.present? %></td>
             <td><%= admin_doubt.data_resposta.strftime("%d/%m/%Y") if admin_doubt.author.present? %></td>
-            <td><%= link_to 'Visualizar', [:admin,admin_doubt] %></td>
             <td><%= link_to 'Editar', edit_admin_doubt_path(admin_doubt) %></td>
             <td><%= link_to 'Excluir', [:admin,admin_doubt], confirm: 'Deseja realmente excluir?', method: :delete %></td>
           </tr>

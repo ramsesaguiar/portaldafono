@@ -2,7 +2,7 @@
   <div class="block_head">
     <div class="bheadl"></div>
     <div class="bheadr"></div>
-    <h2>Dúvida > <%= @admin_doubt.slug %></h2>
+    <h2>Dúvida > <%= @admin_doubt.titulo %></h2>
     <ul class="tabs">
       <li><%= link_to 'Editar', edit_admin_doubt_path(@admin_doubt) %></li>
       <li><%= link_to 'Voltar', admin_doubts_path %></li>
@@ -15,7 +15,7 @@
     <p> <strong>ID:</strong> <%= @admin_doubt.id %> </p>
     <p> <strong>Usuário:</strong> <%= @admin_doubt.user.nome %> </p>
     <p> <strong>Data do envio da dúvida:</strong> <%= @admin_doubt.created_at.strftime("%d/%m/%Y") %> </p>
-    <p> <strong>Titulo:</strong> <%= @admin_doubt.titulo %> </p>
+    <p> <strong>Titulo:</strong> <%= @admin_doubt.titulo.mb_chars.downcase.normalize.capitalize %> </p>
     <p> <strong>Texto:</strong> <%= (@admin_doubt.texto).html_safe %> </p>
     <p> <strong>Status:</strong>  <%= status_to_string @admin_doubt.status %> </p>
     <br /> 

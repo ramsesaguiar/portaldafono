@@ -2,7 +2,7 @@
   # GET /admin/news
   # GET /admin/news.json
   def index
-    @admin_news = News.find(:all, :include => :author)
+    @admin_news = News.find(:all, :include => :author, :order => 'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb

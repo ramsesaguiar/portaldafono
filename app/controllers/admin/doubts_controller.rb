@@ -2,7 +2,7 @@
   # GET /admin/doubts
   # GET /admin/doubts.json
   def index
-    @admin_doubts = Doubt.includes(:author, :user).all
+    @admin_doubts = Doubt.includes(:author, :user).order('created_at DESC').all
 
     respond_to do |format|
       format.html # index.html.erb

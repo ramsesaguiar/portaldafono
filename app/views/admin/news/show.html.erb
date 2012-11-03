@@ -14,8 +14,8 @@
     <% end %>
     <p> <strong>ID:</strong> <%= @admin_news.id %> </p>
     <p> <strong>Autor:</strong> <%= @admin_news.author.nome %> </p>
-    <p> <strong>Titulo:</strong> <%= @admin_news.titulo %> </p>
-    <p> <strong>Subtitulo:</strong> <%= @admin_news.subtitulo %> </p>
+    <p> <strong>Titulo:</strong> <%= @admin_news.titulo.mb_chars.downcase.normalize.capitalize %> </p>
+    <p> <strong>Subtitulo:</strong> <%= @admin_news.subtitulo.mb_chars.downcase.normalize.capitalize %> </p>
     <p> <strong>Texto:</strong> <%= (@admin_news.texto).html_safe %> </p>
     <p> <strong>Publicado? :</strong> <%= status_to_sim_nao @admin_news.status %> </p>
     <p> <strong>Data:</strong> <%= @admin_news.created_at.strftime("%d/%m/%Y") %> </p>

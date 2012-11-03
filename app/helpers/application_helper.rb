@@ -26,7 +26,7 @@
        when "Sep"
         retorno  = "Set"
        when "Oct"
-        retorno = "Oct"
+        retorno = "Out"
        when "Nov"
         retorno = "Nov"
        when "Dec"
