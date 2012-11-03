@@ -3,7 +3,6 @@
   has_many :discussions
   has_many :doubts
   has_many :news
-  has_many :interviews
 
   extend FriendlyId
   friendly_id :nome, use: :slugged

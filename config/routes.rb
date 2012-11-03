@@ -43,6 +43,13 @@ match "termos-de-uso" => "estaticas#termos_de_uso"
 match "como-enviar-suas-duvidas" => "estaticas#como_enviar_suas_duvidas"
 match "links-uteis" => "estaticas#links_uteis"
 match "termos-de-uso" => "estaticas#termos_de_uso"
+match "manuais" => "estaticas#manuais"
+match "legislacao" => "estaticas#legislacao"
+match "juramento-do-fonoaudiologo" => "estaticas#juramento"
+match "guias-e-manuais" => "estaticas#guias_e_manuais"
+match "historia-da-fonoaudiologia" => "estaticas#historia"
+
+
 
 
 #LOGIN WITH FACEBOOK#

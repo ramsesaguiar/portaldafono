@@ -11,12 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121020183959) do
-
-  create_table "admin_interviews", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20121103123656) do
 
   create_table "articles", :force => true do |t|
     t.integer  "author_id"
@@ -24,13 +19,9 @@ ActiveRecord::Schema.define(:version => 20121020183959) do
     t.string   "subtitulo"
     t.text     "texto"
     t.text     "palavras_chave"
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.string   "destaque",           :limit => 0
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+    t.string   "destaque",       :limit => 0
     t.string   "slug"
   end
 
@@ -85,7 +76,7 @@ ActiveRecord::Schema.define(:version => 20121020183959) do
     t.text     "texto"
     t.integer  "autor_responsavel_id"
     t.text     "resposta"
-    t.datetime "data_resposta"
+    t.date     "data_resposta"
     t.datetime "created_at",                        :null => false
     t.datetime "updated_at",                        :null => false
     t.string   "status",               :limit => 0
@@ -95,7 +86,6 @@ ActiveRecord::Schema.define(:version => 20121020183959) do
   add_index "doubts", ["slug"], :name => "index_doubts_on_slug", :unique => true
 
   create_table "interviews", :force => true do |t|
-    t.integer  "author_id"
     t.string   "nome_entrevistado"
     t.text     "texto"
     t.datetime "created_at",        :null => false
@@ -113,12 +103,12 @@ ActiveRecord::Schema.define(:version => 20121020183959) do
     t.text     "texto"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
+    t.string   "status",             :limit => 0
+    t.string   "slug"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.string   "status",             :limit => 0
-    t.string   "slug"
   end
 
   add_index "news", ["slug"], :name => "index_news_on_slug", :unique => true
@@ -159,5 +149,9 @@ ActiveRecord::Schema.define(:version => 20121020183959) do
     t.integer  "uid",         :limit => 8
     t.string   "genero",      :limit => 20
   end
+
+  add_index "users", ["apelido"], :name => "index_users_on_apelido", :unique => true
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["uid"], :name => "index_users_on_uid", :unique => true
 
 end

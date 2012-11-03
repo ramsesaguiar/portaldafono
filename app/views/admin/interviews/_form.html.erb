@@ -13,10 +13,6 @@
     <%= f.text_field :nome_entrevistado,  :class => "text" %>
   </div>
   <div class="field">
-    <%= f.label :autor_id, "Autor da entrevista*:" %> 
-    <%= select("interview", "author_id", Author.all.collect {|p| [ p.nome, p.id ]}, :selected => @admin_interview.author_id,  :prompt => 'Selecione um autor') %>
-  </div>
-  <div class="field">
     <%= f.label :bio, "Biografia do entrevistado:" %>
     <%= f.text_area :bio, :class => "wysiwyg" %>
   </div>

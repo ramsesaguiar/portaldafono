@@ -5,53 +5,46 @@
                 <div class="widget">
                     <ul class="menu_type_1">
                         <li><a href="/quem-somos">Quem somos</a></li>
+                        <li><a href="/termos-de-uso">Termos de uso</a></li>
                         <li><a href="/anuncie">Anuncie</a></li>
-                        <li><a href="#">Twitter</a></li>
-                         <li><a href="#">Facebook</a></li> 
-                         <li><a href="#">RSS</a> <span class="red">em breve</span></li>  
                     </ul>
                 </div>
             </div>
             <div class="grid_6">
                 <div class="widget">
-                    <h3>UNIVERSITÁRIOS</h3>
+                    <ul class="menu_type_1">
+                        <li><a href="#">Loja do portal da fono</a> <span class="red">em breve</span> </li>
+                        <li><a href="#">Ofertas de emprego</a> <span class="red">em breve</span> </li>
+                        <li><a href="#">Softwares</a> <span class="red">em breve</span> </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid_6">
+                <div class="widget">
+                    <h3>ESTUDANTES</h3>
                     <ul class="menu_type_2">
-                         <li><a href="/livros-recomendados">Livros recomendados</a> </li>
-                         <li><a href="#">Cursos</a>  <span class="red">em breve</span> </li>
-                         <li><a href="#">Faculdades</a> <span class="red">em breve</span> </li>
-                         <li><a href="/o-que-e-fonoaudiologia">O que é fonoaudiologia? </a></li>
-                          <li><a href="/links-uteis">Links úteis </a></li>
+                        <li><a href="/livros-recomendados">Livros recomendados</a> </li>
+                        <li><a href="#">Concursos</a>  <span class="red">em breve</span> </li>
+                        <li><a href="#">Faculdades</a> <span class="red">em breve</span> </li>
+                        <li><a href="/o-que-e-fonoaudiologia" >O que é fonoaudiologia? </a></li>
+                        <li><a href="/links-uteis"> Links úteis </a></li>
+                        <li><a href="/historia-da-fonoaudiologia"> História da fonoaudiologia </a></li>
+                        <li><a href="/guias-e-manuais"> Guias & Manuais </a></li>
                     </ul>
                 </div>
             </div>          
             <div class="grid_6">
                 <div class="widget">
-                    <h3>ARTIGOS EM DESTAQUE</h3>
+                    <h3>PROFISSIONAIS</h3>
                     <ul class="menu_type_2">
-                        <% if @artigos_em_destaque.count > 0 %>
-                            <% @artigos_em_destaque.each do |artigos| %>
-                                <li><%= link_to artigos.titulo, artigos %></li>
-                            <% end %>
-                        <% else %>
-                                <li>Nenhum artigo encontrado</li>
-                        <% end %>
+                         <li><a href="/agenda">Agenda</a></li>
+                         <li><a href="/manuais">Manuais</a></li>
+                         <li><a href="/legislacao">Legislação</a></li>
+                         <li> <a href= "/pdf/CPD.pdf" target="_blank"> Código de processo disciplinar </a> </li> 
+                          <li> <a href= "/juramento-do-fonoaudiologo"> Juramento do fonoaudiologo </a> </li>
                     </ul>
                 </div>
-            </div>           
-            <div class="grid_6">
-                <div class="widget">
-                    <h3>NOTÍCIAS EM DESTAQUE</h3>
-                    <ul class="menu_type_2">
-                        <% if @noticias_em_destaque.count > 0 %>
-                            <% @noticias_em_destaque.each do |noticias| %>
-                                <li><%= link_to noticias.titulo, noticias %></li>
-                            <% end %>
-                        <% else %>
-                                <li>Nenhuma notícia encontrada</li>
-                        <% end %>
-                    </ul>
-                </div>
-            </div>
+            </div> 
             <div class="clear"></div>
         </div>    
     </div>

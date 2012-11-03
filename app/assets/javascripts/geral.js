@@ -1,4 +1,5 @@
-$(document).ready(function(){
+$(function () {
+    
     $.featureList(
         $("#feature_tabs li"),
         $("#feature_output li"), 

@@ -2,7 +2,7 @@ class InterviewsController < ApplicationController
   # GET /interviews
   # GET /interviews.json
   def index
-    @interviews = Interview.find(:all, :include => :author, :order => 'created_at DESC')
+    @interviews = Interview.find(:all, :order => 'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb

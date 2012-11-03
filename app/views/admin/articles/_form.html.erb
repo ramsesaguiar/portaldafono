@@ -7,10 +7,8 @@
         <% end %>
       </div>
   <% end %>
-  <div class="field">
-    <%= f.label :author_id, "Autor:*" %> 
-    <%= select("article", "author_id", Author.all.collect {|p| [ p.nome, p.id ]}, :selected => @admin_article.author_id,  :prompt => 'Selecione um autor') %>
- </div>
+    <%#= select("article", "author_id", Author.all.collect {|p| [ p.nome, p.id ]}, :selected => @admin_article.author_id,  :prompt => 'Selecione um autor') %>
+  <%= f.hidden_field :author_id, :value => session[:admin_current_user_id] %>
   <div class="field">
     <%= f.label :titulo, "Título:*" %> 
     <%= f.text_field :titulo, :class => "text big" %>
@@ -30,11 +28,7 @@
 <div class="field">
   <%= f.label :destaque, "Destaque?" %>
   <%= select("article", "destaque",  hash_to_sim_nao , :selected => @admin_article.destaque,  :prompt => 'Selecione') %>
-</div>
- <div class="field">
-    <%= f.label "Imagem:" %> 
-    <%= f.file_field :image %>
-  </div>
+</div> 
 <div class="field">
   <%= f.submit "Salvar", :class => "submit small" %>
 </div>

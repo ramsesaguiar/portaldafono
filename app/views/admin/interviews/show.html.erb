@@ -13,7 +13,6 @@
       <div id="notice" class="message success"><p><%= notice %></p></div>
     <% end %>
     <p> <strong>ID:</strong> <%= @admin_interview.id %> </p>
-    <p> <strong>Autor:</strong>  <%= @admin_interview.author.nome %> </p>
     <p> <strong>Nome do entrevistado:</strong>  <%= @admin_interview.nome_entrevistado %> </p>
     <p> <strong>Bio:</strong> <%= (@admin_interview.bio).html_safe if @admin_interview.bio.present? %> </p>
     <p> <strong>Entrevista:</strong> <%= @admin_interview.texto %> </p>

@@ -140,6 +140,8 @@
 	},
 	"file_history":
 	[
+		"/C/wwwrails/portaldafono/app/views/interviews/show.html.erb",
+		"/C/wwwrails/portaldafono/app/views/articles/show.html.erb",
 		"/C/wwwrails/portaldafono/app/views/admin/authors/index.html.erb",
 		"/C/wwwrails/portaldafono/app/views/admin/authors/_form.html.erb",
 		"/C/wwwrails/portaldafono/app/controllers/admin/authors_controller.rb",
@@ -250,7 +252,6 @@
 		"/C/wwwrails/portaldafono/app/views/estaticas/livros_recomendados.html.erb",
 		"/C/wwwrails/portaldafono/app/views/partials/advertisement/_adv_728x90.html.erb",
 		"/C/wwwrails/portaldafono/app/views/partials/advertisement/_adv468x60.html.erb",
-		"/C/wwwrails/portaldafono/app/views/articles/show.html.erb",
 		"/C/wwwrails/portaldafono/app/views/articles/index.html.erb",
 		"/C/wwwrails/portaldafono/log/production.log",
 		"/C/wwwrails/portaldafono/app/assets/javascripts/application.js",
@@ -266,8 +267,7 @@
 		"/C/wwwrails/portaldafono/app/assets/stylesheets/shThemeDefault.css",
 		"/C/wwwrails/portaldafono/app/assets/stylesheets/users.css",
 		"/C/wwwrails/portaldafono/app/assets/stylesheets/authors.css",
-		"/C/wwwrails/portaldafono/app/assets/stylesheets/index.css",
-		"/C/wwwrails/portaldafono/app/assets/javascripts/contacts.js"
+		"/C/wwwrails/portaldafono/app/assets/stylesheets/index.css"
 	],
 	"find":
 	{
@@ -366,6 +366,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"articleshow",
+				"app/views/articles/show.html.erb"
+			],
+			[
+				"inteviewshow",
+				"app/views/interviews/show.html.erb"
+			],
 			[
 				"adv",
 				"app/views/partials/advertisement/_adv300x250.html.erb"
@@ -807,10 +815,6 @@
 				"app/views/admin/interviews/show.html.erb"
 			],
 			[
-				"articleshow",
-				"app/views/admin/articles/show.html.erb"
-			],
-			[
 				"interviewedi",
 				"app/views/admin/interviews/edit.html.erb"
 			],
@@ -873,10 +877,6 @@
 			[
 				"adminapli",
 				"app/views/layouts/admin_application.html.erb"
-			],
-			[
-				"oq",
-				"app/views/estaticas/o_que_e_fonoaudiologia.html.erb"
 			]
 		],
 		"width": 0.0

@@ -20,9 +20,6 @@
         <div style="margin-top:3px"> &nbsp;|&nbsp; <%= @article.created_at.strftime("%d/%m/%Y") %> </div>
       </div>
       <div class="entry">
-        <% if not @article.image.url(:medium) == "/images/medium/missing.png" %>
-            <p> <%= image_tag @article.image.url(:medium), :class => "frame_left" %>  </p>
-        <% end %> 
         <p>  <%= (@article.texto).html_safe %> </p>
         <p> <strong>Palavras-chave:</strong> <em> <%= @article.palavras_chave %></em> </p>
         <div class="clear"></div>

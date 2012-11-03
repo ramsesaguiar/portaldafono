@@ -15,7 +15,6 @@
                                 <h6> <%= mes_do_ano_em_portugues entrevista.created_at.strftime("%b") %> <br> <%= entrevista.created_at.strftime("%Y") %></h6>
                             </div>
                             <div class="post-cats">
-                                <p class="postby"><%= entrevista.author.nome %></p>
                                 <p class="cats">
                                     <fb:comments-count href="<%= request.url + "/" + entrevista.slug %>"></fb:comments-count>
                                     <%= link_to "comentários" , interview_path(entrevista) + "#comente" %>   

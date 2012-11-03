@@ -13,20 +13,19 @@
       <h1><%= @interviews.nome_entrevistado %></h1>
       <div class="post-meta">
         <span class="icon_cat icon_cat_blog">
-                <fb:comments-count href="<%= request.url %>"></fb:comments-count>
-                <%= link_to "comentários" , "#comente" %>  
-              </span>
-        <em>por <span class="author">  <%= @interviews.author.nome %> </span> 
-        &nbsp;|&nbsp; <%= @interviews.created_at.strftime("%d/%m/%Y") %> </em>
+          <fb:comments-count href="<%= request.url %>"></fb:comments-count>
+          <%= link_to "comentários" , "#comente" %>  
+        </span>
+        <em>em &nbsp; <%= @interviews.created_at.strftime("%d/%m/%Y") %> </em>
       </div>
       <div class="entry">
         <p> <strong> Quem é nosso entrevistado ? </strong> </p>
-        <p>  <%= @interviews.bio %> </p>
+        <p>  <%= (@interviews.bio).html_safe %> </p>
         <div class="clear"></div>
       </div>
       <div class="entry">
         <p> <strong> Entrevista </strong> </p>
-        <p>  <%= @interviews.texto %> </p>
+        <p>  <%= (@interviews.texto).html_safe %> </p>
         <div class="clear"></div>
       </div>
     </div>

@@ -20,9 +20,6 @@
     <p> <strong> Destaque:</strong> <%= @admin_article.destaque %> </p>
     <p> <strong>Palavras-chave:</strong> <%= @admin_article.palavras_chave %> </p>
     <p> <strong>Data:</strong> <%= @admin_article.created_at.strftime("%d/%m/%Y") %> </p>
-    <p>
-      <%= image_tag @admin_article.image.url(:thumb) %>
-    </p>  
   </div>   
   <div class="bendl"></div>
   <div class="bendr"></div>

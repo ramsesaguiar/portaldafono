@@ -32,5 +32,25 @@ class EstaticasController < ApplicationController
     @sidebar = false
   end
 
+   def manuais
+    @sidebar = false
+  end
+
+   def legislacao
+    @sidebar = false
+  end
+
+   def juramento
+    @sidebar = false
+  end
+
+  def guias_e_manuais
+    @sidebar = false
+  end
+
+  def historia
+    @sidebar = false
+  end
+
 
 end
