@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  titulo: MyString
+  duracao: MyString
+  local: MyText
+  data: 2012-11-07
+  informacao: MyText
+  investimento: MyString
+  sobre: MyText
+  destaque: false
+
+two:
+  titulo: MyString
+  duracao: MyString
+  local: MyText
+  data: 2012-11-07
+  informacao: MyText
+  investimento: MyString
+  sobre: MyText
+  destaque: false

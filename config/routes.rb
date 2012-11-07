@@ -12,6 +12,7 @@ Portaldafono::Application.routes.draw do
 namespace :admin do  
   resources :newsletters 
   resources :contacts, :path => "faleconosco", :path_names => { :new => :inserir, :edit => :alterar } 
+  resources :calendars, :path => "agenda", :path_names => { :new => :inserir, :edit => :alterar } 
   resources :super_highlights, :path => "superdestaques", :path_names => { :new => :inserir, :edit => :alterar } 
   resources :doubts, :path => "duvidas", :path_names => { :new => :inserir, :edit => :alterar }
   resources :news, :path => "noticias", :path_names => { :new => :inserir, :edit => :alterar }
@@ -23,6 +24,7 @@ namespace :admin do
 end
 
 resources :news, :path => "noticias", :path_names => { :new => :inserir, :edit => :alterar }
+resources :calendars , :path => "agenda", :path_names => { :new => :inserir, :edit => :alterar }
 resources :discussions, :path => "debates", :path_names => { :new => :inserir, :edit => :alterar }
 resources :contacts, :path => "faleconosco"
 resources :doubts, :path => "duvidas", :path_names => { :new => :inserir, :edit => :alterar }
@@ -36,7 +38,6 @@ match 'subscribe_to_newsletter' => 'index#subscribe_to_newsletter'
 # ESTATICAS #
 match "quem-somos" => "estaticas#quem_somos"
 match "anuncie" => "estaticas#anuncie"
-match "agenda" => "estaticas#agenda"
 match "livros-recomendados" => "estaticas#livros_recomendados"
 match "o-que-e-fonoaudiologia" => "estaticas#o_que_e_fonoaudiologia"
 match "termos-de-uso" => "estaticas#termos_de_uso"

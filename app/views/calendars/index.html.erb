@@ -1,0 +1,35 @@
+<div class="divider_thin"></div>
+<div class="grid_24 suffix_1 content">
+    <div class="cat_title">
+        <h1>Calendário de eventos</h1> 
+        <div class="clear"></div>
+    </div>
+    <div class="text">
+        <!-- <div class="eve-month">
+            <p class="colr float_left">Novembro / 2012</p>
+            <p class="float_right">7 Eventos</p>
+        </div> -->
+        <% @calendars.each do |calendar| %>
+        <div class="single-event">
+            <div class="eve-date">
+                <h1><%= calendar.data.strftime("%d") %></h1>
+                <h5> <%= mes_do_ano_em_portugues calendar.data.strftime("%b") %> <br /> <%= calendar.data.strftime("%Y") %> </h5>
+            </div>
+            <div class="eve-desc">
+                <h4> <%= link_to calendar.titulo, (calendar.link.present? ? calendar.link : "#"), :target => "blank" %> </h4>
+                <p class="time"> <strong> Duração: </strong> <%= (calendar.duracao.present? ? calendar.duracao : "não informado" ) %>   </p>
+            </div>
+            <div class="venu-map">
+                <p class="colr">Sobre o evento:</p>
+                <p class="localizacao-do-evento"> <strong> Local: </strong>  <%= calendar.local %> </p>
+                <br />
+                 <%= raw "<strong> Informações ou inscrições: </strong> " + (calendar.informacao).html_safe %> 
+                <p> <strong> Investimento: </strong> <%= (calendar.investimento.present? ? calendar.investimento : "não informado" ) %>  </p>
+                <br />
+                <p> <strong> Objetivo: </strong>  <%= (calendar.sobre).html_safe %> </p>
+            </div>
+        </div>
+        <% end %> 
+        
+    </div>
+</div>

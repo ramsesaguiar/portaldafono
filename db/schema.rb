@@ -11,10 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121103123656) do
+ActiveRecord::Schema.define(:version => 20121107154417) do
 
   create_table "articles", :force => true do |t|
-    t.integer  "author_id"
+    t.integer  "author_id_id"
     t.string   "titulo"
     t.string   "subtitulo"
     t.text     "texto"
@@ -43,8 +43,20 @@ ActiveRecord::Schema.define(:version => 20121103123656) do
     t.string   "slug"
   end
 
-  add_index "authors", ["crfa"], :name => "crfa", :unique => true
   add_index "authors", ["slug"], :name => "index_authors_on_slug", :unique => true
+
+  create_table "calendars", :force => true do |t|
+    t.string   "titulo"
+    t.string   "duracao"
+    t.text     "local"
+    t.date     "data"
+    t.text     "informacao"
+    t.string   "investimento"
+    t.text     "sobre"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.string   "link"
+  end
 
   create_table "contacts", :force => true do |t|
     t.string   "nome"
@@ -103,12 +115,12 @@ ActiveRecord::Schema.define(:version => 20121103123656) do
     t.text     "texto"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
-    t.string   "status",             :limit => 0
-    t.string   "slug"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "status",             :limit => 0
+    t.string   "slug"
   end
 
   add_index "news", ["slug"], :name => "index_news_on_slug", :unique => true
@@ -141,12 +153,12 @@ ActiveRecord::Schema.define(:version => 20121103123656) do
     t.date     "data_nasc"
     t.string   "email"
     t.string   "senha"
-    t.integer  "status",                    :default => 1
-    t.datetime "created_at",                               :null => false
-    t.datetime "updated_at",                               :null => false
+    t.integer  "status"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
     t.string   "url_image"
     t.string   "localizacao"
-    t.integer  "uid",         :limit => 8
+    t.integer  "uid"
     t.string   "genero",      :limit => 20
   end
 

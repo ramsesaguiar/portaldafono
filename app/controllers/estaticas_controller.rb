@@ -48,13 +48,6 @@ class EstaticasController < ApplicationController
     @sidebar = false
   end
 
-  def agenda
-     set_meta_tags :title => 'Agenda', 
-    :description => 'Aqui voc&ecirc; encontra alguns dos principais eventos, simp&oacute;sios, cursos, congressos e palestras envolvendo o mundo da fonoaudiologia', 
-    :keywords => 'fonoaudiologia, agenda da fono, cursos de fonoaudiologia,  congressos de fono, palestras de fonoaudiologia'
-    @sidebar = false
-  end
-
    def manuais
     @sidebar = false
   end

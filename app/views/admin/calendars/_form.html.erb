@@ -1,0 +1,48 @@
+<%= form_for [:admin, @admin_calendar]  do |f| %>
+  <% if @admin_calendar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_calendar.errors.count, "erro") %> encontrado(s):</h2>
+      <% @admin_calendar.errors.full_messages.each do |msg| %>
+        <div class="message errormsg"><p><%= msg %></p></div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo, "Título do evento:*" %> 
+    <%= f.text_field :titulo, :class => "text big", :placeholder => "Escreva o título do evento" %>
+  </div>
+  <div class="field">
+    <%= f.label :link, "Link para o evento:" %> 
+    <%= f.text_field :link, :class => "text big", :placeholder => "Ex: facebook.com/nomedoevento" %>
+  </div>
+  <div class="field">
+    <%= f.label :duracao, "Duração que o evento terá:" %>
+    <%= f.text_field :duracao, :class => "text big",  :placeholder => "Ex: quinta-feira(08), de 17h30 às 20h30 e sexta(09), de 8h30 às 18h." %>
+  </div>
+  <div class="field">
+    <%= f.label :local, "Local:*" %>
+    <%= f.text_field :local, :class => "text big", :placeholder => "Ex: Rua Sete de Setembro, 48 Rio de Janeiro - RJ" %>
+  </div>
+  <div class="field">
+    <%= f.label :informacao, "Informações e ou inscrições:*" %>
+    <p> (00) 0000-0000 ramais 0001 e 0000 , evento@evento.com.br ou no Facebook do evento: http://www.facebook.com/events/136344083155041 </p> 
+    <%= f.text_area :informacao, :class => "wysiwyg" %>
+  </div>
+  <div class="field">
+    <%= f.label :investimento, "Investimento:" %> 
+    <%= f.text_field :investimento, :class => "text big", :placeholder => "3 parcelas de R$50,00"  %>
+  </div>
+  <div class="field">
+    <%= f.label :sobre, "Sobre:*" %>
+    <p> Setores de Oncohematologia Pediátrica e Psicologia Médica do Hospital Federal dos Servidores do Estado. Palestras, conferências e mesas redondas. Conferência Magna sobre “Cuidados Paliativos no Brasil: passado, presente e futuro...”, com Dr. Dante Pagnoncelli (IFF)  </p> 
+    <%= f.text_area :sobre, :class => "wysiwyg" %>
+  </div>
+  <div class="field">
+    <%= f.label :data, "Data do evento:*" %>
+    <%= f.text_field :data,  :class=> "text date_picker" %>
+  </div>
+  <div class="field">
+      <%= f.submit "Salvar", :class => "submit small" %>
+  </div>
+<% end %>

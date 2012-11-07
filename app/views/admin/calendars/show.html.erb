@@ -1,0 +1,27 @@
+<div class="block">
+  <div class="block_head">
+    <div class="bheadl"></div>
+    <div class="bheadr"></div>
+    <h2>Agenda > <%= @admin_calendar.titulo %></h2>
+    <ul class="tabs">
+      <li> <%= link_to 'Editar', edit_admin_calendar_path(@admin_calendar) %> </li>
+      <li> <%= link_to 'Voltar', admin_calendars_path %> </li>
+    </ul>
+  </div>    
+  <div class="block_content tab_content">
+    <% if notice.present? %>
+      <div id="notice" class="message success"><p><%= notice %></p></div>
+    <% end %>
+    <p> <strong>ID:</strong> <%= @admin_calendar.id %> </p>
+    <p> <strong>Titulo:</strong> <%= @admin_calendar.titulo %> </p>
+    <p> <strong>Link:</strong> <%= link_to @admin_calendar.link , @admin_calendar.link, :target => "blank"  %> </p>
+    <p> <strong>Duração:</strong> <%= @admin_calendar.duracao %> </p>
+    <p> <strong>Local:</strong> <%= (@admin_calendar.local).html_safe %> </p>
+    <p> <strong>Sobre:</strong> <%= (@admin_calendar.sobre).html_safe %> </p>
+    <p> <strong>Informação e ou inscrições:</strong> <%= (@admin_calendar.informacao).html_safe %> </p>
+    <p> <strong>Investimento:</strong> <%= @admin_calendar.investimento %> </p>
+    <p> <strong>Data do evento:</strong> <%= @admin_calendar.data.strftime("%d/%m/%Y") %> </p>    
+  </div>   
+  <div class="bendl"></div>
+  <div class="bendr"></div>
+</div> 

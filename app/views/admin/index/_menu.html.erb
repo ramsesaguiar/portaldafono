@@ -3,15 +3,12 @@
 	<div class="hdrr"></div>
 	<h1><%= link_to "Portal da fono", "http://portaldafono.com", :target=> "blank" %></h1>
 	<ul id="nav">
+		<li> <%= link_to "Agenda", :controller => "calendars", :action => "index" %></li>
 		<li> <%= link_to "Artigos", :controller => "articles", :action => "index" %></li>
 		<li> <%= link_to "Debates", :controller => "discussions", :action => "index" %></li>
 		<li> <%= link_to "Dúvidas", :controller => "doubts", :action => "index" %></li>
 		<li> <%= link_to "Entrevistas", :controller => "interviews", :action => "index" %></li>
-		<li> <%= link_to "Fale conosco", :controller => "contacts", :action => "index" %></li>
 		<li> <%= link_to "Notícias", :controller => "news", :action => "index" %> </li>
-		<li> <%= link_to "Newsletter", :controller => "newsletters", :action => "index" %></li>
-		<li> <%= link_to "Super destaques", :controller => "super_highlights", :action => "index" %></li>
-		
 	</ul>
 	<p class="user">Olá, <%= link_to session[:admin_nome] , :controller => "authors", :action => "index" %>  |  <%= link_to "Sair", :controller => "login", :action => "logout" %> </p>
 </div>	
